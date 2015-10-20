@@ -1,0 +1,130 @@
+@include('widgets.summary')                  
+
+<div class="row">
+    <div class="col-lg-12 col-xs-12">
+        <hr/>
+    </div>
+</div>
+    
+<br/><br/>
+                  
+                  <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-yellow">
+                                <div class="inner">
+                                    <h3>
+                                        Moodle
+                                    </h3>
+                                    <p>
+                                        New Orders
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-settings"></i>
+                                </div>
+                                <a href="http://188.226.189.149/cch/moodle/" class="small-box-footer">
+                                    Go to Moodle <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        Oppia 
+                                    </h3>
+                                    <p>
+                                        Bounce Rate
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-iphone"></i>
+                                </div>
+                                <a href="http://188.226.189.149/cch/oppia/" class="small-box-footer">
+                                    Go to Oppia <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                      Point of Care
+                                    </h3>
+                                    <p>
+                                     Diagnostic tool
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-medkit"></i>
+                                </div>
+                                <a href="poceditor/pocmenu.php" class="small-box-footer">
+                                    Go to Point of Care Editor <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+
+                    <!-- top row -->
+                    <div class="row">
+                        <div class="col-xs-12 connectedSortable">
+                            
+                        </div><!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- Main row -->
+			<section class="content">
+                    <div class="row">
+						           <div class="table-responsive">
+                                   <!-- .table - Uses sparkline charts-->
+                                    <h3 class="box-title"><i class="fa fa-download"></i> Downloads</h3>
+									<small>You won't be able to download anything yet, but this is coming soon.</small>
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <th>Description</th>
+                                                <th>Type</th>
+                                                <th>Last Updated</th>
+                                                <th>Download</th>
+                                             </tr>
+                                            <tr>
+                                                <td><a href="#">CCH with Learning Module</a></td>
+                                                <td>Application (APK)</td>
+                                                <td>24th April 2014</td>
+                                                <td><a href="StartupActivity.apk"><i class="fa fa-download"></i></td></a>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">CCH Point of Care</a></td>
+                                                <td>Application(APK)</td>
+                                                <td>24th April 2014</td>
+                                                <td><a href="CCH.apk"><i class="fa fa-download"></i></td></a>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Event Planner</a></td>
+                                                <td>Application (APK)</td>
+                                                <td>24th April 2014</td>
+                                                <td><a href="index.html"><i class="fa fa-download"></i></td></a>
+                                            </tr>
+                                          <tr>
+                                                <td><a href="#">Uploading Learning Module content</a></td>
+                                                <td>Manual</td>
+                                                <td>24th April 2014</td>
+                                                <td><a href="index.html"><i class="fa fa-download"></i></td></a>
+                                            </tr>
+                                          <tr>
+                                                <td><a href="#">Uploading Point of Care content</a></td>
+                                                <td>Manual</td>
+                                                <td>24th April 2014</td>
+                                                <td><a href="index.html"><i class="fa fa-download"></i></td></a>
+                                            </tr>
+                                         </table><!-- /.table -->
+					</div>
+                    </div><!-- /.row (main row) -->
+		</section>	
