@@ -23,9 +23,12 @@
 <!-- title row -->
                     <div class="row">
                         <div class="col-xs-12">
+
                             <h2 class="page-header">
+ @if (Auth::user()->role == 'Admin')
+
 				    <a class="btn btn-small btn-success" href="{{ URL::to('zones/create') }}"><i class="fa fa-plus-circle"></i> Add a Zone</a>
-                            </h2>                            
+@endif                            </h2>                            
                         </div><!-- /.col -->
                     </div>
 					@if (Session::has('message'))

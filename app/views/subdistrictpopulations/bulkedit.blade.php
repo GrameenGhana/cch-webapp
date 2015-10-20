@@ -24,8 +24,8 @@
     <div class="row">
         <div class="col-xs-12">
             <h2 class="page-header">
-                <a class="btn btn-small btn-success" href="{{ URL::to('subdistrictpopulations/create') }}"><i class="fa fa-plus-circle"></i> Add a Population</a>
-            </h2>                            
+<!--                <a class="btn btn-small btn-success" href="{{ URL::to('subdistrictpopulations/create') }}"><i class="fa fa-plus-circle"></i> Add a Population</a>
+    -->        </h2>                            
         </div><!-- /.col -->
     </div>
     @if (Session::has('message'))
@@ -37,7 +37,7 @@
         </div><!-- /.box-header -->
         <div class="box-body table-responsive">
             {{ Form::open(array('url'=> 'subdistrictpopulations/bulkedit','method'=>'post')) }}
-            <input type="submit" value="Edit Sub Districts Populations in {{$district->name}}"  class="btn btn-success btn-lg" />
+            <input type="submit" value="Save All"  class="btn btn-success btn-lg" />
   
             <input type="hidden" name="year" value="{{$year}}" /> 
 	    <input type="hidden" name="type" value="{{$type}}" />
