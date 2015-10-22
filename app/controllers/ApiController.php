@@ -19,7 +19,7 @@ class ApiController extends BaseController {
         $nurse_id = Input::get( 'nurse_id' );
          $year = date('Y');
 
-
+       try {
         $user = User::whereRaw('username = ?',array($nurse_id) )->first();
         if(null != $user) {
             $zone = $user->zone_id;
@@ -103,15 +103,112 @@ class ApiController extends BaseController {
                                                  'target_overall' => $men_women_50_to_60_yrs_total , 'target_id' => $men_women_50_to_60_yrs->id ] ]);
             
         }else{
-            return "{'status'=>'500','message'=>'User can not found.'}";
+            $errors = array('User not found'); 
+            return Response::json(array('error' => true, 'messages'=>$errors), 200);
         }
+    }catch(Exception $ex){
+        $errors = array('Server error'); 
+            return Response::json(array('error' => true, 'messages'=>$errors), 200);
+
+    }
         
-        
+            
     }
 
-    function detailsWrap($val) {
+ // wrapping names with values 
+   public  function detailsWrap($val) {
     return "{'name':'" . $val. "'}";
 }
+
+
+ public function getAllNurses(){
+   
+   $nurse_id = Input::get( 'nurse_id' );
+   $user = User::whereRaw('username=?', array($nurse_id))->first();
+
+   if (is_null($user)) {
+    $errors = array('User Not Found');
+    return Response::json(array('error' => true, 'messages' => $errors), 200);
+} else {
+    $s = $this->details($user);
+    $facilities = array();
+    foreach ($user->supervisedFacilities as $k => $v) {
+        $facilities[] = array("id" => $v->id, "name" => $v->name);
+    }
+
+
+    $primary = array("id" =>@ $user->getPrimaryFacility()->facility_id, "name" => $user->getPrimaryFacilityDetails());
+
+//            echo 'select * from cch.districts u where u.id =(select district from  cch.cch_facilities cf where cf.id='.$sup->getPrimaryFacility()->facility_id.' ) ';
+
+    $district = DB::select('select * from cch.districts u where u.id =(select district from  cch.cch_facilities cf where cf.id=? ) ', array(@ $user->getPrimaryFacility()->facility_id));
+    $dist = "No District";
+    foreach($district as $d)
+        {
+            $dist = $d->name;
+
+        }
+
+    $subdistrict = DB::select('select * from cch.cch_sub_districts u where u.id =(select sub_district from  cch.cch_facilities cf where cf.id=? ) ', array(@ $user->getPrimaryFacility()->facility_id));
+    $subdist = "No Sub District";
+    foreach($subdistrict as $sd)
+        {
+            $subdist = $sd->name;
+
+        }
+
+    $zones = DB::select('select * from cch.cch_zones z where z.id =? ', array($user->zone_id));
+    $zone = "No Zone";
+    foreach($zones as $z)
+        {
+            $zone = $z->name;
+
+        }
+
+        $query = 'SELECT cu.username, cu.last_name,cu.first_name, IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No")) as is_chn,d.name as district_name ,sd.name as subdistrict_name,cf.name as facility_name,cf.facility_type ,z.name as zone_name,cu.status  FROM cch.cch_users cu LEFT JOIN cch.cch_facility_user cfu  on   cu.id = cfu.user_id AND cfu.`primary` = 1   LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id LEFT JOIN cch.cch_sub_districts sd on sd.id=cf.sub_district  LEFT JOIN cch.districts d on d.id=cf.district LEFT JOIN cch.cch_zones z on z.id=cu.id  where cu.status="ACTIVE" group by cu.username';
+        $groups=DB::select($query);
+  
+        return Response::json(array('error' => false,"user_id"=>$user->id, 'last_name' => $user->last_name, "first_name" => $user->first_name,
+            "role" => $user->role, "ischn" => $user->ischn, "title" => $user->title,
+            "primary_facility" => $primary,
+            "district_name" => $dist,
+            "subdistrict_name" => $subdist,
+            "zone_name" => $zone,
+            "groups"=>$groups,
+            "userervised_facility" => $facilities));
+
+    }
+}
+
+protected function details($user)
+    {
+            $facs = array();
+            foreach($user->facilities as $k=>$v)
+            {
+                $nurses = array();
+                foreach($v->nurses() as $n)
+                      {
+if($n->status=='ACTIVE' || $user->status=='TEST' && $n->status=='TEST') {     
+         array_push($nurses, $n->toArray());
+                }}
+         array_push($facs, array('name'=>$v->name,
+                                 'id'=>$v->id,
+                                 'district'=>$v->facDistrict->name,
+                                 'did'=>$v->facDistrict->id,
+                                
+ 'region'=>$v->facDistrict->region,
+
+                                'nurses'=>$nurses,
+                                  ));
+          }
+
+            $s = array('name'=>$user->getName(),
+                       'username'=>$user->username,
+            'role'=>$user->role,
+                       'facilities'=> $facs);
+
+            return $s;
+    }
     
 }
 

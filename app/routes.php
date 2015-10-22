@@ -99,3 +99,4 @@ Blade::extend(function($value) {
 //Apis
 
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));
+Route::get('/getNurses', array('uses' => 'ApiController@getAllNurses'));
