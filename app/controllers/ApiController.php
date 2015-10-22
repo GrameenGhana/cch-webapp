@@ -165,7 +165,7 @@ class ApiController extends BaseController {
 
         }
 
-        $query = 'SELECT cu.username, cu.last_name,cu.first_name, IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No")) as is_chn,d.name as district_name ,sd.name as subdistrict_name,cf.name as facility_name,cf.facility_type ,z.name as zone_name,cu.status  FROM cch.cch_users cu LEFT JOIN cch.cch_facility_user cfu  on   cu.id = cfu.user_id AND cfu.`primary` = 1   LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id LEFT JOIN cch.cch_sub_districts sd on sd.id=cf.sub_district  LEFT JOIN cch.districts d on d.id=cf.district LEFT JOIN cch.cch_zones z on z.id=cu.id  where cu.status="ACTIVE" group by cu.username';
+        $query = 'SELECT cu.username, cu.last_name,cu.first_name, IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No")) as is_chn,d.name as district_name ,sd.name as subdistrict_name,cf.name as facility_name,cf.facility_type ,z.name as zone_name,cu.status  FROM cch.cch_users cu LEFT JOIN cch.cch_facility_user cfu  on   cu.id = cfu.user_id AND cfu.`primary` = 1   LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id LEFT JOIN cch.cch_sub_districts sd on sd.id=cf.sub_district  LEFT JOIN cch.districts d on d.id=cf.district LEFT JOIN cch.cch_zones z on z.id=cu.zone_id  where cu.status="ACTIVE" group by cu.username';
         $groups=DB::select($query);
   
         return Response::json(array('error' => false,"user_id"=>$user->id, 'last_name' => $user->last_name, "first_name" => $user->first_name,
