@@ -95,7 +95,7 @@
                         <td> {{ $value->subdistrict->name}} </td>
                         <td> {{ Form::text('district_percentage_'.$value->id,$value->district_percentage,array('class'=>'form-control','placeholder'=>'% ','onkeyup'=>'checkPopulation('.$value->id.')','id'=>'district_percentage_'.$value->id))  }}</td>
                         <td> {{ Form::text('population_'.$value->id,$value->population,array('class'=>'form-control','placeholder'=>''.$value->name ,'onkeyup'=>'updateCol(4)','id'=>'population_'.$value->id))}}</td>
-                        <td> {{ Form::text('expected_pregnancies_'.$value->id,$value->population,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(5)' ,'id'=>'expected_pregnancies_'.$value->id))}}</td>
+                        <td> {{ Form::text('expected_pregnancies_'.$value->id,$value->expected_pregnancies,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(5)' ,'id'=>'expected_pregnancies_'.$value->id))}}</td>
                         <td> {{ Form::text('chn_6_11_mnths_'.$value->id,$value->chn_6_11_mnths,array('class'=>'form-control','placeholder'=>$value->name ,'onkeyup'=>'updateCol(6)','id'=>'chn_6_11_mnths_'.$value->id))}}</td>
                         <td> {{ Form::text('chn_0_to_11_mnths_'.$value->id,$value->chn_0_to_11_mnths,array('class'=>'form-control','placeholder'=>''.$value->name ,'onkeyup'=>'updateCol(7)','id'=>'chn_0_to_11_mnths_'.$value->id))}}</td>
                         <td> {{ Form::text('chn_12_23_mnths_'.$value->id,$value->chn_12_23_mnths,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(8)','id'=>'chn_12_23_mnths_'.$value->id ))}}</td>

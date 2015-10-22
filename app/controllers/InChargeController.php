@@ -108,7 +108,16 @@ public function showdetail($id) {
 		{$dist = $d->name;
         
 }
-            $groups=DB::select('SELECT cu.username, cu.last_name,cu.first_name, IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No")) as is_chn,cf.facility_type ,cu.status  FROM cch.cch_users cu LEFT JOIN cch.cch_facility_user cfu  on   cu.id = cfu.user_id AND cfu.`primary` = 1   LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id  LEFT JOIN cch.districts d on d.id=cf.district  and d.id='.$d->id.' where cu.status="ACTIVE" group by cu.username');
+            $groups=DB::select('SELECT cu.username, cu.last_name,cu.first_name,
+                                 IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No"))
+                                 as is_chn,cf.facility_type ,cf.name,cu.status 
+                                 FROM cch.cch_users cu 
+                                 LEFT JOIN cch.cch_facility_user cfu  
+                                 ON cu.id = cfu.user_id 
+                                 AND cfu.`primary` = 1 
+                                 LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id 
+                                 LEFT JOIN cch.districts d on d.id=cf.district  
+                                 AND d.id='.$d->id.' where cu.status="ACTIVE" group by cu.username');
 
             return Response::json(array('error' => false,"user_id"=>$sup->id, 'last_name' => $sup->last_name, "first_name" => $sup->first_name,
                         "role" => $sup->role, "ischn" => $sup->ischn, "title" => $sup->title,
