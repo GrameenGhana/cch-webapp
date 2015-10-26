@@ -62,7 +62,7 @@
                               <div class="row">
                                 <div class="col-md-6">
                                     {{ Form::label('year','Year') }}
-                                    {{ Form::select('year', array('2012'=>'2012','2013'=>'2013','2014'=>'2014','2015'=>'2015','2016'=>'2016'), $pop->year,array('class'=>'form-control','placeholder'=>'Select year')) }}
+                                    {{ Form::select('year', array('2015'=>'2015','2016'=>'2016'), $pop->year,array('class'=>'form-control','placeholder'=>'Select year')) }}
                                 </div>  <div class="col-md-6">
                                  {{ Form::label('district_percentage','Percentage of district (%)') }}
                                 {{ Form::text('district_percentage',$pop->district_percentage,array('class'=>'form-control','placeholder'=>'Enter percentage')) }}
@@ -92,10 +92,10 @@
                                         {{ Form::text('expected_pregnancies',$pop->expected_pregnancies,array('class'=>'form-control','placeholder'=>'')) }}
                                     </div>
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         {{ Form::label('chn_6_11_mnths','Chn 6-11 months') }} <span id="chn_6_11_mnths_percentage"> </span>
                                         {{ Form::text('chn_6_11_mnths',$pop->chn_6_11_mnths,array('class'=>'form-control','placeholder'=>'')) }}
-                                    </div>
+                                    </div>-->
 
                                     <div class="form-group">
                                         {{ Form::label('chn_0_to_11_mnths','Chn 0-11 months') }} <span id="chn_0_to_11_mnths_percentage"> </span>
@@ -107,10 +107,10 @@
                                         {{ Form::text('chn_12_23_mnths',$pop->chn_12_23_mnths,array('class'=>'form-control','placeholder'=>'')) }}
                                     </div>
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         {{ Form::label('chn_0_to_23_mnths','Chn 0-23 months') }} <span id="chn_0_to_23_mnths_percentage"> </span>
                                         {{ Form::text('chn_0_to_23_mnths',$pop->chn_0_to_23_mnths,array('class'=>'form-control','placeholder'=>'')) }}
-                                    </div>
+                                    </div>-->
 
                                     <div class="form-group">
                                         {{ Form::label('chn_24_to_59_mnths','Chn 24-59 months') }} <span id="chn_24_to_59_mnths_percentage"> </span>
@@ -210,10 +210,10 @@
 
               totalpopulation = data.population;
               expected_pregnancies_percentage = data.expected_pregnancies;
-              chn_6_11_mnths_percentage  = data.chn_6_11_mnths ;
+//              chn_6_11_mnths_percentage  = data.chn_6_11_mnths ;
               chn_0_to_11_mnths_percentage = data.chn_0_to_11_mnths ;
               chn_12_23_mnths_percentage = data.chn_12_23_mnths ;
-              chn_0_to_23_mnths_percentage = data.chn_0_to_23_mnths ;
+//              chn_0_to_23_mnths_percentage = data.chn_0_to_23_mnths ;
               chn_24_to_59_mnths_percentage = data.chn_24_to_59_mnths ;
               chn_less_than_5_yrs_percentage = data.chn_less_than_5_yrs ;
               wifa_15_49_yrs_percentage = data.wifa_15_49_yrs ;
@@ -223,10 +223,10 @@
               console.log("Expected Pregnancies -> " + expected_pregnancies_percentage);
 
               $('#expected_pregnancies_percentage').html(" on " +expected_pregnancies_percentage + "%");
-              $('#chn_6_11_mnths_percentage').html(" on " +chn_6_11_mnths_percentage + "%");
+//              $('#chn_6_11_mnths_percentage').html(" on " +chn_6_11_mnths_percentage + "%");
               $('#chn_0_to_11_mnths_percentage').html(" on " +chn_0_to_11_mnths_percentage + "%");
               $('#chn_12_23_mnths_percentage').html(" on " +chn_12_23_mnths_percentage + "%");
-              $('#chn_0_to_23_mnths_percentage').html(" on " +chn_0_to_23_mnths_percentage + "%");
+//              $('#chn_0_to_23_mnths_percentage').html(" on " +chn_0_to_23_mnths_percentage + "%");
               $('#chn_24_to_59_mnths_percentage').html(" on " +chn_24_to_59_mnths_percentage + "%");
               $('#chn_less_than_5_yrs_percentage').html(" on " +chn_less_than_5_yrs_percentage + "%");
               $('#wifa_15_49_yrs_percentage').html(" on " +wifa_15_49_yrs_percentage + "%");
@@ -253,10 +253,10 @@
     {
         var population = parseFloat($("#population").val());
         var expected_pregnancies = population * ( expected_pregnancies_percentage / 100 );
-        var chn_6_11_mnths = population * ( chn_6_11_mnths_percentage / 100 );
+//        var chn_6_11_mnths = population * ( chn_6_11_mnths_percentage / 100 );
         var chn_0_to_11_mnths = population * ( chn_0_to_11_mnths_percentage / 100 );
         var chn_12_23_mnths = population * ( chn_12_23_mnths_percentage / 100 );
-        var chn_0_to_23_mnths = population * ( chn_0_to_23_mnths_percentage / 100 );
+//        var chn_0_to_23_mnths = population * ( chn_0_to_23_mnths_percentage / 100 );
         var chn_24_to_59_mnths = population * ( chn_24_to_59_mnths_percentage / 100 );
         var chn_less_than_5_yrs = population * ( chn_less_than_5_yrs_percentage / 100 );
         var wifa_15_49_yrs = population * ( wifa_15_49_yrs_percentage / 100 );
@@ -273,10 +273,10 @@
         men_women_50_to_60_yrs = men_women_50_to_60_yrs.toFixed(0);
 
         $("#expected_pregnancies").val(expected_pregnancies);
-        $("#chn_6_11_mnths").val(chn_6_11_mnths);
+//        $("#chn_6_11_mnths").val(chn_6_11_mnths);
         $("#chn_0_to_11_mnths").val(chn_0_to_11_mnths);
         $("#chn_12_23_mnths").val(chn_12_23_mnths);
-        $("#chn_0_to_23_mnths").val(chn_0_to_23_mnths);
+//        $("#chn_0_to_23_mnths").val(chn_0_to_23_mnths);
         $("#chn_24_to_59_mnths").val(chn_24_to_59_mnths);
         $("#chn_less_than_5_yrs").val(chn_less_than_5_yrs);
         $("#wifa_15_49_yrs").val(wifa_15_49_yrs);

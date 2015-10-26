@@ -54,10 +54,10 @@
                                                  @if (count($pops)==1)
 
     							<th>Expected Pregnancies ({{ $pops[0]->expected_pregnancies }}%)</th>
-                                                <th>Chn 6-11 months ({{ $pops[0]->chn_6_11_mnths }} %)</th> 
+                                                <!--<th>Chn 6-11 months ({{ $pops[0]->chn_6_11_mnths }} %)</th>--> 
                                                 <th>Chn 0-11 months ({{ $pops[0]->chn_0_to_11_mnths }}%)</th>
                                                 <th>Chn 12-23 months ({{ $pops[0]->chn_12_23_mnths }}%)</th>
-                                                <th>Chn 0-23 months ({{ $pops[0]->chn_0_to_23_mnths }}%)</th>
+                                                <!--<th>Chn 0-23 months ({{ $pops[0]->chn_0_to_23_mnths }}%)</th>-->
                                                 <th>Chn 24-59 months ({{ $pops[0]->chn_24_to_59_mnths }}%)</th>
                                                 <th>Chn < 5 yrs ({{ $pops[0]->chn_less_than_5_yrs }}%)</th>
                                                 <th>Wifa 15-49 yrs ( {{ $pops[0]->wifa_15_49_yrs }}%)</th>
@@ -67,10 +67,10 @@
 
 @if (count($pops)!=1)
     						<th>Expected Pregnancies </th>
-                                                <th>Chn 6-11 months </th>
+                                                <!--<th>Chn 6-11 months </th>-->
                                                 <th>Chn 0-11 months </th>
                                                 <th>Chn 12-23 months </th>
-                                                <th>Chn 0-23 months </th>
+                                                <!--<th>Chn 0-23 months </th>-->
                                                 <th>Chn 24-59 months </th>
                                                 <th>Chn < 5 yrs </th>
                                                 <th>Wifa 15-49 yrs </th>
@@ -92,10 +92,10 @@
 
  @if (count($pops)==1)
  			 <td> {{ round(($value->expected_pregnancies / 100 ) * $value->population) }}  </td>
-                          <td> {{ round(($value->chn_6_11_mnths / 100 ) * $value->population) }} </td>
+                          <!--<td> {{ round(($value->chn_6_11_mnths / 100 ) * $value->population) }} </td>-->
                           <td> {{ round(($value->chn_0_to_11_mnths / 100 ) * $value->population) }} </td>
                           <td> {{ round(($value->chn_12_23_mnths / 100 ) * $value->population) }} </td>
-                          <td> {{ round(($value->chn_0_to_23_mnths / 100 ) * $value->population) }} </td>
+                          <!--<td> {{ round(($value->chn_0_to_23_mnths / 100 ) * $value->population) }} </td>-->
                           <td> {{ round(($value->chn_24_to_59_mnths / 100 ) * $value->population) }} </td>
                           <td> {{ round(($value->chn_less_than_5_yrs / 100 ) * $value->population) }} </td>
                           <td> {{ round(($value->wifa_15_49_yrs / 100 ) * $value->population) }} </td>
@@ -104,10 +104,10 @@
 
 @if (count($pops)!=1)
                           <td> {{ round(($value->expected_pregnancies / 100 ) * $value->population) }} ({{ $value->expected_pregnancies }}%) </td>
-                          <td> {{ round(($value->chn_6_11_mnths / 100 ) * $value->population) }} ({{ $value->chn_6_11_mnths }}%)</td>
+                          <!--<td> {{ round(($value->chn_6_11_mnths / 100 ) * $value->population) }} ({{ $value->chn_6_11_mnths }}%)</td>-->
                           <td> {{ round(($value->chn_0_to_11_mnths / 100 ) * $value->population) }} ({{ $value->chn_0_to_11_mnths }}%)</td>
                           <td> {{ round(($value->chn_12_23_mnths / 100 ) * $value->population) }} ({{ $value->chn_12_23_mnths }}%)</td>
-                          <td> {{ round(($value->chn_0_to_23_mnths / 100 ) * $value->population) }} ({{ $value->chn_0_to_23_mnths }}%)</td>
+                          <!--<td> {{ round(($value->chn_0_to_23_mnths / 100 ) * $value->population) }} ({{ $value->chn_0_to_23_mnths }}%)</td>-->
                           <td> {{ round(($value->chn_24_to_59_mnths / 100 ) * $value->population) }} ({{ $value->chn_24_to_59_mnths }}%)</td>
                           <td> {{ round(($value->chn_less_than_5_yrs / 100 ) * $value->population) }} ({{ $value->chn_less_than_5_yrs }}%)</td>
                           <td> {{ round(($value->wifa_15_49_yrs / 100 ) * $value->population) }} ( {{ $value->wifa_15_49_yrs }}%)</td>
