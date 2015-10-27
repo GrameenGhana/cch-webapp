@@ -87,12 +87,15 @@ class TrackerController extends BaseController {
                         Log::info("Target setting data coming through .....");
                         $justification = '';
                         $comment ='';
+                        $target_detail='';
 
                         $data = json_decode($l->data);
 
                         if(strpos($l->data,'justification') !== false) $justification =  $data->justification; 
                         
                         if(strpos($l->data,'comments') !== false) $comment = $data->comments;
+
+                        if(strpos($l->data,'target_detail') !== false) $target_detail = $data->target_detail;
 
                         $target = new FacilityTarget;
                         $target->username = $l->user_id;
@@ -104,7 +107,7 @@ class TrackerController extends BaseController {
                         $target->target_month = $data->target_month;
                         $target->target_number = $data->target_number;
                         $target->achieved_number = $data->achieved_number;
-                        $target->target_detail = $data->target_detail;
+                        $target->target_detail = $target_detail;
                         $target->target_number = $data->target_number;
                         $target->last_updated = $data->last_updated;
                         $target->comment = $comment;
