@@ -94,6 +94,7 @@ class TrackerController extends BaseController {
                         $target->target_number = $data->target_number;
                         $target->achieved_number = $data->achieved_number;
                         $target->justification = $data->justification;
+                        $target->last_updated = $data->last_updated;
                         $target->comment = $data->comments;
                         $target->group_members =  $data->group_members;
                         $target->save();
