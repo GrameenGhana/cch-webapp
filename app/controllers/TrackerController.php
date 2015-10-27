@@ -88,6 +88,17 @@ class TrackerController extends BaseController {
                         $justification = '';
                         $comment ='';
                         $target_detail='';
+                        $target_id='';
+                        $target_category='';
+                        $facility='';
+                        $zone='';
+                        $target_type='';
+                        $target_month='';
+                        $target_number='';
+                        $achieved_number='';
+                        $last_updated='';
+                        $group_members='';
+
 
                         $data = json_decode($l->data);
 
@@ -97,21 +108,40 @@ class TrackerController extends BaseController {
 
                         if(strpos($l->data,'target_detail') !== false) $target_detail = $data->target_detail;
 
+                        if(strpos($l->data,'target_id') !== false) $target_id = $data->target_id;
+
+                        if(strpos($l->data,'target_category') !== false) $target_category = $data->target_category;
+
+                        if(strpos($l->data,'facility') !== false) $facility = $data->facility;
+
+                        if(strpos($l->data,'zone') !== false) $zone = $data->zone;
+
+                        if(strpos($l->data,'target_type') !== false) $target_type = $data->target_type;
+
+                        if(strpos($l->data,'target_month') !== false) $target_month = $data->target_month;
+
+                        if(strpos($l->data,'target_number') !== false) $target_number = $data->target_number;
+
+                        if(strpos($l->data,'achieved_number') !== false) $achieved_number = $data->achieved_number;
+
+                        if(strpos($l->data,'last_updated') !== false) $last_updated = $data->last_updated;
+
+                        if(strpos($l->data,'group_members') !== false) $group_members = $data->group_members;
+
                         $target = new FacilityTarget;
                         $target->username = $l->user_id;
-                        $target->facility =  $data->facility;
+                        $target->facility =  $facility;
                         $target->zone = $data->zone;
-                        $target->target_type = $data->target_type;
-                        $target->target_category = $data->target_category;
-                        $target->target_id = $data->target_id;
-                        $target->target_month = $data->target_month;
-                        $target->target_number = $data->target_number;
-                        $target->achieved_number = $data->achieved_number;
+                        $target->target_type = $target_type;
+                        $target->target_category = $target_category;
+                        $target->target_id = $target_id;
+                        $target->target_month = $target_month;
+                        $target->target_number = $target_number;
+                        $target->achieved_number = $achieved_number;
                         $target->target_detail = $target_detail;
-                        $target->target_number = $data->target_number;
-                        $target->last_updated = $data->last_updated;
+                        $target->last_updated = $last_updated;
                         $target->comment = $comment;
-                        $target->group_members =  $data->group_members;
+                        $target->group_members =  $group_members;
                         $target->save();
 
                         Log::info("Facility target saved -> ". $target->target_id);
