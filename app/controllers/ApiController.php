@@ -217,6 +217,7 @@ public function pushFacilityTargets(){
                         $target->achieved_number = $data->achieved_number;
                         $target->justification = $data->justification;
                         $target->comment = $data->comments;
+                         $target->last_updated = $data->last_updated;
                         $target->group_members =  $data->group_members;
                         $target->save();
 
