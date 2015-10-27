@@ -78,8 +78,11 @@ class TrackerController extends BaseController {
                     $log->modified_by = 1; // Tracker user id 
                     $log->save();
 
+                    Log::info("Tracker saved .... ");
+
                     // check to see if group target setting
-                    if($l->module == 'Target Setting' && strpos($l->data,'group_members') !== false){
+                    if($l->module == 'Target Setting' ) {
+                        if ( strpos($l->data,'group_members') !== false){
 
                         Log::info("Target setting data coming through .....");
                         $justification = '';
@@ -101,13 +104,20 @@ class TrackerController extends BaseController {
                         $target->target_month = $data->target_month;
                         $target->target_number = $data->target_number;
                         $target->achieved_number = $data->achieved_number;
-                        $target->justification = $justification;
+                        $target->target_detail = $data->target_detail;
+                        $target->target_number = $data->target_number;
                         $target->last_updated = $data->last_updated;
                         $target->comment = $comment;
                         $target->group_members =  $data->group_members;
                         $target->save();
 
                         Log::info("Facility target saved -> ". $target->id);
+
+                        }else{
+                        Log::info(" tracker data does not have group members ....");
+                        }
+                    }else{
+                        Log::info(" tracker not of target setting ....");
                     }
                 }
                 } else {
