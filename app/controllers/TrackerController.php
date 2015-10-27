@@ -114,7 +114,7 @@ class TrackerController extends BaseController {
                         $target->group_members =  $data->group_members;
                         $target->save();
 
-                        Log::info("Facility target saved -> ". $target->id);
+                        Log::info("Facility target saved -> ". $target->target_id);
 
                         }else{
                         Log::info(" tracker data does not have group members ....");
