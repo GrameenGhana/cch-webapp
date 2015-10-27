@@ -100,3 +100,6 @@ Blade::extend(function($value) {
 
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));
 Route::get('/getNurses', array('uses' => 'ApiController@getAllNurses'));
+
+Route::post('/pushFacilityTargets', array('uses' => 'ApiController@pushFacilityTargets'));
+Route::get('/getFacilityTargets', array('uses' => 'ApiController@getFacilityTargets'));

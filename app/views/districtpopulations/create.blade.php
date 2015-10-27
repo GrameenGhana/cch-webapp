@@ -86,10 +86,10 @@
                                         {{ Form::text('expected_pregnancies',Input::old('expected_pregnancies'),array('class'=>'form-control','placeholder'=>'')) }}
                                     </div>
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         {{ Form::label('chn_6_11_mnths','Chn 6-11 months ') }}
                                         {{ Form::text('chn_6_11_mnths',Input::old('chn_6_11_mnths'),array('class'=>'form-control','placeholder'=>'')) }}
-                                    </div>
+                                    </div>-->
 
                                     <div class="form-group">
                                         {{ Form::label('chn_0_to_11_mnths','Chn 0-11 months ') }}
@@ -101,10 +101,10 @@
                                         {{ Form::text('chn_12_23_mnths',Input::old('chn_12_23_mnths'),array('class'=>'form-control','placeholder'=>'')) }}
                                     </div>
 
-                                    <div class="form-group">
+<!--                                    <div class="form-group">
                                         {{ Form::label('chn_0_to_23_mnths','Chn 0-23 months ') }}
                                         {{ Form::text('chn_0_to_23_mnths',Input::old('chn_0_to_23_mnths'),array('class'=>'form-control','placeholder'=>'')) }}
-                                    </div>
+                                    </div>-->
 
                                     <div class="form-group">
                                         {{ Form::label('chn_24_to_59_mnths','Chn 24-59 months ') }}

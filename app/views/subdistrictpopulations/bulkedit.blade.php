@@ -57,14 +57,14 @@
                         <th>Expected Pregnancies<br />
                             {{ $districtpopulation->expected_pregnancies }}%
                         </th>
-                        <th>Chn 6-11 months<br />
-                            {{ $districtpopulation->chn_6_11_mnths }}%</th>
+<!--                        <th>Chn 6-11 months<br />
+                            {{ $districtpopulation->chn_6_11_mnths }}%</th>-->
                         <th>Chn 0-11 months<br />
                             {{ $districtpopulation->chn_0_to_11_mnths }}%</th>
                         <th>Chn 12-23 months<br />
                             {{ $districtpopulation->chn_12_23_mnths }}%</th>
-                        <th>Chn 0-23 months<br />
-                            {{ $districtpopulation->chn_0_to_23_mnths }}%</th>
+<!--                        <th>Chn 0-23 months<br />
+                            {{ $districtpopulation->chn_0_to_23_mnths }}%</th>-->
                         <th>Chn 24-59 months<br />
                             {{ $districtpopulation->chn_24_to_59_mnths }}%</th>
                         <th>Chn < 5 yrs<br />
@@ -88,11 +88,11 @@
                         <td> {{ $value->year}} </td>
                         <td> {{ Form::text('district_percentage_'.$value->id,$value->district_percentage,array('class'=>'form-control','placeholder'=>'% ','onkeyup'=>'checkPopulation('.$value->id.')','id'=>'district_percentage_'.$value->id))  }}</td>
                         <td> {{ Form::text('population_'.$value->id,$value->population,array('class'=>'form-control','placeholder'=>''.$value->name ,'onkeyup'=>'updateCol(4)','id'=>'population_'.$value->id))}}</td>
-                        <td> {{ Form::text('expected_pregnancies_'.$value->id,$value->expected_pregnancies,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(5)' ,'id'=>'expected_pregnancies_'.$value->id))}}</td>
-                        <td> {{ Form::text('chn_6_11_mnths_'.$value->id,$value->chn_6_11_mnths,array('class'=>'form-control','placeholder'=>$value->name ,'onkeyup'=>'updateCol(6)','id'=>'chn_6_11_mnths_'.$value->id))}}</td>
+                        <td> {{ Form::text('expected_pregnancies_'.$value->id,$value->population,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(5)' ,'id'=>'expected_pregnancies_'.$value->id))}}</td>
+                        <!--<td> {{ Form::text('chn_6_11_mnths_'.$value->id,$value->chn_6_11_mnths,array('class'=>'form-control','placeholder'=>$value->name ,'onkeyup'=>'updateCol(6)','id'=>'chn_6_11_mnths_'.$value->id))}}</td>-->
                         <td> {{ Form::text('chn_0_to_11_mnths_'.$value->id,$value->chn_0_to_11_mnths,array('class'=>'form-control','placeholder'=>''.$value->name ,'onkeyup'=>'updateCol(7)','id'=>'chn_0_to_11_mnths_'.$value->id))}}</td>
                         <td> {{ Form::text('chn_12_23_mnths_'.$value->id,$value->chn_12_23_mnths,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(8)','id'=>'chn_12_23_mnths_'.$value->id ))}}</td>
-                        <td> {{ Form::text('chn_0_to_23_mnths_'.$value->id,$value->chn_0_to_23_mnths,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(9)','id'=>'chn_0_to_23_mnths_'.$value->id))}}</td>
+                        <!--<td> {{ Form::text('chn_0_to_23_mnths_'.$value->id,$value->chn_0_to_23_mnths,array('class'=>'form-control','placeholder'=>''.$value->name,'onkeyup'=>'updateCol(9)','id'=>'chn_0_to_23_mnths_'.$value->id))}}</td>-->
                         <td> {{ Form::text('chn_24_to_59_mnths_'.$value->id,$value->chn_24_to_59_mnths,array('class'=>'form-control','placeholder'=> $value->name,'onkeyup'=>'updateCol(10)','id'=>'chn_24_to_59_mnths_'.$value->id)) }}</td>
                         <td> {{ Form::text('chn_less_than_5_yrs_'.$value->id,$value->chn_less_than_5_yrs,array('class'=>'form-control','placeholder'=>$value->name,'onkeyup'=>'updateCol(11)','id'=>'chn_less_than_5_yrs_'.$value->id)) }}</td>
                         <td> {{ Form::text('wifa_15_49_yrs_'.$value->id,$value->wifa_15_49_yrs,array('class'=>'form-control','placeholder'=>$value->name,'onkeyup'=>'updateCol(12)','id'=>'wifa_15_49_yrs_'.$value->id)) }}</td>
@@ -115,8 +115,8 @@ href="{{ URL::to('/zonepopulations/bulkedit/subdistrict/' . $value->subdistrict-
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+<!--                        <td></td>-->
+                        <!--<td></td>-->
                         <td></td>
                                
         </tr>
@@ -126,10 +126,10 @@ href="{{ URL::to('/zonepopulations/bulkedit/subdistrict/' . $value->subdistrict-
                         <td>100</td>
                         <td>{{ $districtpopulation->population }}</td>
                         <td>{{ number_format(($districtpopulation->expected_pregnancies/100)* $districtpopulation->population ) }}</td>
-                        <td>{{ number_format(($districtpopulation->chn_6_11_mnths/100)* $districtpopulation->population ) }}</td>
+                        <!--<td>{{ number_format(($districtpopulation->chn_6_11_mnths/100)* $districtpopulation->population ) }}</td>-->
                         <td>{{ number_format(($districtpopulation->chn_0_to_11_mnths/100)* $districtpopulation->population ) }}</td>
                         <td>{{ number_format(($districtpopulation->chn_12_23_mnths/100)* $districtpopulation->population ) }}</td>
-                        <td>{{ number_format(($districtpopulation->chn_0_to_23_mnths/100)* $districtpopulation->population ) }}</td>
+                        <!--<td>{{ number_format(($districtpopulation->chn_0_to_23_mnths/100)* $districtpopulation->population ) }}</td>-->
                         <td>{{ number_format(($districtpopulation->chn_24_to_59_mnths/100)* $districtpopulation->population ) }}</td>
                         <td>{{ number_format(($districtpopulation->chn_less_than_5_yrs/100)* $districtpopulation->population ) }}</td>
                         <td>{{ number_format(($districtpopulation->wifa_15_49_yrs/100)* $districtpopulation->population ) }}</td>
@@ -150,10 +150,10 @@ href="{{ URL::to('/zonepopulations/bulkedit/subdistrict/' . $value->subdistrict-
 <script type="text/javascript">
     var DISTRICT_POPULATION = {{ $districtpopulation->population }};
             var expected_pregnancies_percentage = {{ $districtpopulation->expected_pregnancies }};
-            var chn_6_11_mnths_percentage = {{ $districtpopulation->chn_6_11_mnths }};
+//            var chn_6_11_mnths_percentage = {{ $districtpopulation->chn_6_11_mnths }};
             var chn_0_to_11_mnths_percentage = {{ $districtpopulation->chn_0_to_11_mnths }};
             var chn_12_23_mnths_percentage = {{ $districtpopulation->chn_12_23_mnths }};
-            var chn_0_to_23_mnths_percentage = {{ $districtpopulation->chn_0_to_23_mnths }};
+//            var chn_0_to_23_mnths_percentage = {{ $districtpopulation->chn_0_to_23_mnths }};
             var chn_24_to_59_mnths_percentage = {{ $districtpopulation->chn_24_to_59_mnths }};
             var wifa_15_49_yrs_percentage = {{ $districtpopulation->wifa_15_49_yrs }};
             var men_women_50_to_60_yrs_percentage = {{ $districtpopulation->men_women_50_to_60_yrs }};
@@ -167,29 +167,29 @@ href="{{ URL::to('/zonepopulations/bulkedit/subdistrict/' . $value->subdistrict-
             var dist = DISTRICT_POPULATION * (parseFloat($("#district_percentage_" + id).val())/100);
                     var population = dist.toFixed(0);
                     var expected_pregnancies = population * (expected_pregnancies_percentage / 100);
-                    var chn_6_11_mnths = population * (chn_6_11_mnths_percentage / 100);
+//                    var chn_6_11_mnths = population * (chn_6_11_mnths_percentage / 100);
                     var chn_0_to_11_mnths = population * (chn_0_to_11_mnths_percentage / 100);
                     var chn_12_23_mnths = population * (chn_12_23_mnths_percentage / 100);
-                    var chn_0_to_23_mnths = population * (chn_0_to_23_mnths_percentage / 100);
+//                    var chn_0_to_23_mnths = population * (chn_0_to_23_mnths_percentage / 100);
                     var chn_24_to_59_mnths = population * (chn_24_to_59_mnths_percentage / 100);
                     var chn_less_than_5_yrs = population * (chn_less_than_5_yrs_percentage / 100);
                     var wifa_15_49_yrs = population * (wifa_15_49_yrs_percentage / 100);
                     var men_women_50_to_60_yrs = population * (men_women_50_to_60_yrs_percentage / 100);
                     expected_pregnancies = expected_pregnancies.toFixed(0);
-                    chn_6_11_mnths = chn_6_11_mnths.toFixed(0);
+//                    chn_6_11_mnths = chn_6_11_mnths.toFixed(0);
                     chn_0_to_11_mnths = chn_0_to_11_mnths.toFixed(0);
                     chn_12_23_mnths = chn_12_23_mnths.toFixed(0);
-                    chn_0_to_23_mnths = chn_0_to_23_mnths.toFixed(0);
+//                    chn_0_to_23_mnths = chn_0_to_23_mnths.toFixed(0);
                     chn_24_to_59_mnths = chn_24_to_59_mnths.toFixed(0);
                     chn_less_than_5_yrs = chn_less_than_5_yrs.toFixed(0);
                     wifa_15_49_yrs = wifa_15_49_yrs.toFixed(0);
                     men_women_50_to_60_yrs = men_women_50_to_60_yrs.toFixed(0);
                     $("#population_" + id).val(population);
                     $("#expected_pregnancies_" + id).val(expected_pregnancies);
-                    $("#chn_6_11_mnths_" + id).val(chn_6_11_mnths);
+//                    $("#chn_6_11_mnths_" + id).val(chn_6_11_mnths);
                     $("#chn_0_to_11_mnths_" + id).val(chn_0_to_11_mnths);
                     $("#chn_12_23_mnths_" + id).val(chn_12_23_mnths);
-                    $("#chn_0_to_23_mnths_" + id).val(chn_0_to_23_mnths);
+//                    $("#chn_0_to_23_mnths_" + id).val(chn_0_to_23_mnths);
                     $("#chn_24_to_59_mnths_" + id).val(chn_24_to_59_mnths);
                     $("#chn_less_than_5_yrs_" + id).val(chn_less_than_5_yrs);
                     $("#wifa_15_49_yrs_" + id).val(wifa_15_49_yrs);
@@ -248,8 +248,8 @@ function showSummations(){
             updateCol(9);
             updateCol(10);
             updateCol(11);
-            updateCol(12);
-            updateCol(13);
+//            updateCol(12);
+//            updateCol(13);
           //  updateCol(14);
 
 
@@ -271,6 +271,7 @@ function showSummations(){
     });
 </script>
 @stop
+
 
 
 
