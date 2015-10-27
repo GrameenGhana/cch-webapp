@@ -81,6 +81,8 @@ class TrackerController extends BaseController {
                     // check to see if group target setting
                     if($l->module == 'Target Setting' && strpos($l->data,'group_members') !== false){
 
+                        Log::info("Target setting data coming through .....");
+
                         $data = json_decode($l->data);
 
                         $target = new FacilityTarget;
@@ -98,6 +100,8 @@ class TrackerController extends BaseController {
                         $target->comment = $data->comments;
                         $target->group_members =  $data->group_members;
                         $target->save();
+
+                        Log::info("Facility target saved -> ". $target->id);
                     }
                 }
                 } else {
