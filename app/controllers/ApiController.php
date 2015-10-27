@@ -201,9 +201,16 @@ public function getFacilityTargets(){
 
 
 public function pushFacilityTargets(){
-        $rawdata = '{"target_category":"12-23 months","imei":"355067064013246","ver":"3.0.44","justification":"No vaccines","achieved_number":"20","target_number":"34","group_members":"8009,ADEDDCO,ADEDDNS,adedhd,ADEDHIO,AdaFoah,9055,4454,4166,","target_id":"362","target_month":"10","facility":"ST - Sasekope CHPS","battery":"100%","device":"Samsung SM-G355H","last_updated":"1445864954502","target_type":"Vitamin A","comments":"vfsfhj","zone":"Sasekope"}';
-       
-        $data = json_decode($rawdata);
+        $rawdata = '{"target_category":"Antigens","imei":"355067064013246","target_group":"Child health","ver":"3.0.44.1","achieved_number":"2","target_number":"9","group_members":"7867,adaeastadmin,ADEDDHS,10570,12956,test_adw","target_id":479,"target_month":"10","facility":"ST - Sasekope CHPS","battery":"100%","device":"Samsung SM-G355H","last_updated":"1445941351648","target_type":"BCG","comments":"aggbkkn","zone":"No Zone"} ';
+        
+                    $justification = '';
+                        $comment ='';
+
+                        $data = json_decode($rawdata);
+
+                        if(strpos($rawdata,'justification') !== false) {$justification =  $data->justification; }
+                        
+                        if(strpos($rawdata,'comments') !== false) {$comment = $data->comments;}
 
                         $target = new FacilityTarget;
                         $target->username = '308';
@@ -215,8 +222,9 @@ public function pushFacilityTargets(){
                         $target->target_month = $data->target_month;
                         $target->target_number = $data->target_number;
                         $target->achieved_number = $data->achieved_number;
-                        $target->justification = $data->justification;
-                        $target->comment = $data->comments;
+                        $target->justification = $justification;
+                        $target->target_detail = $data->target_detail;
+                        $target->comment = $comment;
                          $target->last_updated = $data->last_updated;
                         $target->group_members =  $data->group_members;
                         $target->save();

@@ -82,8 +82,14 @@ class TrackerController extends BaseController {
                     if($l->module == 'Target Setting' && strpos($l->data,'group_members') !== false){
 
                         Log::info("Target setting data coming through .....");
+                        $justification = '';
+                        $comment ='';
 
                         $data = json_decode($l->data);
+
+                        if(strpos($l->data,'justification') !== false) $justification =  $data->justification; 
+                        
+                        if(strpos($l->data,'comments') !== false) $comment = $data->comments;
 
                         $target = new FacilityTarget;
                         $target->username = $l->user_id;
@@ -95,9 +101,9 @@ class TrackerController extends BaseController {
                         $target->target_month = $data->target_month;
                         $target->target_number = $data->target_number;
                         $target->achieved_number = $data->achieved_number;
-                        $target->justification = $data->justification;
+                        $target->justification = $justification;
                         $target->last_updated = $data->last_updated;
-                        $target->comment = $data->comments;
+                        $target->comment = $comment;
                         $target->group_members =  $data->group_members;
                         $target->save();
 
