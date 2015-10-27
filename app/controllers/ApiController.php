@@ -180,6 +180,51 @@ class ApiController extends BaseController {
     }
 }
 
+public function getFacilityTargets(){
+
+    $zone = Input::get( 'zone' );
+    Log::info("Zone - ".$zone);
+
+    $targets = FacilityTarget::whereRaw('zone=?', array($zone))->get();
+
+
+    if(sizeof($targets) == 0 ){
+        $errors = array('Targets Not Found');
+    return Response::json(array('error' => true, 'messages' => $errors), 200);
+    }else{
+        return Response::json(array('error' => false, 'targets' => $targets->toArray()), 200);
+    }
+
+    
+
+}
+
+
+public function pushFacilityTargets(){
+        $rawdata = '{"target_category":"12-23 months","imei":"355067064013246","ver":"3.0.44","justification":"No vaccines","achieved_number":"20","target_number":"34","group_members":"8009,ADEDDCO,ADEDDNS,adedhd,ADEDHIO,AdaFoah,9055,4454,4166,","target_id":"362","target_month":"10","facility":"ST - Sasekope CHPS","battery":"100%","device":"Samsung SM-G355H","last_updated":"1445864954502","target_type":"Vitamin A","comments":"vfsfhj","zone":"Sasekope"}';
+       
+        $data = json_decode($rawdata);
+
+                        $target = new FacilityTarget;
+                        $target->username = '308';
+                        $target->facility =  $data->facility;
+                        $target->zone = $data->zone;
+                        $target->target_type = $data->target_type;
+                        $target->target_category = $data->target_category;
+                        $target->target_id = $data->target_id;
+                        $target->target_month = $data->target_month;
+                        $target->target_number = $data->target_number;
+                        $target->achieved_number = $data->achieved_number;
+                        $target->justification = $data->justification;
+                        $target->comment = $data->comments;
+                        $target->group_members =  $data->group_members;
+                        $target->save();
+
+        return Response::json(array('error' => false, 'messages' => 'Successfully saved targets by '.$target->username), 200);
+
+
+}
+
 protected function details($user)
     {
             $facs = array();

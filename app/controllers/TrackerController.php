@@ -77,6 +77,27 @@ class TrackerController extends BaseController {
                     $log->created_at = date('Y-m-d h:m:s');
                     $log->modified_by = 1; // Tracker user id 
                     $log->save();
+
+                    // check to see if group target setting
+                    if($l->module == 'Target Setting' && strpos($l->data,'group_members') !== false){
+
+                        $data = json_decode($l->data);
+
+                        $target = new FacilityTarget;
+                        $target->username = $l->user_id;
+                        $target->facility =  $data->facility;
+                        $target->zone = $data->zone;
+                        $target->target_type = $data->target_type;
+                        $target->target_category = $data->target_category;
+                        $target->target_id = $data->target_id;
+                        $target->target_month = $data->target_month;
+                        $target->target_number = $data->target_number;
+                        $target->achieved_number = $data->achieved_number;
+                        $target->justification = $data->justification;
+                        $target->comment = $data->comments;
+                        $target->group_members =  $data->group_members;
+                        $target->save();
+                    }
                 }
                 } else {
 
