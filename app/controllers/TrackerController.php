@@ -81,7 +81,7 @@ class TrackerController extends BaseController {
                     Log::info("Tracker saved .... ");
 
                     // check to see if group target setting
-                    if($l->module == 'Target Setting' ) {
+                    if(trim(preg_replace('/\s+/', ' ', $l->module)) == trim(preg_replace('/\s+/', ' ', 'Target Setting')) ) {
                         if ( strpos($l->data,'group_members') !== false){
 
                         Log::info("Target setting data coming through .....");
