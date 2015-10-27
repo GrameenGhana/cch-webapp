@@ -90,6 +90,7 @@ class TrackerController extends BaseController {
                         $target_detail='';
                         $target_id='';
                         $target_category='';
+                        $target_group='';
                         $facility='';
                         $zone='';
                         $target_type='';
@@ -111,6 +112,8 @@ class TrackerController extends BaseController {
                         if(strpos($l->data,'target_id') !== false) $target_id = $data->target_id;
 
                         if(strpos($l->data,'target_category') !== false) $target_category = $data->target_category;
+
+                        if(strpos($l->data,'target_group') !== false) $target_group = $data->target_group;
 
                         if(strpos($l->data,'facility') !== false) $facility = $data->facility;
 
@@ -134,6 +137,7 @@ class TrackerController extends BaseController {
                         $target->zone = $data->zone;
                         $target->target_type = $target_type;
                         $target->target_category = $target_category;
+                        $target->target_group = $target_group;
                         $target->target_id = $target_id;
                         $target->target_month = $target_month;
                         $target->target_number = $target_number;
