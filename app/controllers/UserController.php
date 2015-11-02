@@ -252,7 +252,7 @@ class UserController extends BaseController {
             $statusChange->new_status = $user->status;
             $statusChange->created_at =  date('Y-m-d h:m:s'); // DB::raw('NOW()');
             $statusChange->modified_by = Auth::user()->id;
-           $statusChange->created__by = Auth::user()->id;
+           $statusChange->created_by = Auth::user()->id;
 
             $statusChange->save();
 
