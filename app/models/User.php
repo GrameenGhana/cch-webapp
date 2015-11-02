@@ -517,13 +517,18 @@ public  static function getUserDistricts($id) {
             } else {
                 //           $eventid = (isset($events->eventid)) ? $events->eventid : '0';
                 $location = (isset($events->location)) ? $events->location : 'unknown location.';
+                $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
+                $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
+
 
                 $event = array('title' => addslashes(trim(@$events->eventtype . ' at ' . $location)),
                     'location' => addslashes($location),
                     'type' => addslashes(@$events->eventtype),
                     'start' => $start,
                     'end' => $end,
-                    'eventid' => $eventid);
+                    'eventid' => $eventid,
+                    'justification' => $justification,
+                    'comments' => $comments);
                 return $event;
             }
         }
