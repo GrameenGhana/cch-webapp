@@ -30,6 +30,7 @@ Route::get('/districtadmin', array('uses' => 'UserController@indexDistrictAdmin'
 Route::get('/districtadmin/create', array('uses' => 'UserController@districtAdminCreate'));
 Route::resource('users','UserController');
 Route::resource('facilities','FacilityController'); 
+Route::resource('facilitytypes','FacilityTypeController'); 
 Route::resource('devices','DeviceController'); 
 Route::resource('tracker','TrackerController'); 
 Route::resource('districts','DistrictController'); 
