@@ -54,7 +54,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    {{ Form::submit('Edit Facility Type',array('class'=>'btn btn-primary')) }}
+                    {{ Form::submit('Add Facility Type',array('class'=>'btn btn-primary')) }}
                 </div>
 
                 {{ Form::close() }}
