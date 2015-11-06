@@ -589,8 +589,15 @@ public  static function getUserDistricts($id) {
                 //echo $exc->getTraceAsString();
             }
 
+            $target_id = "";
+            try {
+                $target_id = addslashes($targets->id);
+            } catch (Exception $exc) {
+                //echo $exc->getTraceAsString();
+            }
+
             $target = array(
-                'id' => $targets->id, 'category' => $category,
+                'id' => $target_id, 'category' => $category,
                 'type' => $type,
                 'target' => $target,
                 'achieved' => $achieved_number,
