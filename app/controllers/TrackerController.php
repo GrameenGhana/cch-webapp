@@ -70,7 +70,16 @@ class TrackerController extends BaseController {
                     $log = new Tracker;
                     $log->username = $l->user_id;
                     $log->module = $l->module;
-                    $log->data = $l->data;
+
+                    $jsondata = json_decode($l->data);
+                    if(strpos($jsondata,'android.widget') !== false){
+                        $processeddata = '{"target_category":"'.$jsondata->category.'","imei":"'.$jsondata->imei.'","battery":"'.$jsondata->battery.'","device":"'.$jsondata->device.'","due_date":"'.$jsondata->due_date.'","last_updated":"'.$jsondata->last_updated.'","ver":"'.$jsondata->ver.'","achieved_number":'.$jsondata->achieved_number.',"start_date":"'.$jsondata->start_date.'","target_number":"'.$jsondata->target_number.'","target_type":"'.$jsondata->target_type.'","group_members":"'.$jsondata->group_members.'","target_id":'.$jsondata->target_id.',"id":'.$jsondata->target_id.'} ';
+                        $log->data = $processeddata;
+                    }else {
+                        $log->data = $l->data;
+                    }
+
+
                     $log->start_time = $l->start_time;
                     $log->end_time = $l->end_time;
                     $log->timetaken = (($l->end_time - $l->start_time) / 1000);
