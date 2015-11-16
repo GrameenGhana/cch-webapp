@@ -4,7 +4,6 @@
     <list default="true" id="8f7ad430-1fc6-42cd-b392-935b25c21974" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/TrackerController.php" afterPath="$PROJECT_DIR$/app/controllers/TrackerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cch-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +57,10 @@
       <file leaf-file-name="TrackerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56188923">
-              <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.34201956">
+              <caret line="76" column="71" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
               <folding>
-                <marker date="1447668400000" expanded="true" signature="7921:7965" placeholder="select id fr..cch_event_type..." />
+                <marker date="1447670074000" expanded="true" signature="7903:7947" placeholder="select id fr..cch_event_type..." />
               </folding>
             </state>
           </provider>
@@ -265,7 +264,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
           <folding>
-            <marker date="1447668400000" expanded="true" signature="7921:7965" placeholder="select id fr..cch_event_type..." />
+            <marker date="1447670074000" expanded="true" signature="7903:7947" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
@@ -329,10 +328,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56188923">
-          <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.34201956">
+          <caret line="76" column="71" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
           <folding>
-            <marker date="1447668400000" expanded="true" signature="7921:7965" placeholder="select id fr..cch_event_type..." />
+            <marker date="1447670074000" expanded="true" signature="7903:7947" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
