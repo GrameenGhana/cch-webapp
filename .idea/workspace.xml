@@ -83,9 +83,9 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6205421">
-              <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding>
-                <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+                <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
               </folding>
             </state>
           </provider>
@@ -382,7 +382,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+            <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
@@ -432,7 +432,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
           <folding>
-            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+            <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
@@ -530,9 +530,9 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6205421">
-          <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding>
-            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+            <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>

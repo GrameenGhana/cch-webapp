@@ -72,7 +72,7 @@ class TrackerController extends BaseController {
                     $log->module = $l->module;
 
                     $jsondata = json_decode($l->data);
-                    if(strpos($jsondata->target_number,'android.widget') !== false){
+                    if(strpos($l->data,'android.widget') !== false){
                         $processeddata = '{"target_category":"'.$jsondata->category.'","imei":"'.$jsondata->imei.'","battery":"'.$jsondata->battery.'","device":"'.$jsondata->device.'","due_date":"'.$jsondata->due_date.'","last_updated":"'.$jsondata->last_updated.'","ver":"'.$jsondata->ver.'","achieved_number":'.$jsondata->achieved_number.
                             ',"start_date":"'.$jsondata->start_date.'","target_type":"'.$jsondata->target_type.'","group_members":"'.$jsondata->group_members.'","target_id":'.$jsondata->target_id.',"id":'.$jsondata->target_id.'} ';
                         $log->data = $processeddata;
