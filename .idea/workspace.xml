@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f7ad430-1fc6-42cd-b392-935b25c21974" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/TrackerController.php" afterPath="$PROJECT_DIR$/app/controllers/TrackerController.php" />
     </list>
     <ignored path="cch-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6008902">
+            <state vertical-scroll-proportion="-7.9411764">
               <caret line="289" column="50" selection-start-line="289" selection-start-column="50" selection-end-line="289" selection-end-column="50" />
               <folding>
                 <marker date="1447760008000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
@@ -75,6 +74,18 @@
                 <marker date="1447760008000" expanded="true" signature="16083:16233" placeholder="UPDATE cch.c..." />
                 <marker date="1447760008000" expanded="true" signature="16410:16541" placeholder="UPDATE cch.c..." />
                 <marker date="1447760008000" expanded="true" signature="16602:16682" placeholder="UPDATE cch.c..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackerController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6205421">
+              <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+              <folding>
+                <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
               </folding>
             </state>
           </provider>
@@ -118,8 +129,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/controllers/TrackerController.php" />
         <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/TrackerController.php" />
       </list>
     </option>
   </component>
@@ -370,6 +381,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -417,6 +431,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+          <folding>
+            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -451,13 +468,6 @@
             <marker date="1446810901000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
             <marker date="1446810901000" expanded="true" signature="23034:23281" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6628665">
-          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -496,7 +506,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6008902">
+        <state vertical-scroll-proportion="-7.9411764">
           <caret line="289" column="50" selection-start-line="289" selection-start-column="50" selection-end-line="289" selection-end-column="50" />
           <folding>
             <marker date="1447760008000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
@@ -513,6 +523,16 @@
             <marker date="1447760008000" expanded="true" signature="16083:16233" placeholder="UPDATE cch.c..." />
             <marker date="1447760008000" expanded="true" signature="16410:16541" placeholder="UPDATE cch.c..." />
             <marker date="1447760008000" expanded="true" signature="16602:16682" placeholder="UPDATE cch.c..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6205421">
+          <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+          <folding>
+            <marker date="1447760436000" expanded="true" signature="7918:7962" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
