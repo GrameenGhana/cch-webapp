@@ -241,7 +241,8 @@ class UserController extends BaseController {
             $user->modified_by = Auth::user()->id;
             $user->save();
 
-            if (strlen($user->device_id) > 0) {
+            //if (strlen($user->device_id) > 0) {
+            if ($user->device_id != 0) {
                 $d = Device::find($user->device_id);
                 $d->user_id = $user->id;
                 $d->save();

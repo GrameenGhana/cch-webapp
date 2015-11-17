@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f7ad430-1fc6-42cd-b392-935b25c21974" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/TrackerController.php" afterPath="$PROJECT_DIR$/app/controllers/TrackerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" />
     </list>
     <ignored path="cch-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,35 +54,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9411764">
-              <caret line="289" column="50" selection-start-line="289" selection-start-column="50" selection-end-line="289" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.48961425">
+              <caret line="244" column="35" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
               <folding>
-                <marker date="1447760008000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
-                <marker date="1447760008000" expanded="true" signature="4394:4469" placeholder="select facil..cch_facility_user..." />
-                <marker date="1447760008000" expanded="true" signature="4757:4801" placeholder="select u.* f..cch_users..." />
-                <marker date="1447760008000" expanded="true" signature="5803:6032" placeholder="select u.* f..cch_users..." />
-                <marker date="1447760008000" expanded="true" signature="5956:6031" placeholder="select facil..cch_facility_user..." />
-                <marker date="1447760008000" expanded="true" signature="11099:11249" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="11436:11516" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="11632:11708" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="11754:11820" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="14913:15000" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="15062:15128" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="16083:16233" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="16410:16541" placeholder="UPDATE cch.c..." />
-                <marker date="1447760008000" expanded="true" signature="16602:16682" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
+                <marker date="1447771830000" expanded="true" signature="4394:4469" placeholder="select facil..cch_facility_user..." />
+                <marker date="1447771830000" expanded="true" signature="4757:4801" placeholder="select u.* f..cch_users..." />
+                <marker date="1447771830000" expanded="true" signature="5803:6032" placeholder="select u.* f..cch_users..." />
+                <marker date="1447771830000" expanded="true" signature="5956:6031" placeholder="select facil..cch_facility_user..." />
+                <marker date="1447771830000" expanded="true" signature="11142:11292" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="11479:11559" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="11675:11751" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="11797:11863" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="14956:15043" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="15105:15171" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="16126:16276" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="16453:16584" placeholder="UPDATE cch.c..." />
+                <marker date="1447771830000" expanded="true" signature="16645:16725" placeholder="UPDATE cch.c..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrackerController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserStatusChange.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/UserStatusChange.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6205421">
+            <state vertical-scroll-proportion="-18.125">
               <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding>
                 <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
@@ -94,7 +104,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.875">
+            <state vertical-scroll-proportion="78.75">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1445346059000" expanded="true" signature="7277:7478" placeholder="..." />
@@ -129,8 +139,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/controllers/TrackerController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
       </list>
     </option>
   </component>
@@ -308,7 +318,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -471,16 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1445346059000" expanded="true" signature="7277:7478" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.8235295">
@@ -504,35 +506,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9411764">
-          <caret line="289" column="50" selection-start-line="289" selection-start-column="50" selection-end-line="289" selection-end-column="50" />
+        <state vertical-scroll-proportion="-18.125">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding>
-            <marker date="1447760008000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
-            <marker date="1447760008000" expanded="true" signature="4394:4469" placeholder="select facil..cch_facility_user..." />
-            <marker date="1447760008000" expanded="true" signature="4757:4801" placeholder="select u.* f..cch_users..." />
-            <marker date="1447760008000" expanded="true" signature="5803:6032" placeholder="select u.* f..cch_users..." />
-            <marker date="1447760008000" expanded="true" signature="5956:6031" placeholder="select facil..cch_facility_user..." />
-            <marker date="1447760008000" expanded="true" signature="11099:11249" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="11436:11516" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="11632:11708" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="11754:11820" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="14913:15000" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="15062:15128" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="16083:16233" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="16410:16541" placeholder="UPDATE cch.c..." />
-            <marker date="1447760008000" expanded="true" signature="16602:16682" placeholder="UPDATE cch.c..." />
+            <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/TrackerController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/UserStatusChange.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6205421">
-          <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="78.75">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447760562000" expanded="true" signature="7902:7946" placeholder="select id fr..cch_event_type..." />
+            <marker date="1445346059000" expanded="true" signature="7277:7478" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48961425">
+          <caret line="244" column="35" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
+          <folding>
+            <marker date="1447771830000" expanded="true" signature="4237:4470" placeholder="select u.* f..cch_users..." />
+            <marker date="1447771830000" expanded="true" signature="4394:4469" placeholder="select facil..cch_facility_user..." />
+            <marker date="1447771830000" expanded="true" signature="4757:4801" placeholder="select u.* f..cch_users..." />
+            <marker date="1447771830000" expanded="true" signature="5803:6032" placeholder="select u.* f..cch_users..." />
+            <marker date="1447771830000" expanded="true" signature="5956:6031" placeholder="select facil..cch_facility_user..." />
+            <marker date="1447771830000" expanded="true" signature="11142:11292" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="11479:11559" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="11675:11751" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="11797:11863" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="14956:15043" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="15105:15171" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="16126:16276" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="16453:16584" placeholder="UPDATE cch.c..." />
+            <marker date="1447771830000" expanded="true" signature="16645:16725" placeholder="UPDATE cch.c..." />
           </folding>
         </state>
       </provider>
