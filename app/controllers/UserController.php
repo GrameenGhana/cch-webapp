@@ -287,6 +287,9 @@ class UserController extends BaseController {
             $url = 'http://localhost/cch/oppia/api/v1/register/';
             $response = $this->curl_json_post($url, $postdata);
 
+            Log::info("Response -> " . $response);
+
+
             Session::flash('message', "{$user->getName()} created successfully ");
             return Redirect::to('/users');
         }
