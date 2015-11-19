@@ -28,7 +28,8 @@ class Facility extends Eloquent {
 
         foreach ($this->users as $l => $u) {
 	
-            if ((!in_array($u->id, $seen)) && $u->isNurse()) {
+           // if ((!in_array($u->id, $seen)) && $u->isNurse()) {
+            if ((!in_array($u->id, $seen))) {
 
                 $u->myfac = $this->name;
                 $u->calendar = $u->events(true);

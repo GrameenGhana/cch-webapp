@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f7ad430-1fc6-42cd-b392-935b25c21974" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/InChargeController.php" afterPath="$PROJECT_DIR$/app/controllers/InChargeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Facility.php" afterPath="$PROJECT_DIR$/app/models/Facility.php" />
     </list>
     <ignored path="cch-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-74.98039">
-              <caret line="620" column="73" selection-start-line="620" selection-start-column="21" selection-end-line="620" selection-end-column="73" />
+            <state vertical-scroll-proportion="-4.392157">
+              <caret line="388" column="25" selection-start-line="388" selection-start-column="20" selection-end-line="388" selection-end-column="25" />
               <folding>
                 <marker date="1446810901000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
                 <marker date="1446810901000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InChargeController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InChargeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38516405">
+            <state vertical-scroll-proportion="-30.625">
               <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
               <folding>
                 <marker date="1447946136000" expanded="true" signature="5144:5147" placeholder="SELECT cu.* ..cch_users..." />
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Facility.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Facility.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3529413">
-              <caret line="35" column="44" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.13353115">
+              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -170,6 +170,7 @@
         <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/InChargeController.php" />
+        <option value="$PROJECT_DIR$/app/models/Facility.php" />
       </list>
     </option>
   </component>
@@ -937,10 +938,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.625">
+          <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
+          <folding>
+            <marker date="1447946136000" expanded="true" signature="5144:5147" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1447946136000" expanded="true" signature="7178:7280" placeholder="select * fro..districts..." />
+            <marker date="1447946136000" expanded="true" signature="7221:7278" placeholder="select distr..cch_facilities..." />
+            <marker date="1447946136000" expanded="true" signature="8927:9113" placeholder="Select t.* f..targetsetting..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-74.98039">
-          <caret line="620" column="73" selection-start-line="620" selection-start-column="21" selection-end-line="620" selection-end-column="73" />
+        <state vertical-scroll-proportion="-4.392157">
+          <caret line="388" column="25" selection-start-line="388" selection-start-column="20" selection-end-line="388" selection-end-column="25" />
           <folding>
             <marker date="1446810901000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
             <marker date="1446810901000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
@@ -956,22 +970,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3529413">
-          <caret line="35" column="44" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.13353115">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38516405">
-          <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
-          <folding>
-            <marker date="1447946136000" expanded="true" signature="5144:5147" placeholder="SELECT cu.* ..cch_users..." />
-            <marker date="1447946136000" expanded="true" signature="7178:7280" placeholder="select * fro..districts..." />
-            <marker date="1447946136000" expanded="true" signature="7221:7278" placeholder="select distr..cch_facilities..." />
-            <marker date="1447946136000" expanded="true" signature="8927:9113" placeholder="Select t.* f..targetsetting..." />
-          </folding>
         </state>
       </provider>
     </entry>
