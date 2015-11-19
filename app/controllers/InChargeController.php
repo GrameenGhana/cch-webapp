@@ -95,9 +95,9 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
                         $u->myfac = $v->name;
 
-                        $u->calendar = $this->getUserEvents($u->username);
+                        $u->calendar = $this->getUserEvents($u->id);
                         $u->courses = $u->courses();
-                        $u->targets = $this->getUserTargets($u->username);
+                        $u->targets = $this->getUserTargets($u->id);
                         array_push($nurses, $u->toArray());
                         array_push($seen, $u->id);
                     }
