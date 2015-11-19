@@ -127,7 +127,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
     }
 
     protected function getUserEvents($username){
-        $eventsdata = DB::table('cch_events')
+        $eventsdata = DB::table('user_events')
             ->where('username','=',$username)
             ->get();
 
@@ -156,7 +156,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
     }
 
     protected function getUserTargets($username){
-        $targetsdata = DB::table('cch_targets')
+        $targetsdata = DB::table('user_targets')
             ->where('username','=',$username)
             ->get();
 
