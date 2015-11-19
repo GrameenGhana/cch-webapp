@@ -131,6 +131,8 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
             ->where('username','=',$username)
             ->get();
 
+        Log::info("Count of Events" . count($eventsdata));
+
         $events = array();
 
         foreach($eventsdata as $e => $event) {
@@ -170,13 +172,13 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
         foreach($targetsdata as $t => $target) {
 
-            $s = md5($target->category . $target->target_id);
+            $s = md5($target->category . $target->targetid);
 
             $targets[$s] = array(
-                'id' => $target->target_id, 'category' => $target->category,
+                'id' => $target->targetid, 'category' => $target->category,
                 'type' => $target->type,
                 'target' => $target->target,
-                'achieved' => $target->achieved_number,
+                'achieved' => $target->achieved,
                 'justification' => ($target->justification),
                 'start' => $target->start,
                 'end' => $target->end);
