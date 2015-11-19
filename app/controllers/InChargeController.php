@@ -98,7 +98,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                         $u->calendar = $this->getUserEvents($u->username);
                         $u->courses = $u->courses();
                         $u->targets = $this->getUserTargets($u->username);
-                        array_push($nurses, $u);
+                        array_push($nurses, $u->toArray());
                         array_push($seen, $u->id);
                     }
                 }
@@ -131,6 +131,8 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
             ->where('username','=',$username)
             ->get();
 
+        $events = array();
+
         foreach($eventsdata as $e => $event) {
 
             $location = (isset($event->location)) ? $event->location : 'unknown location.';
@@ -140,7 +142,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
             $s = md5( $event->eventid);
 
-            $events = array('title' => addslashes(trim(@$event->eventtype . ' at ' . $location)),
+            $events[$s] = array('title' => addslashes(trim(@$event->eventtype . ' at ' . $location)),
                 'location' => addslashes($location),
                 'type' => addslashes(@$event->eventtype),
                 'start' => $event->start,
@@ -150,15 +152,19 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                 'comments' => $comments,
                 'status' => $status);
 
+
         }
+
+
 
         return $events;
     }
 
     protected function getUserTargets($username){
-        $targetsdata = DB::table('user_targets')
-            ->where('username','=',$username)
-            ->get();
+        $targetsdata = (array) DB::select("SELECT * FROM user_targets  WHERE username = ". $username);
+
+
+        $targets= array();
 
         foreach($targetsdata as $t => $target) {
 
@@ -172,6 +178,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                 'justification' => ($target->justification),
                 'start' => $target->start,
                 'end' => $target->end);
+
 
         }
 

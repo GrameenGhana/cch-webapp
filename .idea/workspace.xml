@@ -28,8 +28,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+            <state vertical-scroll-proportion="-74.98039">
+              <caret line="620" column="73" selection-start-line="620" selection-start-column="21" selection-end-line="620" selection-end-column="73" />
               <folding>
                 <marker date="1446810901000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
                 <marker date="1446810901000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
@@ -84,12 +84,15 @@
       <file leaf-file-name="InChargeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38516405">
-              <caret line="158" column="38" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="38" />
+            <state vertical-scroll-proportion="-1.1126962">
+              <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
               <folding>
-                <marker date="1447934975000" expanded="true" signature="7063:7165" placeholder="select * fro..districts..." />
-                <marker date="1447934975000" expanded="true" signature="7106:7163" placeholder="select distr..cch_facilities..." />
-                <marker date="1447934975000" expanded="true" signature="8812:8998" placeholder="Select t.* f..targetsetting..." />
+                <marker date="1447937638000" expanded="true" signature="5026:5070" placeholder="SELECT * FRO..user_targets..." />
+                <marker date="1447937638000" expanded="true" signature="5026:5071" placeholder="SELECT * FRO..user_targets..." />
+                <marker date="1447937638000" expanded="true" signature="5026:5086" placeholder="SELECT cu.* ..cch_users..." />
+                <marker date="1447937638000" expanded="true" signature="7126:7228" placeholder="select * fro..districts..." />
+                <marker date="1447937638000" expanded="true" signature="7169:7226" placeholder="select distr..cch_facilities..." />
+                <marker date="1447937638000" expanded="true" signature="8875:9061" placeholder="Select t.* f..targetsetting..." />
               </folding>
             </state>
           </provider>
@@ -98,8 +101,8 @@
       <file leaf-file-name="Facility.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2941175">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="25" />
+            <state vertical-scroll-proportion="-2.3529413">
+              <caret line="35" column="44" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -425,9 +428,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
           <folding>
-            <marker date="1447934975000" expanded="true" signature="7063:7165" placeholder="select * fro..districts..." />
-            <marker date="1447934975000" expanded="true" signature="7106:7163" placeholder="select distr..cch_facilities..." />
-            <marker date="1447934975000" expanded="true" signature="8812:8998" placeholder="Select t.* f..targetsetting..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5070" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5071" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5086" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1447937638000" expanded="true" signature="7126:7228" placeholder="select * fro..districts..." />
+            <marker date="1447937638000" expanded="true" signature="7169:7226" placeholder="select distr..cch_facilities..." />
+            <marker date="1447937638000" expanded="true" signature="8875:9061" placeholder="Select t.* f..targetsetting..." />
           </folding>
         </state>
       </provider>
@@ -538,9 +544,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="49" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="49" />
           <folding>
-            <marker date="1447934975000" expanded="true" signature="7063:7165" placeholder="select * fro..districts..." />
-            <marker date="1447934975000" expanded="true" signature="7106:7163" placeholder="select distr..cch_facilities..." />
-            <marker date="1447934975000" expanded="true" signature="8812:8998" placeholder="Select t.* f..targetsetting..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5070" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5071" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5086" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1447937638000" expanded="true" signature="7126:7228" placeholder="select * fro..districts..." />
+            <marker date="1447937638000" expanded="true" signature="7169:7226" placeholder="select distr..cch_facilities..." />
+            <marker date="1447937638000" expanded="true" signature="8875:9061" placeholder="Select t.* f..targetsetting..." />
           </folding>
         </state>
       </provider>
@@ -651,9 +660,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="46" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="46" />
           <folding>
-            <marker date="1447934975000" expanded="true" signature="7063:7165" placeholder="select * fro..districts..." />
-            <marker date="1447934975000" expanded="true" signature="7106:7163" placeholder="select distr..cch_facilities..." />
-            <marker date="1447934975000" expanded="true" signature="8812:8998" placeholder="Select t.* f..targetsetting..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5070" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5071" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5086" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1447937638000" expanded="true" signature="7126:7228" placeholder="select * fro..districts..." />
+            <marker date="1447937638000" expanded="true" signature="7169:7226" placeholder="select distr..cch_facilities..." />
+            <marker date="1447937638000" expanded="true" signature="8875:9061" placeholder="Select t.* f..targetsetting..." />
           </folding>
         </state>
       </provider>
@@ -900,23 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
-          <folding>
-            <marker date="1446810901000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1446810901000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1446810901000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1446810901000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1446810901000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1446810901000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1446810901000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1446810901000" expanded="true" signature="23034:23281" placeholder="SELECT cu.* ..cch_users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -950,22 +945,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-74.98039">
+          <caret line="620" column="73" selection-start-line="620" selection-start-column="21" selection-end-line="620" selection-end-column="73" />
+          <folding>
+            <marker date="1446810901000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1446810901000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1446810901000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1446810901000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1446810901000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1446810901000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1446810901000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1446810901000" expanded="true" signature="23034:23281" placeholder="SELECT cu.* ..cch_users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2941175">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="25" />
+        <state vertical-scroll-proportion="-2.3529413">
+          <caret line="35" column="44" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38516405">
-          <caret line="158" column="38" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="38" />
+        <state vertical-scroll-proportion="-1.1126962">
+          <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
           <folding>
-            <marker date="1447934975000" expanded="true" signature="7063:7165" placeholder="select * fro..districts..." />
-            <marker date="1447934975000" expanded="true" signature="7106:7163" placeholder="select distr..cch_facilities..." />
-            <marker date="1447934975000" expanded="true" signature="8812:8998" placeholder="Select t.* f..targetsetting..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5070" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5071" placeholder="SELECT * FRO..user_targets..." />
+            <marker date="1447937638000" expanded="true" signature="5026:5086" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1447937638000" expanded="true" signature="7126:7228" placeholder="select * fro..districts..." />
+            <marker date="1447937638000" expanded="true" signature="7169:7226" placeholder="select distr..cch_facilities..." />
+            <marker date="1447937638000" expanded="true" signature="8875:9061" placeholder="Select t.* f..targetsetting..." />
           </folding>
         </state>
       </provider>
