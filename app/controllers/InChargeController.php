@@ -161,7 +161,9 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
     }
 
     protected function getUserTargets($username){
-        $targetsdata = (array) DB::select("SELECT * FROM user_targets  WHERE username = ". $username);
+        $targetsdata = DB::table('user_targets')
+            ->where('username','=',$username)
+            ->get();
 
 
         $targets= array();
