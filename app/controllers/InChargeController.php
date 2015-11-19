@@ -89,7 +89,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
                 $seen = array();
 
-                foreach ($sup->facilities->users as $l => $u) {
+                foreach ($v->users as $l => $u) {
 
                     if ((!in_array($u->id, $seen)) && $u->isNurse()) {
 
