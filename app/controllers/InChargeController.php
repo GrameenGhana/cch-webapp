@@ -93,7 +93,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
                     if ((!in_array($u->id, $seen)) && $u->isNurse()) {
 
-                        $u->myfac = $this->name;
+                        $u->myfac = $v->name;
 
                         $u->calendar = $this->getUserEvents($u->username);
                         $u->courses = $u->courses();
