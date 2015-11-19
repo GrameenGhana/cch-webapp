@@ -72,6 +72,113 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
     }
 
 
+    public function getSupData($username){
+        //$username = Input::get('username');
+
+        $sup = User::whereRaw('username=? and role like "%Supervisor%"',array($username))->first();
+
+        if (is_null($sup)) {
+            $errors = array('Supervisor not found');
+            return Response::json(array('error' => true, 'messages'=>$errors), 200);
+        } else {
+
+            $facs = array();
+            foreach($sup->facilities as $k=>$v)
+            {
+                $nurses = array();
+
+                $seen = array();
+
+                foreach ($this->users as $l => $u) {
+
+                    if ((!in_array($u->id, $seen)) && $u->isNurse()) {
+
+                        $u->myfac = $this->name;
+
+                        $u->calendar = $this->getUserEvents($u->username);
+                        $u->courses = $u->courses();
+                        $u->targets = $this->getUserTargets($u->username);
+                        array_push($nurses, $u);
+                        array_push($seen, $u->id);
+                    }
+                }
+
+
+                array_push($facs, array('name'=>$v->name,
+                    'id'=>$v->id,
+                    'district'=>$v->facDistrict->name,
+                    'did'=>$v->facDistrict->id,
+
+                    'region'=>$v->facDistrict->region,
+
+                    'nurses'=>$nurses,
+                ));
+            }
+
+            $s = array('name'=>$sup->getName(),
+                'username'=>$sup->username,
+                'role'=>$sup->role,
+                'facilities'=> $facs);
+
+
+            return Response::json(array('error' => false, 'data' => array('supervisor'=>$s)), 200);
+        }
+
+    }
+
+    protected function getUserEvents($username){
+        $eventsdata = DB::table('cch_events')
+            ->where('username','=',$username)
+            ->get();
+
+        foreach($eventsdata as $e => $event) {
+
+            $location = (isset($event->location)) ? $event->location : 'unknown location.';
+            $justification = (isset($event->justification)) ? $event->justification : 'no justification.';
+            $comments = (isset($event->comments)) ? $event->comments : 'no comments.';
+            $status = (isset($event->status)) ? $event->status : 'unknown';
+
+            $s = md5( $event->eventid);
+
+            $events = array('title' => addslashes(trim(@$event->eventtype . ' at ' . $location)),
+                'location' => addslashes($location),
+                'type' => addslashes(@$event->eventtype),
+                'start' => $event->start,
+                'end' => $event->end,
+                'eventid' => $event->eventid,
+                'justification' => $justification,
+                'comments' => $comments,
+                'status' => $status);
+
+        }
+
+        return $events;
+    }
+
+    protected function getUserTargets($username){
+        $targetsdata = DB::table('cch_targets')
+            ->where('username','=',$username)
+            ->get();
+
+        foreach($targetsdata as $t => $target) {
+
+            $s = md5($target->category . $target->target_id);
+
+            $targets[$s] = array(
+                'id' => $target->target_id, 'category' => $target->category,
+                'type' => $target->type,
+                'target' => $target->target,
+                'achieved' => $target->achieved_number,
+                'justification' => ($target->justification),
+                'start' => $target->start,
+                'end' => $target->end);
+
+        }
+
+        return $targets;
+    }
+
+
 public function showdetail($id) {
 //        $sup = User::whereRaw('id=? and role="Supervisor"',array($id))->first();
         $sup = User::whereRaw('username=?', array($id))->first();

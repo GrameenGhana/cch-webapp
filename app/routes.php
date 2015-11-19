@@ -60,7 +60,7 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::resource('tracker','TrackerController'); 
     Route::resource('users','UserController');
     Route::resource('incharge','InChargeController');
-
+    Route::get('getSupData/{id}', 'InChargeController@getSupData');
     Route::get('details/{id}', 'InChargeController@showdetail');
     Route::get('achievements/{id}','InChargeController@achievements');
 });
