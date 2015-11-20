@@ -224,7 +224,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
 
             $courses = array(
-                'topics' => $this->getUserCoursesTopics($course->title),
+              //  'topics' => $this->getUserCoursesTopics($course->title),
                 'attempts' => $course->attempts,
                 'score' => $course->score,
                 'time_taken' => $course->time_taken,
