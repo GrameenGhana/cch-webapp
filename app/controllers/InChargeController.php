@@ -91,12 +91,12 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
                 foreach ($v->users as $l => $u) {
 
-                    if ((!in_array($u->id, $seen)) && $u->isNurse()) {
+                    if ((!in_array($u->id, $seen)) ) {
 
                         $u->myfac = $v->name;
 
                         $u->calendar = $this->getUserEvents($u->id);
-                        $u->courses = $u->courses();
+                        $u->courses = $this->getUserCourses($u->id);
                         $u->targets = $this->getUserTargets($u->id);
                         array_push($nurses, $u->toArray());
                         array_push($seen, $u->id);
@@ -187,6 +187,54 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
         }
 
         return $targets;
+    }
+
+    protected function getUserCoursesTopics($course){
+        $topicsdata = DB::table('user_courses_topics')
+            ->where('course','=',$course)
+            ->get();
+
+
+        $topics= array();
+
+        foreach($topicsdata as $t => $topic) {
+
+
+            $topics[$topic->title] = array(
+                'last_accessed' => $topic->last_accessed,
+                'time_taken' => $topic->time_taken,
+                'percentcomplete' => $topic->percentcomplete,
+                'activities' => $topic->activities);
+
+
+        }
+
+        return $topics;
+    }
+
+    protected function getUserCourses($username){
+        $coursesdata = DB::table('user_courses')
+            ->where('username','=',$username)
+            ->get();
+
+
+        $courses= array();
+
+        foreach($coursesdata as $c => $course) {
+
+
+            $courses = array(
+                'topics' => $this->getUserCoursesTopics($course->title),
+                'attempts' => $course->attempts,
+                'score' => $course->score,
+                'time_taken' => $course->time_taken,
+                'last_accessed' => $course->last_accessed,
+                'percentcomplete' => $course->percentcomplete);
+
+
+        }
+
+        return $courses;
     }
 
 
