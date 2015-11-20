@@ -223,7 +223,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
         foreach($coursesdata as $c => $course) {
 
 
-            $courses = array(
+            $courses[$course->title] = array(
               //  'topics' => $this->getUserCoursesTopics($course->title),
                 'attempts' => $course->attempts,
                 'score' => $course->score,
