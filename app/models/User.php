@@ -498,6 +498,7 @@ public  static function getUserDistricts($id) {
 
     public function createEvent($data, $start, $end) {
         $data = preg_replace("/\n/", "", $data);
+        Log::info("Data ->" . $data);
         $events = json_decode($data);
 //echo "<br />".$data."<br />";
 
