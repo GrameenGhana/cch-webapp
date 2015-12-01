@@ -520,8 +520,10 @@ public  static function getUserDistricts($id) {
                 $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
                 $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
                 $status = 'unknown' ;
-                if(isset($status)){
+                if(isset($events->status)){
                     $status = $events->status;
+
+                    Log::info("Status -> " .$status);
                 }
 
 

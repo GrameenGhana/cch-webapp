@@ -28,17 +28,17 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27817404">
-              <caret line="523" column="46" selection-start-line="523" selection-start-column="46" selection-end-line="523" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.34236804">
+              <caret line="526" column="1" selection-start-line="526" selection-start-column="1" selection-end-line="526" selection-end-column="1" />
               <folding>
-                <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-                <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-                <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-                <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-                <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-                <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-                <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-                <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+                <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+                <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+                <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+                <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+                <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+                <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+                <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+                <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
               </folding>
             </state>
           </provider>
@@ -434,14 +434,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -548,14 +548,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="302" column="50" selection-start-line="302" selection-start-column="42" selection-end-line="302" selection-end-column="50" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -662,14 +662,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -776,14 +776,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="532" column="39" selection-start-line="532" selection-start-column="39" selection-end-line="532" selection-end-column="39" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -818,14 +818,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="532" column="39" selection-start-line="532" selection-start-column="39" selection-end-line="532" selection-end-column="39" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -870,14 +870,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="532" column="39" selection-start-line="532" selection-start-column="39" selection-end-line="532" selection-end-column="39" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -907,14 +907,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
@@ -1018,17 +1018,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27817404">
-          <caret line="523" column="46" selection-start-line="523" selection-start-column="46" selection-end-line="523" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.34236804">
+          <caret line="526" column="1" selection-start-line="526" selection-start-column="1" selection-end-line="526" selection-end-column="1" />
           <folding>
-            <marker date="1448963157000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
-            <marker date="1448963157000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
-            <marker date="1448963157000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
-            <marker date="1448963157000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
-            <marker date="1448963157000" expanded="true" signature="23091:23338" placeholder="SELECT cu.* ..cch_users..." />
+            <marker date="1448963333000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
+            <marker date="1448963333000" expanded="true" signature="2123:2263" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2384:2530" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="2837:2979" placeholder="select disti..cch_facilities..." />
+            <marker date="1448963333000" expanded="true" signature="3425:3674" placeholder="SELECT cu.* ..." />
+            <marker date="1448963333000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
+            <marker date="1448963333000" expanded="true" signature="23154:23401" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
         </state>
       </provider>
