@@ -519,7 +519,7 @@ public  static function getUserDistricts($id) {
                 $location = (isset($events->location)) ? $events->location : 'unknown location.';
                 $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
                 $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
-                $status = (is_null($events->status)) ? 'unknown' : $events->status;
+                $status = (!is_null($events->status)) ? $events->status : 'unknown' ;
 
 
                 $event = array('title' => addslashes(trim(@$events->eventtype . ' at ' . $location)),
