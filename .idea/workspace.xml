@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f7ad430-1fc6-42cd-b392-935b25c21974" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Facility.php" afterPath="$PROJECT_DIR$/app/models/Facility.php" />
     </list>
     <ignored path="cch-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24332345">
-              <caret line="502" column="19" selection-start-line="502" selection-start-column="19" selection-end-line="502" selection-end-column="19" />
+            <state vertical-scroll-proportion="-14.686275">
+              <caret line="498" column="31" selection-start-line="498" selection-start-column="20" selection-end-line="498" selection-end-column="31" />
               <folding>
                 <marker date="1448965571000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
                 <marker date="1448965571000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Facility.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Facility.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.51355207">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/app/controllers/TrackerController.php" />
         <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/models/Facility.php" />
         <option value="$PROJECT_DIR$/app/controllers/InChargeController.php" />
         <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/models/Facility.php" />
       </list>
     </option>
   </component>
@@ -985,14 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/InChargeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1018,8 +1010,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24332345">
-          <caret line="502" column="19" selection-start-line="502" selection-start-column="19" selection-end-line="502" selection-end-column="19" />
+        <state vertical-scroll-proportion="-14.686275">
+          <caret line="498" column="31" selection-start-line="498" selection-start-column="20" selection-end-line="498" selection-end-column="31" />
           <folding>
             <marker date="1448965571000" expanded="true" signature="1582:1656" placeholder="select * fro..cch_facility_user..." />
             <marker date="1448965571000" expanded="true" signature="1846:1920" placeholder="select * fro..cch_facility_user..." />
@@ -1030,6 +1022,14 @@
             <marker date="1448965571000" expanded="true" signature="5343:6108" placeholder="SELECT t.use..oppia_tracker..." />
             <marker date="1448965571000" expanded="true" signature="23202:23449" placeholder="SELECT cu.* ..cch_users..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Facility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51355207">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
