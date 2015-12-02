@@ -527,8 +527,8 @@ public  static function getUserDistricts($id) {
 
                     Log::info("Status -> " .$status);
                 }
-                }catch(Exception ex){
-                    
+                }catch(Exception $ex){
+
                 }
                 
 
