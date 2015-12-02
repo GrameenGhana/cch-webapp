@@ -522,11 +522,11 @@ public  static function getUserDistricts($id) {
                 $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
                 $status = 'unknown' ;
                 try{
-                    if(strpos($data,'status') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
+                    if(strpos($data,'"status"') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
                     $status = $events->status;
 
                     Log::info("Status -> " .$status);
-                }
+                    }
                 }catch(Exception $ex){
 
                 }
