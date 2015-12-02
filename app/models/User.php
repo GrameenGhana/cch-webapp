@@ -521,6 +521,13 @@ public  static function getUserDistricts($id) {
                 $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
                 $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
                 $status = 'unknown' ;
+
+                if($eventid == "417"){
+                     Log::info("Data -> " .$data);
+
+                    Log::info("Status -> " .$events->status);
+                }
+
                 try{
                     if(strpos($data,'"status"') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
                     $status = $events->status;
