@@ -57,7 +57,7 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                                  'district'=>$v->facDistrict->name,
                                  'did'=>$v->facDistrict->id,
                                 
- 'region'=>$v->facDistrict->region,
+                                 'region'=>$v->facDistrict->region,
 
                                 'nurses'=>$nurses,
                                   ));
