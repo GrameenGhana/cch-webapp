@@ -512,7 +512,7 @@ public  static function getUserDistricts($id) {
             echo $exc->getTraceAsString();
         }
 
-        if(isset($events->status){
+        if(isset($events->status)){
 
         if ($deleted == 0) {
             if (strtolower(@$events->eventtype) == 'personal' || strtolower($category) == 'personal') {
