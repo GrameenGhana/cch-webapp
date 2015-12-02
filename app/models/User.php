@@ -521,11 +521,16 @@ public  static function getUserDistricts($id) {
                 $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
                 $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
                 $status = 'unknown' ;
-                if(strpos($data,'status') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
+                try{
+                    if(strpos($data,'status') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
                     $status = $events->status;
 
                     Log::info("Status -> " .$status);
                 }
+                }catch(Exception ex){
+                    
+                }
+                
 
 
                 $event = array('title' => addslashes(trim(@$events->eventtype . ' at ' . $location)),
