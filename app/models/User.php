@@ -525,7 +525,6 @@ public  static function getUserDistricts($id) {
                 if($eventid == "417"){
                      Log::info("Data -> " .$data);
 
-                    Log::info("Status -> " .$events->status);
                 }
 
                 try{
