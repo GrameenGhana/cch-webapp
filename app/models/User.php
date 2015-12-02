@@ -505,12 +505,14 @@ public  static function getUserDistricts($id) {
         $eventid = (isset($events->eventid)) ? $events->eventid : '0';
 
         $category = (isset($events->category)) ? $events->category : '';
- $deleted=0;
+        $deleted=0;
         try {
             $deleted = @$events->deleted;
         } catch (Exception $exc) {
             echo $exc->getTraceAsString();
         }
+
+        if(isset($events->status){
 
         if ($deleted == 0) {
             if (strtolower(@$events->eventtype) == 'personal' || strtolower($category) == 'personal') {
@@ -528,7 +530,7 @@ public  static function getUserDistricts($id) {
                 }
 
                 try{
-                    if(strpos($data,'"status"') !== false || strpos($data,'complete') !== false || strpos($data,'incomplete') !== false){
+                    if(strpos($data,'status') !== false ){
                     $status = $events->status;
 
                     Log::info("Status -> " .$status);
@@ -551,6 +553,8 @@ public  static function getUserDistricts($id) {
                 return $event;
             }
         }
+
+     }
         return $eventid;
     }
 
