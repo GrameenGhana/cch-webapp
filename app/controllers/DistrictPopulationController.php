@@ -64,7 +64,7 @@ $districts = District::all();
         } else{
             $pops = DistrictPopulation::where('year','=',$currentyear)->get();
         }
-      return View::make('districtpopulations.index', array('pops' => $pops,'year' => $currentyear));
+      return View::make('targets.districtpopulations.index', array('pops' => $pops,'year' => $currentyear));
     }
 
     /**
@@ -73,7 +73,7 @@ $districts = District::all();
      * @return Response
      */
     public function create() {
-        return View::make('districtpopulations.create', array("districts" => $this->districts, "region" => $this->regions));   //
+        return View::make('targets.districtpopulations.create', array("districts" => $this->districts, "region" => $this->regions));   //
     }
 
     /**
@@ -87,7 +87,7 @@ $districts = District::all();
       
 
         if ($validator->fails()) {
-            return Redirect::to('/districtpopulations/create')
+            return Redirect::to('/targets/population/districts/create')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -108,7 +108,7 @@ $districts = District::all();
             $pop->modified_by = 1;
             $pop->save();
             Session::flash('message', "Population of {$pop->district->name} - {$pop->population} created successfully");
-            return Redirect::to('/districtpopulations');
+            return Redirect::to('/targets/population/districts');
         }
     }
  
@@ -186,7 +186,7 @@ $districts = District::all();
     public function edit($id) {
 //
         $pop = DistrictPopulation::find($id);
-        return View::make('districtpopulations.edit', array('pop'=>$pop,'districts'=>$this->districts, "region" => $this->regions));   //
+        return View::make('targets.districtpopulations.edit', array('pop'=>$pop,'districts'=>$this->districts, "region" => $this->regions));   //
     }
 
     /**
@@ -202,7 +202,7 @@ $districts = District::all();
       
 
         if ($validator->fails()) {
-            return Redirect::to('/districtpopulations/'.$id.'/edit')
+            return Redirect::to('/targets/population/districts/'.$id.'/edit')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -222,7 +222,7 @@ $districts = District::all();
             $pop->men_women_50_to_60_yrs = Input::get('men_women_50_to_60_yrs');
             $pop->save();
             Session::flash('message', "{$pop->district->name} : {$pop->population} edited successfully");
-            return Redirect::to('/districtpopulations');
+            return Redirect::to('/targets/population/districts');
         }
     }
 

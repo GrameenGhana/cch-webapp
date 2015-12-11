@@ -14,12 +14,24 @@ Route::get('/distusers', array('uses' => 'UserController@districtAdminList'));
 Route::get('/getUsersInDistricts', array('uses' => 'DeviceController@getDistrictUsers'));
 Route::get('/getDistricts', array('uses' => 'DistrictController@getDistricts'));
 
-Route::get('/getDistrictPopulationData', array('uses' => 'DistrictPopulationController@index'));
-Route::get('/getSubDistrictPopulationData', array('uses' => 'SubDistrictPopulationController@index'));
-Route::get('/getZonePopulationData', array('uses' => 'ZonePopulationController@index'));
+/**** Target setting routes ***/
+
+Route::resource('/targets/population/districts',                         'DistrictPopulationController');
+
+Route::get('/targets/population/subdistricts/bulkedit/{id}/{year}',      array('uses' => 'SubDistrictPopulationController@districtView'))->before('auth');
+Route::post('/targets/population/subdistricts/bulkedit',                 array('uses' => 'SubDistrictPopulationController@updateAll'));
+Route::resource('/targets/population/subdistricts',                      'SubDistrictPopulationController'); 
+
+Route::get('/getZonePopulationData',                                     array('uses' => 'ZonePopulationController@index'));
+Route::get('/targets/population/zones/bulkedit/{id}',                    array('uses' => 'ZonePopulationController@indexAll'))->before('auth');
+Route::get('/targets/population/zones/bulkedit/district/{id}/{year}',    array('uses' => 'ZonePopulationController@districtView'))->before('auth');
+Route::get('/targets/population/zones/bulkedit/subdistrict/{id}/{year}', array('uses' => 'ZonePopulationController@subDistrictView'))->before('auth');
+Route::post('/targets/population/zones/bulkedit',                        array('uses' => 'ZonePopulationController@updateAll'));
+Route::resource('targets/population/zones',                              'ZonePopulationController'); 
+
+/**** / Target setting routes ***/
 
 Route::get('/getFacilityZones', array('uses' => 'ZoneController@getByFacilityZones'));
-
 Route::get('/getDistrictTotalPopulationZones', array('uses' => 'DistrictPopulationController@getDistrictTotalPopulationZones'));
 Route::get('/getDistrictTotalPopulation', array('uses' => 'DistrictPopulationController@getDistrictTotalPopulation'));
 Route::get('/getSubDistrictTotalPopulation', array('uses' => 'DistrictPopulationController@getSubDistrictTotalPopulation'));
@@ -31,43 +43,16 @@ Route::get('/districtadmin/create', array('uses' => 'UserController@districtAdmi
 Route::resource('users','UserController');
 Route::resource('facilities','FacilityController'); 
 Route::resource('facilitytypes','FacilityTypeController'); 
+Route::resource('facilitytype','FacilityTypeController'); 
 Route::resource('devices','DeviceController'); 
 Route::resource('tracker','TrackerController'); 
 Route::resource('districts','DistrictController'); 
-//Route::get('/reports/{id}', array('uses' => 'ReportController@userReport'))->before('auth');
 Route::resource('subdistricts','SubDistrictController'); 
-Route::resource('reports','ReportController'); 
 Route::resource('zones','ZoneController'); 
-Route::resource('districtpopulations','DistrictPopulationController');
+Route::resource('reports','ReportController'); 
+//Route::get('/reports/{id}', array('uses' => 'ReportController@userReport'))->before('auth');
 
-//BULK  EDITS
-Route::get('/subdistrictpopulations/bulkedit/{id}/{year}', array('uses' => 'SubDistrictPopulationController@districtView'))->before('auth');
-Route::post('/subdistrictpopulations/bulkedit', array('uses' => 'SubDistrictPopulationController@updateAll'));
-
-Route::resource('subdistrictpopulations','SubDistrictPopulationController'); 
-Route::get('/zonepopulations/bulkedit/{id}', array('uses' => 'ZonePopulationController@indexAll'))->before('auth');
-Route::get('/zonepopulations/bulkedit/district/{id}/{year}', array('uses' => 'ZonePopulationController@districtView'))->before('auth');
-Route::get('/zonepopulations/bulkedit/subdistrict/{id}/{year}', array('uses' => 'ZonePopulationController@subDistrictView'))->before('auth');
-
-Route::post('/zonepopulations/bulkedit', array('uses' => 'ZonePopulationController@updateAll'));
-
-Route::resource('zonepopulations','ZonePopulationController'); 
-
-Route::resource('facilitytype','FacilityTypeController'); 
-
-Route::group(array('prefix' => 'api/v1'), function()
-{
-    Route::resource('tracker','TrackerController'); 
-    Route::resource('users','UserController');
-    Route::resource('incharge','InChargeController');
-    Route::get('getSupData/{id}', 'InChargeController@getSupData');
-    Route::get('details/{id}', 'InChargeController@showdetail');
-    Route::get('achievements/{id}','InChargeController@achievements');
-});
-Route::get('/courses',function(){
-    $courses=CourseDetails::details();
-    return $courses;
-    });
+Route::get('/courses',function(){ $courses=CourseDetails::details(); return $courses; });
 Route::pattern('id','[0-9]+');
 Route::get('/districts/people/{id}', array('uses' => 'DistrictController@showPeople'))->before('auth');
 Route::get('/', array('uses' => 'HomeController@showHome'))->before('auth');
@@ -86,20 +71,20 @@ Route::get('moduleusagebytype', array('uses' => 'DashboardController@moduleUsage
 Route::post('swplansbyprofile', array('uses' => 'DashboardController@swPlansByProfile'));
 Route::get('swplansbyprofile', array('uses' => 'DashboardController@swPlansByProfile'));
 
-Route::get('/zonepopulation/bulkedit/{id}', array('uses' => 'ZonePopulationController@indexAll'))->before('auth');
-Route::post('/zonepopulation/bulkedit', array('uses' => 'ZonePopulationController@updateAll'));
-
-
-
-
-Blade::extend(function($value) {
-    return preg_replace('/\{\?(.+)\?\}/', '<?php ${1} ?>', $value);
-});
-
-
 //Apis
+Route::group(array('prefix' => 'api/v1'), function()
+{
+    Route::resource('tracker','TrackerController'); 
+    Route::resource('users','UserController');
+    Route::resource('incharge','InChargeController');
+    Route::get('getSupData/{id}', 'InChargeController@getSupData');
+    Route::get('details/{id}', 'InChargeController@showdetail');
+    Route::get('achievements/{id}','InChargeController@achievements');
+});
 
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));
 Route::get('/getNurses', array('uses' => 'ApiController@getAllNurses'));
 Route::post('/pushFacilityTargets', array('uses' => 'ApiController@pushFacilityTargets'));
 Route::get('/getFacilityTargets', array('uses' => 'ApiController@getFacilityTargets'));
+
+Blade::extend(function($value) { return preg_replace('/\{\?(.+)\?\}/', '<?php ${1} ?>', $value); });

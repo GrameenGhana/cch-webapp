@@ -73,7 +73,7 @@ class SubDistrictPopulationController extends \BaseController {
             $pops = SubDistrictPopulation::whereRaw('year=? and  district_id  in (?) ', array($currentyear,$this->districtIds))->get();
         } else
             $pops = SubDistrictPopulation::where('year','=',$currentyear)->get();
-        return View::make('subdistrictpopulations.index', array('pops' => $pops,'year' => $currentyear));
+        return View::make('targets.subdistrictpopulations.index', array('pops' => $pops,'year' => $currentyear));
     }
 
     /**
@@ -82,7 +82,7 @@ class SubDistrictPopulationController extends \BaseController {
      * @return Response
      */
     public function create() {
-        return View::make('subdistrictpopulations.create', array("districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
+        return View::make('targets.subdistrictpopulations.create', array("districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
     }
 
     /**
@@ -96,7 +96,7 @@ class SubDistrictPopulationController extends \BaseController {
 
 
         if ($validator->fails()) {
-            return Redirect::to('/subdistrictpopulations/create')
+            return Redirect::to('/target/population/subdistricts/create')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -119,7 +119,7 @@ class SubDistrictPopulationController extends \BaseController {
             $pop->modified_by = 1;
             $pop->save();
             Session::flash('message', "{$pop->subdistrict->name } -  {$pop->population} created successfully");
-            return Redirect::to('/subdistrictpopulations');
+            return Redirect::to('/targets/population/subdistricts');
         }
     }
 
@@ -132,7 +132,7 @@ class SubDistrictPopulationController extends \BaseController {
     public function show($id) {
 //
         $pop = SubDistrictPopulation::find($id);
-        return View::make('subdistrictpopulations.edit', array("subdistricts" => $this->subdistricts));   //
+        return View::make('targets.subdistrictpopulations.edit', array("subdistricts" => $this->subdistricts));   //
     }
 
     /**
@@ -144,7 +144,7 @@ class SubDistrictPopulationController extends \BaseController {
     public function edit($id) {
 
         $pop = SubDistrictPopulation::find($id);
-        return View::make('subdistrictpopulations.edit', array('pop' => $pop, "districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
+        return View::make('targets.subdistrictpopulations.edit', array('pop' => $pop, "districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
     }
 
     /**
@@ -160,7 +160,7 @@ class SubDistrictPopulationController extends \BaseController {
 
 
         if ($validator->fails()) {
-            return Redirect::to('/subdistrictpopulations/' . $id . '/edit')
+            return Redirect::to('/targets/populations/subdistricts/' . $id . '/edit')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -183,7 +183,7 @@ class SubDistrictPopulationController extends \BaseController {
             $pop->save();
 
             Session::flash('message', "{$pop->subdistrict->name } :  {$pop->population} edited successfully");
-            return Redirect::to('/subdistrictpopulations');
+            return Redirect::to('targets/population/subdistricts');
         }
     }
 
@@ -244,7 +244,7 @@ class SubDistrictPopulationController extends \BaseController {
         $sd = SubDistrict::hydrate($rawResult);
         $this->saveDefaultInsert($sd, $year);
         $pops = SubDistrictPopulation::whereRaw('year = ? and district_id = ? ', array($year, $districtId))->get();
-        return View::make('subdistrictpopulations.bulkedit', array(
+        return View::make('targets.subdistrictpopulations.bulkedit', array(
                     'subdistricts' => $pops,
                     "districtpopulation" => $districtPopulation,
                     "type" => "district_id",
@@ -286,7 +286,7 @@ class SubDistrictPopulationController extends \BaseController {
             $pop->save();
         }
 
-        return Redirect::to('/subdistrictpopulations');
+        return Redirect::to('targets/population/subdistricts');
 //        }
     }
 

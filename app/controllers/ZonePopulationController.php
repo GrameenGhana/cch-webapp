@@ -74,7 +74,7 @@ class ZonePopulationController extends \BaseController {
             $pops = ZonePopulation::whereRaw('year=? and district_id  in (?) ', array($currentyear,$this->districtIds))->get();
         } else
             $pops = ZonePopulation::where('year','=',$currentyear)->get();
-        return View::make('zonepopulations.index', array('zones' => $pops,'year' => $currentyear));
+        return View::make('targets.zonepopulations.index', array('zones' => $pops,'year' => $currentyear));
     }
 
     /**
@@ -83,7 +83,7 @@ class ZonePopulationController extends \BaseController {
      * @return Response
      */
     public function create() {
-        return View::make('zonepopulations.create', array("zones" => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.create', array("zones" => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
     }
 
     /**
@@ -97,7 +97,7 @@ class ZonePopulationController extends \BaseController {
 
 
         if ($validator->fails()) {
-            return Redirect::to('/zonepopulations/create')
+            return Redirect::to('/target/population/zones/create')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -143,17 +143,17 @@ class ZonePopulationController extends \BaseController {
                 if ($popsb != null) {
 
                     if ($popsb->population < $zone_populations_total) {
-                        return Redirect::to('/zonepopulations/create')
+                        return Redirect::to('/targets/population/zones/create')
                                         ->with('flash_error', 'true')
                                         ->withErrors("Population doess not tally with totals of sub district selected ");
                     } else {
                         $pop->save();
                         Session::flash('message', "{$pop->zone->name } : {$pop->population} created successfully");
-                        return Redirect::to('/zonepopulations');
+                        return Redirect::to('/targets/population/zones');
                     }
                 }//end if
                 else {
-                    return Redirect::to('/zonepopulations/create')
+                    return Redirect::to('/targets/population/zones/create')
                                     ->with('flash_error', 'true')
                                     ->withErrors("Population of subdistrict not found. ");
                 }
@@ -170,7 +170,7 @@ class ZonePopulationController extends \BaseController {
     public function show($id) {
 //
         $pop = ZonePopulation::find($id);
-        return View::make('zonepopulations.edit', array("subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.edit', array("subdistricts" => $this->subdistricts));   //
     }
 
     /**
@@ -182,7 +182,7 @@ class ZonePopulationController extends \BaseController {
     public function edit($id) {
 //
         $pop = ZonePopulation::find($id);
-        return View::make('zonepopulations.edit', array('pop' => $pop, 'zones' => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.edit', array('pop' => $pop, 'zones' => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
     }
 
     /**
@@ -198,7 +198,7 @@ class ZonePopulationController extends \BaseController {
 
 
         if ($validator->fails()) {
-            return Redirect::to('/zonepopulations/' . $id . '/edit')
+            return Redirect::to('/targets/population/zones/' . $id . '/edit')
                             ->with('flash_error', 'true')
                             ->withErrors($validator);
         } else {
@@ -242,17 +242,17 @@ class ZonePopulationController extends \BaseController {
                 if ($popsb != null) {
 
                     if ($popsb->population < $zone_populations_total) {
-                        return Redirect::to('/zonepopulations/' . $id . '/edit')
+                        return Redirect::to('/targets/population/zonepopulations/' . $id . '/edit')
                                         ->with('flash_error', 'true')
                                         ->withErrors("Population doess not tally with totals of sub district selected ");
                     } else {
                         $pop->save();
                         Session::flash('message', "{$pop->zone->name } : {$pop->population} created successfully");
-                        return Redirect::to('/zonepopulations');
+                        return Redirect::to('/targets/population/zones');
                     }
                 }//end if
                 else {
-                    return Redirect::to('/zonepopulations/' . $id . '/edit')
+                    return Redirect::to('/targets/population/zones/' . $id . '/edit')
                                     ->with('flash_error', 'true')
                                     ->withErrors("Population of subdistrict not found. ");
                 }
@@ -298,7 +298,7 @@ class ZonePopulationController extends \BaseController {
             $pop->save();
         }
 
-        return Redirect::to('/zonepopulations');
+        return Redirect::to('/targets/population/zones');
 //        }
     }
 
@@ -316,7 +316,7 @@ class ZonePopulationController extends \BaseController {
         $zones = Zone::hydrate($rawResult);
         $this->saveDefaultInsert($zones, $year);
         $pops = ZonePopulation::whereRaw('year = ? and district_id = ? ', array($year, $districtId))->get();
-        return View::make('zonepopulations.bulkedit', array('zones' => $pops,
+        return View::make('targets.zonepopulations.bulkedit', array('zones' => $pops,
                     "districtpopulation" => $districtPopulation,
                     'district' => $district,
                     "type" => "district_id", "year" => $year, "typeId" => $districtId));
@@ -325,21 +325,30 @@ class ZonePopulationController extends \BaseController {
     public function subDistrictView($districtId, $year) {
 
         $subDistrict = SubDistrict::find($districtId);
-        $subDistrictPopulation = SubDistrictPopulation::whereRaw('year = ? and subdistrict_id = ? ', array($year, $districtId))->first();
-        $districtPopulation = DistrictPopulation::whereRaw('year = ? and district_id = ? ', array($year, $subDistrict->district_id))->first();
+        #print '<pre>'; print_r($subDistrict); print '</pre>'; exit;
+        
+        if ($subDistrict != null)
+        {
+            $subDistrictPopulation = SubDistrictPopulation::whereRaw('year = ? and subdistrict_id = ? ', array($year, $districtId))->first();
+            $districtPopulation = DistrictPopulation::whereRaw('year = ? and district_id = ? ', array($year, $subDistrict->district_id))->first();
 
-        $district = District::find($subDistrict->district_id);
+            $district = District::find($subDistrict->district_id);
 
-        $rawResult = (array) DB::select("select z.* from cch_zones z left join cch_zone_population zp  on z.id= zp.zone_id and zp.year='$year' where   zp.zone_id is  null and z.subdistrict_id='" . $subDistrict->id . "'");
-        $zones = Zone::hydrate($rawResult);
-        $this->saveDefaultInsert($zones, $year);
-        $pops = ZonePopulation::whereRaw('year = ? and subdistrict_id = ? ', array($year, $districtId))->get();
-
-        return View::make('zonepopulations.bulkedit', array('zones' => $pops,
+            $rawResult = (array) DB::select("select z.* from cch_zones z left join cch_zone_population zp  on z.id= zp.zone_id and zp.year='$year' where   zp.zone_id is  null and z.subdistrict_id='" . $subDistrict->id . "'");
+            $zones = Zone::hydrate($rawResult);
+            $this->saveDefaultInsert($zones, $year);
+            $pops = ZonePopulation::whereRaw('year = ? and subdistrict_id = ? ', array($year, $districtId))->get();
+        
+            return View::make('targets.zonepopulations.bulkedit', array('zones' => $pops,
                     'district' => $district,
                     'subdistrict' => $subDistrict,
                     "districtpopulation" => $districtPopulation,
                     "subdistrictpopulation" => $subDistrictPopulation, "type" => "subdistrict_id", "year" => $year, "typeId" => $districtId));
+        } 
+
+        return Redirect::to('/targets/population/subdistricts')
+                            ->with('flash_error', 'true')
+                            ->withErrors("Cannot find subdistrict zones");
     }
 
     /**
@@ -354,7 +363,7 @@ class ZonePopulationController extends \BaseController {
         $zones = Zone::hydrate($rawResult);
         $this->saveDefaultInsert($zones);
         $pops = ZonePopulation::hydrate((array) DB::select("select * from cch_zone_population where   year=$year"));
-        return View::make('zonepopulations.bulkedit', array('zones' => $pops, 'year' => $year));
+        return View::make('targets.zonepopulations.bulkedit', array('zones' => $pops, 'year' => $year));
     }
 
     function saveDefaultInsert($zones, $year) {

@@ -143,7 +143,41 @@
                             </ul>
                         </li>
 
-		 @if (strtolower(Auth::user()->role) == 'admin' )
+		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant')))
+
+                        <li class="treeview {{ Request::is('targets/*') ? 'active' : '' }}">
+                            <a href="#">
+                                <i class="fa fa-bullseye"></i>
+                                <span>Manage Targets</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href=""><i class="fa fa-angle-double-right"></i> Set Actuals</a></li>
+
+                                <li class="treeview {{ Request::is('targets/population/*') ? 'active' : '' }}">
+                                    <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span>Manage Populations</span>
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li class="{{ Request::is('targets/population/districts*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('targets/population/districts') }}"><i class="fa fa-angle-right"></i>District Population</a>
+                                        </li>
+                                        <li class="{{ Request::is('targets/population/subdistricts*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('targets/population/subdistricts') }}"><i class="fa fa-angle-right"></i>Sub District Population</a>
+                                        </li>
+                                        <li class="{{ Request::is('targets/population/zones*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('targets/population/zones') }}"><i class="fa fa-angle-right"></i>Zone Population</a>
+                                        </li>
+                                    </ul>
+                               </li> 
+                            </ul>
+                        </li>
+			@endif
+
+		    @if (strtolower(Auth::user()->role) == 'admin' )
+                     <!--
                         <li class="treeview {{ Request::is('content/*') ? 'active' : '' }}">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
@@ -155,6 +189,8 @@
                                 <li><a href=""><i class="fa fa-angle-double-right"></i> Staying Well</a></li>
                             </ul>
                         </li>
+                    -->
+
 
                         <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*')) ? 'active' : '' }}">
                             <a href="#">
@@ -170,14 +206,9 @@
                                 <li class="{{ Request::is('districtadmin/*') ? 'active' : '' }}"><a href="{{ URL::to('districtadmin') }}"><i class="fa fa-users"></i>District Admins</a></li>
                                 <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
                                 <li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
- <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
-<li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
- <li class="{{ Request::is('districtpopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('districtpopulations') }}"><i class="fa fa-mobile-phone"></i>District Population</a></li>
- <li class="{{ Request::is('subdistrictpopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistrictpopulations') }}"><i class="fa fa-mobile-phone"></i>Sub District Target</a></li>
- <li class="{{ Request::is('zonepopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('zonepopulations') }}"><i class="fa fa-mobile-phone"></i>Zone  Target</a></li>
- 
- <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
-
+                                <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
+                                <li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
+                                <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
                             </ul>
                         </li>
 			@endif
@@ -195,17 +226,11 @@
                                  <li class="{{ Request::is('facilitytypes/*') ? 'active' : '' }}"><a href="{{ URL::to('facilitytypes') }}"><i class="fa fa-hospital-o"></i>Facility Types</a></li>
                                  <li class="{{ Request::is('distusers/*') ? 'active' : '' }}"><a href="{{ URL::to('distusers') }}"><i class="fa fa-users"></i>Users</a></li>
                                 <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
-<li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
- <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
-<li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
- <li class="{{ Request::is('districtpopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('districtpopulations') }}"><i class="fa fa-mobile-phone"></i>District  Target</a></li>
- <li class="{{ Request::is('subdistrictpopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistrictpopulations') }}"><i class="fa fa-mobile-phone"></i>Sub District Target</a></li>
- <li class="{{ Request::is('zonepopulations/*') ? 'active' : '' }}"><a href="{{ URL::to('zonepopulations') }}"><i class="fa fa-mobile-phone"></i>Zone Target</a></li>
- <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
-                            
-
-
-</ul>
+                                <li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
+                                <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
+                                <li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
+                                <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
+                            </ul>
                         </li>
                          @endif
                     </ul>
