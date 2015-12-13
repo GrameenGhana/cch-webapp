@@ -20,7 +20,7 @@
 @section('content')
 
 <section class="content">
-            {{ Form::open(array('url'=> 'subdistrictpopulations/bulkedit','method'=>'post')) }}
+            {{ Form::open(array('url'=> 'targets/population/subdistricts/bulkedit','method'=>'post')) }}
 
     <!-- title row -->
     <div class="row">
@@ -100,26 +100,24 @@ href="{{ URL::to('/targets/population/zones/bulkedit/subdistrict/' . $value->sub
 
 
                         <tr>
-                        <td>Your District Totals</td>
-                        
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-<!--                        <td></td>-->
-                        <!--<td></td>-->
-                        <td></td>
-                               
-        </tr>
- <tr>
+                            <td>Your District Totals</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+ 
+                       <tr>
                         <td><strong>District Totals</strong> {{$district->name}}-{{$year}}</td>
 
                         <td>100</td>
-                        <td>{{ $districtpopulation->population }}</td>
+                        <td>{{ number_format($districtpopulation->population) }}</td>
                         <td>{{ number_format(($districtpopulation->expected_pregnancies/100)* $districtpopulation->population ) }}</td>
                         <!--<td>{{ number_format(($districtpopulation->chn_6_11_mnths/100)* $districtpopulation->population ) }}</td>-->
                         <td>{{ number_format(($districtpopulation->chn_0_to_11_mnths/100)* $districtpopulation->population ) }}</td>
@@ -145,10 +143,8 @@ href="{{ URL::to('/targets/population/zones/bulkedit/subdistrict/' . $value->sub
 <script type="text/javascript">
     var DISTRICT_POPULATION = {{ $districtpopulation->population }};
             var expected_pregnancies_percentage = {{ $districtpopulation->expected_pregnancies }};
-//            var chn_6_11_mnths_percentage = {{ $districtpopulation->chn_6_11_mnths }};
             var chn_0_to_11_mnths_percentage = {{ $districtpopulation->chn_0_to_11_mnths }};
             var chn_12_23_mnths_percentage = {{ $districtpopulation->chn_12_23_mnths }};
-//            var chn_0_to_23_mnths_percentage = {{ $districtpopulation->chn_0_to_23_mnths }};
             var chn_24_to_59_mnths_percentage = {{ $districtpopulation->chn_24_to_59_mnths }};
             var wifa_15_49_yrs_percentage = {{ $districtpopulation->wifa_15_49_yrs }};
             var men_women_50_to_60_yrs_percentage = {{ $districtpopulation->men_women_50_to_60_yrs }};
@@ -156,41 +152,35 @@ href="{{ URL::to('/targets/population/zones/bulkedit/subdistrict/' . $value->sub
             
     
     function checkPopulation(id)
-            {
+    {
 
 
             var dist = DISTRICT_POPULATION * (parseFloat($("#district_percentage_" + id).val())/100);
                     var population = dist.toFixed(0);
                     var expected_pregnancies = population * (expected_pregnancies_percentage / 100);
-//                    var chn_6_11_mnths = population * (chn_6_11_mnths_percentage / 100);
                     var chn_0_to_11_mnths = population * (chn_0_to_11_mnths_percentage / 100);
                     var chn_12_23_mnths = population * (chn_12_23_mnths_percentage / 100);
-//                    var chn_0_to_23_mnths = population * (chn_0_to_23_mnths_percentage / 100);
                     var chn_24_to_59_mnths = population * (chn_24_to_59_mnths_percentage / 100);
                     var chn_less_than_5_yrs = population * (chn_less_than_5_yrs_percentage / 100);
                     var wifa_15_49_yrs = population * (wifa_15_49_yrs_percentage / 100);
                     var men_women_50_to_60_yrs = population * (men_women_50_to_60_yrs_percentage / 100);
                     expected_pregnancies = expected_pregnancies.toFixed(0);
-//                    chn_6_11_mnths = chn_6_11_mnths.toFixed(0);
                     chn_0_to_11_mnths = chn_0_to_11_mnths.toFixed(0);
                     chn_12_23_mnths = chn_12_23_mnths.toFixed(0);
-//                    chn_0_to_23_mnths = chn_0_to_23_mnths.toFixed(0);
                     chn_24_to_59_mnths = chn_24_to_59_mnths.toFixed(0);
                     chn_less_than_5_yrs = chn_less_than_5_yrs.toFixed(0);
                     wifa_15_49_yrs = wifa_15_49_yrs.toFixed(0);
                     men_women_50_to_60_yrs = men_women_50_to_60_yrs.toFixed(0);
                     $("#population_" + id).val(population);
                     $("#expected_pregnancies_" + id).val(expected_pregnancies);
-//                    $("#chn_6_11_mnths_" + id).val(chn_6_11_mnths);
                     $("#chn_0_to_11_mnths_" + id).val(chn_0_to_11_mnths);
                     $("#chn_12_23_mnths_" + id).val(chn_12_23_mnths);
-//                    $("#chn_0_to_23_mnths_" + id).val(chn_0_to_23_mnths);
                     $("#chn_24_to_59_mnths_" + id).val(chn_24_to_59_mnths);
                     $("#chn_less_than_5_yrs_" + id).val(chn_less_than_5_yrs);
                     $("#wifa_15_49_yrs_" + id).val(wifa_15_49_yrs);
                     $("#men_women_50_to_60_yrs_" + id).val(men_women_50_to_60_yrs);
            
-showSummations();	
+            showSummations();	
  }
 
 
@@ -208,33 +198,36 @@ function toFixed(value, precision) {
     }
     return result;
 }
-    function sumOfColumns(tableID, columnIndex, hasHeader, hasInput) {
-
-
-var colsTolast=2;
-            var tot = 0;
-            $("#" + tableID + " tr" + (hasHeader ? ":gt(0)" : ""))
+    
+    
+function sumOfColumns(tableID, columnIndex, hasHeader, hasInput) 
+{
+    var colsTolast=2;
+    var tot = 0;
+    
+    $("#" + tableID + " tr" + (hasHeader ? ":gt(0)" : ""))
             .children("td:nth-child(" + columnIndex + ")")
             .each(function () {
-
-            t = parseFloat($(this).children("input").first().val());
-                    if (!isNaN(t))
+                t = parseFloat($(this).children("input").first().val());
+                if (!isNaN(t))
                     tot += parseFloat(t);
             });
-            $("#" + tableID + " tr:nth-last-child("+colsTolast+")").children("td:nth-child(" + (columnIndex-1) + ")").html(toFixed(tot));
-            return tot;
-    }
+    $("#" + tableID + " tr:nth-last-child("+colsTolast+")").children("td:nth-child(" + (columnIndex) + ")").html(toFixed(tot));
+    return tot;
+}
 
 
 
 function updateCol(col)
-    {
-        sumOfColumns("bulkedittable", col, true, true);
-    }
+{
+    sumOfColumns("bulkedittable", col, true, true);
+}
 
 
-function showSummations(){
-            updateCol(3);
+function showSummations()
+{
+           updateCol(2);
+           updateCol(3);
             updateCol(4);
             updateCol(5);
             updateCol(6);
@@ -242,16 +235,9 @@ function showSummations(){
             updateCol(8);
             updateCol(9);
             updateCol(10);
-            updateCol(11);
-//            updateCol(12);
-//            updateCol(13);
-          //  updateCol(14);
-
-
-    }
+}
 
     showSummations();
-//    sumOfColumns("bulkedittable", 3, true, true);
 
     $(document).ready(function() {
 
@@ -266,8 +252,3 @@ function showSummations(){
     });
 </script>
 @stop
-
-
-
-
-

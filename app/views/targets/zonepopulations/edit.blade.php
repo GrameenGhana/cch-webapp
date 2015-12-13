@@ -28,10 +28,18 @@
                         </div><!-- /.col -->
                     </div>
 
+                 @if (Session::has('message')) 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-info">{{ Session::get('message') }}</div> 
+                        </div>
+                    </div>    
+                 @endif
             <div class="row">
                 <div class="col-md-6">
+
                     <div class="box box-primary">
-                   {{ Form::open(array('url'=> 'target/population/zones/'.$pop->id,'method'=>'put')) }}
+                   {{ Form::open(array('url'=> 'targets/population/zones/'.$pop->id,'method'=>'put')) }}
 
                                     <div class="box-body">
                     @if(Session::has('flash_error'))

@@ -51,17 +51,15 @@
                                     <table id="factable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Sub District</th>
                                                 <th>District</th>
+                                                <th>Sub District</th>
                                                 <th>Population</th>
                                                 <th>Percentage of District (%)</th>
                                                 <th>Expected Pregnancies</th>
-                                                <th>Chn 6-11 months</th>
                                                 <th>Chn 0-11 months</th>
                                                 <th>Chn 12-23 months</th>
-                                                <th>Chn 0-23 months</th>
                                                 <th>Chn 24-59 months</th>
-                                                <th>Chn < 5 yrs</th>
+                                                <th>Chn &gt; 5 yrs</th>
                                                 <th>Wifa 15-49 yrs</th>
                                                 <th>Men & Women 50-60 yrs</th>
                                                
@@ -73,22 +71,20 @@
 					@foreach($pops as $k => $value) 
 					     <tr>
 						  
-						  <td> {{ $value->subdistrict->name}} </td>
 	                      <td> {{ $value->district->name}} </td>
+						  <td> {{ $value->subdistrict->name}} </td>
                           <td> {{ $value->population }} </td>
                           <td> {{ $value->district_percentage }} </td>
                           <td> {{ $value->expected_pregnancies }} </td>
-                          <td> {{ $value->chn_6_11_mnths }} </td>
                           <td> {{ $value->chn_0_to_11_mnths }} </td>
                           <td> {{ $value->chn_12_23_mnths }} </td>
-                          <td> {{ $value->chn_0_to_23_mnths }} </td>
                           <td> {{ $value->chn_24_to_59_mnths }} </td>
                           <td> {{ $value->chn_less_than_5_yrs }} </td>
                           <td> {{ $value->wifa_15_49_yrs }} </td>
                           <td> {{ $value->men_women_50_to_60_yrs }} </td>
 						  <td>
 							<a title="Edit" class="btn btn-xs btn-info" href="{{ URL::to('targets/population/subdistricts/' . $value->id . '/edit') }}"><i class="fa fa-pencil"></i></a>
-							<a title="Zones" class="btn btn-xs btn-info" href="{{ URL::to('targets/population/zones/bulkedit/subdistrict/' . $value->id . '/'. $year) }}"><i class=""></i> Zones</a>
+							<a title="Zones" class="btn btn-xs btn-info" href="{{ URL::to('targets/population/zones/bulkedit/subdistrict/' . $value->subdistrict->id . '/'. $year) }}"><i class=""></i> Zones</a>
                             
 						  </td>
 					     </tr>					@endforeach

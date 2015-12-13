@@ -141,10 +141,12 @@ class SubDistrictPopulationController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function edit($id) {
-
+    public function edit($id) 
+    {
         $pop = SubDistrictPopulation::find($id);
-        return View::make('targets.subdistrictpopulations.edit', array('pop' => $pop, "districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
+        return View::make('targets.subdistrictpopulations.edit', 
+                         array('pop' => $pop, "districts" => $this->districts, 
+                               "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
     }
 
     /**
@@ -156,8 +158,6 @@ class SubDistrictPopulationController extends \BaseController {
     public function update($id) {
 //
         $validator = Validator::make(Input::all(), $this->rules);
-
-
 
         if ($validator->fails()) {
             return Redirect::to('/targets/populations/subdistricts/' . $id . '/edit')

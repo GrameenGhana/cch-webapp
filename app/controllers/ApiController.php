@@ -14,6 +14,17 @@
 
 class ApiController extends BaseController {
 
+    public function getIndicators()
+    {
+        return Response::json(Indicator::all(),200);
+    }
+
+    public function getIndicatorStats()
+    {
+        return Response::json(IndicatorTracker::all(),200);
+    }
+
+
     public function getTargets(){
 
         $nurse_id = Input::get( 'nurse_id' );

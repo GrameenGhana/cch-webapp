@@ -10,44 +10,39 @@
 @stop
 
 @section('content-header')
-        
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1> <i class="fa fa-hospital-o"></i> Zones Population Data </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="{{ URL::to('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Zones Population Data</li>
-                    </ol>
-                </section>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1> <i class="fa fa-hospital-o"></i> Zones Indicators Data </h1>
+        <ol class="breadcrumb">
+            <li><a href="{{ URL::to('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Zone Indicators Data</li>
+        </ol>
+    </section>
 @stop
 
 @section('content')
 
-                <section class="content">
-<!-- title row -->
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h2 class="page-header">
-                                <a class="btn btn-small btn-success" href="{{ URL::to('targets/population/zones/create') }}"><i class="fa fa-plus-circle"></i> Add Zone Population Data</a>
-                            </h2>                            
-                        </div><!-- /.col -->
-                    </div>
-                    @if (Session::has('message'))
+     <section class="content">
+        <!-- title row -->
+        <div class="row">
+            <div class="col-xs-12">
+                 @if (Session::has('message'))
                         <div class="alert alert-info">{{ Session::get('message') }}</div>
-                    @endif
+                 @endif
+            </div>
+         </div>
 
-                    <div class="panel">
-                                <div class="box-body table-responsive" style="padding:10px">
-
-                                    <div style="">
-				                        Showing population for 
-                                        <select name="year" style="font-size:20px;" onchange="if (this.value) window.location.href=this.value">
-                                            <option value="/cch/yabr3/targets/population/zones?year=2015">2015</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2014">2014</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2013">2013</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2012">2012</option>
-                                        </select>
- 				                    </div>
+         <div class="panel">
+            <div class="box-body table-responsive" style="padding:10px">
+                <div>
+				   <label>Showing actuals for</label> 
+                   <select name="year" style="font-size:20px;" onchange="if (this.value) window.location.href=this.value">
+                        <option value="/cch/yabr3/targets/population/zones?year=2015">2015</option>
+                        <option value="/cch/yabr3/targets/population/zones?year=2014">2014</option>
+                        <option value="/cch/yabr3/targets/population/zones?year=2013">2013</option>
+                        <option value="/cch/yabr3/targets/population/zones?year=2012">2012</option>
+                   </select>
+ 				</div>
 
 
                                     <table id="factable" class="table table-bordered table-striped">

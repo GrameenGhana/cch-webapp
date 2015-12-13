@@ -31,7 +31,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="box box-primary">
-                          {{ Form::open(array('url'=> 'target/population/zones','method'=>'post')) }}
+                          {{ Form::open(array('url'=> 'targets/population/zones','method'=>'post')) }}
 
                           <div class="box-body">
 

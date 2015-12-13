@@ -15,7 +15,7 @@ Route::get('/getUsersInDistricts', array('uses' => 'DeviceController@getDistrict
 Route::get('/getDistricts', array('uses' => 'DistrictController@getDistricts'));
 
 /**** Target setting routes ***/
-
+Route::resource('/targets/actuals',                                      'IndicatorTrackerController');
 Route::resource('/targets/population/districts',                         'DistrictPopulationController');
 
 Route::get('/targets/population/subdistricts/bulkedit/{id}/{year}',      array('uses' => 'SubDistrictPopulationController@districtView'))->before('auth');
@@ -28,7 +28,6 @@ Route::get('/targets/population/zones/bulkedit/district/{id}/{year}',    array('
 Route::get('/targets/population/zones/bulkedit/subdistrict/{id}/{year}', array('uses' => 'ZonePopulationController@subDistrictView'))->before('auth');
 Route::post('/targets/population/zones/bulkedit',                        array('uses' => 'ZonePopulationController@updateAll'));
 Route::resource('targets/population/zones',                              'ZonePopulationController'); 
-
 /**** / Target setting routes ***/
 
 Route::get('/getFacilityZones', array('uses' => 'ZoneController@getByFacilityZones'));
@@ -82,6 +81,8 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::get('achievements/{id}','InChargeController@achievements');
 });
 
+Route::get('/indicators', array('uses' => 'ApiController@getIndicators'));
+Route::get('/indicatorstats', array('uses' => 'ApiController@getIndicatorStats'));
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));
 Route::get('/getNurses', array('uses' => 'ApiController@getAllNurses'));
 Route::post('/pushFacilityTargets', array('uses' => 'ApiController@pushFacilityTargets'));

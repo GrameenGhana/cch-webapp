@@ -259,30 +259,24 @@
     {
         var population = parseFloat($("#population").val());
         var expected_pregnancies = population * ( expected_pregnancies_percentage / 100 );
-//        var chn_6_11_mnths = population * ( chn_6_11_mnths_percentage / 100 );
         var chn_0_to_11_mnths = population * ( chn_0_to_11_mnths_percentage / 100 );
         var chn_12_23_mnths = population * ( chn_12_23_mnths_percentage / 100 );
-//        var chn_0_to_23_mnths = population * ( chn_0_to_23_mnths_percentage / 100 );
         var chn_24_to_59_mnths = population * ( chn_24_to_59_mnths_percentage / 100 );
         var chn_less_than_5_yrs = population * ( chn_less_than_5_yrs_percentage / 100 );
         var wifa_15_49_yrs = population * ( wifa_15_49_yrs_percentage / 100 );
         var men_women_50_to_60_yrs = population * ( men_women_50_to_60_yrs_percentage / 100 );
 
         expected_pregnancies = expected_pregnancies.toFixed(0);
-        chn_6_11_mnths = chn_6_11_mnths.toFixed(0);
         chn_0_to_11_mnths = chn_0_to_11_mnths.toFixed(0);
         chn_12_23_mnths = chn_12_23_mnths.toFixed(0);
-        chn_0_to_23_mnths = chn_0_to_23_mnths.toFixed(0);
         chn_24_to_59_mnths = chn_24_to_59_mnths.toFixed(0);
         chn_less_than_5_yrs = chn_less_than_5_yrs.toFixed(0);
         wifa_15_49_yrs = wifa_15_49_yrs.toFixed(0);
         men_women_50_to_60_yrs = men_women_50_to_60_yrs.toFixed(0);
 
         $("#expected_pregnancies").val(expected_pregnancies);
-//        $("#chn_6_11_mnths").val(chn_6_11_mnths);
         $("#chn_0_to_11_mnths").val(chn_0_to_11_mnths);
         $("#chn_12_23_mnths").val(chn_12_23_mnths);
-//        $("#chn_0_to_23_mnths").val(chn_0_to_23_mnths);
         $("#chn_24_to_59_mnths").val(chn_24_to_59_mnths);
         $("#chn_less_than_5_yrs").val(chn_less_than_5_yrs);
         $("#wifa_15_49_yrs").val(wifa_15_49_yrs);

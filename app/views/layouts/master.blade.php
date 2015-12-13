@@ -152,7 +152,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href=""><i class="fa fa-angle-double-right"></i> Set Actuals</a></li>
+                                <li class="treeview {{ Request::is('targets/actuals/*') ? 'active' : '' }}">
+                                    <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-double-right"></i> Set Actuals</a>
+                                </li>
 
                                 <li class="treeview {{ Request::is('targets/population/*') ? 'active' : '' }}">
                                     <a href="#">
@@ -162,13 +164,13 @@
                                     </a>
                                     <ul class="treeview-menu">
                                         <li class="{{ Request::is('targets/population/districts*') ? 'active' : '' }}">
-                                            <a href="{{ URL::to('targets/population/districts') }}"><i class="fa fa-angle-right"></i>District Population</a>
+                                            <a href="{{ URL::to('targets/population/districts') }}"><i class="fa fa-angle-right"></i>District Populations</a>
                                         </li>
                                         <li class="{{ Request::is('targets/population/subdistricts*') ? 'active' : '' }}">
-                                            <a href="{{ URL::to('targets/population/subdistricts') }}"><i class="fa fa-angle-right"></i>Sub District Population</a>
+                                            <a href="{{ URL::to('targets/population/subdistricts') }}"><i class="fa fa-angle-right"></i>Sub District Populations</a>
                                         </li>
                                         <li class="{{ Request::is('targets/population/zones*') ? 'active' : '' }}">
-                                            <a href="{{ URL::to('targets/population/zones') }}"><i class="fa fa-angle-right"></i>Zone Population</a>
+                                            <a href="{{ URL::to('targets/population/zones') }}"><i class="fa fa-angle-right"></i>Zone Populations</a>
                                         </li>
                                     </ul>
                                </li> 
