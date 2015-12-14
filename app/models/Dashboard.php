@@ -128,6 +128,70 @@ class Dashboard extends Eloquent {
         return $data;
     }
 
+    /*** Indicators **/
+    private function getitype($params)
+    {
+        if ($params==null) { return 'Child Health'; }
+        
+        if (isset($params['type'])) {
+            return (in_array($params['type'], array('Child Health','Maternal Health','Others'))) ? $params['type'] : 'Child Health';
+        } else {
+            return 'Child Health'; 
+        }
+    }
+
+    public function indicatorsData($params=null)
+    {
+        $data = array();
+
+        $type = $this->getitype($params); 
+        $where = Dashboard::buildWhere($params, false, true);
+        $groupby = ($type=='Maternal Health') ? 'category' : 'agegroup';
+
+        $d =  DB::table('cch_indicators_tracker')
+                ->join('cch_indicators', 'cch_indicators_tracker.indicator_id','=','cch_indicators.id')
+                ->select(DB::raw("$groupby as g, (SUM(actual) / SUM(target)) * 100 as c"))
+                        ->whereRaw($where)
+                        ->whereRaw("cch_indicators.type='$type'")
+                        ->groupBy($groupby)
+                        ->get();
+
+        foreach($d as $p) { $data[$p->g] = $p->c; }
+
+        return $data;
+    }
+
+    public function indicatorsDataByCare($params=null)
+    {
+        $data = array();
+
+        $type = $this->getitype($params); 
+        $where = Dashboard::buildWhere($params, false, true);
+        $groupby = ($type=='Maternal Health') ? 'category' : 'agegroup';
+
+        $d =  DB::table('cch_indicators_tracker')
+                ->join('cch_indicators', 'cch_indicators_tracker.indicator_id','=','cch_indicators.id')
+                ->select(DB::raw("$groupby as g, care, (SUM(actual) / SUM(target)) * 100 as c"))
+                        ->whereRaw($where)
+                        ->whereRaw("cch_indicators.type='$type'")
+                        ->groupBy($groupby)
+                        ->groupBy('care')
+                        ->get();
+
+        foreach($d as $p) {
+            if (in_array($p->g, array_keys($data))) {
+                array_push($data[$p->g], array($p->care, $p->c));
+            } else {
+                $data[$p->g] = array();
+                array_push($data[$p->g], array($p->care, $p->c));
+            }
+        }
+
+        return $data;
+    }
+
+    /*** End Indicators  **/
+
 
     /*** Staying Well **/
     public function swPlans($params=null)
@@ -174,8 +238,6 @@ class Dashboard extends Eloquent {
         return $data;
     }
 
-
-
     /*** End Staying well **/
 
     protected function makePercentage($data)
@@ -194,6 +256,23 @@ class Dashboard extends Eloquent {
         return array('all'=>'All','Regions'=>$l->regions(),
                      'Districts'=>$l->districts(),
                      'Facilities'=>$l->facilities());
+    }
+
+    public function locationZonesForSelect()
+    {
+        $locs = array('all'=>'All');
+        $districtIds = User::getUserDistricts(Auth::user()->id);
+        $locations = District::with('subdistricts.zones')->whereIn('id', explode(',',$districtIds))->get();
+
+        foreach($locations as $district)
+        {
+                foreach($district->subdistricts as $sd) {
+                        $x = array();
+                        foreach($sd->zones as $z) { $x[$z->id]=$z->name;  }
+                        $locs[$sd->name] =  $x;  
+                }
+        }
+        return $locs; 
     }
 
     /** Utility functions **/
@@ -252,9 +331,7 @@ class Dashboard extends Eloquent {
             return array($years, $months, $days);
    }
 
-
-
-    protected static function buildWhere($params)
+    protected static function buildWhere($params, $strmonth=true, $zones=false)
     {
         if (is_null($params)) { return "1=1"; }
 
@@ -263,6 +340,7 @@ class Dashboard extends Eloquent {
         // process dates
         $where = "`year` BETWEEN  YEAR('".$params['startdate']."') AND YEAR('".$params['enddate']."')";
         $where .= " AND MONTH(str_to_date(`month`,'%M')) BETWEEN  MONTH('".$params['startdate']."') AND MONTH('".$params['enddate']."')";
+        if (!$strmonth) { $where = preg_replace("/MONTH\(str_to_date\(`month`,'%M'\)\)/",'`month`',$where); }
 
         // process location option
         if (! is_null($params['location']))
@@ -288,7 +366,8 @@ class Dashboard extends Eloquent {
                 } 
 
                 if (! empty($facs)) {
-                    $where .= " AND motech_facility_id in (".implode(',',$facs).")";
+                    $col = ($zones) ? 'zone_id' : 'motech_facility_id in';
+                    $where .= " AND $col in (".implode(',',$facs).")";
                 }
             }
         }

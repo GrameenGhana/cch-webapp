@@ -10,11 +10,23 @@
 | and give it the Closure to execute when that URI is requested.
 */
 
-Route::get('/distusers', array('uses' => 'UserController@districtAdminList'));
+Route::get('/distusers',           array('uses' => 'UserController@districtAdminList'));
 Route::get('/getUsersInDistricts', array('uses' => 'DeviceController@getDistrictUsers'));
-Route::get('/getDistricts', array('uses' => 'DistrictController@getDistricts'));
+Route::get('/getDistricts',        array('uses' => 'DistrictController@getDistricts'));
 
-/**** Target setting routes ***/
+/**** Dashboard routes ***/
+Route::get('/indicators',            array('uses'=>  'DashboardController@showIndicators'));
+Route::post('indicatorsdata',        array('uses' => 'DashboardController@indicatorsData'));
+Route::post('indicatorsdatabycare',  array('uses' => 'DashboardController@indicatorsDataByCare'));
+Route::get('/stayingwell',           array('uses' => 'DashboardController@showStayingWell'));
+Route::get('swplansbyprofile',       array('uses' => 'DashboardController@swPlansByProfile'));
+Route::post('swplansbyprofile',      array('uses' => 'DashboardController@swPlansByProfile'));
+Route::get('moduleusagebytype',      array('uses' => 'DashboardController@moduleUsageByType'));
+Route::post('moduleusagebytype',     array('uses' => 'DashboardController@moduleUsageByType'));
+/**** / Dasboard routes ***/
+
+/**** Target routes ***/
+Route::post('/targets/actuals/{id}',                                     'IndicatorTrackerController@update');
 Route::resource('/targets/actuals',                                      'IndicatorTrackerController');
 Route::resource('/targets/population/districts',                         'DistrictPopulationController');
 
@@ -28,7 +40,7 @@ Route::get('/targets/population/zones/bulkedit/district/{id}/{year}',    array('
 Route::get('/targets/population/zones/bulkedit/subdistrict/{id}/{year}', array('uses' => 'ZonePopulationController@subDistrictView'))->before('auth');
 Route::post('/targets/population/zones/bulkedit',                        array('uses' => 'ZonePopulationController@updateAll'));
 Route::resource('targets/population/zones',                              'ZonePopulationController');
-/**** / Target setting routes ***/
+/**** / Target routes ***/
 
 Route::get('/getFacilityZones', array('uses' => 'ZoneController@getByFacilityZones'));
 Route::get('/getDistrictTotalPopulationZones', array('uses' => 'DistrictPopulationController@getDistrictTotalPopulationZones'));
@@ -55,7 +67,6 @@ Route::get('/courses',function(){ $courses=CourseDetails::details(); return $cou
 Route::pattern('id','[0-9]+');
 Route::get('/districts/people/{id}', array('uses' => 'DistrictController@showPeople'))->before('auth');
 Route::get('/', array('uses' => 'HomeController@showHome'))->before('auth');
-Route::get('/stayingwell', array('uses' => 'DashboardController@showStayingWell'))->before('auth');
 Route::get('/facilities/calendar/{id}', array('uses' => 'FacilityController@showCalendar'))->before('auth');
 Route::get('/facilities/districtcalendar/{id}/{district}', array('uses' => 'FacilityController@showDistrictCalendar'))->before('auth');
 Route::get('/facilities/people/{id}', array('uses' => 'FacilityController@showPeople'))->before('auth');
@@ -64,11 +75,6 @@ Route::get('/users/courses/{id}', array('uses' => 'UserController@showCourses'))
 Route::get('login', array('uses' => 'HomeController@showLogin'))->before('guest');
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 Route::get('logout', array('uses' => 'HomeController@doLogout'))->before('auth');
-
-Route::post('moduleusagebytype', array('uses' => 'DashboardController@moduleUsageByType'));
-Route::get('moduleusagebytype', array('uses' => 'DashboardController@moduleUsageByType'));
-Route::post('swplansbyprofile', array('uses' => 'DashboardController@swPlansByProfile'));
-Route::get('swplansbyprofile', array('uses' => 'DashboardController@swPlansByProfile'));
 
 //Apis
 Route::group(array('prefix' => 'api/v1'), function()
@@ -81,8 +87,6 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::get('achievements/{id}','InChargeController@achievements');
 });
 
-Route::get('/indicators', array('uses' => 'ApiController@getIndicators'));
-Route::get('/indicatorstats', array('uses' => 'ApiController@getIndicatorStats'));
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));
 Route::get('/getNurses', array('uses' => 'ApiController@getAllNurses'));
 Route::post('/pushFacilityTargets', array('uses' => 'ApiController@pushFacilityTargets'));
