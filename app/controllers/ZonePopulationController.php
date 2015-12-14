@@ -14,6 +14,8 @@
 class ZonePopulationController extends \BaseController {
 
     public function __construct() {
+        $this->beforeFilter('auth');
+
         $region = District::groupBy("region")->get();
         $districts = District::all();
         $subdistricts = SubDistrict::all();

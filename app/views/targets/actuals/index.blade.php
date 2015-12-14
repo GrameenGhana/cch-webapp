@@ -5,6 +5,10 @@
    {{ HTML::style('css/datatables/dataTables.bootstrap.css'); }} 
    <style type="text/css">
       #factable_filter { margin-top:-25px;}
+
+      input:focus, textarea:focus {
+        background-color: #FFFFCC;
+      }
    </style>
 
 @stop
@@ -12,10 +16,10 @@
 @section('content-header')
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1> <i class="fa fa-hospital-o"></i> Zones Indicators Data </h1>
+        <h1> <i class="fa fa-hospital-o"></i> Zones Indicators Actuals </h1>
         <ol class="breadcrumb">
             <li><a href="{{ URL::to('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Zone Indicators Data</li>
+            <li class="active">Zones Indicators Actuals</li>
         </ol>
     </section>
 @stop
@@ -34,91 +38,135 @@
 
          <div class="panel">
             <div class="box-body table-responsive" style="padding:10px">
-                <div>
-				   <label>Showing actuals for</label> 
-                   <select name="year" style="font-size:20px;" onchange="if (this.value) window.location.href=this.value">
-                        <option value="/cch/yabr3/targets/population/zones?year=2015">2015</option>
-                        <option value="/cch/yabr3/targets/population/zones?year=2014">2014</option>
-                        <option value="/cch/yabr3/targets/population/zones?year=2013">2013</option>
-                        <option value="/cch/yabr3/targets/population/zones?year=2012">2012</option>
-                   </select>
- 				</div>
+                <div class="row" style="padding-bottom:40px;">
+                    <div class="col-md-12">
+				        <label>Zone</label> 
+                        <select name="location" id="location" style="margin-right: 20px;">
+                         @foreach($locations as $i => $district) 
+                            <optgroup label="{{ $district->name }}">
+                            @foreach($district->subdistricts as $k => $sd) 
+                                <optgroup label="{{ $sd->name }}">
+                                @foreach($sd->zones as $l => $z) <option value="{{ $z->id }}">{{$z->name}}</option> @endforeach
+                                </optgroup> 
+                            @endforeach
+                            </optgroup> 
+                        @endforeach
+                        </select>
 
-
-                                    <table id="factable" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Zone</th>
-                                                <th>Population</th>
-                                                <th>Percentage of District</th>
-                                                <th>Expected Pregnancies</th>
-                                                <th>Chn 0-11 months</th>
-                                                <th>Chn 12-23 months</th>
-                                                <th>Chn 24-59 months</th>
-                                                <th>Chn &lt; 5 yrs</th>
-                                                <th>Wifa 15-49 yrs</th>
-                                                <th>Men &amp; Women 50-60 yrs</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                    @foreach($zones as $k => $value) 
-                         <tr>
-                          <td> {{ $value->zone->name}} </td>
-                          <td> {{ $value->population }} </td>
-                          <td> {{ $value->district_percentage }} </td>
-                          <td> {{ $value->expected_pregnancies }} </td>
-                          <td> {{ $value->chn_0_to_11_mnths }} </td>
-                          <td> {{ $value->chn_12_23_mnths }} </td>
-                          <td> {{ $value->chn_24_to_59_mnths }} </td>
-                          <td> {{ $value->chn_less_than_5_yrs }} </td>
-                          <td> {{ $value->wifa_15_49_yrs }} </td>
-                          <td> {{ $value->men_women_50_to_60_yrs }} </td>
-                          <td>
-                            <a title="Edit" class="btn btn-sm btn-info" href="{{ URL::to('targets/population/zones/' . $value->id . '/edit') }}"><i class="fa fa-pencil"></i></a>
-                          </td>
-                         </tr>
-                    @endforeach
-                    </tbody>
-                     </table>
+				        <label>Year</label> 
+                        <select name="year" onchange="if (this.value) window.location.href=this.value">
+                            @foreach($years as $year)
+                            <option value="/cch/yabr3/targets/actual?year={{ $year }}">{{ $year }}</option>
+                            @endforeach
+                        </select>
+ 				    </div>
                 </div>
-            </div>
-        </section>  
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Child Indicators</h2>
+                        <table id="factable" style-"margin-top: 25px" class="factable table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Indictor</th>
+                                    <th>Jan - {{ $year }}</th> <th>Feb - {{ $year }}</th> <th>Mar - {{ $year }}</th> <th>Apr - {{ $year }}</th>
+                                    <th>May - {{ $year }}</th> <th>Jun - {{ $year }}</th> <th>Jul - {{ $year }}</th> <th>Aug - {{ $year }}</th>
+                                    <th>Sep - {{ $year }}</th> <th>Oct - {{ $year }}</th> <th>Nov - {{ $year }}</th> <th>Dec - {{ $year }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($data['Child Health'] as $name => $idc)
+                                <tr>
+                                    <td>{{ $name }}</td>
+                                    @for($i=0; $i<12; $i++)
+                                    <td> {{ Form::text('idc_'.$idc[$i]['id'], $idc[$i]['actual'], 
+                                                       array('class'=>'form-control','onblur'=>'updateActual('.$idc[$i]['id'].')', 'id'=>'idc_'.$idc[$i]['id']))  }}</td>
+
+                                    @endfor
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Maternal Indicators</h2>
+                        <table id="mfactable" style-"margin-top: 25px" class="factable table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Indictor</th>
+                                    <th>Jan - {{ $year }}</th> <th>Feb - {{ $year }}</th> <th>Mar - {{ $year }}</th> <th>Apr - {{ $year }}</th>
+                                    <th>May - {{ $year }}</th> <th>Jun - {{ $year }}</th> <th>Jul - {{ $year }}</th> <th>Aug - {{ $year }}</th>
+                                    <th>Sep - {{ $year }}</th> <th>Oct - {{ $year }}</th> <th>Nov - {{ $year }}</th> <th>Dec - {{ $year }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($data['Maternal Health'] as $name => $idc)
+                                <tr>
+                                    <td>{{ $name }}</td>
+                                    @for($i=0; $i<12; $i++)
+                                    <td> {{ Form::text('idc_'.$idc[$i]['id'], $idc[$i]['actual'], 
+                                                       array('class'=>'form-control','onblur'=>'updateActual('.$idc[$i]['id'].')', 'id'=>'idc_'.$idc[$i]['id']))  }}</td>
+                                    @endfor
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Other Indicators</h2>
+                        <table id="ofactable" style-"margin-top: 25px" class="factable table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Indictor</th>
+                                    <th>Jan - {{ $year }}</th> <th>Feb - {{ $year }}</th> <th>Mar - {{ $year }}</th> <th>Apr - {{ $year }}</th>
+                                    <th>May - {{ $year }}</th> <th>Jun - {{ $year }}</th> <th>Jul - {{ $year }}</th> <th>Aug - {{ $year }}</th>
+                                    <th>Sep - {{ $year }}</th> <th>Oct - {{ $year }}</th> <th>Nov - {{ $year }}</th> <th>Dec - {{ $year }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($data['Others'] as $name => $idc)
+                                <tr>
+                                    <td>{{ $name }}</td>
+                                    @for($i=0; $i<12; $i++)
+                                    <td> {{ Form::text('idc_'.$idc[$i]['id'], $idc[$i]['actual'], 
+                                                       array('class'=>'form-control','onblur'=>'updateActual('.$idc[$i]['id'].')', 'id'=>'idc_'.$idc[$i]['id']))  }}</td>
+                                    @endfor
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+        </div>
+    </div>
+</section>  
 @stop
 
 
 @section('script')
-    <script type="text/javascript">
-            $(function() {
-                $('#factable').dataTable({
+<script type="text/javascript">
+    function updateActual(elem)
+    {
+       var newval = $('#idc_'+elem).val();
+       console.log(elem+': '+newval);
+    }
+
+    $(function() {
+       $('.factable').dataTable({
                     "bPaginate": true,
+                    "iDisplayLength": 20,
                     "bLengthChange": false,
-                    "bFilter": true,
-                    "bSort": true,
+                    "bFilter": false,
+                    "bSort": false,
                     "bInfo": true,
                     "bAutoWidth": false
-                });
-
-		var year = {{ $year}};
-            console.log('Year => ' + year);
-
-            switch (year) {
-              case 2015:
-              $('select>option:eq(0)').attr('selected', true);
-              break;
-              case 2014:
-              $('select>option:eq(1)').attr('selected', true);
-              break;
-              case 2013:
-              $('select>option:eq(2)').attr('selected', true);
-              break;
-              case 2012:
-              $('select>option:eq(3)').attr('selected', true);
-              break;
-
-
-            }
-            });
-        </script>
+        });
+    });
+</script>
 @stop
-

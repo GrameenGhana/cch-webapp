@@ -2,16 +2,15 @@
 
 class District extends Eloquent { 
 
-
-//	public function modifier()
-//	{
-//	    return $this->hasOne('Region','id','modified_by');
-//	}
-
     public function users()
     {
       	return $this->belongsToMany('Facilities','cch_facilties');
     } 
+
+    public function subdistricts()
+    {
+        return $this->hasMany('SubDistrict','district_id');
+    }
 
     public function nurses()
     {
@@ -102,7 +101,6 @@ class District extends Eloquent {
 
         return $facilities;
     }
-
 
     public function districtCount()
     {

@@ -152,7 +152,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="treeview {{ Request::is('targets/actuals/*') ? 'active' : '' }}">
+                                <li class="treeview {{ Request::is('targets/actuals*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-double-right"></i> Set Actuals</a>
                                 </li>
 

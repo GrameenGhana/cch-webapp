@@ -15,9 +15,14 @@ class SubDistrict extends Eloquent {
 
 	protected $table = 'cch_sub_districts';
 
- public function district()
+    public function district()
 	{
 	    return $this->hasOne('District','id','district_id');
+	}
+
+    public function zones()
+	{
+	    return $this->hasMany('Zone','subdistrict_id');
 	}
 }
 

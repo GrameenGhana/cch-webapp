@@ -29,7 +29,32 @@ class IndicatorTracker  extends Eloquent {
 
     public static function ByZoneYear($zone, $year)
     {
-        return IndicatorTracker::whereRaw('zone_id=? and year=?', array($zone, $year))->get();
+        return IndicatorTracker::whereRaw('zone_id=? and year=?', array($zone, $year))->orderBy('month')->orderBy('indicator_id')->get();
+    }
+
+    public static function ZoneActuals($zone, $year)
+    {
+        $info = array();
+        $zd = IndicatorTracker::ByZoneYear($zone, $year);
+        
+        foreach($zd as $d)
+        {
+            $idc = ($d->indicator->type=='Maternal Health') ? $d->indicator->care : $d->indicator->care.' ('.$d->indicator->agegroup.')'; 
+
+            if (in_array($d->indicator->type, array_keys($info))) {
+                if (in_array($idc, array_keys($info[$d->indicator->type]))) {
+                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+                } else {
+                    $info[$d->indicator->type][$idc] = array();
+                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+                }
+            } else {
+               $info[$d->indicator->type] = array($idc => array());
+               $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+            }
+        }
+
+        return $info;
     }
 
     public static function updateTrackerTarget($pop)

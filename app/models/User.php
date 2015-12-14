@@ -22,19 +22,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function device() {
         return $this->hasOne('Device', 'user_id', 'id');
-}   public function zone() {
+    }   
+
+    public function zone() {
         return $this->hasOne('Zone', 'zone_id', 'id');
-
-
-}
+    }
 
     public function tracklogs() {
         return $this->hasMany('Tracker', 'username', 'username');
     }
 
     function getPrimaryFacilityDetails() {
-
-
         return ($this->getPrimaryFacilityId() == 0) ? "No Facility" : Facility::find($this->getPrimaryFacilityId())->name;
     }
 
@@ -89,11 +87,17 @@ public  static function getUserRegions($id) {
 
 
 public  static function getUserDistricts($id) {
-        $facs = DB::select('select distinct cf.district from cch.cch_facilities cf inner join  cch.cch_facility_user cfu   on cf.id = cfu.facility_id  where cfu.user_id=? ', array($id));
+        $user = User::find($id);
+
+        if (in_array($user->role, array('Admin'))) {
+            $facs = DB::select('select distinct district from cch.cch_facilities');
+        } else {
+            $facs = DB::select('select distinct cf.district from cch.cch_facilities cf inner join  cch.cch_facility_user cfu on cf.id = cfu.facility_id  where cfu.user_id=? ', array($id));
+        }
+
         $dis = "";
         $cnt = 0;
         foreach ($facs as $f) {
-
             if ($cnt > 0)
                 $dis.=",";
             $dis.=$f->district;
@@ -631,7 +635,7 @@ public  static function getUserDistricts($id) {
     }
 
   public static function isDistrictAdmin($role) {
-        if (strtolower($role) == 'district admin') {
+        if (in_array(strtolower($role), array('district admin','dhio','dhio assistant'))) {
             return true;
         }
         return false;

@@ -8,9 +8,8 @@ class Zone extends Eloquent {
   {
       return $this->hasOne('District','id','district_id');
   }
-
    
-    public function subdistrict()
+  public function subdistrict()
   {
       return $this->hasOne('SubDistrict','id','subdistrict_id');
   }
@@ -19,5 +18,4 @@ class Zone extends Eloquent {
   {
       return $this->hasOne('Facility','id','facility_id');
   }
-
 }

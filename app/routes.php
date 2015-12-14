@@ -19,15 +19,15 @@ Route::resource('/targets/actuals',                                      'Indica
 Route::resource('/targets/population/districts',                         'DistrictPopulationController');
 
 Route::get('/targets/population/subdistricts/bulkedit/{id}/{year}',      array('uses' => 'SubDistrictPopulationController@districtView'))->before('auth');
-Route::post('/targets/population/subdistricts/bulkedit',                 array('uses' => 'SubDistrictPopulationController@updateAll'));
-Route::resource('/targets/population/subdistricts',                      'SubDistrictPopulationController'); 
+Route::post('/targets/population/subdistricts/bulkedit',                 array('uses' => 'SubDistrictPopulationController@updateAll'))->before('auth');
+Route::resource('/targets/population/subdistricts',                      'SubDistrictPopulationController');
 
 Route::get('/getZonePopulationData',                                     array('uses' => 'ZonePopulationController@index'));
 Route::get('/targets/population/zones/bulkedit/{id}',                    array('uses' => 'ZonePopulationController@indexAll'))->before('auth');
 Route::get('/targets/population/zones/bulkedit/district/{id}/{year}',    array('uses' => 'ZonePopulationController@districtView'))->before('auth');
 Route::get('/targets/population/zones/bulkedit/subdistrict/{id}/{year}', array('uses' => 'ZonePopulationController@subDistrictView'))->before('auth');
 Route::post('/targets/population/zones/bulkedit',                        array('uses' => 'ZonePopulationController@updateAll'));
-Route::resource('targets/population/zones',                              'ZonePopulationController'); 
+Route::resource('targets/population/zones',                              'ZonePopulationController');
 /**** / Target setting routes ***/
 
 Route::get('/getFacilityZones', array('uses' => 'ZoneController@getByFacilityZones'));
