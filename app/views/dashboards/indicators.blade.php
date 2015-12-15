@@ -24,13 +24,13 @@
                         </div>
                     </div>
     
-                    <h2>Child Health</h2>
+                    <h2 class="text-center">Child Health</h2>
                     @include('widgets.cch-indicators-childhealth',array('dashboard'=>$dashboard))                  
 
-                    <h2>Maternal Health</h2>
+                    <h2 class="text-center">Maternal Health</h2>
                     @include('widgets.cch-indicators-maternalhealth',array('dashboard'=>$dashboard))                  
 
-                    <h2>Others</h2>
+                    <h2 class="text-center">Others</h2>
                     @include('widgets.cch-indicators-others',array('dashboard'=>$dashboard))                  
                </section>
 	       <!-- /.content -->

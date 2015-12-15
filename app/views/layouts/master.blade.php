@@ -135,14 +135,14 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="treeview {{ (Request::is('/') or Request::is('stayingwell*') or Request::is('indicators*')) ? 'active' : '' }}">
-                            <a href="{{ URL::to('/') }}">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                            </a>
+                            <a href="{{ URL::to('/') }}"> <i class="fa fa-dashboard"></i><span>Dashboard</span> </a>
                             <ul class="treeview-menu">
                                 <li class="treeview {{ Request::is('indicators/*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('indicators/')}}"><i class="fa fa-angle-double-right"></i> Indicators</a></li>
+                                    <a href="{{ URL::to('indicators/')}}"><i class="fa fa-angle-double-right"></i>Indicators</a>
+                                </li>
                                 <li class="treeview {{ Request::is('stayingwell/*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('stayingwell/')}}"><i class="fa fa-angle-double-right"></i> Staying Well</a></li>
+                                    <a href="{{ URL::to('stayingwell/')}}"><i class="fa fa-angle-double-right"></i>Staying Well</a>
+                                </li>
                             </ul>
                         </li>
 
@@ -156,7 +156,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="treeview {{ Request::is('targets/actuals*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-double-right"></i> Set Actuals</a>
+                                    <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-right"></i> Set Actuals</a>
                                 </li>
 
                                 <li class="treeview {{ Request::is('targets/population/*') ? 'active' : '' }}">

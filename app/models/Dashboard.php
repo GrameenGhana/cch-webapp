@@ -190,6 +190,23 @@ class Dashboard extends Eloquent {
         return $data;
     }
 
+    public function indicatorsDataByNurse($nurse)
+    {
+        $data = array();
+        $year = date('Y');
+        $zonedata = IndicatorTracker::ZoneActualsByNurse($nurse, $year);
+        return $zonedata;
+    }
+
+    public function indicatorsDataByZone($zone)
+    {
+        $data = array();
+        $year = date('Y');
+        $zonedata = IndicatorTracker::ZoneActuals($zone, $year);
+        return $zonedata;
+    }
+
+
     /*** End Indicators  **/
 
 

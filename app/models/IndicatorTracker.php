@@ -32,6 +32,55 @@ class IndicatorTracker  extends Eloquent {
         return IndicatorTracker::whereRaw('zone_id=? and year=?', array($zone, $year))->orderBy('month')->orderBy('indicator_id')->get();
     }
 
+    public static function ZoneActualsByNurse($nurseid, $year)
+    {
+        $info = array();
+
+        $nurse = User::find($nurseid);
+
+        if ($nurse != null)
+        {
+            $zd = IndicatorTracker::ByZoneYear($nurse->zone_id, $year);
+
+            if (sizeof($zd)==0) { // Actuals don't exist- create records
+                $pop = ZonePopulation::whereRaw('year=? and zone_id=?',array($year,$zone))->first();
+                IndicatorTracker::updateTrackerTarget($pop);
+                $zd = IndicatorTracker::ByZoneYear($zone, $year);
+            }
+
+            foreach($zd as $d)
+            {
+                $idc = ($d->indicator->type=='Maternal Health') ? $d->indicator->category : $d->indicator->agegroup;
+                $c = $d->indicator->care;
+
+                $monthNum  = $d->month;
+                $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                $month = $dateObj->format('F');    
+
+                if (in_array($d->indicator->type, array_keys($info))) {
+                    if (in_array($idc, array_keys($info[$d->indicator->type]))) {
+                         if (in_array($c, array_keys($info[$d->indicator->type][$idc]))) {
+                                array_push($info[$d->indicator->type][$idc][$c], array('month'=>$month, 'target'=>$d->target,
+                                                                                       'actual'=>$d->actual));
+                            } else {
+                                $info[$d->indicator->type][$idc][$c] = array();
+                                array_push($info[$d->indicator->type][$idc][$c], array('month'=>$month, 'target'=>$d->target,
+                                                                                        'actual'=>$d->actual));
+                            }
+                    } else {
+                        $info[$d->indicator->type][$idc] = array($c=>array());
+                        array_push($info[$d->indicator->type][$idc][$c], array('month'=>$month, 'target'=>$d->target,'actual'=>$d->actual));
+                    }
+                } else {
+                    $info[$d->indicator->type] = array($idc => array($c=> array( array('month'=>$month, 
+                                                                                       'target'=>$d->target,'actual'=>$d->actual))));
+                }
+            }
+        }
+        return $info;
+    }
+
+
     public static function ZoneActuals($zone, $year)
     {
         $info = array();
@@ -47,16 +96,20 @@ class IndicatorTracker  extends Eloquent {
         {
             $idc = ($d->indicator->type=='Maternal Health') ? $d->indicator->care : $d->indicator->care.' ('.$d->indicator->agegroup.')'; 
 
+            $monthNum  = $d->month;
+            $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+            $month = $dateObj->format('F'); 
+
             if (in_array($d->indicator->type, array_keys($info))) {
                 if (in_array($idc, array_keys($info[$d->indicator->type]))) {
-                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'month'=>$month, 'target'=>$d->target,'actual'=>$d->actual);
                 } else {
                     $info[$d->indicator->type][$idc] = array();
-                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+                    $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'month'=>$month, 'target'=>$d->target,'actual'=>$d->actual);
                 }
             } else {
                $info[$d->indicator->type] = array($idc => array());
-               $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'target'=>$d->target,'actual'=>$d->actual);
+               $info[$d->indicator->type][$idc][$d->month - 1] = array('id'=>$d->id, 'month'=>$month, 'target'=>$d->target,'actual'=>$d->actual);
             }
         }
 

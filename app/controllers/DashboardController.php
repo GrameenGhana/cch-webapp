@@ -25,6 +25,18 @@ class DashboardController extends BaseController {
             return Response::json(array('error' => false, 'info' => $info), 200);
     }
 
+    public function indicatorsDataByZone($id)
+    {
+            $info = $this->dashboard->indicatorsDataByZone($id);
+            return Response::json($info, 200);
+    }
+
+    public function indicatorsDataByNurse($id)
+    {
+            $info = $this->dashboard->indicatorsDataByNurse($id);
+            return Response::json($info, 200);
+    }
+
 	public function showIndicators()
 	{
             //return Response::json($this->dashboard->indicatorsData(array()));
