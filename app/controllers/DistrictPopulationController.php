@@ -13,32 +13,34 @@
  */
 class DistrictPopulationController extends \BaseController {
 
-    public function __construct() {
+    public function __construct() 
+    {
 
          $this->regions = array();
- if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role),"supervisor")!='') {
+         if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role),"supervisor")!='') {
            $ids = User::getUserDistricts(Auth::user()->id);
 
-$districts= District::whereRaw(' id  in (?) ',array($ids) )->get();
-$region = User::getUserRegions(Auth::user()->id);
+            $districts= District::whereRaw(' id  in (?) ',array($ids) )->get();
+            $region = User::getUserRegions(Auth::user()->id);
 
-}else  {
-$districts = District::all();
+        }else  {
+            $districts = District::all();
 
-         $region = District::groupBy("region")->get();
-}        foreach ($region as $key => $value) {
-            $this->regions[$value->region] = $value->region;
+            $region = District::groupBy("region")->get();
+        }           
+        
+        foreach ($region as $key => $value) {
+                $this->regions[$value->region] = $value->region;
         }
 
-
-//        $districts = District::all();
-        
         $this->districts = array();
 
         foreach ($districts as $k => $v) {
             $this->districts[$v->district][$v->id]= $v->name;
         }
 
+        $this->years = array();
+        for($i=2012; $i <=date('Y'); $i++) { $this->years[$i] = $i; };
         
 
         $this->rules = array('year' => 'required', 'district' => 'required' ,'population' => 'required|integer');
@@ -51,14 +53,13 @@ $districts = District::all();
      * @return Response
      */
     public function index() {
-//        $pops = DistrictPopulation::all();
-	$year = Input::get('year');
+	    $year = Input::get('year');
         $currentyear = date('Y');
         if(null != $year){
           $currentyear = $year;  
         }  
 
- if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role),"supervisor")!='') {
+        if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role),"supervisor")!='') {
            $ids = User::getUserDistricts(Auth::user()->id);
            $pops = DistrictPopulation::whereRaw('year =? and  district_id  in (?) ',array($currentyear,$ids) )->get();
         } else{
@@ -72,8 +73,9 @@ $districts = District::all();
      *
      * @return Response
      */
-    public function create() {
-        return View::make('targets.districtpopulations.create', array("districts" => $this->districts, "region" => $this->regions));   //
+    public function create() 
+    {
+        return View::make('targets.districtpopulations.create', array("districts" => $this->districts, "region" => $this->regions, "years"=>$this->years));   //
     }
 
     /**
@@ -83,8 +85,6 @@ $districts = District::all();
      */
     public function store() {
         $validator = Validator::make(Input::all(), $this->rules);
-
-      
 
         if ($validator->fails()) {
             return Redirect::to('/targets/population/districts/create')
@@ -186,7 +186,7 @@ $districts = District::all();
     public function edit($id) {
 //
         $pop = DistrictPopulation::find($id);
-        return View::make('targets.districtpopulations.edit', array('pop'=>$pop,'districts'=>$this->districts, "region" => $this->regions));   //
+        return View::make('targets.districtpopulations.edit', array('pop'=>$pop,'districts'=>$this->districts, "region" => $this->regions, "years"=>$this->years)); 
     }
 
     /**

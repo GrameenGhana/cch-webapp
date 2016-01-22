@@ -44,6 +44,8 @@ class SubDistrictPopulationController extends \BaseController {
             $this->districts[$v->district][$v->id] = $v->name;
         }
 
+      $this->years = array();
+        for($i=2012; $i <=date('Y'); $i++) { $this->years[$i] = $i; };
 
 
         $this->subdistricts = array();
@@ -82,7 +84,7 @@ class SubDistrictPopulationController extends \BaseController {
      * @return Response
      */
     public function create() {
-        return View::make('targets.subdistrictpopulations.create', array("districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
+        return View::make('targets.subdistrictpopulations.create', array("districts" => $this->districts, "subdistricts" => $this->subdistricts, "regions" => $this->regions, "years"=>$this->years));   //
     }
 
     /**
@@ -145,7 +147,7 @@ class SubDistrictPopulationController extends \BaseController {
     {
         $pop = SubDistrictPopulation::find($id);
         return View::make('targets.subdistrictpopulations.edit', 
-                         array('pop' => $pop, "districts" => $this->districts, 
+                         array('pop' => $pop, "districts" => $this->districts, "years"=>$this->years, 
                                "subdistricts" => $this->subdistricts, "regions" => $this->regions));   //
     }
 

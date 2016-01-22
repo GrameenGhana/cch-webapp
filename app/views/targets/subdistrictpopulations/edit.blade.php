@@ -62,7 +62,7 @@
                               <div class="row">
                                 <div class="col-md-6">
                                     {{ Form::label('year','Year') }}
-                                    {{ Form::select('year', array('2015'=>'2015','2016'=>'2016'), $pop->year,array('class'=>'form-control','placeholder'=>'Select year')) }}
+                                    {{ Form::select('year', $years, $pop->year,array('class'=>'form-control','placeholder'=>'Select year')) }}
                                 </div>  <div class="col-md-6">
                                  {{ Form::label('district_percentage','Percentage of district (%)') }}
                                 {{ Form::text('district_percentage',$pop->district_percentage,array('class'=>'form-control','placeholder'=>'Enter percentage')) }}

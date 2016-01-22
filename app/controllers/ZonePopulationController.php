@@ -54,6 +54,9 @@ class ZonePopulationController extends \BaseController {
             $this->subdistricts[$v->subdistrict][$v->id] = $v->name;
         }
 
+        $this->years = array();
+        for($i=2012; $i <=date('Y'); $i++) { $this->years[$i] = $i; };
+
         $this->rules = array('population' => 'required | integer', 
                              'district_percentage' => 'required|integer|between:1,100', 
                              'zoneselected' => 'required');
@@ -89,7 +92,7 @@ class ZonePopulationController extends \BaseController {
      * @return Response
      */
     public function create() {
-        return View::make('targets.zonepopulations.create', array("zones" => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.create', array("zones" => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts, "years"=>$this->years));   //
     }
 
     /**
@@ -174,7 +177,7 @@ class ZonePopulationController extends \BaseController {
     public function show($id) {
 //
         $pop = ZonePopulation::find($id);
-        return View::make('targets.zonepopulations.edit', array("subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.edit', array("subdistricts" => $this->subdistricts,"years"=>$this->years));   //
     }
 
     /**
@@ -186,7 +189,7 @@ class ZonePopulationController extends \BaseController {
     public function edit($id) {
 //
         $pop = ZonePopulation::find($id);
-        return View::make('targets.zonepopulations.edit', array('pop' => $pop, 'zones' => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts));   //
+        return View::make('targets.zonepopulations.edit', array('pop' => $pop, 'zones' => $this->zones, "districts" => $this->districts, "region" => $this->regions, "subdistricts" => $this->subdistricts,"years"=>$this->years));   //
     }
 
     /**

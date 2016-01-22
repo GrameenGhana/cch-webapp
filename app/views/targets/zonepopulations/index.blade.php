@@ -42,10 +42,9 @@
                                     <div style="">
 				                        Showing population for 
                                         <select name="year" style="font-size:20px;" onchange="if (this.value) window.location.href=this.value">
-                                            <option value="/cch/yabr3/targets/population/zones?year=2015">2015</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2014">2014</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2013">2013</option>
-                                            <option value="/cch/yabr3/targets/population/zones?year=2012">2012</option>
+                                            @for ($i=date('Y'); $i >= 2012; $i--)
+                                            <option value="/cch/yabr3/targets/population/zones?year={{ $i }}">{{ $i }}</option>
+                                            @endfor
                                         </select>
  				                    </div>
 

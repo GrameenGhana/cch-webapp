@@ -86,10 +86,12 @@ class IndicatorTracker  extends Eloquent {
         $info = array();
         $zd = IndicatorTracker::ByZoneYear($zone, $year);
 
-        if (sizeof($zd)==0) { // Actuals don't exist- create records
+        if ($zd->count()==0) { // Actuals don't exist- create records
             $pop = ZonePopulation::whereRaw('year=? and zone_id=?',array($year,$zone))->first();
-            IndicatorTracker::updateTrackerTarget($pop);
-            $zd = IndicatorTracker::ByZoneYear($zone, $year);
+            if ($pop != null) {
+                IndicatorTracker::updateTrackerTarget($pop);
+                $zd = IndicatorTracker::ByZoneYear($zone, $year);
+            }
         }
         
         foreach($zd as $d)

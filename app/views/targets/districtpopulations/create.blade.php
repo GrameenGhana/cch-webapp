@@ -59,7 +59,7 @@
                               <div class="row">
                                 <div class="col-md-6">
                                     {{ Form::label('year','Year') }}
-                                    {{ Form::select('year', array('2012'=>'2012','2013'=>'2013','2014'=>'2014','2015'=>'2015'), Input::old('year'),array('class'=>'form-control','placeholder'=>'Select year')) }}
+                                    {{ Form::select('year', $years, Input::old('year'),array('class'=>'form-control','placeholder'=>'Select year')) }}
                                 </div>  
                                 <div class="col-md-6">
                                 {{ Form::label('population','Population') }}
