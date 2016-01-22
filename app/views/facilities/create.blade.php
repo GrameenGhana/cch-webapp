@@ -49,17 +49,19 @@
 					    {{ Form::label('fac_type','Facility Type') }}
 					    {{ Form::select('fac_type', $facilityTypes, Input::old('fac_type'),array('class'=>'form-control','placeholder'=>'Choose Facility Type')) }}
                                         </div>
+
                                         <div class="form-group">
 					    {{ Form::label('district','District') }}
 					    {{ Form::select('district', $districts, Input::old('district'),array('class'=>'form-control','placeholder'=>'Enter district name')) }}
                                         </div>
+
                                         <div class="form-group">
-					    {{ Form::label('sub_district','Sub District') }}
-                                            {{ Form::select('sub_district', $subdistricts, Input::old('sub_district'),array('class'=>'form-control','placeholder'=>'Enter district name')) }}
-
-				
-
+					  {{ Form::label('sub_district','Sub District') }}
+                        <select id="sub_district" name="sub_district" class="form-control">
+                            <option>Select a district first</option>
+                        </select>
                                         </div>
+
                                         <div class="form-group">
 					    {{ Form::label('motechid','MOTECH Facility Id') }}
 					    {{ Form::text('motechid',Input::old('motechid'),array('class'=>'form-control','placeholder'=>'Enter MOTECH Facility ID')) }}
@@ -76,4 +78,22 @@
 				</div>
 			</div>
    		</section>	
+@stop
+
+@section('script')
+        <script type="text/javascript">
+             function getsubs(did)
+             {
+					        $.get("{{ url('api/v1/dropdown/subdistricts')}}", { id: did }, function(data) {
+					            $('#sub_district').empty(); 
+					            $.each(data, function(key, element) {
+					                $('#sub_district').append("<option value='" + key +"'>" + element + "</option>");
+					            });
+					        });
+             }
+					$(document).ready(function($){
+					    $('#district').change(function(){ getsubs($(this).val()); });
+                        getsubs($('#district').val());
+					});
+        </script>
 @stop

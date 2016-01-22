@@ -8,9 +8,11 @@
 
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /cch/yabr3/$1 [L,R=301]
+    #RewriteRule ^(.*)/$ /cch/dashboard/$1 [L,R=301]
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule .* /cch/yabr3/index.php [L]
+    #RewriteRule .* /cch/dashboard/index.php [L]
 </IfModule>

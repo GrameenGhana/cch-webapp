@@ -81,6 +81,12 @@ Route::get('logout', array('uses' => 'HomeController@doLogout'))->before('auth')
 //Apis
 Route::group(array('prefix' => 'api/v1'), function()
 {
+    Route::get('dropdown/subdistricts', function() {
+        $id = Input::get('id');
+        $subs = District::find($id)->subdistricts;
+        return $subs->lists('name','id');
+    });
+    
     Route::resource('tracker','TrackerController'); 
     Route::resource('users','UserController');
     Route::resource('incharge','InChargeController');
