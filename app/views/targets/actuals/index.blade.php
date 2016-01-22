@@ -61,10 +61,16 @@
                         </select>
  				    </div>
                 </div>
-            
+           
+                @if (count($data)==0)
+                    <p class="text-center">
+                        Zone Population data not available for {{ $year }}. Enter data <a href="http://188.226.189.149/cch/yabr3/targets/population/zones">here</a>.
+                    </p>
+                @else
                 @include('targets.actuals.actualtable', array('title'=>'Child Indicators',    'data'=>$data['Child Health'],    'year'=>$year))
                 @include('targets.actuals.actualtable', array('title'=>'Maternal Indicators', 'data'=>$data['Maternal Health'], 'year'=>$year))
                 @include('targets.actuals.actualtable', array('title'=>'Other Indicators',    'data'=>$data['Others'],          'year'=>$year))
+                @endif
         </div>
     </div>
 </section>  
