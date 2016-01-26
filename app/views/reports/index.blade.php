@@ -97,6 +97,30 @@
                                              </tr>
 
 
+  <tr>
+                                                  <td>Final Quiz Scores</td>
+                                                  <td>
+                                                        <a title="View Reports" class="btn btn-sm btn-info" href="/reports/cch.export.php?action=cchquiz&d={{$d}}"><i class="fa fa-bar-chart-o">View Report</i></a>
+                                                  </td>
+                                             </tr>
+
+                                             <tr>
+                                                  <td>District Target Distribution</td>
+                                                  <td>
+                                                       <div class="row">
+                                                            <div class="col-md-4">
+                                                                <select name="year" id="year" class="form-control" style="">
+                                                                    @foreach($years as $y)
+                                                                    <option value="{{ $y }}">{{ $y }} Targets</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                 <a title="View Report" class="pull-left btn btn-sm btn-info"  href="javascript:getTargetsReport();"><i class="fa fa-bar-chart-o">View Report</i></a>
+                                                            </div>
+                                                       </div>
+                                                  </td>
+                                             </tr>
 
 					</tbody>
 				     </table>
@@ -104,3 +128,15 @@
 			</div>
    		</section>	
 @stop
+
+@section('script')
+<script type="text/javascript">
+
+    function getTargetsReport()
+    {
+       var year = $('#year').val();
+       window.location.href = "/reports/cch.export.php?action=targets&year="+year+"&d={{ $d }}";
+    }
+</script>
+@stop
+

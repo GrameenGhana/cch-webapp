@@ -15,7 +15,6 @@ class DistrictPopulationController extends \BaseController {
 
     public function __construct() 
     {
-
          $this->regions = array();
          if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role),"supervisor")!='') {
            $ids = User::getUserDistricts(Auth::user()->id);

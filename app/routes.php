@@ -62,7 +62,7 @@ Route::resource('tracker','TrackerController');
 Route::resource('districts','DistrictController'); 
 Route::resource('subdistricts','SubDistrictController'); 
 Route::resource('zones','ZoneController'); 
-Route::resource('reports','ReportController'); 
+Route::resource('reports','ReportController',['before'=>'auth']); 
 //Route::get('/reports/{id}', array('uses' => 'ReportController@userReport'))->before('auth');
 
 Route::get('/courses',function(){ $courses=CourseDetails::details(); return $courses; });

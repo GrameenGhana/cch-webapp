@@ -11,24 +11,23 @@
  *
  * @author skwakwa
  */
-class ReportController  extends BaseController {
-    
-       public function index() {
-
- $this->districtIds = User::getUserDistricts(Auth::user()->id);
+class ReportController  extends BaseController 
+{
+    public function index() 
+    {
+        $this->districtIds = User::getUserDistricts(Auth::user()->id);
         $this->isDistrictAdmin = false;
 
         if (strtolower(Auth::user()->role) == 'district admin' || strpos(strtolower(Auth::user()->role), "supervisor") != '') {
-        $this->isDistrictAdmin = true;
+            $this->isDistrictAdmin = true;
+        } else {
+            $this->districtIds = "";
+        }
 
-}else{
-$this->districtIds = "";
-
-}
-
+        $years = array();
+        for($i=date('Y'); $i >= 2012; $i--) { array_push($years, $i); }
         
-        return View::make('reports.index',array('d'=> $this->districtIds));
+        return View::make('reports.index',array('d'=> $this->districtIds, 'years'=>$years));
     }
-    
 }
 
