@@ -36,7 +36,9 @@ class SubDistrictPopulationController extends \BaseController {
 
 
         foreach ( $region as $key => $value) {
+if ($value->region!='unknown') {
             $this->regions[$value->region] = $value->region;
+            }
         }
 
 

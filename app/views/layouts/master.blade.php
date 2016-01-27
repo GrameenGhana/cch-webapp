@@ -152,7 +152,7 @@
                             </ul>
                         </li>
 
-		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant')))
+		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant')) || (strpos(strtolower(Auth::user()->role),"supervisor")>=0))
 
                         <li class="treeview {{ Request::is('content*') ? 'active' : '' }}">
                             <a href="{{ URL::to('/content') }}">
@@ -219,18 +219,7 @@
                         </li>
 			@endif
 
-		    @if (strtolower(Auth::user()->role) == 'admin' )
-                     <!--
-                        <li class="treeview {{ Request::is('content/*') ? 'active' : '' }}">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>Content</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                        </li>
-                    -->
-
-
+            @if (strpos(strtolower(Auth::user()->role),"supervisor")>=0 || strtolower(Auth::user()->role) == 'admin'  )
                         <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*')) ? 'active' : '' }}">
                             <a href="#">
                                 <i class="fa fa-cogs"></i>
@@ -240,37 +229,22 @@
                             <ul class="treeview-menu">
                                 <li class="{{ Request::is('devices/*') ? 'active' : '' }}"><a href="{{ URL::to('devices') }}"><i class="fa fa-mobile-phone"></i>Devices</a></li>
                                 <li class="{{ Request::is('facilities/*') ? 'active' : '' }}"><a href="{{ URL::to('facilities') }}"><i class="fa fa-hospital-o"></i>Facilities</a></li>
-                                <li class="{{ Request::is('facilitytypes/*') ? 'active' : '' }}"><a href="{{ URL::to('facilitytypes') }}"><i class="fa fa-hospital-o"></i>Facility Types</a></li>
-                                <li class="{{ Request::is('users/*') ? 'active' : '' }}"><a href="{{ URL::to('users') }}"><i class="fa fa-users"></i>Users</a></li>
-                                <li class="{{ Request::is('districtadmin/*') ? 'active' : '' }}"><a href="{{ URL::to('districtadmin') }}"><i class="fa fa-users"></i>District Admins</a></li>
-                                <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
+                                <li class="{{ Request::is('facilitytypes/*') ? 'active' : ''}}"><a href="{{ URL::to('facilitytypes') }}"><i class="fa fa-hospital-o"></i>Facility Types</a></li>
                                 <li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
                                 <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
                                 <li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
-                                <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
+
+                                <li class="{{ Request::is('districtadmin/*') ? 'active' : '' }}"><a href="{{ URL::to('districtadmin') }}"><i class="fa fa-users"></i>District Admins</a></li>
+		                        @if (strtolower(Auth::user()->role) == 'admin' )
+                                <li class="{{ Request::is('users/*') ? 'active' : '' }}"><a href="{{ URL::to('users') }}"><i class="fa fa-users"></i>Users</a></li>
+                                @else
+                                <li class="{{ Request::is('distusers/*') ? 'active' : '' }}"><a href="{{ URL::to('distusers') }}"><i class="fa fa-users"></i>Users</a></li>
+                                @endif
+                                <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
                             </ul>
                         </li>
 			@endif
                         
-                         @if (strpos(strtolower(Auth::user()->role),"supervisor")>=0 && strtolower(Auth::user()->role) != 'admin'  )
-                             <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*')) ? 'active' : '' }}">
-                            <a href="#">
-                                <i class="fa fa-cogs"></i>
-                                <span>System Setup</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li class="{{ Request::is('devices/*') ? 'active' : '' }}"><a href="{{ URL::to('devices') }}"><i class="fa fa-mobile-phone"></i>Devices</a></li>
-                                <li class="{{ Request::is('facilities/*') ? 'active' : '' }}"><a href="{{ URL::to('facilities') }}"><i class="fa fa-hospital-o"></i>Facilities</a></li>
-                                 <li class="{{ Request::is('facilitytypes/*') ? 'active' : '' }}"><a href="{{ URL::to('facilitytypes') }}"><i class="fa fa-hospital-o"></i>Facility Types</a></li>
-                                 <li class="{{ Request::is('distusers/*') ? 'active' : '' }}"><a href="{{ URL::to('distusers') }}"><i class="fa fa-users"></i>Users</a></li>
-                                <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
-                                <li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
-                                <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
-                                <li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
-                            </ul>
-                        </li>
-                         @endif
                     </ul>
                 </section>
                 <!-- /.sidebar -->

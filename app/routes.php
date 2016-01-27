@@ -42,23 +42,19 @@ Route::get('/content/poccms/section',          array('uses'=>  'PocCmsController
 Route::get('/content/poccms/upload',           array('uses'=>  'PocCmsController@upload'));
 Route::get('/content/poccms/uploadFiles',      array('uses'=>  'PocCmsController@uploadFiles'));
 Route::get('/content/poccms/alluploads',       array('uses'=>  'PocCmsController@allUploads'));
-
 Route::post('/content/poccms/addsection',       array('uses'=>  'PocCmsController@addSection'));
 Route::post('/content/poccms/editsectionvalue', array('uses'=>  'PocCmsController@editSectionValue'));
 Route::post('/content/poccms/addpage',          array('uses'=>  'PocCmsController@addPage'));
 Route::post('/content/poccms/addpagedetails',   array('uses'=>  'PocCmsController@addPageDetails'));
 /**** / Content routes ***/
 
-
 /**** Target routes ***/
 Route::post('/targets/actuals/{id}',                                     'IndicatorTrackerController@update');
 Route::resource('/targets/actuals',                                      'IndicatorTrackerController');
 Route::resource('/targets/population/districts',                         'DistrictPopulationController');
-
 Route::get('/targets/population/subdistricts/bulkedit/{id}/{year}',      array('uses' => 'SubDistrictPopulationController@districtView'))->before('auth');
 Route::post('/targets/population/subdistricts/bulkedit',                 array('uses' => 'SubDistrictPopulationController@updateAll'))->before('auth');
 Route::resource('/targets/population/subdistricts',                      'SubDistrictPopulationController');
-
 Route::get('/getZonePopulationData',                                     array('uses' => 'ZonePopulationController@index'));
 Route::get('/targets/population/zones/bulkedit/{id}',                    array('uses' => 'ZonePopulationController@indexAll'))->before('auth');
 Route::get('/targets/population/zones/bulkedit/district/{id}/{year}',    array('uses' => 'ZonePopulationController@districtView'))->before('auth');
@@ -76,6 +72,8 @@ Route::get('/getFacilities', array('uses' => 'FacilityController@getFacilities')
 Route::get('/getZones', array('uses' => 'ZoneController@getZones'));
 Route::get('/districtadmin', array('uses' => 'UserController@indexDistrictAdmin'));
 Route::get('/districtadmin/create', array('uses' => 'UserController@districtAdminCreate'));
+
+/*** System Setup **/
 Route::resource('users','UserController');
 Route::resource('facilities','FacilityController'); 
 Route::resource('facilitytypes','FacilityTypeController'); 
@@ -86,7 +84,7 @@ Route::resource('districts','DistrictController');
 Route::resource('subdistricts','SubDistrictController'); 
 Route::resource('zones','ZoneController'); 
 Route::resource('reports','ReportController',['before'=>'auth']); 
-//Route::get('/reports/{id}', array('uses' => 'ReportController@userReport'))->before('auth');
+/** end System Setup **/
 
 Route::get('/courses',function(){ $courses=CourseDetails::details(); return $courses; });
 Route::pattern('id','[0-9]+');

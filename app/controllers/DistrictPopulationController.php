@@ -29,11 +29,12 @@ class DistrictPopulationController extends \BaseController {
         }           
         
         foreach ($region as $key => $value) {
+                    if ($value->region!='unknown') {
                 $this->regions[$value->region] = $value->region;
+                }
         }
 
         $this->districts = array();
-
         foreach ($districts as $k => $v) {
             $this->districts[$v->district][$v->id]= $v->name;
         }

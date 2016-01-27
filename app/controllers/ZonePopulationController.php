@@ -43,7 +43,9 @@ class ZonePopulationController extends \BaseController {
         }
 
         foreach ($region as $key => $value) {
-            $this->regions[$value->region] = $value->region;
+           if ($value->region!='unknown') {
+               $this->regions[$value->region] = $value->region;
+           }
         }
 
         foreach ($districts as $k => $v) {
