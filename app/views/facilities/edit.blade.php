@@ -64,6 +64,10 @@
 					    {{ Form::text('motechid',($facility->motech_facility_id==0 ? "": $facility->motech_facility_id),array('class'=>'form-control','placeholder'=>'Enter MOTECH Facility ID')) }}
 					    <p>This is only required if this is a MOTECH facility</p>
                                         </div>
+                                        <div class="form-group">
+					    {{ Form::label('comment','Comment') }}
+					    {{ Form::textarea('comment',$facility->comment,array('class'=>'form-control','placeholder'=>'Enter reason for edit')) }}
+                                        </div>
                                     </div><!-- /.box-body -->
 
                                     <div class="box-footer">

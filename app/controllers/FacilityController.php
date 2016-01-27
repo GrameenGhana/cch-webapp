@@ -224,6 +224,7 @@ class FacilityController extends BaseController {
             $facility->motech_facility_id = Input::get('motechid');
             $facility->region = $this->getRegionFromDistrict(Input::get('district'));
             $facility->facility_type = Input::get('fac_type');
+            $facility->comment = Input::get('comment');
             $facility->modified_by = Auth::user()->id;
             $facility->save();
 

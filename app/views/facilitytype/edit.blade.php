@@ -48,7 +48,6 @@
                     <div class="form-group">
                         {{ Form::label('name','Name') }}
                         {{ Form::text('name',$facilitytype->name,array('class'=>'form-control','placeholder'=>'Enter Name')) }}
-
                     </div>
                 </div><!-- /.box-body -->
 
