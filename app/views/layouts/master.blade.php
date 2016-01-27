@@ -134,8 +134,11 @@
 
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="treeview {{ (Request::is('/') or Request::is('stayingwell*') or Request::is('indicators*')) ? 'active' : '' }}">
-                            <a href="{{ URL::to('/') }}"> <i class="fa fa-dashboard"></i><span>Dashboard</span> </a>
+                        <li class="treeview {{ (Request::is('/') or Request::is('stayingwell*') or Request::is('indicators*') or Request::is('reports*')) ? 'active' : '' }}">
+                            <a href="{{ URL::to('/') }}"> 
+                                <i class="fa fa-dashboard"></i><span>Dashboard</span> 
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
                             <ul class="treeview-menu">
                                 <li class="treeview {{ Request::is('indicators/*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('indicators/')}}"><i class="fa fa-angle-double-right"></i>Indicators</a>
@@ -143,10 +146,45 @@
                                 <li class="treeview {{ Request::is('stayingwell/*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('stayingwell/')}}"><i class="fa fa-angle-double-right"></i>Staying Well</a>
                                 </li>
+                                <li class="treeview {{ Request::is('reports*') ? 'active' : '' }}">
+                                    <a href="{{ URL::to('reports') }}"><i class="fa fa-angle-double-right"></i>Reports</a>
+                                </li>
                             </ul>
                         </li>
 
 		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant')))
+
+                        <li class="treeview {{ Request::is('content*') ? 'active' : '' }}">
+                            <a href="{{ URL::to('/content') }}">
+                                <i class="fa fa-bullseye"></i>
+                                <span>Manage Content</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+
+                            <ul class="treeview-menu">
+                                <li class="treeview {{ Request::is('content/poccms/*') ? 'active' : '' }}">
+                                    <a href="{{ URL::to('content/poccms') }}">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span>Point of Care CMS</span>
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li class="{{ Request::is('content/poccms/view*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('content/poccms/view') }}"><i class="fa fa-edit fa-fw"></i>View Pages</a>
+                                        </li>
+                                        <li class="{{ Request::is('content/poccms/add*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('content/poccms/add') }}"><i class="fa fa-edit fa-fw"></i>Add Pages</a>
+                                        </li>
+                                        <li class="{{ Request::is('content/poccms/section*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('content/poccms/section') }}"><i class="fa fa-edit fa-fw"></i>Sections</a>
+                                        </li>
+                                        <li class="{{ Request::is('content/poccms/upload*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('content/poccms/upload') }}"><i class="fa fa-upload"></i>Upload Content</a>
+                                        </li>
+                                    </ul>
+                               </li> 
+                            </ul>
+                        </li>
 
                         <li class="treeview {{ Request::is('targets/*') ? 'active' : '' }}">
                             <a href="#">
@@ -156,7 +194,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="treeview {{ Request::is('targets/actuals*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-right"></i> Set Actuals</a>
+                                    <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-double-right"></i> Set Actuals</a>
                                 </li>
 
                                 <li class="treeview {{ Request::is('targets/population/*') ? 'active' : '' }}">
@@ -189,10 +227,6 @@
                                 <span>Content</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href=""><i class="fa fa-angle-double-right"></i> Point of Care</a></li>
-                                <li><a href=""><i class="fa fa-angle-double-right"></i> Staying Well</a></li>
-                            </ul>
                         </li>
                     -->
 
@@ -234,7 +268,6 @@
                                 <li class="{{ Request::is('districts/*') ? 'active' : '' }}"><a href="{{ URL::to('districts') }}"><i class="fa fa-mobile-phone"></i>District</a></li>
                                 <li class="{{ Request::is('subdistricts/*') ? 'active' : '' }}"><a href="{{ URL::to('subdistricts') }}"><i class="fa fa-mobile-phone"></i>Sub District</a></li>
                                 <li class="{{ Request::is('zones/*') ? 'active' : '' }}"><a href="{{ URL::to('zones') }}"><i class="fa fa-mobile-phone"></i>Zone</a></li>
-                                <li class="{{ Request::is('reports*') ? 'active' : '' }}"><a href="{{ URL::to('reports') }}"><i class="fa fa-mobile-phone"></i>Reports</a></li>
                             </ul>
                         </li>
                          @endif

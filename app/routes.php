@@ -27,6 +27,29 @@ Route::get('moduleusagebytype',      array('uses' => 'DashboardController@module
 Route::post('moduleusagebytype',     array('uses' => 'DashboardController@moduleUsageByType'));
 /**** / Dasboard routes ***/
 
+/**** Content routes ***/
+Route::get('/content',                         array('uses'=>  'PocCmsController@home'));
+Route::get('/content/poccms',                  array('uses'=>  'PocCmsController@home'));
+Route::get('/content/poccms/onepage',          array('uses'=>  'PocCmsController@onePage'));
+Route::get('/content/poccms/view',             array('uses'=>  'PocCmsController@view'));
+Route::get('/content/poccms/add',              array('uses'=>  'PocCmsController@add'));
+Route::get('/content/poccms/edit',             array('uses'=>  'PocCmsController@edit'));
+Route::get('/content/poccms/editsection',      array('uses'=>  'PocCmsController@editSection'));
+Route::get('/content/poccms/delete',           array('uses'=>  'PocCmsController@delete'));
+Route::get('/content/poccms/deletesection',    array('uses'=>  'PocCmsController@deleteSection'));
+Route::get('/content/poccms/forms',            array('uses'=>  'PocCmsController@forms'));
+Route::get('/content/poccms/section',          array('uses'=>  'PocCmsController@section'));
+Route::get('/content/poccms/upload',           array('uses'=>  'PocCmsController@upload'));
+Route::get('/content/poccms/uploadFiles',      array('uses'=>  'PocCmsController@uploadFiles'));
+Route::get('/content/poccms/alluploads',       array('uses'=>  'PocCmsController@allUploads'));
+
+Route::post('/content/poccms/addsection',       array('uses'=>  'PocCmsController@addSection'));
+Route::post('/content/poccms/editsectionvalue', array('uses'=>  'PocCmsController@editSectionValue'));
+Route::post('/content/poccms/addpage',          array('uses'=>  'PocCmsController@addPage'));
+Route::post('/content/poccms/addpagedetails',   array('uses'=>  'PocCmsController@addPageDetails'));
+/**** / Content routes ***/
+
+
 /**** Target routes ***/
 Route::post('/targets/actuals/{id}',                                     'IndicatorTrackerController@update');
 Route::resource('/targets/actuals',                                      'IndicatorTrackerController');
