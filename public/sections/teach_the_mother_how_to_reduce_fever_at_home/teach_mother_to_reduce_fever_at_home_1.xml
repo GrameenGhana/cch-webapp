@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="teach_mother_to_reduce_fever_at_home_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Teach the Mother How to Reduce Fever at Home&gt; Teach Mother to Reduce Fever at Home 1" color_code="Select">
+		<field name="Counsel the mother about her own health" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="If the mother is sick, care will provided and or referred when necessary" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="she has a breast problem (such as engorgement, sore nipples, breast infection), care will be provided and/ or referred when necessary" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Advise her to eat well to keep up her own strength and health" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Check the mother&#x2019;s immunization status and give her tetanus toxoid (TT) if needed" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give pregnant woman IPT, if necessary " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Make sure she has access to" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Family planning " link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="Counselling on STI and AIDS prevention" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Encourage every mother to be sure to know her own HIV status and to seek HIV testing if she does not know her status or is concerned about the possibility of HIV in herself or her family" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

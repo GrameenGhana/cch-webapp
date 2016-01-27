@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="diarrhoea1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea1" color_code="Select">
+	<field name="ASK" link="" type="header" group="section_header" color_code="" options=""/>
+	<field name="Does the child have  Diarrhoea? " link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Yes" color_code="Default" link="child_assessment_diarrhoea/diarrhoea2" type="button" group="actions" options=""/>
+</form>
+</xmlgui>

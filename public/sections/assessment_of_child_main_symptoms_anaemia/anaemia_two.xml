@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="anaemia_two" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Anaemia&gt; Anaemia Two" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Severe palmar pallor" link="" type="answers" group="answers" color_code="" options=""/>
+		<field name="Next" color_code="Default" link="assessment_of_child_main_symptoms_anaemia/anaemia_three" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

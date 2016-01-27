@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="home_care_for_the_child_1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Counselling: Home Care for the Child&gt; Home Care for the Child 1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+	<field name="Giving home care for the infant " link="home_care_for_the_child/giving_home_care_for_infant" type="answers" group="answers" color_code="" options=""/>
+	<field name="Caring for the cord" link="home_care_for_the_child/caring_for_the_cord" type="answers" group="answers" color_code="" options=""/>
+	<field name="Preventing Infections" link="home_care_for_the_child/preventing_infections" type="answers" group="answers" color_code="" options=""/>
+	<field name="Home Care for Diarrhoea" link="home_care_for_the_child/home_care_for_diarrhoea" type="answers" group="answers" color_code="" options=""/>
+	<field name="Treatment for Worm Infestation" link="home_care_for_the_child/treatment_for_worm_infestation" type="answers" group="answers" color_code="" options=""/>
+	<field name="Home Care for Fever " link="home_care_for_the_child/home_care_for_fever" type="answers" group="answers" color_code="" options=""/>
+	<field name="Malaria Prevention" link="home_care_for_the_child/malaria_prevention" type="answers" group="answers" color_code="" options=""/>
+	<field name="Sickle Cell Disease" link="home_care_for_the_child/sickle_cell_disease" type="answers" group="answers" color_code="" options=""/>
+	<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+</form>
+</xmlgui>

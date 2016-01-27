@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="anaemia" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Anaemia&gt; Anaemia" color_code="Amber">
+		<field name="" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: Anaemia" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Give Iron " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give oral anti-malaria treatment: oral Artesunate Amodiaquine or Arthemeter /Lumefantrine " link="home_care_for_the_child/home_care_for_the_child_1" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give Mebendazole or Albendazole [if child is aged 2 years or above &amp; has not had a dose in the previous 6 months] " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give 500 mg mebendazole or 400mg albendazole as a single dose in clinic  if the child has not had a dose in the previous 6 months " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="NB: preferably, give mebendazole 100mg twice daily for 3 days, instead of 500mg as a single dose" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="assessment_of_child_main_symptoms_anaemia/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Assess the child&#x2019;s feeding" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel the mother according to the feeding recommendations" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise caregiver /mother to return for follow up care in 14 days" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+	</form></xmlgui>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="assess_other_problems_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assess Other Problems&gt; Assess Other Problems 1" color_code="Select">
+		<field name="Look out for Conditions Like" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Sickle Cell Disease" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Skin Problems &amp; any other problems" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="NB: Treat according to Standard Treatment Guidelines " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="OR Refer appropriately" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Age Calculator for dosage calculation" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Inspect and ensure that Child&#x2019;s immunization status is up to date." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Advise caregiver/ mother on when to return for the next visit." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

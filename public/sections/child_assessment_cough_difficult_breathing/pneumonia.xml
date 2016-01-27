@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="pneumonia" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms&gt; Pneumonia" color_code="Amber">
+		<field name="Fast Breathing" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Pneumonia" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_cough_difficult_breathing/amoxycillin_dosage.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on treatment" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Administer appropriate oral antibiotic below after complete assessment has been done and document" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother to soothe the throat and relieve the cough with a safe remedy " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="NB: IF coughing for more than 2 weeks, REFER to a health center or hospital for further assessment" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise the mother on when to return immediately for care" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advice mother to return for a follow up care in 2 days" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Check for HIV" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Patient Education: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/>
+		<field name="Teach mother to give oral drug at home" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Emphasize when to return for care and complete documentation " link="" type="second_actions" group="second_actions" color_code="" options=""/>
+	</form>
+	</xmlgui>

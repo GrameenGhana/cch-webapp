@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="afass" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding&gt; AFASS" color_code="Select">
+		<field name="&#x201C;AFASS&#x201D; CRITERIA FOR STOPPING BREASTFEEDING for HIV exposed" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Acceptable:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Mother perceives no problem in replacement feeding." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Feasible:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Mother has adequate time, knowledge, skills, resources, and support to correctly mix formula or milk and feed the infant up to 12 times in 24 hours." link="" type="section_items" group="section_items" color_code="" options=""/><field name="Affordable:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Mother and family, with community can pay the cost of re-placement feeding without harming the health and nutrition of the family." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Sustainable:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Availability of a continuous supply of all ingredients needed for safe replacement feeding for up to one year of age or longer." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Safe:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Replacement foods are correctly and hygienically prepared and stored." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="6 months up to 12 Months" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Give 3 adequate servings of nutritious complementary foods plus one snack per day (to include protein, mashed fruit and vegetables). " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Each meal should be 3/4 cup*. If possible, give an additional animal-source food, such as liver or meat." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If an infant is not breastfeeding, give about 1-2 cups (500 ml) of full cream milk or infant formula per day " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give milk with a cup, not a bottle " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If no milk is available, give 4-5 feeds per day*  one cup= 250 ml" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="12 Months up to 2 years" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="If an infant is not breastfeeding, give about 1-2 cups* (500 ml) of full cream milk or infant formula per day " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give adequate servings of  nutritious complementary foods to include protein, mashed fruit and vegetables. " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If possible, give an additional animal-source food, such as liver or meat." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="OR" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Family foods 5 times per day. " link="" type="section_items" group="section_items" color_code="" options=""/><field name="If breastfed, give adequate servings 3 times per day plus snacks " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give milk with a cup, not a bottle " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If no milk is available, give 4-5 feeds per day * one cup = 250 ml" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

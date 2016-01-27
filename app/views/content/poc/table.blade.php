@@ -64,11 +64,11 @@
 					@if(file_exists($page->page_url)) 
 						<td><span class="btn btn-success btn-circle"><i class="fa fa-check"></i></span></td>
   					@else
-  						<td><span class="btn btn-danger btn-circle"><i class="fa fa-times"></i></span></td>
+  						<td><span class="btn btn-danger btn-circle"><i class="fa fa-minus"></i></span></td>
 					@endif
 					<td style="width:8%">
-					<a href="delete?id={{$page->id}}"><button type="button" class="btn btn-danger btn-circle delete"><i class="fa fa-trash"></i></button></a>
 					<a href="edit?id={{$page->id}}"><button type="button" class="btn btn-warning btn-circle" id="{{$page->id}}"><i class="fa fa-pencil"></i></button></a>
+					<a href="delete?id={{$page->id}}"><button type="button" class="btn btn-danger btn-circle delete"><i class="fa fa-times"></i></button></a>
 					</td>
 				</tr>
 				 @endforeach

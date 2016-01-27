@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding&gt; Feeding 1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Breastfeeding" link="feeding/breastfeeding" type="answers" group="answers" color_code="" options=""/>
+		<field name="Feeding a Sick Child" link="feeding/feeding_a_sick_child" type="answers" group="answers" color_code="" options=""/>
+		<field name="Feeding Recommendation During Sickness &amp; Health" link="feeding/feeding_recommendation_during_sickness_&amp;_health" type="answers" group="answers" color_code="" options=""/>
+		<field name="Family Foods that you can give to the child" link="feeding/family_foods_that_you_can_give_to_the_child" type="answers" group="answers" color_code="" options=""/>
+		<field name="Feeding Recommendations For Child Classified as HIV Exposed" link="feeding/feeding_recommendation_for_child_classified_as_hiv_exposed" type="answers" group="answers" color_code="" options=""/>
+	</form></xmlgui>

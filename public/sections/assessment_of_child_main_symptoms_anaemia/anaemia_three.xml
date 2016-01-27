@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="anaemia_three" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Anaemia&gt; Anaemia Three" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Severe Anaemia" link="assessment_of_child_main_symptoms_anaemia/severe_anaemia" type="answers" group="answers" color_code="" options=""/>
+		<field name="Anaemia" link="assessment_of_child_main_symptoms_anaemia/anaemia" type="answers" group="answers" color_code="" options=""/>
+		<field name="No Anaemia" link="assessment_of_child_main_symptoms_anaemia/no_anaemia" type="answers" group="answers" color_code="" options=""/>
+	</form>
+</xmlgui>

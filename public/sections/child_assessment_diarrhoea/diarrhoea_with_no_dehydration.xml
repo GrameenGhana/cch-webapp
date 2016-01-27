@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="diarrhoea_with_no_dehydration" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea&gt; Diarrhoea with no dehydration" color_code="Green">
+		<field name="Child has Diarrhoea BUT | Child has not got enough signs to classify as some or severe dehydration&#13;&#10;" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Diarrhoea with no dehydration" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		
+		<field name="Counsel caregiver/mother  on the four [4] rules of Home Treatment in &#x201C;Plan A&#x201D; " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give Extra Fluid" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Continue Feeding " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Give Zinc Supplements (age 2 months up to 5 years)" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="When to Return" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="GIVE EXTRA FLUID (as much as the child will take)" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="ADVISE THE MOTHER TO:" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Breastfeed more frequently and for longer at each feed" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="If the child is exclusively breastfed, give ORS or clean water in addition to breast milk" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="If the child is not exclusively breastfed, give one or more of the following: ORS, coconut water, strained rice water, mashed kenkey in water,mashed tuo zafi, porridge (koko), light soup without pepper or clean water." link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="NB: It is especially important to give ORS at home when:" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="the child has been treated with Plan B or Plan C during this visit" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="the child cannot return to a clinic if the diarrhoea gets worse" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name=" TEACH THE MOTHER HOW TO MIX AND GIVE ORS." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give the mother 3 packets of ORS to use at home." link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="SHOW THE MOTHER HOW MUCH FLUID TO GIVE IN ADDITION TO THE USUAL FLUID INTAKE:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Up to 2 years:&#9;50 to 100 ml after each loose stool" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="2 years or more:   100 to 200 ml after each loose stool" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+
+		<field name="Tell the mother to:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give frequent small sips from a cup." link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="If the child vomits, wait for 10 minutes then continue - but more slowly" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Continue giving extra fluid until the diarrhoea stops" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+
+		<field name="SHOW THE MOTHER HOW TO GIVE ZINC SUPPLEMENTS" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Infants&#x2014;dissolve tablet in a small amount of expressed breast milk, ORS or clean water in a cup" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Older children - tablets can be chewed or dissolved in a small amount of clean water in a cup" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary. " link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Advise caregiver to return after 5 days if condition is not improving and document" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+</form>
+	</xmlgui>

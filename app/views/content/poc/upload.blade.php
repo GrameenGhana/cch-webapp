@@ -60,13 +60,15 @@
 					<td>{{$section->sub_section}}</td>
 					<td>{{$section->shortname}}</td>
 					@if($section->upload_status=='') 
-						<td><a href=""><button type="button" class="btn btn-warning btn-circle upload" id="{{$section->id}}"><i class="fa fa-upload"></i></button></td>
+						<td>
+                            <a href="uploadFiles?id={{ $section->id }}"><button type="button" class="btn btn-warning btn-circle" id="{{$section->id}}"><i class="fa fa-upload"></i></button>
+                        </td>
   					@else
   						<td>{{$section->upload_status}}</td>
 					@endif
 					<td>
-					<a href=""><button type="button" class="btn btn-danger btn-circle delete" id="{{$section->id}}"><i class="fa fa-trash" ></i></button></a>
 					<a href="editsection?id={{$section->id}}"><button type="button" class="btn btn-warning btn-circle edit" id="{{$section->id}}"><i class="fa fa-pencil"></i></button></a>
+					<a href="deletesection?id={{$section->id}}"><button type="button" class="btn btn-danger btn-circle delete" id="{{$section->id}}"><i class="fa fa-times" ></i></button></a>
 					</td>
 				</tr>
 				 @endforeach
@@ -85,56 +87,10 @@
 
 @section('script')
 <script type="text/javascript" charset="utf8">
-   // $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true,
-                 paging: true
- //       });
+    $('#dataTables-example').DataTable({
+         responsive: true,
+        paging: true
     });
-    </script>
-<script type="text/javascript"> 
- $(document).ready(function(){
-        
- $('.upload').click(function() {
-        id = $(this).attr('id'); // table row ID 
-        $.ajax({
-                url: 'uploadFiles',
-                type: 'GET',
-                data: {id:id},
-                success: function(response)
-                {
-                  //console.log(response);
-                }
-            });
-       });
-
- $('.delete').click(function() {
-        id = $(this).attr('id'); // table row ID 
-      // alert(id);
-        $.ajax({
-                url: 'deletesection',
-                type: 'GET',
-                data: {id:id},
-                success: function(response)
-                {
-                  console.log(response);
-                }
-            });
-       });
-
- /*$('.edit').click(function() {
-        id = $(this).attr('id'); // table row ID 
-        alert(id);
-        $.ajax({
-                url: 'editSection',
-                type: 'GET',
-                data: {id:id},
-                success: function(response)
-                {
-                  console.log(response);
-                }
-            });
-       });*/
-      });
+    $(document).ready(function(){ });
 </script>
 @stop

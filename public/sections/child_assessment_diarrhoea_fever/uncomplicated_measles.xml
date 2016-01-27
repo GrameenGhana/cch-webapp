@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="uncomplicated_measles" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever&gt; Uncomplicated Measles" color_code="Green">
+		<field name="Measles now OR within the last 3 months" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: Uncomplicated Measles" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Give First dose of Vitamin A  per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/><field name="child_assessment_diarrhoea_fever/severe_complicated_measles.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Counsel and give Second dose of Vitamin A  to caregiver/mother to be given the next day" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Treat any skin irritation with calamine lotion by applying to the affected areas" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give one dose of paracetamol per table below for fever and counsel mother to continue: " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea_fever/paracetamol.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="feeding/feeding_a_sick_child" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother to return for care if child is not getting well" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

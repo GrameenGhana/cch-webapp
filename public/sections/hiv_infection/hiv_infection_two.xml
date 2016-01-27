@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="hiv_infection_two" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: HIV Infection&gt; HIV Infection Two" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Confirmed HIV Infection" link="hiv_infection/confirmed_hiv_infection" type="answers" group="answers" color_code="" options=""/>
+		<field name="HIV Exposed or Possible HIV" link="hiv_infection/hiv_exposed_or_possible_hiv" type="answers" group="answers" color_code="" options=""/>
+		<field name="Suspected Symptomatic HIV Infection" link="hiv_infection/suspected_symptomatic_hiv_infection" type="answers" group="answers" color_code="" options=""/>
+		<field name="Suspected Symptomatic HIV Infection Unlikely" link="hiv_infection/suspected_symptomatic_hiv_infection_unlikely" type="answers" group="answers" color_code="" options=""/>
+		<field name="HIV Infection Unlikely" link="hiv_infection/hiv_infection_unlikely" type="answers" group="answers" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

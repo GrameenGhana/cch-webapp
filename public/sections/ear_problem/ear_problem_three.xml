@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="ear_problem_three" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Ear Problem&gt; Ear Problem Three" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Mastoiditis" link="ear_problem/mastoiditis" type="answers" group="answers" color_code="" options=""/>
+		<field name="Acute Ear Infection" link="ear_problem/acute_ear_infection" type="answers" group="answers" color_code="" options=""/>
+		<field name="Chronic Ear Infection" link="ear_problem/chronic_ear_infection" type="answers" group="answers" color_code="" options=""/>
+		<field name="No Ear Infection" link="ear_problem/no_ear_infection" type="answers" group="answers" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

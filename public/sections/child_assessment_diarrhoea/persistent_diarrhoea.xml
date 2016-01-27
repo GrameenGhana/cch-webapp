@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="persistent_diarrhoea" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea&gt; Perssitent Diarrhoea" color_code="Amber">
+		<field name="Child has had Diarrhea for | 14 days or more and currently classified as SEVERE or SOME DEHYDRATION  | Skin pinch goes back slowly. etc&#13;&#10;" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Perssitent Diarrhoea" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Check for HIV Infection" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise the mother on feeding a child who has PERSISTENT DIARRHOEA as below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="If still breastfeeding, give more frequent, longer breastfeeds, day and night. " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="If taking other milk: " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="replace with increased breastfeeding OR " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="replace half the milk with thick porridge " link="" type="first_actions_sub" group="first_actions" color_code="" options=""/><field name="For other foods, follow feeding recommendations for the child&#x2019;s age." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give one dose daily of Zinc and multivitamins / mineral supplement for 14 days" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="TELL THE MOTHER HOW MUCH ZINC TO GIVE (20 mg tab) :" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="2 months up to 6 months &#x2014;-  1/2 tablet daily for 14 days" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="6 months or more &#x2014;- 1 tablet daily for 14 days" link="" type="first_actions_sub" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below: WHEN TO RETURN IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/><field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary." link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child " link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Advise caregiver to return after 5 days if condition is not improving and document" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+</form>
+	</xmlgui>

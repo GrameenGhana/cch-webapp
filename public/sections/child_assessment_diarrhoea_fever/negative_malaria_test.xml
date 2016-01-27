@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="negative_malaria_test" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever&gt; Negative Malaria Test" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Negative Malaria Test One" link="child_assessment_diarrhoea_fever/fever_but_no_malaria" type="answers" group="answers" color_code="" options=""/>
+		<field name="Negative Malaria Test Two" link="child_assessment_diarrhoea_fever/severe_complicated_measles" type="answers" group="answers" color_code="" options=""/>
+		<field name="Negative Malaria Test Three" link="child_assessment_diarrhoea_fever/measles_with_complications" type="answers" group="answers" color_code="" options=""/>
+		<field name="Negative Malaria Test 4" link="child_assessment_diarrhoea_fever/uncomplicated_measles" type="answers" group="answers" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/></form></xmlgui>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="positive_malaria_test" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever&gt; Positive Malaria Test" color_code="Select">
+		<field name="If Positive Malaria test" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Severe Febrile Disease Including Malaria" link="child_assessment_diarrhoea_fever/severe_febrile_disease_malaria" type="answers" group="answers" color_code="" options=""/>
+		<field name="Uncomplicated Malaria" link="child_assessment_diarrhoea_fever/uncomplicated_malaria" type="answers" group="answers" color_code="" options=""/>
+	
+</form>
+	</xmlgui>

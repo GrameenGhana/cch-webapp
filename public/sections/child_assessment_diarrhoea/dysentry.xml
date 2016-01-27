@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="dysentry" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea&gt; Dysentry" color_code="Amber">
+		<field name="Child has Diarrhea PLUS | Blood in Stool&#13;&#10;" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Dysentry" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Give appropriate antibiotic for 5 days per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea/dysentry.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below: WHEN TO RETURN IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Advise caregiver / mother to return strictly for follow up care in 2 days and document" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+	</form>
+	</xmlgui>

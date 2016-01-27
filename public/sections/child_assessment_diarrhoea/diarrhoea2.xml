@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="diarrhoea2" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea2" color_code="Select">
+	<field name="ASK" link="" type="header" group="section_header" color_code="" options=""/>
+	<field name="For how long [days]? " link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Look at the child’s general condition. Is the child: " link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Lethargic or unconscious? " link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Restless and irritable?  " link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="LOOK AND FEEL" link="" type="header" group="section_header" color_code="" options=""/>
+	
+	<field name="Look for sunken eyes" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Offer the child fluid. Is the child" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Not able to drink or drinking poorly?" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Drinking eagerly, thirsty?" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Pinch the skin of the abdomen. Does it go back:" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Very slowly [longer  than 2 seconds]" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Slowly?" link="" type="section_items" group="section_items" color_code="" options=""/>
+	<field name="Next" color_code="Default" link="child_assessment_diarrhoea/diarrhoea3" type="button" group="actions" options=""/>
+</form>
+</xmlgui>

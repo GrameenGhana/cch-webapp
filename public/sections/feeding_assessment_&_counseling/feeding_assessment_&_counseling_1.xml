@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_assessment_&amp;_counseling_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Feeding Assessment &amp; Counseling&gt; Feeding Assessment &amp; Counseling 1" color_code="Select">
+		<field name="Feeding Assessment &amp; Counseling Assess and compare with Feeding Recommendation" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Assess the Feeding of:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Sick Infants under 2 years or " link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="if child has  moderate acute malnutrition or underweight or anaemia " link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="Ask questions about the child&#x2019;s usual feeding and feeding during this illness. Note whether the mother is HIV infected, uninfected, or does not know her status. " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Compare the mother&#x2019;s answers below  to the Feeding Recommendations for the child&#x2019;s age." link="feeding/feeding_1" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If the infant is receiving any breast milk, ASK:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="How many times during the day?" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Do you also breastfeed during the night?" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If infant is receiving replacement milk, ASK: " link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="What replacement milk are you giving? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="How many times during the day and night? " link="" type="section_items" group="section_items" color_code="" options=""/><field name="How much is given at each feed? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="How is the milk prepared? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="How is the milk being given? Cup or bottle? " link="" type="section_items" group="section_items" color_code="" options=""/><field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Does the infant take any other food or fluids? " link="" type="header" group="section_header" color_code="" options=""/><field name="What food or fluids? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="How many times per day? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="What do you use to feed the child? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="If  moderate acute malnutrition or underweight ASK: " link="" type="header" group="section_header" color_code="" options=""/><field name="How large are servings? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Does the child receive his own serving? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Who feeds the child and how? " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="During this illness, has the infant&#x2019;s feeding changed? " link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="If yes, how?" link="" type="section_items" group="section_items" color_code="" options=""/>
+</form></xmlgui>

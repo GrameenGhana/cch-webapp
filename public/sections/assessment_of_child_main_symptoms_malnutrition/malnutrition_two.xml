@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="malnutrition_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Malnutrition&gt; Malnutrition Two" color_code="Select">
+		<field name="LOOK AND FEEL \n RUTF Available" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="For all Children" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Determine weight for age" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Weight for Age-Boys: Plot current weight on Growth chart" link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="Weight for Age-Boys: Plot current weight on Growth chart" link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="Look for oedema of both feet" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="For Children up to 6 months:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Look for severe wasting" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="For Children aged 6 months or above:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Determine the MUAC [mid upper arm circumference] and if its below 11.5cm OR Oedema is present, assess appetite. Appetite is assessed by observing the child eating RUTF [Ready-To-Use Therapeutic Food.] " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="NB: If tapes are not available for MUAC, look for visible severe wasting:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Remove the child&#x2019;s clothes and look; " link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="For severe wasting of the muscles of the shoulders, arms, buttocks and legs" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="For severe wasting of the muscles of the shoulders, arms, buttocks and legs" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="At the child&#x2019;s hips which may look small compared to the chest and abdomen" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="At the child from the side to see if the fat of the buttocks is missing." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Next" color_code="Default" link="assessment_of_child_main_symptoms_malnutrition/malnutrition_three" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

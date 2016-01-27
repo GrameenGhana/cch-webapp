@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="convulsing_now" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Danger Signs&gt;Convulsing now [during current visit]" color_code="Red">
+		<field name="" link="" type="definition" group="definition" color_code="" property="" options=""/>
+		<field name="Take Action: Convulsing now [during current visit]" link="" type="first_section_head" group="first_actions" color_code="" property="" options=""/>
+		<field name="Manage the airway" link="" type="first_actions" group="first_actions" color_code="" property="Bold" options=""/>
+		<field name="Turn the child on his or her side to avoid aspiration " link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Do not insert anything in the mouth " link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="If the lips and tongue are blue, open the mouth and make sure the airway is clear " link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="If necessary, remove secretions from the throat through a catheter inserted through the nose " link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/><field name="NB: Give Diazepam rectally" link="" type="first_actions" group="first_actions" color_code="" property="Bold" options=""/>
+		<field name="Draw up the dose from an ampoule of diazepam into a 2 ml syringe. Then remove the needle. " link="" type="first_actions_sub" group="first_actions" color_code="" property="Bold Red" options=""/><field name="Insert the syringe into the rectum 4-5cm and inject the diazepam solution " link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Hold buttocks together for a few minutes " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="danger_signs/rectal_diazepam_dosing_table.JPG" link="" type="image" group="first_actions" color_code="" property="" options=""/>
+		<field name="Proceed to care" color_code="Default" property="" link="danger_signs/history_of_convulsions" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

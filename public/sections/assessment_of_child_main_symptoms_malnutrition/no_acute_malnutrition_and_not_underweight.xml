@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="no_acute_malnutrition_and_not_underweight" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Malnutrition&gt; No Acute Malnutrition and not Underweight" color_code="Green">
+		<field name="" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: No Acute Malnutrition and not Underweight" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="If child is less than 2 years old, assess the child&#x2019;s feeding" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel the mother according to the feeding recommendations " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="If child&#x2019;s condition is as a result of a feeding problem, advise mother to return for care in 5 days" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child " link="feeding/feeding_a_sick_child" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="assessment_of_child_main_symptoms_malnutrition/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

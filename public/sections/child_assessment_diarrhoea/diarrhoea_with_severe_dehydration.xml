@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="diarrhoea_with_severe_dehydration" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea&gt; Diarrhoea with Severe Dehydration" color_code="Red">
+		<field name="Lethargic or unconscious | Sunken eyes | Not able to drink or drinking poorly | Skin pinch does back very slowly.&#13;&#10;" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Diarrhoea with Severe Dehydration" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on pre-referral treatment and Referral and Refer" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Check for the presence, rate and rhythm of the pulses" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Observe the respiratory rate and pattern." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Perform cardiopulmonary resuscitation [CPR] if child is Unconscious and NOT BREATHING. After CPR, Place the patient in the Sim&#x2019;s position with head supported to prevent aspiration in case of Vomiting." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Prepare ORS" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother to be giving frequent sips of ORS one the way to higher health facility, if child can take sips" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother to continue breastfeeding if still breastfeeding" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Administer appropriate pre-referral treatment after assessment and document." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Call health provider taking up care and arrange transport" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/>
+		<field name="Advise mother to not put the child on her back " link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Teach mother how to keep the child warm on the way to the health facility" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary. " link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child " link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Accompany mother and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		
+</form>
+	</xmlgui>

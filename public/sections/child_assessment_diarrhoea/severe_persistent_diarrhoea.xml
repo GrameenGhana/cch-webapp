@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="severe_persistent_diarrhoea" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Diarrhoea&gt; Severe Persistent Diarrhoea" color_code="Red">
+		<field name="Restless or irritable | Sunken eyes | Drinks eagerly, thirsty | Skin pinch goes back slowly etc&#13;&#10;" link="" type="text" group="definition" color_code="" options=""/>
+		<field name="Take Action: Severe Persistent Diarrhoea" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on pre-referral treatment and Referral" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Treat dehydration before referral unless child has another severe classification after assessment" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Prepare ORS" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give recommended amount of ORS over 4-hour period in your facility:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="child_assessment_diarrhoea/diarrheoa_with_some_dehydration.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Document pre-referral treatment administered." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Call health provider taking up care and arrange for transport " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/>
+		<field name="Advise mother to be giving frequent sips of ORS one the way to higher health facility, if child can take sips" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Advise mother to continue breastfeeding if still breastfeeding" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child " link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Accompany mother and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		
+</form>
+	</xmlgui>

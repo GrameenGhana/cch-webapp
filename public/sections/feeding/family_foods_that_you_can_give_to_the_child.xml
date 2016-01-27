@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="family_foods_that_you_can_give_to_the_child" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding&gt; Family Foods That you can give to the Child" color_code="Select">
+		<field name="Porridge" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Thick porridge made from maize, millet, sorghum, guinea corn or rice; ekwegbemi or other thick porridge like tom-brown and weanimix. Add a little sugar and enrich with one or more of the following:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Palm oil, shea butter or other vegetable oil, groundnut paste, soy flour, bean flour, egg, milk or fish powder." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="For children 12 months and older, porridge should be served with bread, doughnuts (bofrot), koose, kulikuli or biscuit." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Snacks" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Give in between meals, doughnuts (bofrot), koose, bread with margarine or groundnut paste, kulikuli, biscuit, banana, roasted or fried plantain or yam, fruit." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Fruits" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Give the child everyday, fruits such as mango, orange, watermelon, avacado pear, pawpaw, pineapple, banana etc." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Family Foods" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Waakye, rice, kenkey, fufu, aboloo, gari, yam cocoyam, plantain, cassava, sweet potato, kokonte, akple or tuozafi." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Serving suggestion" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Serve with at least one ladle of stew such as:  Kontomire, beans, garden egg, okro, tomato, agushie, aleefu, ayoyo, pumpkin, bokoboko all cooked with palm oil or other vegetable oil and mashed fish, meat or egg." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Or with at least one ladle of soup such as: groundnut, palm nut, neri, okro, vegetable soup, or green leafy vegetable soup. All prepared with mashed fish, meat, egg or beans." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Other family foods" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Mpotompoto, gari-foto, aprapransa with palm oil or other vegetable oil and mashed fish, egg, meat, or beans." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/></form></xmlgui>

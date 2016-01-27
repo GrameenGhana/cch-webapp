@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="sickle_cell_disease" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Home Care for the Child&gt; Sickle Cell Disease" color_code="Select">
+		<field name="In Ghana Sickle cell disease is the most common blood disease that children can inherit from their parents. You will not know your child has Sickle Cell Disease unless he/she is tested." link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Signs and symptoms include:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Yellow eyes, mouth, palms, and other parts of the body" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Swelling of the hands and feet" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Frequent shortage of blood" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Enlargement of the abdomen (tummy)" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Children with sickle cell disease easily get malaria, pneumonia and other infections." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="To find out if your child has sickle cell disease, take him/her to the health facility for laboratory tests as soon as possible, after birth." link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Here are some tips on the care for a child with sickle cell disease:" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Feed the child well. Give breast-milk only for the first 6 months of life for protection against infections" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Feed the child well. Give breast-milk only for the first 6 months of life for protection against infections" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="After 6 months give baby other foods in addition to breast milk until he/she is 2 years old and beyond
+" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Protect the child from cold; do not give food/drink that is cold  or  iced" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Let him/her sleep under an ITN every night" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give the child daily folic acid and other medicines prescribed by your health worker" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Do not give iron tablets/syrup except when prescribed by your doctor" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give the child a lot of fluids to drink" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Always use warm water to bathe  the child" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Keep all appointments with your health worker even if the child is well." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="when_to_return_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: When to Return / Follow up Visit&gt;  When to Return 1" color_code="Select">
+		<field name="" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Advise the Mother When to Return to Health Worker" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="when_to_return_follow_up_visit/when_to_return_follow_up.JPG" link="" type="image" group="section_items" color_code="" options=""/>
+		<field name="WHEN TO RETURN IMMEDIATELY" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="when_to_return_follow_up_visit/page 9_when to return follow up.PNG" link="" type="image" group="section_items" color_code="" options=""/><field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

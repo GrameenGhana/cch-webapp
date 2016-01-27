@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="malaria_test_not_available" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever&gt; Malaria Test Not Available" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Malaria Test Not Available One" link="child_assessment_diarrhoea_fever/malaria_test_not_available_one" type="answers" group="answers" color_code="" options=""/>
+		<field name="Malaria Test Not Available Two" link="child_assessment_diarrhoea_fever/malaria_test_not_available_two" type="answers" group="answers" color_code="" options=""/>
+		<field name="Malaria Test Not Available Three" link="child_assessment_diarrhoea_fever/malaria_test_not_available_three" type="answers" group="answers" color_code="" options=""/>
+		<field name="Malaria Test Not Available Four" link="child_assessment_diarrhoea_fever/malaria_test_not_available_four" type="answers" group="answers" color_code="" options=""/>
+		<field name="Malaria Test Not Available Five" link="child_assessment_diarrhoea_fever/malaria_test_not_available_five" type="answers" group="answers" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

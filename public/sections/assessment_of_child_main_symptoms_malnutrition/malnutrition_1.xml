@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="malnutrition_1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Malnutrition&gt; Malnutrition 1" color_code="Select">
+		<field name="Ask about the main symptoms and proceed to care" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Ready-To-Use Therapeutic Food Available" link="assessment_of_child_main_symptoms_malnutrition/malnutrition_two" type="answers" group="answers" color_code="" options=""/>
+		<field name="No Ready-To-Use Therapeutic Food" link="assessment_of_child_main_symptoms_malnutrition/malnutrition_two" type="answers" group="answers" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

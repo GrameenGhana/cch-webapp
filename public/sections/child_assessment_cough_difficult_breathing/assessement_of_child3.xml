@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="assessement_of_child3" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms:Cough or Difficult Breathing3" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" options=""/>
+		<field name="Severe Pneumonia Or Very Severe Disease" link="" type="answers" group="answers" color_code="" options="Any general Danger Sign  OR | Chest indrawing  OR | Stridor in calm child  | Click here to take action"/>
+		<field name="Pneumonia" link="child_assessment_cough_difficult_breathing/pneumonia" type="answers" group="answers" color_code="" options="Fast Breathing | Click here to take action"/>
+		<field name="Cough or Cold" link="child_assessment_cough_difficult_breathing/cough_or_cold" type="answers" group="answers" color_code="" options="No signs of Pneumonia | No sign of very severe disease | Click here to take action"/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

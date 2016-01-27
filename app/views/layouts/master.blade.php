@@ -176,7 +176,7 @@
                                             <a href="{{ URL::to('content/poccms/add') }}"><i class="fa fa-edit fa-fw"></i>Add Pages</a>
                                         </li>
                                         <li class="{{ Request::is('content/poccms/section*') ? 'active' : '' }}">
-                                            <a href="{{ URL::to('content/poccms/section') }}"><i class="fa fa-edit fa-fw"></i>Sections</a>
+                                            <a href="{{ URL::to('content/poccms/section') }}"><i class="fa fa-edit fa-fw"></i>Add Sections</a>
                                         </li>
                                         <li class="{{ Request::is('content/poccms/upload*') ? 'active' : '' }}">
                                             <a href="{{ URL::to('content/poccms/upload') }}"><i class="fa fa-upload"></i>Upload Content</a>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="not_able_to_drink" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Danger Signs&gt;Not able to drink or breastfeed" color_code="Select">
+		<field name="" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: Not able to drink or breastfeed" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Assess the sick child completely" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Test child for malaria: If Positive [Give Pre-Referral Treatment]: if  Negative, proceed with care below " link="pre-referral_treatment/pre-referral_treatment" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name=" Record child&#x2019;s clinical information in Child Health Records book &#x201C;Green&#x201D; book. " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on pre-referral treatment and Referral and Refer" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Administer appropriate pre-referral treatment and document." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Call health provider taking up care and arrange  for transport " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/>
+		<field name="Advise mother  not to put the baby on her back so that she can observe her closely" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Teach mother how to keep the baby warm on the way to the health facility " link="keeping_infant_warm_&amp;_breastfeeding_on_the_wa/keeping_infant_warm_1" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary.  " link="breast_attachment/breast_attachment_1" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick baby" link="feeding_the_sick_child/feeding_the_sick_child_1" type="transport_actions" group="transport_actions" color_code="" options=""/><field name="Accompany mother and child to the health facility." link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital." link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

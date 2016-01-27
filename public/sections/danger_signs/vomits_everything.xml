@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="vomits_everything" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Danger Signs&gt;Vomits everything he/she eats and drinks" color_code="Red">
+		<field name="" link="" type="definition" group="definition" color_code="" property="" options=""/>
+		<field name="Take Action: Vomits everything he/she eats and drinks" link="" type="first_section_head" group="first_actions" color_code="" property="" options=""/>
+		<field name="Assess the sick child completely." link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Test child for malaria: If Positive; Give Malaria Pre-Referral Treatment:  if Negative; proceed with care below " link="pre-referral_treatment/pre-referral_treatment" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Record child&#x2019;s clinical information in Child Health Records book &#x201C;Green&#x201D; book. " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Counsel mother on pre-referral treatment and Referral and Refer" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Administer appropriate pre-referral treatment  after completing assessment and document:" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Check for signs of dehydration: Restlessness, Irritability, Sunken eyes, skin pinch goes back slowly or very slowly [longer than 2 seconds]. " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="If Dehydration is present" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Prepare ORS" link="ors_calculator/ors_calculator" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Advise mother to be giving frequent sips of ORS on the way to higher health facility, if child can take sips. If child vomits, wait for 10 minutes and then continue but do it more slowly" link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Advise mother to continue breastfeeding if still breastfeeding" link="" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Call health provider taking up care and arrange for transport " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="NB: Strongly discourage promethazine [Phenegan] for a child who is vomiting" link="" type="first_actions_sub" group="first_actions" color_code="" property="Bold" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" property="" options=""/>
+		<field name="Advise mother not to put the baby on her back so that she can observe her closely" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Support the child&#x2019;s head with a pillow or child&#x2019;s cloth and handle child in the Sims or lateral position to prevent swallowing of vomitus" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Teach mother how to keep the baby warm on the way to the health facility" link="keeping_infant_warm_&amp;_breastfeeding_on_the_wa/keeping_infant_warm_1" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Observe mother breastfeeding and counsel her on positioning and attachment if necessary. However, if urgent referral is needed, do not waste time counseling. " link="breast_attachment/breast_attachment_1" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="feeding_the_sick_child/feeding_the_sick_child_1" type="transport_actions" group="transport_actions" color_code="" options=""/><field name="Accompany mother and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital " link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="immunization_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Immunization and Vitamin A Status&gt; Immunization 1" color_code="Select">
+		<field name="Immunization and Vitamin A Supplementation Status" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Enter the Child&#x2019;s Date of Birth in to Age Calculator Below" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Age Calculator:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Compare the age of the child against immunization chart and immunize appropriately " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="For any vaccine given, Fill in the Date Given, Batch Number, Place Given and Date of Next Visit" link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Advise caregiver/ mother on when to return for the next set of immunizations due." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Give 1st dose of Rotavirus at 6 weeks or latest by 15 weeks; Give the 2nd dose of Rotavirus at 10 weeks or latest by 24 weeks of age. " link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Absolute Contraindications to Immunization" link="" type="header" group="section_header" color_code="" options=""/>
+		<field name="Infants should not be vaccinated if a previous vaccination was followed by anaphylaxis, encephalitis or non-febrile convulsions" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Yellow fever vaccine should not be given if there is history of anaphylaxis with ingestion of egg" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Rotavirus vaccine should not be given: if child has a history of abdominal surgery, history of uncorrected congenital malformation of the gastrointestinal tract &amp; a history of intussusceptions" link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Individuals with symptomatic HIV infection should not receive BCG Yellow Fever &amp; Pneumococcal vaccines. " link="" type="section_items_sub" group="section_items" color_code="" options=""/>
+		<field name="BCG vaccine can be given at birth since the HIV infected newborn is asymptomatic." link="" type="section_items" group="section_items" color_code="" options=""/>
+		<field name="Measles vaccine should be given to HIV positive patients even though it is a live vaccine because the benefit outweighs the risk." link="" type="section_items" group="section_items" color_code="" options=""/>
+		
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/></form></xmlgui>

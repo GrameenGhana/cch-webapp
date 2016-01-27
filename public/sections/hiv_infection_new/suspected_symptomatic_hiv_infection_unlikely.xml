@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="suspected_symptomatic_hiv_infection_unlikely" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: HIV Infection&gt; Suspected Symptomatic HIV Infection Unlikely" color_code="Green">
+		<field name="Less than two conditions AND | No test results for child or mother &#13;&#10;" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: Suspected Symptomatic HIV Infection Unlikely" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Treat and counsel mother appropriately." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise the mother about appropriate Feeding Recommendations for Child Classified as HIV Exposed" link="feeding_assessment_&amp;_counseling/feeding_assessment_&amp;_counseling_1" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel the mother about her own health" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Advise mother on when to return for care immediately per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="hiv_infection/when_to_return_diarrhoea.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Encourage HIV testing" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother appropriately and document." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="" link="" type="transport_actions" group="transport_actions" color_code="" options=""/>
+		<field name="" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

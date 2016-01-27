@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="mastoiditis" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Ear Problem&gt; Mastoiditis" color_code="Red">
+		<field name="Tender swelling behind the ear" link="" type="definition" group="definition" color_code="" options=""/>
+		<field name="Take Action: Mastoiditis" link="" type="first_section_head" group="first_actions" color_code="" options=""/>
+		<field name="Counsel mother on pre-referral treatment and Referral" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Give first dose of an appropriate antibiotic before referral per table below:" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="ear_problem/amoxycillin_dosage.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Give first dose of paracetamol for pain and or fever per table below: " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="ear_problem/paracetamol.JPG" link="" type="image" group="first_actions" color_code="" options=""/>
+		<field name="Administer all appropriate pre-referral treatment after completing assessment and document." link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Call health provider taking up care and arrange transport " link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="Fill out Referral Form &amp; Refer the child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" options=""/>
+		<field name="Counsel mother on feeding a sick child" link="feeding_the_sick_child/feeding_the_sick_child_1" type="transport_actions" group="transport_actions" color_code="" options=""/><field name="Accompany mother and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="second_actions" group="second_actions" color_code="" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

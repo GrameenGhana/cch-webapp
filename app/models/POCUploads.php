@@ -8,7 +8,7 @@ class POCUploads extends Eloquent
 	 *
 	 * @var string
 	 */
-	protected $table = 'cch_conent_poc_uploads';
+	protected $table = 'cch_content_poc_uploads';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
