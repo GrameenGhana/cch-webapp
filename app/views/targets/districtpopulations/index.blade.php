@@ -42,7 +42,7 @@
                                  
                                         <select name="year" style="font-size:20px;" onchange="if (this.value) window.location.href=this.value">
                                             @for ($i=date('Y'); $i >= 2012; $i--)
-                                            <option value="/cch/yabr3/targets/population/districts?year={{ $i }}">{{ $i }}</option>
+                                            <option value="/cch/yabr3/targets/population/districts?year={{ $i }}" @if ($year==$i) selected @endif>{{ $i }}</option>
                                             @endfor
                                         </select>
                                     </div>
@@ -139,25 +139,6 @@
                     "bAutoWidth": false
                 });
 
-		var year = {{ $year}};
-            console.log('Year => ' + year);
-
-            switch (year) {
-              case 2015:
-              $('select>option:eq(0)').attr('selected', true);
-              break;
-              case 2014:
-              $('select>option:eq(1)').attr('selected', true);
-              break;
-              case 2013:
-              $('select>option:eq(2)').attr('selected', true);
-              break;
-              case 2012:
-              $('select>option:eq(3)').attr('selected', true);
-              break;
-
-
-            }
             });
         </script>
 @stop
