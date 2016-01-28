@@ -219,7 +219,7 @@
                         </li>
 			@endif
 
-            @if (strpos(strtolower(Auth::user()->role),"supervisor")>=0 || strtolower(Auth::user()->role) == 'admin'  )
+		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant','district admin')) || (strpos(strtolower(Auth::user()->role),"supervisor")>=0))
                         <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*')) ? 'active' : '' }}">
                             <a href="#">
                                 <i class="fa fa-cogs"></i>
