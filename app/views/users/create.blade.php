@@ -151,7 +151,7 @@
                             {{ Form::select('gender', array('unspecified'=>'Unknown','female'=>'Female','male'=>'Male'), Input::old('gender'),array('class'=>'form-control','placeholder'=>'Enter Gender')) }}
                                 </div>  <div class="col-md-6">
                                        {{ Form::label('status','Status') }}
-                            {{ Form::select('status', array('ACTIVE'=>'Active','TEST'=>'Test','ERROR'=>'Error','INACTIVE'=>'In Active','OWNDEVICE'=>'OWN DEVICE'), Input::old('status'),array('class'=>'form-control','placeholder'=>'Select Status')) }}
+                            {{ Form::select('status', array('ACTIVE'=>'Active','TEST'=>'Test','ERROR'=>'Error','INACTIVE'=>'In Active','OWNDEVICE'=>'OWN DEVICE','NONAPP'=>'Non App Users'), Input::old('status'),array('class'=>'form-control','placeholder'=>'Select Status')) }}
                         
                                 </div> </div>
                     </fieldset>

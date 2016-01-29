@@ -154,7 +154,7 @@
                                 </div>  
                                 <div class="col-md-6">
                                     {{ Form::label('status','Status') }}
-                                    {{ Form::select('status', array('ACTIVE'=>'Active','TEST'=>'Test','ERROR'=>'Error','INACTIVE'=>'In Active','OWNDEVICE'=>'OWN DEVICE'), $user->status,array('class'=>'form-control','placeholder'=>'Select Status')) }}
+                                    {{ Form::select('status', array('ACTIVE'=>'Active','TEST'=>'Test','ERROR'=>'Error','INACTIVE'=>'In Active','OWNDEVICE'=>'OWN DEVICE','NONAPP'=>'Non App Users'), $user->status,array('class'=>'form-control','placeholder'=>'Select Status')) }}
                                 </div>
                             </div>
                         </div>

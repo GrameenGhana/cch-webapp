@@ -16,7 +16,7 @@
 <section class="content">
 
 <div class="row">
-{{ Form::open(array('url'=> 'addpagedetails','method'=>'post','files'=>true)) }}
+{{ Form::open(array('url'=> '/content/poccms/addpagedetails','method'=>'post','files'=>true)) }}
 <input type="hidden" value="{{$page_values->id}}" name="id" id="id">
 <div class="col-md-8">
         @if (Session::has('message'))

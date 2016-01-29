@@ -305,8 +305,15 @@ public function showdetail($id) {
                                 ->where('username','=',$id)
                                 ->get();
 
+                                $courses_for_ksa=DB::connection('mysql2')
+                                ->table('finalquizscores')
+                                ->select(DB::raw('*'))
+                                ->where('username','=',$id)
+                                ->get();
+
                               return Response::json(array("targets"=>$target_achievements,
-                                                            "courses"=>$course_achievements));
+                                                            "courses"=>$course_achievements,
+                                                            "new_courses"=>$courses_for_ksa));
     }
 }
 
