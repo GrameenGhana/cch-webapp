@@ -119,7 +119,11 @@
                                     <div class="form-group">
                                     <div class="col-xs-3">
                                         {{ Form::label('header','Is sub item?') }}
-                                        <input type="checkbox" id="first_action_sub_s1" name="first_action_sub_s1" value="yes" class="form-control"/>  
+                                        <select class="form-control" id="first_action_sub_s1" name="first_action_sub_s1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                       <!-- <input type="checkbox" id="first_action_sub_s1" name="first_action_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
                                         <div class="col-xs-3">
                                              {{ Form::label('header','Text property') }}
@@ -186,7 +190,11 @@
                                     <div class="form-group">
                                     <div class="col-xs-3">
                                         {{ Form::label('header','Is sub item?') }}
-                                        <input type="checkbox" id="transport_sub_s1" name="transport_sub_s1" value="yes" class="form-control"/>  
+                                        <select class="form-control" id="transport_sub_s1" name="transport_sub_s1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="transport_sub_s1" name="transport_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
                                         <div class="col-xs-3">
                                              {{ Form::label('header','Text property') }}
@@ -250,7 +258,11 @@
                                     <div class="form-group">
                                     <div class="col-xs-3">
                                         {{ Form::label('header','Is sub item?') }}
-                                        <input type="checkbox" id="noreferral_sub_s1" name="noreferral_sub_s1" value="yes" class="form-control"/>  
+                                         <select class="form-control" id="noreferral_sub_s1" name="noreferral_sub_s1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                       <!-- <input type="checkbox" id="noreferral_sub_s1" name="noreferral_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
                                         <div class="col-xs-3">
                                              {{ Form::label('header','Text property') }}
@@ -314,7 +326,11 @@
                                     <div class="form-group">
                                     <div class="col-xs-3">
                                         {{ Form::label('header','Is sub item?') }}
-                                        <input type="checkbox" id="second_action_sub_s1" name="second_action_sub_s1" value="yes" class="form-control"/>  
+                                         <select class="form-control" id="second_action_sub_s1" name="second_action_sub_s1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="second_action_sub_s1" name="second_action_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
                                         <div class="col-xs-3">
                                              {{ Form::label('header','Text property') }}
@@ -462,7 +478,11 @@
                                     <div class="form-group">
                                     <div class="col-xs-3">
                                         {{ Form::label('header','Is sub item?') }}
-                                        <input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  
+                                         <select class="form-control" id="page_item_sub_s1__1" name="page_item_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
                                     </div>
                                         <div class="col-xs-3">
                                              {{ Form::label('header','Text property') }}
@@ -510,6 +530,7 @@
 
             </div>
         </div>
+        <input type="hidden" value="1" name="layout_cnt" id="layout_cnt"/>
     </div>  
          <div class="col-md-8" id="actions">
         <div class="box box-primary">
@@ -571,7 +592,7 @@
         </div>
         <input type="hidden" value="1" name="action_cnt" id="action_cnt"/>
     </div>
-    <input type="hidden" value="1" name="layout_cnt" id="layout_cnt"/>
+    
       <button type="submit" class="btn btn-success">Create Page</button>
             <button type="reset" class="btn btn-danger">Reset</button>  
     {{ Form::close()}}
@@ -595,6 +616,7 @@
         $(firstContent).find("h3").html("Page Section "+ currentElementCnt);
 //        alert(firstPitem)
         $(firstContent).find("#pItem_s"+(currentElementCnt)).html(firstPitem);
+        $(firstContent).find("#layout_s"+(currentElementCnt)).html(firstPitem);
         $(firstContent).find("select").val("");
         $(firstContent).find("textarea").val("");
         $("#layout_cnt").val(currentElementCnt);

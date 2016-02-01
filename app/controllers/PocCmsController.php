@@ -331,8 +331,8 @@ class PocCmsController extends BaseController {
 	            $transport_action_cnt = Input::get('transport_cnt');
 	            $action_cnt = Input::get('action_cnt');
 	            $question_cnt = Input::get('question_cnt');
-	             $layout_cnt = Input::get('layout_cnt');
-	             $noreferral_cnt = Input::get('noreferral_cnt');
+	            $layout_cnt = Input::get('layout_cnt');
+	            $noreferral_cnt = Input::get('noreferral_cnt');
 	//          
 	              $section = POCSections::where('name_of_section','=',Input::get('page_section'))->first();
 	 			$xmlFileName =$section->section_url.'/'.Input::get('page_shortname').'.xml';
@@ -345,11 +345,11 @@ class PocCmsController extends BaseController {
 	                              'page_name' => Input::get('page_name'),
 	                              'page_title'=> Input::get('page_title'),
 	                              'page_subtitle'=>Input::get('page_subtitle').": ".Input::get('page_description'),
-	                               'page_section'=>Input::get('page_section'),
-	                               'page_link_value'=>$section->shortname."/".Input::get('page_shortname'),
-	                               'color_code'=>Input::get('color_code'),
-	                               'page_shortname'=>Input::get('page_shortname'),
-	                                'page_url'=>$xmlFileName,
+	                              'page_section'=>Input::get('page_section'),
+	                              'page_link_value'=>$section->shortname."/".Input::get('page_shortname'),
+	                              'color_code'=>Input::get('color_code'),
+	                              'page_shortname'=>Input::get('page_shortname'),
+	                              'page_url'=>$xmlFileName,
 	                               ));
 				$xmlFile=fopen($xmlFileName, "w");
 	           
@@ -398,7 +398,7 @@ class PocCmsController extends BaseController {
 	 						$first_actions_xml_field=$form->addChild('field');
 	 						$first_actions_xml_field->addAttribute('name',Input::get("first_action_s$i"));
 	 						$first_actions_xml_field->addAttribute('link',Input::get("first_link_type_s$i"));
-	                        if(Input::get("first_action_sub_s$i")=="yes"){
+	                        if(Input::get("first_action_sub_s$i")=="Yes"){
 	                            $first_actions_xml_field->addAttribute('type','first_actions_sub');
 	                        }else{
 	                             $first_actions_xml_field->addAttribute('type','first_actions');
@@ -448,7 +448,7 @@ class PocCmsController extends BaseController {
 	                    $transport_xml_field=$form->addChild('field');
 	                        $transport_xml_field->addAttribute('name',Input::get("noreferral_s$j"));
 	                        $transport_xml_field->addAttribute('link',Input::get("noreferral_link_type_s$j"));
-	                         if(Input::get("noreferral_sub_s$j")=="yes"){
+	                         if(Input::get("noreferral_sub_s$j")=="Yes"){
 	                            $transport_xml_field->addAttribute('type','transport_actions_sub');
 	                        }else{
 	                             $transport_xml_field->addAttribute('type','transport_actions');
@@ -475,7 +475,7 @@ class PocCmsController extends BaseController {
 	                        $transport_xml_field=$form->addChild('field');
 	                        $transport_xml_field->addAttribute('name',Input::get("transport_s$j"));
 	                        $transport_xml_field->addAttribute('link',Input::get("transport_link_type_s$j"));
-	                         if(Input::get("transport_sub_s$j")=="yes"){
+	                         if(Input::get("transport_sub_s$j")=="Yes"){
 	                            $transport_xml_field->addAttribute('type','transport_actions_sub');
 	                        }else{
 	                             $transport_xml_field->addAttribute('type','transport_actions');
@@ -503,7 +503,7 @@ class PocCmsController extends BaseController {
 	            	$second_actions_xml_field=$form->addChild('field');
 	 						$second_actions_xml_field->addAttribute('name',Input::get("second_action_s$k"));
 	 						$second_actions_xml_field->addAttribute('link',Input::get("second_link_type_s$k"));
-	                         if(Input::get("second_action_sub_s$k")=="yes"){
+	                         if(Input::get("second_action_sub_s$k")=="Yes"){
 	                            $second_actions_xml_field->addAttribute('type','second_actions_sub');
 	                        }else{
 	                             $second_actions_xml_field->addAttribute('type','second_actions');
@@ -637,7 +637,7 @@ class PocCmsController extends BaseController {
 	                   		$section_items_xml_field=$form->addChild('field');
 	 							$section_items_xml_field->addAttribute('name',Input::get("page_header$ik"));
 	 							$section_items_xml_field->addAttribute('link',Input::get("link_type$ik"));
-	                            if(Input::get("page_item_sub$ik")=="yes"){
+	                            if(Input::get("page_item_sub$ik")=="Yes"){
 	                            $section_items_xml_field->addAttribute('type','section_items_sub');
 	                        }else{
 	                             $section_items_xml_field->addAttribute('type','section_items');
@@ -649,25 +649,25 @@ class PocCmsController extends BaseController {
 	               if (Input::hasFile("page_item_image$ik")){
 	                                $image = Input::file("page_item_image$ik");
 	                                $name=$image->getClientOriginalName();
-	                                $transport_image_xml_field=$form->addChild('field');
-	                                $transport_image_xml_field->addAttribute('name',$section->shortname."/".$name);
-	                                $transport_image_xml_field->addAttribute('link','');
-	                                $transport_image_xml_field->addAttribute('type','image');
-	                                $transport_image_xml_field->addAttribute('group','section_items');
-	                                $transport_image_xml_field->addAttribute('color_code','');
-	                                $transport_image_xml_field->addAttribute('property','');   
-	                                $transport_image_xml_field->addAttribute('options','');
+	                                $section_image_xml_field=$form->addChild('field');
+	                                $section_image_xml_field->addAttribute('name',$section->shortname."/".$name);
+	                                $section_image_xml_field->addAttribute('link','');
+	                                $section_image_xml_field->addAttribute('type','image');
+	                                $section_image_xml_field->addAttribute('group','section_items');
+	                                $section_image_xml_field->addAttribute('color_code','');
+	                                $section_image_xml_field->addAttribute('property','');   
+	                                $section_image_xml_field->addAttribute('options','');
 	                              $image->move($section->section_url.'/', $image->getClientOriginalName());
 	                        }
 	                }
 	            }
-	            		  for ($i = 1; $i <= $action_cnt; $i++) { 
-	                        Input::get("action_s$i");
-	                        $actionDetailCnt = Input::get("action_detail_cnt_s$i");
+	            		  for ($f = 1; $f <= $action_cnt; $f++) { 
+	                        Input::get("action_s$f");
+	                        $actionDetailCnt = Input::get("action_detail_cnt_s$f");
 	                        $action_xml_field=$form->addChild('field');
-	                        $action_xml_field->addAttribute('name',Input::get("action_s$i"));
-	                        $action_xml_field->addAttribute('color_code',Input::get("color_s$i"));
-	                        $action_xml_field->addAttribute('link',Input::get("link_type_s$i"));
+	                        $action_xml_field->addAttribute('name',Input::get("action_s$f"));
+	                        $action_xml_field->addAttribute('color_code',Input::get("color_s$f"));
+	                        $action_xml_field->addAttribute('link',Input::get("link_type_s$f"));
 	                        $action_xml_field->addAttribute('type','button');
 	                        $action_xml_field->addAttribute('group','actions');  
 	                        $action_xml_field->addAttribute('property','');   
