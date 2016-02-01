@@ -107,6 +107,16 @@ Route::group(array('prefix' => 'api/v1'), function()
         $subs = District::find($id)->subdistricts;
         return $subs->lists('name','id');
     });
+
+    Route::get('userid/generate', function() {
+        mt_srand();
+        $id = 0;
+        do {
+            $id = mt_rand(1000000,9999999);
+        } while(User::where('username', '=', $id)->exists());
+
+        return $id; 
+    });
     
     Route::resource('tracker','TrackerController'); 
     Route::resource('users','UserController');

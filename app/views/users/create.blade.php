@@ -49,6 +49,7 @@
                         <div class="form-group">
                             {{ Form::label('username','Username') }}
                             {{ Form::text('username',Input::old('username'),array('class'=>'form-control','placeholder'=>'Enter username')) }}
+                            <a id="generateid" style="font-size:small">Auto generate ID</a>
                         </div>
 
                         <div class="form-group">
@@ -218,6 +219,14 @@
 @section('script')
 <script type="text/javascript">
     $(function() {
+
+        $('#generateid').click(function()
+        {
+             $.get("{{ url('api/v1/userid/generate')}}", { }, function(data) {
+                   $('#username').val(data); 
+             });
+        });
+
         //              $('#group').change(function() { showhidefacs(); });                
         $('#role').change(function() {
             showhidefacs();
@@ -225,11 +234,11 @@
 
         $('.parent input:checkbox').on('ifChecked ifUnchecked', function(e) {
          
-var chk="uncheck";
+            var chk="uncheck";
 
- if (e.type == 'ifChecked') {
-          chk ='check';
-        } 
+            if (e.type == 'ifChecked') {
+                chk ='check';
+            } 
 
             $("#"+$(this).val()).find('input').each(function() {
                 $(this).iCheck(chk);
