@@ -220,7 +220,7 @@
 			@endif
 
 		    @if (in_array(strtolower(Auth::user()->role),  array('admin','dhio','dhio assistant','district admin')) || (strpos(strtolower(Auth::user()->role),"supervisor")>=0))
-                        <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*')) ? 'active' : '' }}">
+                        <li class="treeview {{ (Request::is('devices*') or Request::is('facilities*')  or Request::is('users*') or Request::is('tracker*') or Request::is('logs*')) ? 'active' : '' }}">
                             <a href="#">
                                 <i class="fa fa-cogs"></i>
                                 <span>System Setup</span>
@@ -240,7 +240,7 @@
                                 @else
                                 <li class="{{ Request::is('distusers/*') ? 'active' : '' }}"><a href="{{ URL::to('distusers') }}"><i class="fa fa-users"></i>Users</a></li>
                                 @endif
-                                <li class="{{ Request::is('tracker*') ? 'active' : '' }}"><a href="{{ URL::to('tracker') }}"><i class="fa fa-file"></i>Logs</a></li>
+                                <li class="{{ Request::is('logs*') ? 'active' : '' }}"><a href="{{ URL::to('logs') }}"><i class="fa fa-file"></i>Logs</a></li>
                             </ul>
                         </li>
 			@endif

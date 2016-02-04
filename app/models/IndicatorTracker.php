@@ -11,11 +11,30 @@
  *
  * @author dhutchful
  */
-class IndicatorTracker  extends Eloquent { 
+
+use Venturecraft\Revisionable\Revisionable;
+
+
+class IndicatorTracker  extends Revisionable { 
 
 	protected $table = 'cch_indicators_tracker';
        
     protected $with = array('zone','indicator');
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;
+    protected $revisionCreationsEnabled = true;
+    protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
+
+    public function identifiableName()
+    {
+        return $this->indicator->type.'-'.$this->year.'-'.$this->month;
+    }
+
+
+
 
     public function zone()
     {

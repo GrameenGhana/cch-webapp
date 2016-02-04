@@ -25,6 +25,7 @@ Route::get('swplansbyprofile',       array('uses' => 'DashboardController@swPlan
 Route::post('swplansbyprofile',      array('uses' => 'DashboardController@swPlansByProfile'));
 Route::get('moduleusagebytype',      array('uses' => 'DashboardController@moduleUsageByType'));
 Route::post('moduleusagebytype',     array('uses' => 'DashboardController@moduleUsageByType'));
+Route::resource('reports','ReportController',['before'=>'auth']); 
 /**** / Dasboard routes ***/
 
 /**** Content routes ***/
@@ -83,7 +84,7 @@ Route::resource('tracker','TrackerController');
 Route::resource('districts','DistrictController'); 
 Route::resource('subdistricts','SubDistrictController'); 
 Route::resource('zones','ZoneController'); 
-Route::resource('reports','ReportController',['before'=>'auth']); 
+Route::resource('logs','LogController',['before'=>'auth']); 
 /** end System Setup **/
 
 Route::get('/courses',function(){ $courses=CourseDetails::details(); return $courses; });

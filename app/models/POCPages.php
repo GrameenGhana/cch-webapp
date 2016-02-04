@@ -1,6 +1,7 @@
 <?php
+use Venturecraft\Revisionable\Revisionable;
 
-class POCPages extends Eloquent 
+class POCPages extends Revisionable 
 { 
 
 	/**
@@ -9,6 +10,19 @@ class POCPages extends Eloquent
 	 * @var string
 	 */
 	protected $table = 'cch_content_poc_pages';
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;
+    protected $revisionCreationsEnabled = true;
+    protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
+
+    public function identifiableName()
+    {
+        return $this->page_name;
+    }
+ 
 
 	/**
 	 * The attributes excluded from the model's JSON form.

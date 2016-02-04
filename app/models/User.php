@@ -2,11 +2,32 @@
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Venturecraft\Revisionable\Revisionable;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+
+class User extends Revisionable implements UserInterface, RemindableInterface {
 
     protected $table = 'cch_users';
     protected $hidden = array('password', 'remember_token');
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;
+    protected $revisionCreationsEnabled = true;
+    protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
+
+    protected $revisionFormattedFields = array(
+        'online' => 'boolean:Logged Out|Logged In',
+    );
+
+    protected $dontKeepRevisionOf = array( 'remember_token');
+
+    public function identifiableName()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
+
 
     public function modifier() {
         return $this->hasOne('User', 'id', 'modified_by');

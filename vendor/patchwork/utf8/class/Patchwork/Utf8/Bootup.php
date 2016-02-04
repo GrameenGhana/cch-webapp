@@ -1,6 +1,6 @@
 <?php // vi: set fenc=utf-8 ts=4 sw=4 et:
 /*
- * Copyright (C) 2013 Nicolas Grekas - p@tchwork.com
+ * Copyright (C) 2016 Nicolas Grekas - p@tchwork.com
  *
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the (at your option):
@@ -72,7 +72,7 @@ class Bootup
                 mb_language('uni');
             }
         }
-        else if (!defined('MB_OVERLOAD_MAIL'))
+        else if (!function_exists('mb_strlen'))
         {
             extension_loaded('iconv') or static::initIconv();
 
@@ -84,22 +84,22 @@ class Bootup
     {
         if (extension_loaded('iconv'))
         {
-            if ('UTF-8' !== iconv_get_encoding('input_encoding'))
+            if ('UTF-8' !== strtoupper(iconv_get_encoding('input_encoding')))
             {
                 iconv_set_encoding('input_encoding', 'UTF-8');
             }
 
-            if ('UTF-8' !== iconv_get_encoding('internal_encoding'))
+            if ('UTF-8' !== strtoupper(iconv_get_encoding('internal_encoding')))
             {
                 iconv_set_encoding('internal_encoding', 'UTF-8');
             }
 
-            if ('UTF-8' !== iconv_get_encoding('output_encoding'))
+            if ('UTF-8' !== strtoupper(iconv_get_encoding('output_encoding')))
             {
-                iconv_set_encoding('output_encoding' , 'UTF-8');
+                iconv_set_encoding('output_encoding', 'UTF-8');
             }
         }
-        else if (!defined('ICONV_IMPL'))
+        else if (!function_exists('iconv'))
         {
             require __DIR__ . '/Bootup/iconv.php';
         }
@@ -127,7 +127,7 @@ class Bootup
 
         define('GRAPHEME_CLUSTER_RX', PCRE_VERSION >= '8.32' ? '\X' : s\Intl::GRAPHEME_CLUSTER_RX);
 
-        if (! extension_loaded('intl'))
+        if (!function_exists('grapheme_strlen'))
         {
             extension_loaded('iconv') or static::initIconv();
             extension_loaded('mbstring') or static::initMbstring();

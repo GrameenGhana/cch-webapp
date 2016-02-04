@@ -50,12 +50,12 @@ class HomeController extends BaseController {
 				->withErrors($validator)
 				->withInput(Input::except('password'));
 		} else {
-		   $userdata = array(
-			'username' => Input::get('username'),	
-			'password' => Input::get('password')
-		   );		
+		   $userdata = array('username' => Input::get('username'),	'password' => Input::get('password'));		
 
 		   if (Auth::attempt($userdata)) {
+                $user = User::getByUsername($userdata['username']);
+                $user->online = 1;
+                $user->save();
 			    return Redirect::to('/');	
 		   } else {
 			return Redirect::to('login')
@@ -67,6 +67,9 @@ class HomeController extends BaseController {
 
 	public function doLogout()
 	{
+        $user = Auth::user();
+        $user->online = 0;
+        $user->save();
 		Auth::logout(); 
 		return Redirect::to('login'); 
 	}

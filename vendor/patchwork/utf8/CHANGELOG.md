@@ -1,3 +1,17 @@
+## v1.1.31 (2015-12-15)
+
+- fix compat with symfony-polyfill
+
+## v1.1.30 (2015-06-29)
+
+- fix mb_strrpos shim with negative offset
+
+## v1.1.29 (2015-04-26)
+
+- fix ucwords to be functionally the same as in-built PHP version
+- fix iconv_set_encoding deprecation notice in PHP 5.6.0
+- remove legacy test for HHVM/PHP7
+
 ## v1.1.28 (2015-01-12)
 
 - fix mbstring shim for html-entities

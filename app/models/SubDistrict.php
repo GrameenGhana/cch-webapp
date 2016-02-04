@@ -11,9 +11,25 @@
  *
  * @author skwakwa
  */
-class SubDistrict extends Eloquent { 
+
+ use Venturecraft\Revisionable\Revisionable;
+
+class SubDistrict extends Revisionable { 
 
 	protected $table = 'cch_sub_districts';
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;
+    protected $revisionCreationsEnabled = true;
+    protected $revisionNullString = 'nothing';
+    protected $revisionUnknownString = 'unknown';
+
+    public function identifiableName()
+    {
+        return $this->name;
+    }
+
 
     public function district()
 	{
