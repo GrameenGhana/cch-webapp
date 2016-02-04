@@ -140,16 +140,15 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="treeview {{ Request::is('indicators/*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('indicators/')}}"><i class="fa fa-angle-double-right"></i>Indicators</a>
+                                <li class=" {{ Request::is('indicators*') ? 'active' : '' }}">
+                                    <a href="{{ URL::to('indicators')}}"><i class="fa fa-angle-double-right"></i>Indicators</a>
                                 </li>
-                                <li class="treeview {{ Request::is('stayingwell/*') ? 'active' : '' }}">
-                                    <a href="{{ URL::to('stayingwell/')}}"><i class="fa fa-angle-double-right"></i>Staying Well</a>
+                                <li class=" {{ Request::is('stayingwell*') ? 'active' : '' }}">
+                                    <a href="{{ URL::to('stayingwell')}}"><i class="fa fa-angle-double-right"></i>Staying Well</a>
                                 </li>
                                 <li class=" {{ Request::is('reports*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('reports') }}"><i class="fa fa-angle-double-right"></i>Reports</a>
-           
-				</li>
+				                </li>
                             </ul>
                         </li>
 
@@ -194,7 +193,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="treeview {{ Request::is('targets/actuals*') ? 'active' : '' }}">
+                                <li class="{{ Request::is('targets/actuals*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('targets/actuals') }}"><i class="fa fa-angle-double-right"></i> Set Actuals</a>
                                 </li>
 

@@ -1,5 +1,6 @@
 {
     "require": {
-        "pda/pheanstalk": "~2.1"
+        "pda/pheanstalk": "~2.1",
+        "venturecraft/revisionable": "1.*"
     }
 }

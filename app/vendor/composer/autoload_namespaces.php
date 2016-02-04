@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Venturecraft\\Revisionable' => array($vendorDir . '/venturecraft/revisionable/src'),
     'Pheanstalk' => array($vendorDir . '/pda/pheanstalk/classes'),
+    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
 );
