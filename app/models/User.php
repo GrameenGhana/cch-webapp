@@ -32,6 +32,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasMany('Tracker', 'username', 'username');
     }
 
+    public static function getByUsername($username)
+    {
+        return User::whereRaw('username="'.$username.'"')->first();
+    }
+
     function getPrimaryFacilityDetails() {
         return ($this->getPrimaryFacilityId() == 0) ? "No Facility" : Facility::find($this->getPrimaryFacilityId())->name;
     }
@@ -123,10 +128,10 @@ public  static function getUserDistricts($id) {
                 $user->primary_facility = $user->getPrimaryFacilityId();
                 foreach ($user->facilities as $f) {
                     if ($f->id == $user->primary_facility) {
-                        if (in_array($f->district, array_keys($users))) {
-                            $users[$f->district][$user->id] = $user->username." - ".$user->getName();
+                        if (in_array($f->facDistrict->name, array_keys($users))) {
+                            $users[$f->facDistrict->name][$user->id] = $user->username." - ".$user->getName();
                         } else {
-                            $users[$f->district] = array($user->id => $user->username." - ".$user->getName());
+                            $users[$f->facDistrict->name] = array($user->id => $user->username." - ".$user->getName());
                         }
                     } elseif ($user->primary_facility == 0) {
                         $users['No Primary Facility'][$user->id] = $user->username." - ".$user->getName();
@@ -155,11 +160,13 @@ public  static function getUserDistricts($id) {
         $query = "SELECT t.user_id, t.course_id, c.title, max(tracker_date) as lasta, 
                          sum(t.time_taken) as time_taken, 
                          t.completed, t.activity_title, t.section_title, IFNULL(q.attempts,0) as attempts, 
-                         IFNULL(q.percentscore,'Not taken') as score
+                         IFNULL(q.percentscore,'Not taken') as score,
+                         IFNULL(ksa.status,'In Progress') as ksa
                     FROM oppia_tracker t 
                     JOIN auth_user u ON u.id = t.user_id 
                     JOIN oppia_course c ON c.id = t.course_id 
                     LEFT JOIN jsi.finalquizscores q on q.course_id=t.course_id and q.user_id=t.user_id
+                    LEFT JOIN cch_ksa_status ksa ON ksa.courseid = t.course_id and ksa.userid=t.user_id
                    WHERE t.course_id IS NOT null AND u.username = ? 
                    GROUP BY t.user_id, t.course_id, t.activity_title, t.section_title
                    ORDER BY t.course_id";
@@ -195,8 +202,7 @@ public  static function getUserDistricts($id) {
                 $comp[$v->title]['numactivities'] += 1;
                 $comp[$v->title]['numcomplete'] += ($v->completed) ? 1 : 0;
             } else {
-                $comp[$v->title] = array('numactivities' => 1,
-                    'numcomplete' => ($v->completed) ? 1 : 0);
+                $comp[$v->title] = array('numactivities' => 1, 'numcomplete' => ($v->completed) ? 1 : 0);
             }
 
             $v->completed = ($v->completed == 1) ? 'Completed' : 'In progress';
@@ -244,13 +250,11 @@ public  static function getUserDistricts($id) {
                     'last_accessed' => $v->lasta,
                     'time_taken' => $origtt,
                     'percentcomplete' => ($v->completed == 'Completed') ? 100 : 0,
-                    'activities' => 1
+                    'activities' => 1,
                 );
 
-                /* array_push($courses[$v->title]['topics'][$v->section_title]['activities'], 
-                  array('activity'=>$v->activity_title,
-                  'time'=>$v->time_taken,'done'=>$v->completed));
-                 */
+                $courses[$v->title]['cid'] = $v->course_id; 
+                $courses[$v->title]['ksa'] = $v->ksa; 
                 $courses[$v->title]['attempts'] = $v->attempts;
                 $courses[$v->title]['score'] = ($v->score == 'Not taken') ? $v->score : round($v->score);
             }
@@ -267,6 +271,12 @@ public  static function getUserDistricts($id) {
             $courses[$k]['time_taken'] = $this->getHumanReadableTime($v);
             $courses[$k]['last_accessed'] = date('M d, Y', strtotime($la[$k]));
             $courses[$k]['percentcomplete'] = round($comp[$k]['numcomplete'] / $comp[$k]['numactivities'] * 100);
+            
+            if ($courses[$k]['score'] !== 'Not Taken' && $courses[$k]['ksa'] != 'Passed') {
+                if ($courses[$k]['score'] >= 85 && $courses[$k]['percentcomplete'] >= 85) {
+                    $courses[$k]['ksa'] = 'Eligible';
+                }
+            }
         }
 
         return $courses;

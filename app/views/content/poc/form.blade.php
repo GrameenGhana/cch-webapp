@@ -518,7 +518,7 @@
                                         </div>
                                         </div>    
                                     </div>
-                                      <input type="hidden" name="page_subitem_cnt_s1" id="page_subitem_cnt_s1" value="1" />
+                                     <!-- <input type="hidden" name="page_subitem_cnt_s1" id="page_subitem_cnt_s1" value="1" />-->
                                 </div>
                                 <input type="hidden" name="element_cnt_s1" id="element_cnt_s1" value="1" />
                                
@@ -616,7 +616,6 @@
         $(firstContent).find("h3").html("Page Section "+ currentElementCnt);
 //        alert(firstPitem)
         $(firstContent).find("#pItem_s"+(currentElementCnt)).html(firstPitem);
-        $(firstContent).find("#layout_s"+(currentElementCnt)).html(firstPitem);
         $(firstContent).find("select").val("");
         $(firstContent).find("textarea").val("");
         $("#layout_cnt").val(currentElementCnt);
@@ -626,7 +625,7 @@
         currentElementCnt = $("#element_cnt" + idx).val();
         currentElementCnt++;
         firstContent = $("#element_pages_s1__1").html();
-        firstContent = firstContent.replace(/__1/g, '__' + currentElementCnt);
+        firstContent = firstContent.replace(/_s1__1/g, idx+'__' + currentElementCnt);
         firstContent = firstContent.replace(/Page Item 1/g,"Page Item "+currentElementCnt);
         $(firstContent).find("input").val("");
         $(firstContent).find("h5").html("Page Item "+currentElementCnt);
@@ -658,7 +657,7 @@
         currentElementCnt = $("#answer_cnt" + idx).val();
         currentElementCnt++;
         firstContent = $("#answer_pages_s1__1").html();
-        firstContent = firstContent.replace(/__1/g, '__' + currentElementCnt);
+        firstContent = firstContent.replace(/_s1__1/g, idx+'__' + currentElementCnt);
         firstContent = firstContent.replace(/Answer 1/g, "Answer "+currentElementCnt);
         $(firstContent).find("input").val("");
         $(firstContent).find("h5").html("Answer "+currentElementCnt);

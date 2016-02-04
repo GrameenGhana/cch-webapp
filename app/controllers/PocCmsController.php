@@ -304,6 +304,7 @@ class PocCmsController extends BaseController {
 	            $name=$image->getClientOriginalName();
 	        }
 	
+	
 	         $oldPage = POCPages::where('id','=',Input::get('id'))->first();
 	             if (File::exists($oldPage->page_url)) {
 	                 File::delete($oldPage->page_url);
@@ -634,7 +635,7 @@ class PocCmsController extends BaseController {
 	                			$elementCnt = Input::get("element_cnt_s$i");
 	                	for ($k = 1; $k <= $elementCnt; $k++) {
 	                   		 $ik = "_s$i" . "__$k";
-	                   		$section_items_xml_field=$form->addChild('field');
+	                   		 		$section_items_xml_field=$form->addChild('field');
 	 							$section_items_xml_field->addAttribute('name',Input::get("page_header$ik"));
 	 							$section_items_xml_field->addAttribute('link',Input::get("link_type$ik"));
 	                            if(Input::get("page_item_sub$ik")=="Yes"){
@@ -676,7 +677,7 @@ class PocCmsController extends BaseController {
 	            	}
 	            	$xmlgui->asXML($xmlFileName);
 	            return Redirect::to('/content/poccms/forms')
-	                            ->withMessage('Page created successfully');  
-	        } 
+	                         ->withMessage('Page created successfully');  
+	        }
 	    }
 }

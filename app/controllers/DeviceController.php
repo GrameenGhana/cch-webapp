@@ -118,7 +118,12 @@ class DeviceController extends BaseController {
 		
             $device->district_id =Input::get('district');
             $device->modified_by = Auth::user()->id;
+	    if($device->user_id==0){              
+	            $device->status = 'unallocated';
+	    }            
             $device->save();
+
+echo "Device : ".$device->id."  --- ".Input::get('user');
 
             DB::update('UPDATE cch.cch_users SET device_id=0 WHERE id = ?', array($oldu));
             DB::update('UPDATE cch.cch_users SET device_id=? WHERE id = ?', array($device->id, Input::get('user')));

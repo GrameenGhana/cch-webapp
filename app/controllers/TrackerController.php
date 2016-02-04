@@ -3,11 +3,11 @@
 class TrackerController extends BaseController {
 
     public function __construct() {
-//$this->beforeFilter('auth',array('except'=>array('store','update')));
+        //$this->beforeFilter('auth',array('except'=>array('store','update')));
     }
 
     public function index() {
-#$logs = Tracker::all();
+         #$logs = Tracker::all();
         $logs = array();
 
 //$browser = get_browser(null, true);
@@ -44,7 +44,6 @@ class TrackerController extends BaseController {
                     $log->created_at = date('Y-m-d h:m:s');
                     $log->modified_by = 1; // Tracker user id 
                     $log->save();
-//Log::info("SavingLogUpdate: ".$log);
                 }
             } else {
                 return Response::json(array('error' => true, 'messages' => 'data missing'), 200);
@@ -88,13 +87,31 @@ class TrackerController extends BaseController {
                     $log->modified_by = 1; // Tracker user id 
                     $log->save();
 
-                    Log::info("Tracker saved .... ");
+                    //Log::info("Tracker saved .... ");
+                    if (trim(preg_replace('/\s+/', ' ', $l->module)) == 'Supervisor KSA') { 
+                        $data = json_decode($l->data);
+                        $ksa = KSAStatus::findRec($data->userid, $data->courseid);
+                        $sup = User::getByUsername($data->supid);
+                        if($ksa==null)
+                        {
+                            $ksa = new KSAStatus; 
+                            $ksa->userid = $data->userid;
+                            $ksa->courseid = $data->courseid;
+                            $ksa->status = $data->status;
+                            $ksa->created_at = date('Y-m-d h:m:s'); 
+                            $ksa->created_by = $sup->id;
+                        }
+                        $ksa->status = $data->status;
+                        $ksa->changedate = $l->start_time;
+                        $ksa->modified_by = $sup->id;
+                        $ksa->save();
+                    }
 
                     // check to see if group target setting
                     if(trim(preg_replace('/\s+/', ' ', $l->module)) == trim(preg_replace('/\s+/', ' ', 'Target Setting')) ) {
                         if ( strpos($l->data,'group_members') !== false){
 
-                        Log::info("Target setting data coming through .....");
+                        //Log::info("Target setting data coming through .....");
                         $justification = '';
                         $comment ='';
                         $target_detail='';
@@ -158,19 +175,18 @@ class TrackerController extends BaseController {
                         $target->group_members =  $group_members;
                         $target->save();
 
-                        Log::info("Facility target saved -> ". $target->target_id);
+                        //Log::info("Facility target saved -> ". $target->target_id);
 
                         }else{
-                        Log::info(" tracker data does not have group members ....");
+                        //Log::info(" tracker data does not have group members ....");
                         }
                     }else{
-                        Log::info(" tracker not of target setting ....");
+                        //Log::info(" tracker not of target setting ....");
                     }
                 }
                 } else {
 
-//Log::info("SavingLogError: ".$log);
-
+                    //Log::info("SavingLogError: ".$log);
                     return Response::json(array('error' => true, 'messages' => 'data missing'), 200);
                 }
             }

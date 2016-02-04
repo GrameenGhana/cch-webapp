@@ -20,8 +20,7 @@ class InChargeController extends BaseController {
 
     public function show($id)
     {
-//        $sup = User::whereRaw('id=? and role="Supervisor"',array($id))->first();
-     $sup = User::whereRaw('username=? and role like "%Supervisor%"',array($id))->first();
+        $sup = User::whereRaw('username=? and role like "%Supervisor%"',array($id))->first();
 
         if (is_null($sup)) {
 		    $errors = array('Supervisor not found'); 

@@ -146,9 +146,10 @@
                                 <li class="treeview {{ Request::is('stayingwell/*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('stayingwell/')}}"><i class="fa fa-angle-double-right"></i>Staying Well</a>
                                 </li>
-                                <li class="treeview {{ Request::is('reports*') ? 'active' : '' }}">
+                                <li class=" {{ Request::is('reports*') ? 'active' : '' }}">
                                     <a href="{{ URL::to('reports') }}"><i class="fa fa-angle-double-right"></i>Reports</a>
-                                </li>
+           
+				</li>
                             </ul>
                         </li>
 
