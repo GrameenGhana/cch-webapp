@@ -7,21 +7,12 @@ class TrackerController extends BaseController {
     }
 
     public function index() {
-         #$logs = Tracker::all();
         $logs = array();
-
-//$browser = get_browser(null, true);
-//if ($browser['browser']!='Default Browser') {
-//	    return View::make('tracker.index',array('logs'=>$logs));
-//} else {
-        return Response::json(array(
-                    'error' => false,
-                    'logs' => $logs), 200
-        );
-//}
+        return Response::json(array( 'error' => false, 'logs' => $logs), 200);
     }
 
-    public function update() {
+    public function update() 
+    {
         $rules = array('data' => 'required');
 
         $validator = Validator::make(Input::all(), $rules);
@@ -53,7 +44,8 @@ class TrackerController extends BaseController {
         return Response::json(array('error' => false), 200);
     }
 
-    public function store() {
+    public function store() 
+    {
         $rules = array('data' => 'required');
 
         $validator = Validator::make(Input::all(), $rules);
@@ -64,6 +56,7 @@ class TrackerController extends BaseController {
         } else {
             $input = Input::all();
             $data = json_decode($input['data']);
+
             if (sizeof($data->logs)) {
                 foreach ($data->logs as $l) {
                     $log = new Tracker;
@@ -75,7 +68,7 @@ class TrackerController extends BaseController {
                         $processeddata = '{"target_category":"'.$jsondata->category.'","imei":"'.$jsondata->imei.'","battery":"'.$jsondata->battery.'","device":"'.$jsondata->device.'","due_date":"'.$jsondata->due_date.'","last_updated":"'.$jsondata->last_updated.'","ver":"'.$jsondata->ver.'","achieved_number":'.$jsondata->achieved_number.
                             ',"start_date":"'.$jsondata->start_date.'","target_type":"'.$jsondata->target_type.'","group_members":"'.$jsondata->group_members.'","target_id":'.$jsondata->target_id.',"id":'.$jsondata->target_id.'} ';
                         $log->data = $processeddata;
-                    }else {
+                    } else {
                         $log->data = $l->data;
                     }
 
@@ -89,20 +82,20 @@ class TrackerController extends BaseController {
 
                     //Log::info("Tracker saved .... ");
                     if (trim(preg_replace('/\s+/', ' ', $l->module)) == 'Supervisor KSA') { 
-                        $data = json_decode($l->data);
-                        $ksa = KSAStatus::findRec($data->userid, $data->courseid);
-                        $sup = User::getByUsername($data->supid);
+                        $d = json_decode($l->data);
+                        $ksa = KSAStatus::findRec($d->userid, $d->courseid);
+                        $sup = User::getByUsername($d->supid);
                         if($ksa==null)
                         {
                             $ksa = new KSAStatus; 
-                            $ksa->userid = $data->userid;
-                            $ksa->courseid = $data->courseid;
-                            $ksa->status = $data->status;
+                            $ksa->userid = $d->userid;
+                            $ksa->courseid = $d->courseid;
+                            $ksa->status = $d->status;
                             $ksa->created_at = date('Y-m-d h:m:s'); 
                             $ksa->created_by = $sup->id;
                         }
-                        $ksa->status = $data->status;
-                        $ksa->changedate = $l->start_time;
+                        $ksa->status = $d->status;
+                        $ksa->changedate = date('Y-m-d h:m:s', $l->start_time/1000);
                         $ksa->modified_by = $sup->id;
                         $ksa->save();
                     }

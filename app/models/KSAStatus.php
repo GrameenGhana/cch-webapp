@@ -22,6 +22,6 @@ class KSAStatus extends Eloquent {
 
     public static function findRec($userid, $courseid)
     {
-        return  KSAStatus::whereRaw('userid='.$userid.' and courseid='.$courseid)->get();
+        return  KSAStatus::whereRaw('userid='.$userid.' and courseid='.$courseid)->first();
     }
 }
