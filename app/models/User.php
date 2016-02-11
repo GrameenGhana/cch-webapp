@@ -21,7 +21,7 @@ class User extends Revisionable implements UserInterface, RemindableInterface {
         'online' => 'boolean:Logged Out|Logged In',
     );
 
-    protected $dontKeepRevisionOf = array( 'remember_token');
+    protected $dontKeepRevisionOf = array( 'remember_token','password');
 
     public function identifiableName()
     {

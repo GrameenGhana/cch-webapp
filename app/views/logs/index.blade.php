@@ -21,6 +21,14 @@
 @section('content')
 
                 <section class="content invoice">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="page-header">
+                                    <a id="export" class="btn btn-small btn-info"><i class="fa fa-upload"></i> Export</a>
+                            </h2>
+                        </div><!-- /.col -->
+                    </div>
+
                    @if (Session::has('message'))
                            <div class="alert alert-info">{{ Session::get('message') }}</div>
                     @endif
@@ -64,6 +72,10 @@
                     "bInfo": true,
                     "bAutoWidth": false,
                     "iDisplayLength": 100
+                });
+
+                $('#export').click(function(e) {
+                    $('#logstable').tableExport({type:'excel',escape:'false'});
                 });
             });
         </script>

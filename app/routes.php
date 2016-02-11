@@ -38,6 +38,7 @@ Route::get('/content/poccms/edit',             array('uses'=>  'PocCmsController
 Route::get('/content/poccms/editsection',      array('uses'=>  'PocCmsController@editSection'));
 Route::get('/content/poccms/delete',           array('uses'=>  'PocCmsController@delete'));
 Route::get('/content/poccms/deletesection',    array('uses'=>  'PocCmsController@deleteSection'));
+Route::get('/content/poccms/refreshsection',    array('uses'=>  'PocCmsController@refreshSection'));
 Route::get('/content/poccms/forms',            array('uses'=>  'PocCmsController@forms'));
 Route::get('/content/poccms/section',          array('uses'=>  'PocCmsController@section'));
 Route::get('/content/poccms/upload',           array('uses'=>  'PocCmsController@upload'));
@@ -47,6 +48,7 @@ Route::post('/content/poccms/addsection',       array('uses'=>  'PocCmsControlle
 Route::post('/content/poccms/editsectionvalue', array('uses'=>  'PocCmsController@editSectionValue'));
 Route::post('/content/poccms/addpage',          array('uses'=>  'PocCmsController@addPage'));
 Route::post('/content/poccms/addpagedetails',   array('uses'=>  'PocCmsController@addPageDetails'));
+Route::get('/content/poccms/downloadfile',   array('uses'=>  'PocCmsController@downloadFile'));
 /**** / Content routes ***/
 
 /**** Target routes ***/
@@ -113,7 +115,7 @@ Route::group(array('prefix' => 'api/v1'), function()
         mt_srand();
         $id = 0;
         do {
-            $id = mt_rand(1000000,9999999);
+            $id = mt_rand(10000,99999);
         } while(User::where('username', '=', $id)->exists());
 
         return $id; 

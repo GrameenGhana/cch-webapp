@@ -69,6 +69,7 @@
 					<td>
 					<a href="editsection?id={{$section->id}}"><button type="button" class="btn btn-warning btn-circle edit" id="{{$section->id}}"><i class="fa fa-pencil"></i></button></a>
 					<a href="deletesection?id={{$section->id}}"><button type="button" class="btn btn-danger btn-circle delete" id="{{$section->id}}"><i class="fa fa-times" ></i></button></a>
+					<a href="refreshsection?id={{$section->id}}"><button type="button" class="btn btn-warning btn-circle refresh" id="{{$section->id}}"><i class="fa fa-refresh" ></i></button></a>
 					</td>
 				</tr>
 				 @endforeach

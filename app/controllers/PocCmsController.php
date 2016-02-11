@@ -28,10 +28,17 @@ class PocCmsController extends BaseController {
 
 	public function allUploads()
 	{
-	    $uploads=POCUploads::all();
+	    $uploads=POCSections::where('upload_status','=','Uploaded')->get();
 	    return $uploads;
 	}
+	public function downloadFile()
+{
+    //$file = FileManager::find($fileName);
+    $fileName=Input::get('fileName');
+    $file= public_path().'/'.'uploads/'.$fileName;
 
+    return Response::download($file);
+ }
 	public function uploadFiles()
 	{
 	    chmod(public_path() .'/'.'uploads',0777);
@@ -132,7 +139,17 @@ class PocCmsController extends BaseController {
 	    return View::make('content.poc.upload')->with(['message' =>"Section deleted successfully",'sections'=>$sections]);
 	}
 	
-	
+	public function refreshSection()
+	{
+	   $section =POCSections::where('id', '=',Input::get('id'))->first();
+	   DB::table('cch_content_poc_sections')->where('id', '=', Input::get('id'))
+	    									->update(array('upload_status' =>"",));     
+	   if (File::exists(public_path().'/'.'uploads/'.$section->section_shortname.'.zip')) {
+	       File::delete(public_path().'/'.'uploads/'.$section->section_shortname.'.zip');
+	   } 
+	      $sections=POCSections::all(); 
+	    return View::make('content.poc.upload')->with(['message' =>"Section refreshed successfully",'sections'=>$sections]);
+	}
 	public function section()
 	{
 		return View::make('content.poc.sections');

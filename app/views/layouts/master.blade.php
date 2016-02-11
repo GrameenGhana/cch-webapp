@@ -279,6 +279,8 @@
         <!-- data tables -->
         {{ HTML::script('js/plugins/datatables/jquery.dataTables.js'); }}
         {{ HTML::script('js/plugins/datatables/dataTables.bootstrap.js'); }}
+        {{ HTML::script('js/plugins/datatables/tableExport.js'); }}
+        {{ HTML::script('js/plugins/datatables/jquery.base64.js'); }}
         <!-- AdminLTE App -->
         {{ HTML::script('js/AdminLTE/app.js'); }}
 
