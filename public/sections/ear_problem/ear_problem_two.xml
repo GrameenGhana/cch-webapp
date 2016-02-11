@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<xmlgui>
-	<form name="ear_problem_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assessment of Child: Main Symptoms: Ear Problem&gt; Ear Problem Two" color_code="Select">
-		<field name="LOOK AND FEEL" link="" type="header" group="section_header" color_code="" options=""/>
-		<field name="Look  for pus draining from the ear" link="" type="section_items" group="section_items" color_code="" options=""/>
-		<field name="Feel for tender swelling behind the ear." link="" type="section_items" group="section_items" color_code="" options=""/>
-		<field name="Next" color_code="Default" link="ear_problem/ear_problem_three" type="button" group="actions" options=""/>
-	</form>
-</xmlgui>

@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<xmlgui>
-	<form name="malaria_test_not_available_four" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever&gt; Malaria Test Not Available Four" color_code="Select">
-		<field name="" link="" type="question" group="questions" color_code="" options=""/>
-		<field name="Measles with Eyes and Mouth Complications" link="child_assessment_diarrhoea_fever/measles_with_complications" type="answers" group="answers" color_code="" options=""/>
-		<field name="" color_code="Default" link="" type="button" group="actions" options=""/>
-	</form>
-</xmlgui>

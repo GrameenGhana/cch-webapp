@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<xmlgui>
-	<form name="fever1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Assesment of the Child: Main Symptoms: Fever1" color_code="Select">
-		<field name="ASK" link="" type="header" group="section_header" color_code="" options=""/>
-		<field name="Does the child have Fever? " link="" type="section_items" group="section_items" color_code="" options=""/>
-		<field name="By history from caregiver or feels hot  or temperature is 37.5&#xBA;C  or above" link="" type="section_items" group="section_items" color_code="" options=""/>
-		<field name="Yes" color_code="Default" link="child_assessment_diarrhoea_fever/fever2" type="button" group="actions" options=""/>
-</form>
-	</xmlgui>
