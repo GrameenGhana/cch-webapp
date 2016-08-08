@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="nutrition_for_breastfeeding_mothers_four" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Nutrition For Breastfeeding Mothers&gt; Nutrition For Breastfeeding Mothers FOUR" color_code="Select">
+		<field name="Educate clients on what supplements to take " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="nutrition_for_breastfeeding_mothers/76.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Take iron and folic acid supplements during pregnancy and for at least 3 months after " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Take de-worming tablets to treat worms and help prevent anoemia  " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		
+		<field name="Educate clients on safe preparation of food" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="nutrition_for_breastfeeding_mothers/77.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Good hygiene (cleanliness) is important to avoid diarrhea and other illness" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Use clean utensils and store foods in a clean place" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Wash vegetables, cook immediately to preserve nutrients " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Wash raw fruits and vegetables before eating" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Wash your hands with soap and water before preparing foods and after using the toilet " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		
+	</form>
+</xmlgui>

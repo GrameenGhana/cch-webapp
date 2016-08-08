@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<xmlgui><form name="no_fever" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; No Fever" color_code="Green"><field name="" link="" type="header" group="section_header" color_code="" property="" options=""/><field name="Proceed to assess for ear problems" link="ear_problems/ear_problems_1" type="section_items" group="section_items" color_code="" property="Select" options=""/><field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/></form></xmlgui>

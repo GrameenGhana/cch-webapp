@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="maternal_and_newborn_danger_signs_two" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; Maternal and Newborn Danger Signs Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name=" Newborn danger signs:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Poor or no suckling" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/35.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Baby feels too hot or cold" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/36.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Convulsions or fits  (abnormal movement of any part of the body)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/37.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Jaundice (yellow eyes, skin, palms &amp; soles)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/38.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Sleeps too much or hard to wake" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/39.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Difficulty breathing" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/40.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Cord is red or draining pus" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/41.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Skin sores and pus from eyes" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/42.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Small baby" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/43.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Diarrhoea" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/44.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Persistent vomiting " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/45.png" options="" property="" type="image"/>
+		<field color_code="" group="section_header" link="" name="Other newborn danger signs include:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Cyanosis/blueness/colour not pink" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Swollen joints or limbs or skull" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Crying weakly or inconsolably " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Pallor " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="rest__excercise_1" page_subtitle="ANC Counselling: Rest &amp; exercise&gt; Rest &amp; Excercise 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Encourage client to take between 6-10 hours of sleep every night " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Advise her to rest for one hour during the day" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Encourage client to undertake moderate exercise regularly, especially if her daily activities do not entail much physical exercise" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Pelvic Rock: helps relieves backache and pressure in the abdomen, and strengthens muscles in the abdomen " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="rest__exercise/pelvicrock.gif" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Get down on your hand and knees " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Pull in your abdomen and lift your buttocks.  Hold for a count of 5 " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Gently relax your abdomen and buttocks, allowing the curve of your back to return " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Repeat 5-6 times. " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="rest__exercise/rest__exercise_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

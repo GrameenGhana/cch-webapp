@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="infant_feeding_1" page_subtitle="PNC Counselling: Infant Feeding&gt; Infant Feeding 1" page_title="Point of Care" type_of_page="Question Page">
+		<field color_code="" group="questions" link="" name="" options="" property="" type="question"/>
+		<field color_code="" group="answers" link="infant_feeding/importance_of_exclusive_breastfeeding" name="Importance of Exclusive Breastfeeding" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/breast_attachment" name="Breast Attachment " options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/how_often_to_breastfeed" name="How Often to Breastfeed" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/breastfeeding_a_low_birth_weight_baby" name="Breastfeeding a Low Birth Weight Baby" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/how_to_express_breast_milk" name="How to Express Breast Milk" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/when_you_are_separated_from_your_baby" name="When You Are Separated from Your Baby" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/feeding_the_sick_baby_less_than_6_months_of_age" name="Feeding the Sick Baby Less than 6 Months of Age" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/exclusive_breastfeeding_when_mother_is_taking_arvs" name="Exclusively Breastfeeding When Mother is Taking ARVs" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/exclusive_breastfeeding_when_mother_is_not_taking_arvs" name="Exclusively Breastfeeding When Mother is NOT Taking ARVs" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="infant_feeding/things_for_mother_to_remember" name="Things for Mother to Remember" options="" property="" type="answers"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

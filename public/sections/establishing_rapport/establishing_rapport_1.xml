@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="establishing_rapport_1" page_subtitle="ANC Counselling: Establishing rapport&gt; Establishing rapport 1" page_title="Point of Care" type_of_page="Info Page">
+			<field color_code="" group="section_header" link="" name="When speaking to client, keep in mind:  " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Courteous and kind: treat her and (her family member) with respect and sympathy" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Listen and ask: ask client first what she knows about pregnancy and childbirth, before telling them what she should do.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Health education should be individualised: provide the client appropriate counseling specific to her gestational age and specific problems identified" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Answer questions: ask clients if they have any questions or concerns" options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="hiv_positive" page_subtitle="PNC Diagnostic Newborn: PNC HIV Infection&gt; HIV Positive" page_title="Point of Care" type_of_page="Question Page">
+		<field color_code="" group="questions" link="" name="Are you currently taking ARVs? " options="" property="" type="question"/>
+		<field color_code="" group="answers" link="pnc_hiv_infection/hiv_positive_two" name="Yes" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="pnc_hiv_infection/hiv_positive_three" name="No" options="" property="" type="answers"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

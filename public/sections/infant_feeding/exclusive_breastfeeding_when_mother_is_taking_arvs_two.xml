@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="exclusive_breastfeeding_when_mother_is_taking_arvs_two" page_subtitle="PNC Counselling: Infant Feeding&gt; Exclusive Breastfeeding When Mother is Taking ARVs TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="All babies who test positive for HIV at 6 weeks should breastfeed exclusively until 6 months, even without ARV interventions, and then continue breastfeeding for up to 2 years or longer. Complementary foods should be introduced at 6 months " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/57.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="All breastfeeding babies who test negative for HIV at 6 weeks should continue to exclusively breastfeed until 6 months, even without ARV interventions, and continue to breastfeed until 12 months.  Complementary foods should be introduced at 6 months.  After 12 months, breastfeeding should only stop once a safe and nutritionally adequate diet without can be given to the baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/55.png" options="" property="" type="image"/>
+	</form>
+</xmlgui>

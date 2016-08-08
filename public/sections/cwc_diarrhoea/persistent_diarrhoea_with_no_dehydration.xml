@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="persistent_diarrhoea_with_no_dehydration" page_subtitle="CWC Diagnostic: CWC Diarrhoea&gt; Persistent diarrhoea with no dehydration " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Persistent Diarrhoea with No Dehydration | Take Action" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="cwc_hiv_infection/hiv_infection_1" name="Check for HIV infection, if trained " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Advise the mother/caregiver on feeding a child who has persistent diarrhoea, as given below: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If child is still exclusively breastfeeding, give more frequent, longer breastfeeds both day and night" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="If child is still breastfeeding, and other foods have been introduced:" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Replace with more frequent, longer breastfeeds OR" options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="Replace half the milk with thick porridge prepared with clean water" options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="feeding_a_healthy_child/feeding_a_healthy_child1" name="If child is no longer breastfeeding, following feeding recommendation for a sick child " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Give daily doses of multivitamins/mineral supplements to take for 14 days" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give zinc tablets (only for children aged 2 months – 5 years)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="cwc_diarrhoea/3.jpeg" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="feeding_a_healthy_child/breastfeeding_attachment_and_position" name="Advise mother to continue breastfeeding, if child still breastfeeds. Observe mother breastfeeding and provide counseling on breast attachment and positioning, if necessary" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="feeding_a_healthy_child/feeding_a_healthy_child1" name="Counsel mother/caregiver on feeding a sick child " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="when_to_seek_care_immediately/_when_to_seek_care_immediately1" name="Advise mother/caregiver when to return for care immediately " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Advise mother/caregiver to return after 5 days if condition does not improve " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Record clinical care in Child Health Record “green” book " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

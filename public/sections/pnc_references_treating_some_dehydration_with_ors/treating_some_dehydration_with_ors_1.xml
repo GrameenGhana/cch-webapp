@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treating_some_dehydration_with_ors_1" page_subtitle="PNC References: PNC References Treating Some Dehydration with ORS&gt; Treating Some Dehydration with ORS 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="When at a CHPS or Health Center, give the recommended amount of ORS over 4-hour period" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name=" Determine amount of ORS to give the child during the first 4-hours:  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="calculators/ors_calculator" name="Use ORS Calculator" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If you don’t know the child’s weight, use the following table: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treating_some_dehydration_with_ors/11.JPG" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="complementary_feeding_for_children_9_to_less_than_12_months_of_age_three" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding A Healthy Child &gt; Complementary Feeding For Children 9 &#x2013; &lt; 12 MONTHS OF AGE THREE" color_code="Select">
+		<field name="" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Counsel mothers to feed child with a variety of foods at each meal " link="feeding_a_healthy_child/food_variety" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver to include: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Animal source foods are very important, and should be started as early as possible. Cook and chop fine  " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Snacks (extra foods between meals) can be offered once or twice a day.  They include: " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fruits such as pieces of ripe mango, papaya, banana, and avocado " link="" type="section_items_sub_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Vegetables such as boiled potato, sweet potato" link="" type="section_items_sub_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fresh and fried bread products " link="" type="section_items_sub_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Use iodised salt " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Counsel mother/caregiver to avoid: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/><field name="Sugary drinks" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Sweet biscuits " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Next" color_code="Default" link="feeding_a_healthy_child/complementary_feeding_for_children_9_to_less_than_12_months_of_age_four" type="button" group="actions" property="" options=""/></form></xmlgui>

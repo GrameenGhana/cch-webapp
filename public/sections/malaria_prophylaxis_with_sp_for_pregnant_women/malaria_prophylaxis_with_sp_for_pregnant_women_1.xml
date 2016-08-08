@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="malaria_prophylaxis_with_sp_for_pregnant_women_1" page_subtitle="ANC References: Malaria Prophylaxis with SP for Pregnant Women&gt; Malaria Prophylaxis with SP for Pregnant Women 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Intermittent Preventive Treatment (IPTp) with Sulfadoxine-Pyrimethamine (SP) for Pregnant Women  " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Target groups for IPTp using SP include: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="All pregnant women with no signs clinical malaria whose pregnancies are between 16-36 weeks of gestation" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women with first or second pregnancies" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Adolescent and young pregnant women (10-24 years) " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Pregnant women with sickle cell disease" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Pregnant women with HIV infection and other immunocompromised states " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name=" Pregnant women with the following conditions should be exempted from using SP:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Women in their 1st trimester of pregnancy (first 3 months)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women known to have Glucose-6-Phosphate Dehydrogenase (G6PD) enzyme deficiency, either full or partial defect" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women known to have severe liver disease" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women with unexplained recurrent jaundice" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women who are known to be allergic to sulphur-containing drugs or pyrimethamine component" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women who have received treatment with sulphur-based drugs, e.g. cotrimoxazole within 4 weeks of being seen at the clinic" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women with HIV/AIDS who have been put on cotrimoxazole for opportunistic infections" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women with pregnancy beyond 36 weeks (8 months) gestation " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women breastfeeding" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="malaria_prophylaxis_with_sp_for_pregnant_women/malaria_prophylaxis_with_sp_for_pregnant_women_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

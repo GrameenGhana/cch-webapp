@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="nutrition_for_breastfeeding_mothers1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Nutrition For Breastfeeding Mothers&gt; Nutrition For Breastfeeding Mothers1" color_code="Select">
+		<field name="Nutrition for Breastfeeding Mothers | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Counsel mothers on good eating habits " link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="During breastfeeding, eat 2 extra meals or &#x201C;snacks&#x201D; (extra food between meals) each day to provide energy and nutrition for you and your growing baby " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Drink whenever you are thirsty " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Taking tea or coffee with meals can interfere with your body&#x2019;s use of the foods " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Take iron and folate tablets for at least 3 months after your baby&#x2019;s birth " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Take vitamin A capsules immediately after delivery or within 6 weeks so that your baby receives the vitamin A in your breast milk to help prevent illness " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Use iodised salt to help your baby&#x2019;s brain and body develop well " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="For adolescent mothers" link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="You need extra care, more food and more rest than an older mother " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="You need to nourish your body, which is still growing, as well as your growing baby&#x2019;s " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="nutrition_for_breastfeeding_mothers/nutrition_for_breastfeeding_mothers_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

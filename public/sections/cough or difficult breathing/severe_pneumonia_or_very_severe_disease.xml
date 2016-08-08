@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="severe_pneumonia_or_very_severe_disease" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Cough Or Difficult Breathing&gt; Severe Pneumonia or Very Severe Disease" color_code="Red">
+		<field name="" link="" type="definition" group="definition" color_code="" property="" options=""/>
+		<field name="Take Action: Severe Pneumonia or Very Severe Disease" link="" type="first_section_head" group="first_actions" color_code="" property="" options=""/>
+		<field name="" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Refer child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Administer FIRST dose of intramuscular ampicillin and intramuscular gentamicin, as part of pre-referral treatment " link="pre-referral_treatments_in_clinics/intramuscular_ampicillin_and_intramuscular_gentamicin" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Treat the child to prevent low blood sugar " link="pre-referral_treatments_in_clinics/treat_and_prevent_low_blood_sugar" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Fill out referral form, and record clinical care in Child Health Record &#x201C;green&#x201D; book " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" property="" options=""/>
+		<field name="Advise mother/caregiver not to carry the child on her back " link="" type="transport_actions_sub" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver how to keep the child warm on the way to the health facility" link="keeping_child_warm_on_the_way_to_the_hospital/keeping_child_warm_on_the_way_to_the_hospital1" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="If child still breastfeeds, observe mother breastfeeding and provide counseling on breast attachment and positioning, if necessary " link="feeding_a_healthy_child/breastfeeding_attachment_and_position" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Accompany mother/caregiver and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

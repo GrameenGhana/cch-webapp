@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="_growth_monitoring_and_children_development_four" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Growth Monitoring And Children Development&gt; Growth Monitoring And Children Development FOUR" color_code="Select">
+		<field name="Playing " link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="growth_monitoring_and_children_development/57.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Does not enjoy playing simple waving games by 1 year" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Does not play with common objects (e.g. spoons and bowls), by 2 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Does not join games with other children by 4 years. (e.g. catch, hide and seek)" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Does not play like other children of the same age" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	
+		<field name="Moving " link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="growth_monitoring_and_children_development/58.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Is unable to sit unsupported by 10 months" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Cannot walk without help by 2 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Cannot balance on one foot for a short time by 4 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Moves very differently from other children of the same age" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

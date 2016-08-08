@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="kangaroo_mother_care_1" page_subtitle="PNC Counselling: Kangaroo Mother Care&gt; Kangaroo Mother Care 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Teach mother how to keep low weight baby warm at home " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Keep room warm (at least 25 C), and make sure there is no draft or windows open during cold weather " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Avoid bathing the low weight baby.  When washing or bathing, do it in a very warm room with water.  Dry thoroughly, and clothe the young infant immediately " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Change clothes (e.g. nappies) whenever baby is wet " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="kangaroo_mother_care/kangaroo_mother_care_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

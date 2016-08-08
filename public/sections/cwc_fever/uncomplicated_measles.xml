@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="uncomplicated_measles" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Uncomplicated Measles" color_code="Green">
+		<field name="Uncomplicated Measles | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Administer first dose of vitamin A, as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="fever/14.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Counsel and give second dose of Vitamin A to caregiver/mother to be administered to child the next day " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="fever/uncomplicated_measles_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

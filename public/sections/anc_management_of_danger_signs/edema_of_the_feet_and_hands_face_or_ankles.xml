@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Red" name="edema_of_the_feet_and_hands_face_or_ankles" page_subtitle="ANC Diagnostic: ANC Management of Danger Signs&gt; Edema of the feet and hands, face, or ankles " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Edema of the feet and hands, face, or ankles " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="anc_management_of_danger_signs/30.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Refer client to a health center or hospital IMMEDIATELY" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Call provider and arrange transport " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Record clinical information in client’s maternal health or “Red” book if she has one. If possible, fill out referral form " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Accompany client and have a family member accompany client to the health facility" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Follow up with client after discharge from health center or hospital" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

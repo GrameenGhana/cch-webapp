@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="first_aid_cpr" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC References: Pre-referral Treatments in Clinics&gt; First Aid: CPR" color_code="Select">
+		<field name="How old is the child? " link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="&lt; 12 months " link="pre-referral_treatments_in_clinics/first_aid_cpr_less_than_12_months" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="&#x2265; 12 months " link="pre-referral_treatments_in_clinics/first_aid_cpr_greater_than_12_months" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

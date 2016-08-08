@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="acute_ear_infection" page_subtitle="CWC Diagnostic: Ear Problems&gt; Acute Ear Infection" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Acute Ear Infection | Take Action " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Administer oral amoxicillin for 5 days: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="ear_problems/2.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="ear_problems/acute_ear_infection_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

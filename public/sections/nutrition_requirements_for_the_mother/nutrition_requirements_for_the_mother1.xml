@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="nutrition_requirements_for_the_mother1" page_subtitle="PNC Counselling: Nutrition Requirements for the Mother&gt; Nutrition Requirements for the Mother1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name=" Counsel mothers on good eating habits " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="During breastfeeding, eat 2 extra meals or “snacks” (extra food between meals) each day to provide energy and nutrition for you and your growing baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Drink whenever you are thirsty " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Taking tea or coffee with meals can interfere with your body’s use of the foods " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Take iron and folate tablets for at least 3 months after your baby’s birth " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Take vitamin A capsules immediately after delivery or within 6 weeks so that your baby receives the vitamin A in your breast milk to help prevent illness " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="	Use iodised salt to help your baby’s brain and body develop well " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="For adolescent mothers" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="You need extra care, more food and more rest than an older mother " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="You need to nourish your body, which is still growing, as well as your growing baby’s " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="nutrition_requirements_for_the_mother/nutrition_requirements_for_the_mother_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="cough_or_difficult_breathing1" type_of_page="Take Action Classification Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Cough Or Difficult Breathing&gt; Cough Or Difficult Breathing1" color_code="Select">
+		<field name="Does the child have cough or difficult breathing? " link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Has cough or difficult breathing " link="cough or difficult breathing/has_cough_or_difficult_breathing" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="No cough or difficult breathing" link="cough or difficult breathing/no_cough_or_difficult_breathing" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

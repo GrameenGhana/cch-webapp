@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treating_local_infections_at_home_1" page_subtitle="PNC Counselling: Treating Local Infections at Home&gt; Treating Local Infections at Home 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Treating Skin Pustules or Umbilical Infection " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Advise mother to do following home treatment twice daily for 5 days: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Wash hands with soap under running water" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="treating_local_infections_at_home/77.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Gently wipe off pus and crusts with methylated spirit " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Allow cord stump or wound area to air dry " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="treating_local_infections_at_home/3.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Do not put anything else to infected area or cord, such as powder, herbs, or cow dung " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Wash hands with soap under running water " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Return to clinic in 2 days if baby has not improved " options="" property="Select" type="section_items"/>
+		
+		<field color_code="Default" group="actions" link="treating_local_infections_at_home/treating_local_infections_at_home_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

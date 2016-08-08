@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="hiv_positive_two" page_subtitle="PNC Diagnostic Newborn: PNC HIV Infection&gt; HIV Positive Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="HIV-Positive Mother on ARVs | Ask and Take Action" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Ask mother:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="How long have you been taking ARVs?  " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Do you have any problems with taking the drugs? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Is the baby taking ARVs?" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Explain to the mother the benefits of ARVs, both for the mother’s health and for preventing infection to her baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="infant_feeding/exclusive_breastfeeding_when_mother_is_taking_arvs" name="Counsel her to exclusively breastfeed her baby for 6 months" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Refer to ART centre if mother is having problems taking drugs, if her ARVs are about to run out soon, or if baby is not taking ARVs" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If mother and baby are on ARVs and are doing well, no need to refer now.  Advise mother to visit ART centre for her next scheduled visit " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Follow-up with the mother and baby after they have visited the ART centre, and again when the baby is 6 weeks old " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

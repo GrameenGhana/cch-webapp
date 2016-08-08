@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="uncomplicated_malaria" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Uncomplicated Malaria" color_code="Amber">
+		<field name="Uncomplicated Malaria | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Treat child for uncomplicated malaria with oral artesunate amodiaquine OR arthemeter / lumefantrine " link="teach_mother_to_give_oral_drugs_at_home/tetracycline" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give paracetamol to reduce fever (temperature &#x2265; 38.5&#xB0;C), as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give first dose of paracetamol in clinic " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Advise mother/caregiver to give paracetamol every 6 hours until fever or pain is gone " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Provide paracetamol for 2 days " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="fever/13.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="If fever has been present every day for &gt; 7 days, refer child for further assessment " link="" type="section_items" group="section_items" color_code="" property="Bold Red" options=""/>
+		<field name="Complete assessment, and provide all appropriate treatment " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver how to reduce fever at home" link="reduce_fever_at_home_/reduce_fever_at_home_1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Advise mother/caregiver when to return for care immediately " link="when_to_seek_care_immediately/_when_to_seek_care_immediately1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on malaria prevention and use of ITNs " link="malaria_prevention_/_malaria_prevention1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Advise mother/caregiver for follow-up in 2 days if fever persists" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Record clinical care in Child Health Record &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

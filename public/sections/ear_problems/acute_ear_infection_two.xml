@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="acute_ear_infection_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Ear Problems&gt; Acute Ear Infection Two" color_code="Select">
+		<field name="" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Administer ONE dose of paracetamol in clinic if temperature &#x2265; 38.5&#xB0;C " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="ear_problems/9.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Teach mother/caregiver to dry the ear by wicking " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If ear discharge is present, check for HIV infection if trained" link="cwc_hiv_infection/hiv_infection_1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Complete assessment of child, and administer all appropriate treatment " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Advise mother/caregiver to return for a follow-up visit in 5 days " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Record clinical care in Child Health Record &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	</form>
+</xmlgui>

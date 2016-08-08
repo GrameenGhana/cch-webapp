@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="rest__exercise_two" page_subtitle="ANC Counselling: Rest &amp; exercise &gt; Rest &amp; exercise TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Head and Shoulder Lift: strengthens muscles in the abdomen " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="rest__exercise/headshoulderlift.gif" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Lie on you back with your knees bent, feet flat on the floor, and your arms at sides " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Raise your head and shoulders and tighten your abdominal muscles.  Hold for count of 5.  Do not hold your breathe" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Lie back and relax." options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Repeat 5-10 times. " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="rest__exercise/rest__exercise_three" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

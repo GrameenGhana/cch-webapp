@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="intramuscular_ampicillin_and_intramuscular_gentamicin_less_than_28_days_of_age" type_of_page="Reference Page" page_title="Point of Care" page_subtitle="CWC References: Pre-referral Treatments in Clinics&gt; Intramuscular Ampicillin and Intramuscular Gentamicin&gt; &#x2264;   28 days of age" color_code="Select">
+		<field name="Intramuscular Ampicillin and Gentamicin for Infants &#x2264; 28 Days of Age | Dosage " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="pre-referral_treatments_in_clinics/6.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name=" Avoid using undiluted 40 mg/ml gentamicin" link="" type="section_items" group="section_items" color_code="" property="Italic" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

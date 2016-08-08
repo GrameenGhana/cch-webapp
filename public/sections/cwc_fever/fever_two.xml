@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="fever_two" type_of_page="Take Action Classification Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt;Fever two " color_code="Select">
+		<field name="What is the result of the malaria test (RDT)?" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Positive malaria test " link="fever/positive_malaria_test" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="Negative malaria test " link="fever/negative_malaria_test" type="answers" group="answers" color_code="" property="" options="Click here to take action"/><field name="Test Not Possible " link="fever/test_not_possible" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

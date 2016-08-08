@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="ear_problems_1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Ear Problems&gt; Ear Problems 1" color_code="Select">
+		<field name="ASK" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Is there ear pain?" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Is there ear discharge?" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If yes, for how long? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="LOOK AND FEEL " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Look for pus draining from the ear" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Feel for tender swelling behind the ear. " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="ear_problems/ear_problems_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

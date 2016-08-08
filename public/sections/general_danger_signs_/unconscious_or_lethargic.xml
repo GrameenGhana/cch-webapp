@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="unconscious_or_lethargic" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: General Danger Signs &gt; Unconscious or Lethargic" color_code="Red">
+		<field name="Unconscious or Lethargic | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Examine airway and ensure it is clear" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Check the pulse. If present, measure rate and rhythm of pulse" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Observe respiratory rate and pattern" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If child is NOT BREATHING, perform cardiopulmonary resuscitation [CPR]" link="pre-referral_treatments_in_clinics/first_aid_cpr" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Support child&#x2019;s head with a pillow or child&#x2019;s cloth in Sims position: head supported and turned to the side to prevent aspiration in case of vomiting" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Refer the child to a health center or hospital IMMEDIATELY" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fill out referral form, and record clinical care in Child Health Records &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="general_danger_signs_/unconscious_or_lethargic_two" type="button" group="actions" property="" options=""/>
+	</form>
+	</xmlgui>

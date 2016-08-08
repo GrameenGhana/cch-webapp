@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="sickle_cell_disease_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Sickle Cell Disease&gt;  Sickle Cell Disease TWO" color_code="Select">
+		<field name="Tips to care for a child with sickle cell disease:" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Feed child well. Give only breastmilk for the first 6 months of life for protection against infections" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="After 6 months give child other foods in addition to breastmilk until he or she is 2 years of age " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Protect child from cold, and do NOT give food or drinks that is cold or iced" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Let child under an ITN every night" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give child daily folic acid and other medicines prescribed by your health worker " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Do not give iron tablets or syrup except when prescribed by your health worker " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give child a lot of fluids to drink" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Always use warm water to bathe child " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Keep all appointments with your health worker even if child is well " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	</form>
+</xmlgui>

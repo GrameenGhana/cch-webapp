@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="chps_mother_baby_is_able_to_stay_for_4_hours_at_facility_two" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; CHPS + mother &amp; baby is able to stay for &gt; 4 hours at facility Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="In Facility Care for Diarrhoea with Some Dehydration | Take Action: After the First 4-hour Period" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Reassess the child and classify for dehydration" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Select the proper plan to continue treatment.  If the baby has signs of severe disease or dehydration refer mother and baby to see a midwife or a doctor at a health center or hospital immediately  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="pnc_diarrhoea/diarrhoea_with_no_dehydration" name="If the baby shows signs of improvement, advise mother to breastfeed her baby frequently at home care " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="when_to_return_for_care/when_to_return_for_care_1" name="and when to return to the clinic " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

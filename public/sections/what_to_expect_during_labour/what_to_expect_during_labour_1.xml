@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="what_to_expect_during_labour_1" page_subtitle="ANC Counselling: What to expect during labour&gt; What to expect during labour 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Educate client to go to the health center when she has the following signs of labour: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="what_to_expect_during_labour/27.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Water breaks" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Constant abdominal pain  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Back pain" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Waist pain" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Mucoid bloody discharge on pad" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Counsel client to make every effort to deliver in a facility but in case the unexpected happens, then counsel client on what she needs to prepare for a home delivery" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Identify a midwife, nurse or a birth attendant in the neighborhood, and another family member or friend to care for the baby immediately after birth " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Emphasize importance of going to the nearest facility immediately after delivery with newborn baby for appropriate care" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treatment_of_uncomplicated_malaria_in_adolescents_and_adults_four" page_subtitle="PNC References: PNC References Treatment of Uncomplicated Malaria in Adolescents and Adults&gt; Treatment of Uncomplicated Malaria in Adolescents and Adults FOUR" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Counseling and Follow-up after Treatment of Uncomplicated Malaria" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Counsel client to comply with treatment to avoid development of resistance of antimalarial drugs.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Educate her on the importance of taking full dose of drugs in order to clear the parasites from the blood, and thus prevent progression of disease to complications like anemia" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Also educate client on:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Danger signs and to return for follow-up after treatment is completed or if her conditions worsens" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Report any adverse reactions to the drugs immediately " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="In addition to the above clients should be advised to: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Take iron supplements" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Eat well " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Use ITNs and other preventive measures" options="" property="Select" type="section_items_sub"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

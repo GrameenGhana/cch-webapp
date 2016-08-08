@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="_nutrition_for_breastfeeding_mothers_three" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Nutrition For Breastfeeding Mothers&gt; Nutrition For Breastfeeding Mothers THREE" color_code="Select">
+		<field name="Counsel client to eat foods rich in calcium, iron, folate and vitamin C:" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="nutrition_for_breastfeeding_mothers/74.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Meat (especially liver, kidney, and other organ meats)" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Beans, peas, lentils" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Dark green leafy vegetables" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Eggs" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fish" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fruits like oranges, pineapples, mangoes, or bananas" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Milk" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="nutrition_for_breastfeeding_mothers/nutrition_for_breastfeeding_mothers_four" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

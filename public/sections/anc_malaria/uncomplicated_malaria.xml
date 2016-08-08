@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="uncomplicated_malaria" page_subtitle="ANC Diagnostic: ANC Malaria&gt; Uncomplicated Malaria " page_title="Point of Care" type_of_page="Question Page">
+		<field color_code="" group="questions" link="" name="What trimester is the client currently in?" options="" property="" type="question"/>
+		<field color_code="" group="answers" link="anc_malaria/first_trimester" name="1st Trimester " options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="anc_malaria/second_and_third_trimester" name="2nd or 3rd Trimester" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="" name="" options="" property="" type="answers"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

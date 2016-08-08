@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="breast_attachment_three" type_of_page="Info Page" page_title="Point of Care" page_subtitle="PNC Counselling: Infant Feeding&gt; Breast Attachment THREE" color_code="Select">
+		<field name="Good Attachment " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="To make sure baby is attached well: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Touch baby&#x2019;s lips to nipple" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Wait until baby&#x2019;s mouth open wide" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Quickly bring breast from below, aiming nipple up towards the roof of the baby&#x2019;s mouth" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Baby should now take a big mouthful of breast milk" link="" type="section_items_sub" group="section_items" color_code="" property="Bold Blue" options=""/><field name="infant_feeding/14.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="The 4 signs of good attachment are:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Baby&#x2019;s mouth is wide open" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Mother can see more of the darker skin (areola) above the baby&#x2019;s mouth than below" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Baby&#x2019;s lower lop is turned outwards" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Baby&#x2019;s chin is touching breast " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/16.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="The signs of effective suckling are: " link="" type="section_items" group="section_items" color_code="" property="Bold Blue" options=""/>
+		<field name="Baby takes slow, deep suckles, sometimes pausing" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="You may be able to see or hear your baby swallowing after 1 or 2 suckles " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Suckling is comfortable and pain free for you" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Your baby finishes the feed, releases the breast and looks contented and relaxed " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="The breast is softer after the feed " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/17.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="After your baby releases one breast offer your baby the other breast. This will make sure that your baby stimulates your milk production in both breasts, and also gets the most nutritious and satisfying milk " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+
+	</form>
+</xmlgui>

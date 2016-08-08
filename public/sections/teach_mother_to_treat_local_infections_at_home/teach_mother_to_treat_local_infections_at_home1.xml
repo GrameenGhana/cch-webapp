@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="teach_mother_to_treat_local_infections_at_home1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC References: Teach Mother to Treat Local Infections at Home&gt; Teach Mother to Treat Local Infections at Home1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="General Considerations" link="teach_mother_to_treat_local_infections_at_home/general_considerations" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Clear Ear by Dry Wicking and Eardrops" link="teach_mother_to_treat_local_infections_at_home/clear_ear_by_dry_wicking_and_eardrops" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Gentian Violet" link="teach_mother_to_treat_local_infections_at_home/gentian_violet" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Nystatin" link="teach_mother_to_treat_local_infections_at_home/nystatin" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Soothe Throat and Relieve Cough" link="teach_mother_to_treat_local_infections_at_home/soothe_throat_and_relieve_cough_references" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Tetracycline or Chloramphenicol Eye Ointment" link="teach_mother_to_treat_local_infections_at_home/tetracycline_or_chloramphenicol_eye_ointment" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/></form></xmlgui>

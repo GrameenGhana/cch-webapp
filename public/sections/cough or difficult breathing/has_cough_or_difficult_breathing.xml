@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="has_cough_or_difficult_breathing" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Cough Or Difficult Breathing&gt; Has cough or Difficult Breathing" color_code="Select">
+		<field name="ASK" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="How many days has the child had cough or difficult breathing? " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="cough or difficult breathing/6.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="LOOK, LISTEN, FEEL" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Count the breaths in one [1] minute:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fast breathing is &#x2265; 50 bpm for a child aged 2 &#x2013; 12 months " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fast breathing is &#x2265; 40 bpm for a child aged &gt; 1 &#x2013; 5 years " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Look for chest indrawing. Keep child calm during exam" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Look and listen for stridor. Keep child calm during exam" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="cough or difficult breathing/cough_or_difficult_breathing_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

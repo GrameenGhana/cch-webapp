@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="hiv_care_1" page_subtitle="ANC Counselling: HIV care&gt; HIV care 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Counsel clients on: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="hiv_care/48.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Importance of knowing your HIV status" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="To know your HIV status, you must take a test " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If you are HIV-infected, your health care provider will counsel you on your care and treatment, and on how best to feed your baby" options="" property="Select" type="section_items"/>
+		
+		<field color_code="" group="section_items" link="" name="If you are HIV-infected, you need extra food to give you extra energy" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Protect yourself and your baby form HIV and other sexually transmitted infections during pregnancy and while you are breastfeeding by practicing safe sex " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="hiv_care/27.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Use condoms consistently and correctly.  Consult a family planning counselor " options="" property="Select" type="section_items"/>
+		
+	</form>
+</xmlgui>

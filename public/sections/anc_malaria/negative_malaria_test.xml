@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="negative_malaria_test" page_subtitle="ANC Diagnostic: ANC Malaria&gt; Negative Malaria Test" page_title="Point of Care" type_of_page="Take Action Page">
+		<field color_code="" group="definition" link="" name="" options="" property="" type="definition"/>
+		<field color_code="" group="first_actions" link="" name="Take Action: Negative Malaria Test" options="" property="" type="first_section_head"/>
+		<field color_code="" group="first_actions" link="" name="Pregnant client likely has some other infection.  If client has any danger signs present:" options="" property="Select" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="Refer client to the health center or hospital IMMEDIATELY" options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Call provider and arrange transport " options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Give her 2 tablets of paracetamol " options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Accompany client and have a family member accompany client to the health facility" options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="If client does NOT have any danger signs present: " options="" property="Select" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="Refer client to the health center or hospital to be diagnosed for febrile illness" options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Call provider and arrange transport " options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Give her 2 tablets of paracetamol " options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="first_actions" link="" name="Have a family member accompany client to the health facility" options="" property="Select" type="first_actions_sub"/>
+		<field color_code="" group="transport_actions" link="" name="While waiting for transport: " options="" property="" type="transport_section_head"/>
+		<field color_code="" group="transport_actions" link="" name="Encourage fluid intake " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="anc_malaria_prevention/malaria_prevention_1" name="Counsel client to sleep under an insecticide treated net every night " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="second_actions" link="" name="Record clinical information in client’s maternal health or “Red” book. If possible, also fill out referral form " options="" property="Select" type="second_actions"/>
+		<field color_code="" group="second_actions" link="" name="Follow up with client after discharge from health center or hospital" options="" property="Select" type="second_actions"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

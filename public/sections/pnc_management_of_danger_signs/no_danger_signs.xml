@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Green" name="no_danger_signs" page_subtitle="PNC Diagnostic Mother: PNC Management of Danger Signs&gt; No Danger Signs" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="pnc_malaria/malaria_1" name="Now examine client for fever and presence of malaria or other febrile infections " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

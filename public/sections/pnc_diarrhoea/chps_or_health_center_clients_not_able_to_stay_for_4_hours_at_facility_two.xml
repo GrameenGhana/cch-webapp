@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="chps_or_health_center_clients_not_able_to_stay_for_4_hours_at_facility_two" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; CHPS or Health Center + clients NOT able to stay for 4 hours at facility Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Home Care for Diarrhoea with Some Dehydration | Take Action: After 4-Hour Period" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Give the mother enough ORS packets to complete rehydration. Teach her how to mix and give ORS. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="infant_feeding/feeding_the_sick_baby_less_than_6_months_of_age" name="Encourage mother to breastfeed baby frequently " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Counsel her on the 4 Rules of Home Treatment:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give Extra Fluid: breast milk or clean water " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Zinc Supplements (only for children aged 2 months – 5 years) " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Continue Exclusive Breastfeeding " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="when_to_return_for_care/when_to_return_for_care_1" name="When to return to the health facility" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="self-care_and_personal_hygiene_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Self-Care And Personal Hygiene&gt; Self-Care And Personal Hygiene TWO" color_code="Select">
+		<field name="Educate mother on the importance of good hygiene and hand washing " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="self-care_and_personal_hygiene/82.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Good hygiene or cleanliness is important to avoid diarrhoea and other illness " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Wash your hands with soap and water:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Before preparing foods " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Before feeding baby " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Before eating" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="After using toilet" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="After washing or cleaning baby&#x2019;s bottom" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="After handling chemicals such as fertilizer, chemicals that kill weed, insecticide spray" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Feed your baby using clean utensils and clean cups " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Use a clean spoon or cup to give breast milk to your baby " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Do not use bottles, teats or spouted cups since they are difficult to clean and can cause your baby to become sick" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	
+	</form>
+</xmlgui>

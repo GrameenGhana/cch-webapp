@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="registering,_records_and_history1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Registering, Records And History&gt; Registering, Records And History1" color_code="Select">
+		<field name="Welcome caregiver and check child&#x2019;s records " link="" type="header" group="section_header" color_code="" property="" options=""/>
+				<field name="registering_records_and_history/5.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Establish rapport with clients " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="First Time Visitor: Complete child&#x2019;s personal information and registration" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Continuing Visitor: Document Date and Time of arrival" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Check the Vital Statistics and record" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Weigh the child and record" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="registering_records_and_history/4.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="ASK" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="How old is the child? " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Has the child been sick or experiencing problems recently? " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Proceed to assess for cough or breathing difficulty " link="cough or difficult breathing/cough_or_difficult_breathing1" type="section_items" group="section_items" color_code="" property="Select" options=""/><field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_to_breastfeed_breast_care_two" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; How to breastfeed &amp; breast care  Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="How often should a client breastfeed: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed baby on demand, both day and night, at least 8 – 12 times each day " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Frequent feeding will help your body to produce breast milk" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Continue to feed until baby finishes the breast and comes off on his or her own. Offer the other breast and let baby decide if he or she wants more or not" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/23.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="You will know if baby is taking enough breast milk if he or she passes light-coloured urine at least 6 times a day and is gaining weight " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Counsel client on how to prevent common breastfeeding problems: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Position and attach baby correctly on the breast.  Breastfeeding should not hurt" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If you develop cracked nipples, put some breast milk on them.  Do not use any types of creams or ointments except when prescribed by a health care provider " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/24.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Feed frequently to prevent breasts from becoming swollen" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If baby misses a feed you should express some milk to breast soft" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Keep expressed breast milk in a cool place, but not longer than 6-8 hours " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If one or both breasts become painful or hot to the touch, you should contact a health care provider" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/25.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Mixed feeding (combining breast milk with anything else) is not healthy for the baby before 6 months of age.  Mixed feeding reduces the amount of milk that you can produce and also can make the baby sick" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If you has any trouble practicing exclusive breastfeeding, discuss with a trained counselor" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="encouraging_pnc_for_mother_newborn/how_to_breastfeed__breast_care_three" name="NEXT" options="" property="" type="button"/>
+</xmlgui>

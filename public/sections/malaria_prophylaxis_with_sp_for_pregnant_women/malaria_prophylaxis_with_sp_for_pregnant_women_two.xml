@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="malaria_prophylaxis_with_sp_for_pregnant_women_two" page_subtitle="ANC References: Malaria Prophylaxis with SP for Pregnant Women&gt; Malaria Prophylaxis with SP for Pregnant Women Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Dosage of SP for IPTp:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="New GHS guidelines indicate that pregnant women should take up to 5 doses of SP for antimalarial prophylaxis.  A single dose compromising 3 tablets of 500 mg sulfadoxine + 25 mg pyrimethamine should be taken with clean water.  Ensure pregnant clients eat BEFORE taking the medicine, as some women can experience weakness when taken on an empty stomach.  The following is the dosage schedule for SP:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="1st dose at &gt;16 weeks gestation.  The 1st dose should be administered by a midwife, therefore, refer clients to the health facility. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="2nd dose at least one month after 1st dose" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="3rd dose at least one month after 2nd dose" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="4th dose at least one month after 3rd dose" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="5th dose at least one month after 4th dose " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Note:  The last dose of SP can be administered up to the time of delivery without any safety concerns. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Source: WHO " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Counselling/Education on Use of SP " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="All pregnant women should be educated and counselled on IPTp using SP on an individual basis prior to drug administration" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women who receive SP should be educated on the potential adverse effects and what to do when these arise" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Women who refuse IPTp using SP for any reason should NOT be discriminated against, and should be counseled to use ITN" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

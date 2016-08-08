@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Green" name="diarrhoea_with_no_dehydration" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; Diarrhoea with No Dehydration " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Treating Diarrhoea at Home | Take Action" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Counsel the mother on 4 Rules of Home Treatment:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give Extra Fluid: breast milk, ORS or clean water " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Zinc Supplements (only for children aged 2 months – 5 years) " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Continue Exclusive Breastfeeding " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="when_to_return_for_care/when_to_return_for_care_1" name="When to return to the health facility " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="pnc_diarrhoea/diarrhoea_with_no_dehydration_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

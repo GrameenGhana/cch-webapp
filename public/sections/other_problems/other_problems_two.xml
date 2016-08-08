@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="other_problems_two" page_subtitle="CWC Diagnostic: Other Problems&gt;Other Problems TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Other Health Problems | Take Action " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Administer appropriate treatment of other health conditions based on assessment " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Refer children with signs of severe disease or emergencies to a health center or hospital IMMEDIATELY " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="immunization_and_vitamin_a_status/immunization_and_vitamin_a_status1" name="Ensure child’s immunization status is up to date " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="when_to_seek_care_immediately/_when_to_seek_care_immediately1" name="Advise mother/caregiver when to return for care immediately " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Advise mother/caregiver when to return for the next routine visit" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Record clinical care in Child Health Record “green” book" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="cwc_hiv_infection/hiv_infection_1" name="Proceed to assess for HIV infection, if trained " options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

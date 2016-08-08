@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="when_you_are_separated_from_your_baby" page_subtitle="PNC Counselling: Infant Feeding&gt;  When You Are Separated from Your Baby" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Learn to express your breast milk soon after baby is born " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed exclusively and frequently for the whole time you are with your baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Express and store breast milk before you leave your home so that your baby’s caregiver can feed your baby while you are away " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Express breast milk while you are away from your baby.  This will keep the milk flowing and prevent breast swelling " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Teach your baby’s caregiver how to use a clean open cup to feed your baby while you are away " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Expressed breast milk stored in a cool, covered place stays in good condition for 8 hours, even in hot climate" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Take extra time for the feeds before separation from baby and when you return home" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Increase the number of feeds while you are with the baby.  This means increasing night and weekend feedings " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/47.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="If possible, carry the baby with you to work to breastfeed.  If this is not possible, consider having someone bring the baby to you to breastfeed when you have a break" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/48.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Get extra support from family members in caring for your baby and other children, and for doing household chores " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/49.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="nutrition_1" page_subtitle="ANC Counselling: Nutrition&gt; Nutrition 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Nutrition counseling" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Eat 3 meals each day + 1 extra small meal or “snack” (food taken in between main meals). " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Drink 6-8 glasses of liquids a day.  Avoid taking tea or coffee with meals and limit the amount of coffee you drink during pregnancy. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Counsel client to eat foods rich in calcium, iron, folate and vitamin C:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Meat (especially liver, kidney, and other organ meats)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Beans, peas, lentils" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Dark green leafy vegetables" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Eggs" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Fish" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Fruits like oranges, pineapples, mangoes, or bananas" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Milk" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="nutrition/50.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="nutrition/nutrition_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

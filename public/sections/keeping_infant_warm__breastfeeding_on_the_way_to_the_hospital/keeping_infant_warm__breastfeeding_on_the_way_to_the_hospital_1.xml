@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital_1" page_subtitle="PNC Counselling: Keeping Infant Warm &amp; Breastfeeding on the Way to the Hospital&gt; Keeping Infant Warm &amp; Breastfeeding on the Way to the Hospital 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Call for help for transportation, care, money" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital/10.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Keep baby warm by holding him/her close to your body and covering baby with cloth and a hat" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital/71.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed baby every 2 hours while waiting and no the way to the clinic. Or express breast milk and feed baby with a clean cup" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital/72.png" options="" property="" type="image"/>
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

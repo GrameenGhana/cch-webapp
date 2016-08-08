@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="mastoiditis" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Ear Problems&gt;  Mastoiditis " color_code="Red">
+		<field name="Mastoiditis | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Refer mother/caregiver child to a health center or hospital IMMEDIATELY" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Administer FIRST dose of intramuscular ampicillin and gentamicin" link="pre-referral_treatments_in_clinics/intramuscular_ampicillin_and_intramuscular_gentamicin" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Administer ONE dose of paracetamol in clinic if temperature &#x2265; 38.5&#xB0;C " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="ear_problems/9.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="NEXT" color_code="Default" link="ear_problems/mastoiditis_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

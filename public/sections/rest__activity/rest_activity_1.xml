@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="rest_activity_1" page_subtitle="PNC Counselling: Rest &amp; Activity&gt; Rest &amp; Activity 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Rest &amp; Activity" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="To get periodic rest during the day when baby is sleeping" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Encourage client to take between 6-10 hours of sleep every night " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="During the first 4-6 weeks after delivery, clients should try to get domestic help and delay returning to work " options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

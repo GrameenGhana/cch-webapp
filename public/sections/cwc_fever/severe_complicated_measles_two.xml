@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="severe_complicated_measles_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Severe Complicated Measles Two" color_code="Red">
+		<field name="" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Give first dose of an appropriate antibiotic after completing assessment for:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Any general danger sign OR " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Clouding of cornea OR" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Deep or extensive mouth ulcers " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If clouding of the cornea or pus draining from eye, apply tetracycline eye ointment " link="teach_mother_to_treat_local_infections_at_home/tetracycline_or_chloramphenicol_eye_ointment" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Have child look up and squirt a small amount of the ointment on the inside of the lower lid" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fill out referral form. Record clinical care in Child Health Record &#x201C;green&#x201D; book " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="What to do while waiting for transport to arrive:" link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="Advise mother/caregiver not to carry the child on her back " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver how to keep the child warm on the way to the health facility " link="keeping_child_warm_on_the_way_to_the_hospital/keeping_child_warm_on_the_way_to_the_hospital1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If child still breastfeeds, observe mother breastfeeding and provide counseling on breast attachment and positioning, if necessary" link="feeding_a_healthy_child/breastfeeding_attachment_and_position" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Accompany mother and child to the health facility" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+
+	</form>
+</xmlgui>

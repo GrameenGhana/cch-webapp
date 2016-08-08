@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Green" name="no_diarrhoea_or_dehydration" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; No diarrhoea or dehydration " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="No Diarrhoea or Dehydration | Take Action " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="home_care_for_the_infant/home_care_for_the_infant_1" name="Advise mother to give home care for the young infant " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="pnc_hiv_infection/hiv_infection_1" name="Now assess baby and mother for HIV infection " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="breast_attachment_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="PNC Counselling: Infant Feeding&gt; Breast Attachment TWO" color_code="Select">
+	<field name="There are different ways to position your baby for breastfeeding" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Cradle position:  Used most commonly" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/7.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Cross-cradle position: Good for small babies" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/8.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Side-lying position:  Good for rest while breastfeeding and at night" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/12.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Under-arm position:  Good for after c-section, if your nipples are painful or if you breastfeeding twins or a small baby " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/13.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="NEXT" color_code="Default" link="infant_feeding/breast_attachment_three" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

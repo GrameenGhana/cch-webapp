@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_often_to_breastfeed_two" page_subtitle="PNC Counselling: Infant Feeding&gt; How Often to Breastfeed TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="If the mother is concerned about her baby not getting enough milk, then: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Encourage mother and build her confidence by reviewing how to attach and position the baby to her breast " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Reassure her that her baby is getting enough milk when her baby is: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Not visibly thin (or is getting fatter/putting on weight if he or she was thin earlier) " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Responsive and active " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Gaining weight (refer to the baby’s health card).  IF you are not sure weight gain is appropriate, then refer mother and child to nearest health facility" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="When baby passes light-coloured urine at least 6 times a day while being exclusively breastfed " options="" property="Select" type="section_items_sub"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="chps_or_health_center_clients_not_able_to_stay_for_4_hours_at_facility" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; CHPS or Health Center + clients NOT able to stay for 4 hours at facility" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Home Care for Diarrhoea with Some Dehydration | Take Action: First 4-Hour Period" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="If the mother must leave before completing treatment: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="pnc_references_treating_some_dehydration_with_ors/treating_some_dehydration_with_ors_1" name="Determine amount of ORS to give during the first 4 hour period" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Show her how to prepare ORS at home " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Show her how to give ORS in the first 4 hours: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give frequent small sips from a clean cup" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="If the child vomits, wait 10 minutes.  Then continue, but more slowly." options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Continue breastfeeding whenever baby wants" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="If the baby wants more ORS than recommended, give more " options="" property="Select" type="section_items_sub"/>
+		<field color_code="Default" group="actions" link="pnc_diarrhoea/chps_or_health_center_clients_not_able_to_stay_for_4_hours_at_facility_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

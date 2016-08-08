@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="tt_immunisation_schedule_1" page_subtitle="PNC Counselling: TT Immunisation Schedule&gt; TT Immunisation Schedule 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="For women who were NOT previously immunised" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="TT1:  First ANC visit" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="TT2:  At least 4 weeks after TT1" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="TT3:  Six months after TT2" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="TT4:  One year after TT3" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="TT5:  At least one year after TT4" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="For women who were previously immunised" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Immunised during infancy: 2 doses as above" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Immunised during childhood: 1 dose of TT/Td" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Immunised during school age: 1 dose of TT/Td" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Immunised during adolescence: None " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

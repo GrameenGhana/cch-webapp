@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_problems_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Feeding Problems&gt; Feeding Problems Two" color_code="Select">
+		<field name="ASK" link="" type="header" group="section_header" color_code="" property="" options=""/>
+	<field name="Does the child take any other food or fluids? " link="" type="section_items" group="section_items" color_code="" property="Bold" options=""/>
+	<field name="What food or fluids does the child take?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="What do you use to feed the child?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="For children with moderate acute malnutrition or underweight " link="" type="section_items" group="section_items" color_code="" property="Bold" options=""/>
+	<field name="How large are servings?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="Does the child receive his or her own serving?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="Who feeds the child and how? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="During illness has the child&#x2019;s feeding changed? " link="" type="section_items" group="section_items" color_code="" property="Bold" options=""/>
+	<field name="If yes, how?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="NEXT" color_code="Default" link="feeding_problems/feeding_problems_three" type="button" group="actions" property="" options=""/>
+</form></xmlgui>
