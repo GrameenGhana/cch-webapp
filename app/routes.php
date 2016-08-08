@@ -25,7 +25,8 @@ Route::get('swplansbyprofile',       array('uses' => 'DashboardController@swPlan
 Route::post('swplansbyprofile',      array('uses' => 'DashboardController@swPlansByProfile'));
 Route::get('moduleusagebytype',      array('uses' => 'DashboardController@moduleUsageByType'));
 Route::post('moduleusagebytype',     array('uses' => 'DashboardController@moduleUsageByType'));
-Route::resource('reports','ReportController',['before'=>'auth']); 
+Route::get('/dashboard/qar',         'DashboardController@QualityAssuranceReport',['before'=>'auth']);
+Route::resource('reports',           'ReportController',['before'=>'auth']); 
 /**** / Dasboard routes ***/
 
 /**** Content routes ***/
@@ -34,6 +35,7 @@ Route::get('/content/poccms',                  array('uses'=>  'PocCmsController
 Route::get('/content/poccms/onepage',          array('uses'=>  'PocCmsController@onePage'));
 Route::get('/content/poccms/view',             array('uses'=>  'PocCmsController@view'));
 Route::get('/content/poccms/add',              array('uses'=>  'PocCmsController@add'));
+Route::get('/content/poccms/addreference',              array('uses'=>  'PocCmsController@addReference'));
 Route::get('/content/poccms/edit',             array('uses'=>  'PocCmsController@edit'));
 Route::get('/content/poccms/editsection',      array('uses'=>  'PocCmsController@editSection'));
 Route::get('/content/poccms/delete',           array('uses'=>  'PocCmsController@delete'));
@@ -43,12 +45,18 @@ Route::get('/content/poccms/forms',            array('uses'=>  'PocCmsController
 Route::get('/content/poccms/section',          array('uses'=>  'PocCmsController@section'));
 Route::get('/content/poccms/upload',           array('uses'=>  'PocCmsController@upload'));
 Route::get('/content/poccms/uploadFiles',      array('uses'=>  'PocCmsController@uploadFiles'));
-Route::get('/content/poccms/alluploads',       array('uses'=>  'PocCmsController@allUploads'));
+Route::get('/content/poccms/alluploads',       array('uses'=>  'PocCmsController@allUploadsCWC'));
+Route::get('/content/poccms/alluploadscwc',       array('uses'=>  'PocCmsController@allUploadsCWC'));
+Route::get('/content/poccms/alluploadspnc',       array('uses'=>  'PocCmsController@allUploadsPNC'));
+Route::get('/content/poccms/alluploadsanc',       array('uses'=>  'PocCmsController@allUploadsANC'));
+Route::get('/content/poccms/allreferences',       array('uses'=>  'PocCmsController@allReferences'));
 Route::post('/content/poccms/addsection',       array('uses'=>  'PocCmsController@addSection'));
+Route::post('/content/poccms/postreference',       array('uses'=>  'PocCmsController@postReference'));
 Route::post('/content/poccms/editsectionvalue', array('uses'=>  'PocCmsController@editSectionValue'));
 Route::post('/content/poccms/addpage',          array('uses'=>  'PocCmsController@addPage'));
 Route::post('/content/poccms/addpagedetails',   array('uses'=>  'PocCmsController@addPageDetails'));
-Route::get('/content/poccms/downloadfile',   array('uses'=>  'PocCmsController@downloadFile'));
+Route::get('/content/poccms/downloadfile',        array('uses'=>  'PocCmsController@downloadFile'));
+Route::get('/content/poccms/downloadreference',   array('uses'=>  'PocCmsController@downloadReference'));
 /**** / Content routes ***/
 
 /**** Target routes ***/
@@ -105,6 +113,16 @@ Route::get('logout', array('uses' => 'HomeController@doLogout'))->before('auth')
 //Apis
 Route::group(array('prefix' => 'api/v1'), function()
 {
+    Route::get('dashboard/qar/uss', function() {
+        $data = Dashboard::QARUserStatusSummary(Input::all());
+        return Response::json($data); 
+    });
+
+    Route::get('dashboard/qar/viu', function() {
+        $data = Dashboard::QARVersionInUse(Input::all());
+        return Response::json($data); 
+    });
+
     Route::get('dropdown/subdistricts', function() {
         $id = Input::get('id');
         $subs = District::find($id)->subdistricts;
@@ -121,12 +139,21 @@ Route::group(array('prefix' => 'api/v1'), function()
         return $id; 
     });
     
+    Route::get('supervisor/{userid}/{resource}/{time}','SupervisorController@getData');
+    Route::resource('supervisor','SupervisorController');
+
+
+
     Route::resource('tracker','TrackerController'); 
     Route::resource('users','UserController');
     Route::resource('incharge','InChargeController');
+
     Route::get('getSupData/{id}', 'InChargeController@getSupData');
     Route::get('details/{id}', 'InChargeController@showdetail');
+    Route::get('/details', 'InChargeController@showdetailWithInputId');
     Route::get('achievements/{id}','InChargeController@achievements');
+    Route::get('courseachievements/{username}','InChargeController@getUserCoursesForAchievements');
+    Route::get('getCourseAchievement/{id}','InChargeController@courseAchievements');
 });
 
 Route::get('/getTargets', array('uses' => 'ApiController@getTargets'));

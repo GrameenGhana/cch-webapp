@@ -54,8 +54,11 @@
                 <option>Select</option>
                     <option>ANC Diagnostic</option>
                     <option>ANC Counselling</option>
-                    <option>PNC Diagnostic</option>
+                    <option>ANC References</option>
+                    <option>PNC Diagnostic Newborn</option>
+                    <option>PNC Diagnostic Mother</option>
                     <option>PNC Counselling</option>
+                    <option>PNC References</option>
                     <option>CWC Diagnostic</option>
                     <option>CWC Counselling</option>
                     <option>CWC References</option>
@@ -108,9 +111,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
     $("#generate").click(function () {
-    var lower = $('input#page_name').val().toLowerCase(); // to lower case
-    var hyp = lower.replace(/ /g,"_");         
-    $("#page_shortname").val(hyp);
+    var lower = $.trim($('input#page_name').val().toLowerCase()); // to lower case
+    var hyp = lower.replace(/ /g,"_");  
+    var value=hyp.replace (/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/g,"");       
+    $("#page_shortname").val(value);
 
 });
     });

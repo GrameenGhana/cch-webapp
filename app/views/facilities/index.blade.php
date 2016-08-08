@@ -21,7 +21,7 @@
 
                 <section class="content invoice">
 <!-- title row -->
-@if (Auth::user()->role == 'Admin')
+@if (Auth::user()->role == 'Admin' || strtolower(Auth::user()->role)=='district admin')
                     <div class="row">
                         <div class="col-xs-12">
                             <h2 class="page-header">

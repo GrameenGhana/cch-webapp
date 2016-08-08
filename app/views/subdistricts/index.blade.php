@@ -24,7 +24,7 @@
                     <div class="row">
 
                         <div class="col-xs-12">
- @if (strtolower(Auth::user()->role) == 'admin'  )
+ @if (strtolower(Auth::user()->role) == 'admin'  || strtolower(Auth::user()->role)=='district admin')
 
                             <h2 class="page-header">
 				    <a class="btn btn-small btn-success" href="{{ URL::to('subdistricts/create') }}"><i class="fa fa-plus-circle"></i> Add a Sub District</a>

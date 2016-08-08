@@ -4,45 +4,103 @@ class PocCmsController extends BaseController {
 
     public function home()
     {
-        $pages = POCPages::all();
-	    return View::make('content.poc.table')->with(['pages'=>$pages]);
+    	if (Auth::check())
+		{	
+        	$pages = POCPages::all();
+	    	return View::make('content.poc.table')->with(['pages'=>$pages]);
+	    }else{
+	    	 return View::make('login');
+	    }
     }
     
     public function onePage()
     {
-       $oldPage = POCPages::where('id','=',Input::get('id'))->first();
-       return $oldPage->page_url;
+    	if (Auth::check())
+		{	
+       		$oldPage = POCPages::where('id','=',Input::get('id'))->first();
+       		return $oldPage->page_url;
+        }else{
+	    	 return View::make('login');
+	    }
     }
 
     public function view()
 	{
-	    $pages=POCPages::all();
-		return View::make('content.poc.table')->with(['pages'=>$pages]);
+		if (Auth::check())
+		{	
+	    	$pages=POCPages::all();
+			return View::make('content.poc.table')->with(['pages'=>$pages]);
+		 }else{
+	    	 return View::make('login');
+	    }
 	}
 
 	public function upload()
 	{
-	    $sections=POCSections::all();
-	    return View::make('content.poc.upload')->with(['sections'=>$sections]);
+		if (Auth::check())
+		{	
+	    	$sections=POCSections::all();
+	    	return View::make('content.poc.upload')->with(['sections'=>$sections]);
+	     }else{
+	    	 return View::make('login');
+	    }
 	}
 
-	public function allUploads()
+	public function allUploadsCWC()
 	{
-	    $uploads=POCSections::where('upload_status','=','Uploaded')->get();
-	    return $uploads;
+		
+	   	 	$uploads=POCSections::where('upload_status','=','Uploaded')
+	   	 							->where('sub_section','like','%CWC%')
+	   	 							->get();
+	    	return $uploads;
+	     
+	}
+	public function allUploadsANC()
+	{
+		
+	   	 	$uploads=POCSections::where('upload_status','=','Uploaded')
+	   	 							->where('sub_section','like','%ANC%')
+	   	 							->get();
+	    	return $uploads;
+	     
+	}
+	public function allReferences()
+	{
+		
+	   	 	$references=References::all();
+	    	return $references;
+	     
+	}
+	public function allUploadsPNC()
+	{
+		
+	   	 	$uploads=POCSections::where('upload_status','=','Uploaded')
+	   	 							->where('sub_section','like','%PNC%')
+	   	 							->get();
+	    	return $uploads;
+	     
 	}
 	public function downloadFile()
 {
     //$file = FileManager::find($fileName);
+
     $fileName=Input::get('fileName');
     $file= public_path().'/'.'uploads/'.$fileName;
+
+    return Response::download($file);
+ }
+ 	public function downloadReference()
+{
+    //$file = FileManager::find($fileName);
+
+    $fileName=Input::get('fileName');
+    $file= public_path().'/'.'references/'.$fileName;
 
     return Response::download($file);
  }
 	public function uploadFiles()
 	{
 	    chmod(public_path() .'/'.'uploads',0777);
-	
 	    $sections=POCSections::all();
 	    $section_values =POCSections::where('id', '=',Input::get('id'))->first();
 	   
@@ -75,42 +133,138 @@ class PocCmsController extends BaseController {
 	                ->update(array('upload_status' => "Uploaded",
 	                               ));         
         } else {
-	            return View::make('content.poc.upload')->withMessage('Creating zip file Failed');
+	           // return View::make('content.poc.upload')->withMessage('Creating zip file Failed');
+        	return Redirect::to('/content/poccms/upload')
+	                            ->withMessage("Creating zip file Failed");
         }
 
-	    return View::make('content.poc.upload')->with(['sections'=>$sections]);
+	   //return View::make('content.poc.upload')->with(['sections'=>$sections]);
+        return Redirect::to('/content/poccms/upload')
+	                            ->withMessage("Uploaded ");
 	}
 	
 	public function add()
 	{
-		$sections= POCSections::lists('name_of_section', 'name_of_section');
-		$pages = POCPages::lists('page_description', 'page_link_value');
-		return View::make('content.poc.edit')->with(['sections' =>$sections,'pages'=>$pages]);
+		if (Auth::check())
+		{
+			$sections= POCSections::lists('section_desc', 'section_desc');
+			$pages = POCPages::lists('page_description', 'page_link_value');
+			return View::make('content.poc.edit')->with(['sections' =>$sections,'pages'=>$pages]);
+		    }else{ 
+	    	 return View::make('login');
+	    }
 
+	}
+	public function addReference()
+	{
+		if (Auth::check())
+		{
+			$references=References::all();
+			return View::make('content.poc.references')->with(['references'=>$references]);
+		    }else{ 
+	    	 return View::make('login');
+	    }
+
+	}
+	public function postReference()
+	{    
+		function formatSizeUnits($bytes)
+    {
+        if ($bytes >= 1073741824)
+        {
+            $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+        }
+        elseif ($bytes >= 1048576)
+        {
+            $bytes = number_format($bytes / 1048576, 2) . ' MB';
+        }
+        elseif ($bytes >= 1024)
+        {
+            $bytes = number_format($bytes / 1024, 2) . ' KB';
+        }
+        elseif ($bytes > 1)
+        {
+            $bytes = $bytes . ' bytes';
+        }
+        elseif ($bytes == 1)
+        {
+            $bytes = $bytes . ' byte';
+        }
+        else
+        {
+            $bytes = '0 bytes';
+        }
+
+        return $bytes;
+}
+	    $rule  =  array(
+	                    'reference_desc'  => 'required',
+	                    'file'=>'mimes:pdf',
+	                    'shortname'  => 'required',
+	                ) ;
+	      $validator = Validator::make(Input::all(), $rule);
+	      $path = public_path().'/'.'references/';
+	        if ($validator->fails()) {
+	            return Redirect::to('/content/poccms/addreference')
+	                            ->with('flash_error', 'true')
+	                            ->withInput()
+	                            ->withErrors($validator);
+	        } else {
+	        	
+	        	 if (Input::hasFile('file')){
+	            $file = Input::file('file');
+
+	            $name=Input::get('shortname').".pdf";
+	              $file->move($path ,  $name);   
+	        		}
+	            $reference = new References;
+	            $reference->reference_desc = Input::get('reference_desc');
+	            $reference->shortname = Input::get('shortname');
+	            $reference->reference_url =  $path. Input::get('shortname').".pdf";
+	             $reference->size = formatSizeUnits(filesize($path.Input::get('shortname').".pdf"));
+	            $reference->save();
+	        }
+	      return Redirect::to('/content/poccms/addreference')->withMessage('Reference added successfully');
 	}
 	
 	public function forms()
 	{
-	    $sections= POCSections::lists('name_of_section', 'name_of_section');
-	    $pages = POCPages::lists('page_description', 'page_link_value');
+		if (Auth::check())
+		{
+	    $sections= POCSections::lists('section_desc', 'section_desc');
+	    $pages = POCPages::lists('page_subtitle', 'page_link_value');
 	    $pages=POCPages::all();
 	    return View::make('content.poc.table')->with(['pages'=>$pages]);
+	    }else{
+	    	 return View::make('login');
+	    }
 	}
 
 	public function edit()
 	{
-	    $sections= POCSections::lists('name_of_section', 'name_of_section');
-	    $pages = POCPages::lists('page_description', 'page_link_value');
+		if (Auth::check())
+		{
+	    $sections= POCSections::lists('section_desc', 'section_desc');
+	    $pages = POCPages::lists('page_subtitle', 'page_link_value');
 	    $page_values = POCPages::where('id', '=',Input::get('id'))->first();
+
 	    return View::make('content.poc.form')->with(['sections' =>$sections,
 	                                    'pages'=>$pages,
 	                                    'page_values'=>$page_values]);
+	    }else{
+	    	 return View::make('login');
+	    }
 	}
 	
 	public function editSection()
 	{
-	    $section_values =POCSections::where('id', '=',Input::get('id'))->first();
-	    return View::make('content.poc.editSection')->with(['section_values'=>$section_values]);
+		if (Auth::check())
+		{
+	    	$section_values =POCSections::where('id', '=',Input::get('id'))->first();
+	    	return View::make('content.poc.editSection')->with(['section_values'=>$section_values]);
+	    }else{
+	    	 return View::make('login');
+	    }
 	}
 
 	public function delete()
@@ -122,8 +276,9 @@ class PocCmsController extends BaseController {
 	   if (File::exists($page_values->page_url)) {
 	       File::delete($page_values->page_url);
 	   } 
-	      
-	   return View::make('content.poc.table')->with(['message' =>"Page deleted successfully",'pages'=>$pages]);
+	     // return Redirect::to('/content/poccms/')
+	       //                     ->with(['message' =>"Page deleted successfully",'pages'=>$pages]);
+	  return View::make('content.poc.table')->with(['message' =>"Page deleted successfully",'pages'=>$pages]);
 	}
 	
 	public function deleteSection()
@@ -136,19 +291,24 @@ class PocCmsController extends BaseController {
 	       File::deleteDirectory($page_values->section_url);
 	   } 
 	      
-	    return View::make('content.poc.upload')->with(['message' =>"Section deleted successfully",'sections'=>$sections]);
+	    //return View::make('content.poc.upload')->with(['message' =>"Section deleted successfully",'sections'=>$sections]);
+	   return Redirect::to('/content/poccms/upload')
+	                            ->withMessage("Section ".$page_values->shortname." deleted successfully");
 	}
 	
 	public function refreshSection()
 	{
 	   $section =POCSections::where('id', '=',Input::get('id'))->first();
 	   DB::table('cch_content_poc_sections')->where('id', '=', Input::get('id'))
-	    									->update(array('upload_status' =>"",));     
+	    									->update(array('upload_status' =>"",
+	    													'updated_at'=>date('Y-m-d H:i:s'),));     
 	   if (File::exists(public_path().'/'.'uploads/'.$section->section_shortname.'.zip')) {
 	       File::delete(public_path().'/'.'uploads/'.$section->section_shortname.'.zip');
 	   } 
 	      $sections=POCSections::all(); 
-	    return View::make('content.poc.upload')->with(['message' =>"Section refreshed successfully",'sections'=>$sections]);
+	    //return View::make('content.poc.upload')->with(['message' =>"Section refreshed successfully",'sections'=>$sections]);
+	      return Redirect::to('/content/poccms/upload')
+	                            ->withMessage("Section ".$section->shortname." refreshed successfully");
 	}
 	public function section()
 	{
@@ -157,21 +317,28 @@ class PocCmsController extends BaseController {
 
 	public function addSection()
 	    {    
-	    	$sections = POCSections::where('name_of_section','=',Input::get('name_of_section'))->first();
+	    	//$sec = POCSections::where('shortname','=',Input::get('shortname'))->first();
+	    	if (POCSections::where('section_desc','=',Input::get('section_desc'))->exists()) {
+   					return Redirect::to('/content/poccms/section')
+	                            ->withErrors("A section exists with this ".Input::get('section_desc')."name already. Rename section!");
+				}
 	    	$path = public_path().'/'.'sections/'.Input::get('shortname');
 	        $section = [
 	            'name_of_section' => Input::get('name_of_section'),
+	            'section_desc' => Input::get('section_desc'),
 	            'sub_section' => Input::get('sub_section'),
 	            'shortname' =>  Input::get('shortname'),
 	            'section_url'=>$path,
 	        ];
 	       $sections = [
 	           'name_of_section' => Input::get('name_of_section'),
+	           'section_desc' => Input::get('section_desc'),
 	            'sub_section' => Input::get('sub_section'),
 	            'shortname' =>  Input::get('shortname'),           
 	        ];
 	       $rule  =  array(
 	                    'name_of_section' => 'required',
+	                    'section_desc' => 'required',
 	                    'shortname' => 'required',
 	                ) ;
 	 
@@ -183,18 +350,17 @@ class PocCmsController extends BaseController {
 	            }
 	            else
 	            {
-	            if((Input::get('sub_section')!="CWC References")&&(Input::get('sub_section')!="CWC Calculators")){
+	            if(Input::get('sub_section')!="CWC Calculators"){
 	                //echo "Not ready";
 	                     File::makeDirectory($path, $mode = 0777, true, true);
-	            }	else{
-	                 //echo "ready";
 	            }
+
 	           
 	             $sectionData = new POCSections($section);
 	          
 	              $sectionData->save();
 	                        return Redirect::to('/content/poccms/section')
-	                            ->withMessage('Section created');     
+	                            ->withMessage('Section '.Input::get('shortname').' created');     
 	            }
 	       
 	}
@@ -208,6 +374,7 @@ class PocCmsController extends BaseController {
 	        $Uploadpath = public_path().'/'.'uploads/'.$sections->shortname;
 	 $section = [
 	            'name_of_section' => Input::get('name_of_section'),
+	            'section_desc' => Input::get('section_desc'),
 	            'sub_section' => Input::get('sub_section'),
 	            'shortname' =>  Input::get('shortname'),
 	            'section_url'=>$path,
@@ -230,7 +397,7 @@ class PocCmsController extends BaseController {
 	            }
 	            else
 	            {
-	            if((Input::get('sub_section')!="CWC References")&&(Input::get('sub_section')!="CWC Calculators")){
+	            if(Input::get('sub_section')!="CWC Calculators"){
 	                if(File::exists($sections->section_url)){
 	                     File::makeDirectory($path, $mode = 0777, true, true);
 	                     if($pages->count()>1){
@@ -296,7 +463,7 @@ class PocCmsController extends BaseController {
 	                            ->withInput()
 	                            ->withErrors($validator);
 	        } else {
-	            $section = POCSections::where('name_of_section','=',Input::get('page_section'))->first();
+	            $section = POCSections::where('section_desc','=',Input::get('page_section'))->first();
 	            $xmlFileName =$section->section_url.'/'.Input::get('page_shortname').'.xml';
 	            $page = new POCPages;
 	            $page->page_description = Input::get('page_description');
@@ -352,7 +519,7 @@ class PocCmsController extends BaseController {
 	            $layout_cnt = Input::get('layout_cnt');
 	            $noreferral_cnt = Input::get('noreferral_cnt');
 	//          
-	              $section = POCSections::where('name_of_section','=',Input::get('page_section'))->first();
+	              $section = POCSections::where('section_desc','=',Input::get('page_section'))->first();
 	 			$xmlFileName =$section->section_url.'/'.Input::get('page_shortname').'.xml';
 
 	          //  $page->save();
@@ -418,6 +585,8 @@ class PocCmsController extends BaseController {
 	 						$first_actions_xml_field->addAttribute('link',Input::get("first_link_type_s$i"));
 	                        if(Input::get("first_action_sub_s$i")=="Yes"){
 	                            $first_actions_xml_field->addAttribute('type','first_actions_sub');
+	                        }else if(Input::get("first_action_sub_sub_s$i")=="Yes"){
+	                              $first_actions_xml_field->addAttribute('type','first_actions_sub_sub');
 	                        }else{
 	                             $first_actions_xml_field->addAttribute('type','first_actions');
 	                        }
@@ -468,9 +637,16 @@ class PocCmsController extends BaseController {
 	                        $transport_xml_field->addAttribute('link',Input::get("noreferral_link_type_s$j"));
 	                         if(Input::get("noreferral_sub_s$j")=="Yes"){
 	                            $transport_xml_field->addAttribute('type','transport_actions_sub');
+	                        }else if(Input::get("noreferral_sub_sub_s$j")=="Yes"){
+	                             $transport_xml_field->addAttribute('type','transport_actions_sub_sub');
+	                        }else{
+	                        	  $transport_xml_field->addAttribute('type','transport_actions');
+	                        }
+	                        /* if(Input::get("noreferral_sub_sub_s$j")=="Yes"){
+	                            $transport_xml_field->addAttribute('type','transport_actions_sub_sub');
 	                        }else{
 	                             $transport_xml_field->addAttribute('type','transport_actions');
-	                        }
+	                        }*/
 	                        $transport_xml_field->addAttribute('group','transport_actions');
 	                         $transport_xml_field->addAttribute('color_code','');
 	                         $transport_xml_field->addAttribute('property',Input::get("transport_property_s$j"));
@@ -495,8 +671,10 @@ class PocCmsController extends BaseController {
 	                        $transport_xml_field->addAttribute('link',Input::get("transport_link_type_s$j"));
 	                         if(Input::get("transport_sub_s$j")=="Yes"){
 	                            $transport_xml_field->addAttribute('type','transport_actions_sub');
+	                        }else if(Input::get("transport_sub_sub_s$j")=="Yes"){
+	                              $transport_xml_field->addAttribute('type','transport_actions_sub_sub');
 	                        }else{
-	                             $transport_xml_field->addAttribute('type','transport_actions');
+	                        	 $transport_xml_field->addAttribute('type','transport_actions');
 	                        }
 	                        $transport_xml_field->addAttribute('group','transport_actions');
 	                         $transport_xml_field->addAttribute('color_code','');
@@ -523,6 +701,8 @@ class PocCmsController extends BaseController {
 	 						$second_actions_xml_field->addAttribute('link',Input::get("second_link_type_s$k"));
 	                         if(Input::get("second_action_sub_s$k")=="Yes"){
 	                            $second_actions_xml_field->addAttribute('type','second_actions_sub');
+	                        }else if(Input::get("second_action_sub_sub_s$k")=="Yes"){
+	                              $second_actions_xml_field->addAttribute('type','second_actions_sub_sub');
 	                        }else{
 	                             $second_actions_xml_field->addAttribute('type','second_actions');
 	                        }
@@ -562,7 +742,7 @@ class PocCmsController extends BaseController {
 	                //Question Page
 	            	}else if(Input::get('type_of_page')=="Question Page"){
 	            		for ($i = 1; $i <= $question_cnt; $i++) {
-	
+							//echo $question_cnt;
 	                		$answerCnt = Input::get("answer_cnt_s$i");
 	                		$question_xml_field=$form->addChild('field');
 	 						$question_xml_field->addAttribute('name',Input::get("question_s$i"));
@@ -574,10 +754,11 @@ class PocCmsController extends BaseController {
 	                        $question_xml_field->addAttribute('options','');
 	                	for ($k = 1; $k <= $answerCnt; $k++) {
 	                   		 $ik = "_s$i" . "__$k";
-	                   		
+	                   		// echo $answerCnt;
+	                   		  echo $ik.',';
 	                   		$answer_xml_field=$form->addChild('field');
 	 						$answer_xml_field->addAttribute('name',Input::get("question$ik"));
-	 						$answer_xml_field->addAttribute('link',Input::get("link_type$ik"));
+	 						$answer_xml_field->addAttribute('link',Input::get("answer_link_type$ik"));
 	 						$answer_xml_field->addAttribute('type','answers');
 	 						$answer_xml_field->addAttribute('group','answers'); 
 	                        $answer_xml_field->addAttribute('color_code','');
@@ -613,10 +794,10 @@ class PocCmsController extends BaseController {
 	                        $question_xml_field->addAttribute('options','');
 	                    for ($k = 1; $k <= $answerCnt; $k++) {
 	                         $ik = "_s$i" . "__$k";
-	                        
+	                        echo $ik;
 	                        $answer_xml_field=$form->addChild('field');
 	                        $answer_xml_field->addAttribute('name',Input::get("question$ik"));
-	                        $answer_xml_field->addAttribute('link',Input::get("link_type$ik"));
+	                        $answer_xml_field->addAttribute('link',Input::get("answer_link_type$ik"));
 	                        $answer_xml_field->addAttribute('type','answers');
 	                        $answer_xml_field->addAttribute('group','answers'); 
 	                        $answer_xml_field->addAttribute('color_code','');
@@ -657,6 +838,8 @@ class PocCmsController extends BaseController {
 	 							$section_items_xml_field->addAttribute('link',Input::get("link_type$ik"));
 	                            if(Input::get("page_item_sub$ik")=="Yes"){
 	                            $section_items_xml_field->addAttribute('type','section_items_sub');
+	                        }else if(Input::get("page_item_sub_sub$ik")=="Yes"){
+	                              $section_items_xml_field->addAttribute('type','section_items_sub_sub');
 	                        }else{
 	                             $section_items_xml_field->addAttribute('type','section_items');
 	                        }
@@ -692,9 +875,65 @@ class PocCmsController extends BaseController {
 	                        $action_xml_field->addAttribute('options','');  
 	                }
 	            	}
-	            	$xmlgui->asXML($xmlFileName);
-	            return Redirect::to('/content/poccms/forms')
-	                         ->withMessage('Page created successfully');  
+	            	//References Page
+	            	else if(Input::get('type_of_page')=="Reference Page"){
+	            			for ($i = 1; $i <= $layout_cnt; $i++) {	
+	                			$header_xml_field=$form->addChild('field');
+	 							$header_xml_field->addAttribute('name',Input::get("page_header_s$i"));
+	 							$header_xml_field->addAttribute('link','');
+	 							$header_xml_field->addAttribute('type','header');
+	 							$header_xml_field->addAttribute('group','section_header'); 
+	                            $header_xml_field->addAttribute('color_code','');
+	                            $header_xml_field->addAttribute('property','');
+	                            $header_xml_field->addAttribute('options','');
+	                			$elementCnt = Input::get("element_cnt_s$i");
+	                	for ($k = 1; $k <= $elementCnt; $k++) {
+	                   		 $ik = "_s$i" . "__$k";
+	                   		 		$section_items_xml_field=$form->addChild('field');
+	 							$section_items_xml_field->addAttribute('name',Input::get("page_header$ik"));
+	 							$section_items_xml_field->addAttribute('link',Input::get("link_type$ik"));
+	                        if(Input::get("page_item_sub$ik")=="Yes"){
+	                            $section_items_xml_field->addAttribute('type','section_items_sub');
+	                        }else if(Input::get("page_item_sub_sub$ik")=="Yes"){
+	                             $section_items_xml_field->addAttribute('type','section_items_sub_sub');
+	                        }else{
+	                             $section_items_xml_field->addAttribute('type','section_items');
+	                        }
+	 							$section_items_xml_field->addAttribute('group','section_items');  
+	                            $section_items_xml_field->addAttribute('color_code','');   
+	                            $section_items_xml_field->addAttribute('property',Input::get("page_item_property$ik"));   
+	                            $section_items_xml_field->addAttribute('options','');      
+	               if (Input::hasFile("page_item_image$ik")){
+	                                $image = Input::file("page_item_image$ik");
+	                                $name=$image->getClientOriginalName();
+	                                $section_image_xml_field=$form->addChild('field');
+	                                $section_image_xml_field->addAttribute('name',$section->shortname."/".$name);
+	                                $section_image_xml_field->addAttribute('link','');
+	                                $section_image_xml_field->addAttribute('type','image');
+	                                $section_image_xml_field->addAttribute('group','section_items');
+	                                $section_image_xml_field->addAttribute('color_code','');
+	                                $section_image_xml_field->addAttribute('property','');   
+	                                $section_image_xml_field->addAttribute('options','');
+	                              $image->move($section->section_url.'/', $image->getClientOriginalName());
+	                        }
+	                }
+	            }
+	            		  for ($f = 1; $f <= $action_cnt; $f++) { 
+	                        Input::get("action_s$f");
+	                        $actionDetailCnt = Input::get("action_detail_cnt_s$f");
+	                        $action_xml_field=$form->addChild('field');
+	                        $action_xml_field->addAttribute('name',Input::get("action_s$f"));
+	                        $action_xml_field->addAttribute('color_code',Input::get("color_s$f"));
+	                        $action_xml_field->addAttribute('link',Input::get("link_type_s$f"));
+	                        $action_xml_field->addAttribute('type','button');
+	                        $action_xml_field->addAttribute('group','actions');  
+	                        $action_xml_field->addAttribute('property','');   
+	                        $action_xml_field->addAttribute('options','');  
+	                }
+	            	}
+	            $xmlgui->asXML($xmlFileName);
+	           return Redirect::to('/content/poccms/forms')
+	                     ->withMessage('Page created successfully');  
 	        }
 	    }
 }

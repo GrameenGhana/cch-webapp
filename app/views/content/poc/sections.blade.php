@@ -49,8 +49,11 @@
                 <option>Select</option>
                     <option>ANC Diagnostic</option>
                     <option>ANC Counselling</option>
-                    <option>PNC Diagnostic</option>
+                    <option>ANC References</option>
+                    <option>PNC Diagnostic Newborn</option>
+                    <option>PNC Diagnostic Mother</option>
                     <option>PNC Counselling</option>
+                    <option>PNC References</option>
                     <option>CWC Diagnostic</option>
                     <option>CWC Counselling</option>
                     <option>CWC References</option>
@@ -59,6 +62,12 @@
                
 
             </div>
+             <div class="form-group">
+                <label>Section Description</label>
+                <input class="form-control" name="section_desc" id="section_desc">
+                <p class="help-block" style="color:Red">More descriptive and unique name of a section eg: CWC Anaemia</p>
+            </div>
+            
             <div class="form-group">
                 <label>Shortname</label>
                 <input class="form-control" placeholder="Enter text" name="shortname" id="shortname">
@@ -80,8 +89,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
     $("#generate").click(function () {
-    var lower = $('input#name_of_section').val().toLowerCase(); // to lower case
-    var hyp = lower.replace(/ /g,"_");         
+    var lower = $.trim($('input#section_desc').val().toLowerCase()); // to lower case
+    var value=lower.replace (/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/g,"");
+    var hyp = value.replace(/ /g,"_");        
+    
     $("#shortname").val(hyp);
 });
     });

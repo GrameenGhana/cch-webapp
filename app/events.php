@@ -9,6 +9,6 @@
 
 Event::listen('eloquent.saved: ZonePopulation', function($popinfo)
 {
-    Log::info("Zone Saved " . $popinfo->population);
+    //Log::info("Zone Saved " . $popinfo->population);
     IndicatorTracker::updateTrackerTarget($popinfo);
 });

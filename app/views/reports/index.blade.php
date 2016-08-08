@@ -68,7 +68,7 @@
                                                   <td>Facilities</td>
 
                                                   <td>
-                                                        <a title="View Reports" class="btn btn-sm btn-info" href="/reports/cch.export.php?action=cchfacilities&d={{$d}}"><i class="fa fa-bar-chart-o">View$
+                                                        <a title="View Reports" class="btn btn-sm btn-info" href="/reports/cch.export.php?action=cchfacilities&d={{$d}}"><i class="fa fa-bar-chart-o">View Report</i></a>
                                                   </td>
                                              </tr>
 

@@ -51,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label>Page Subtitle</label>
-                 {{ Form::select('page_subtitle',[null=>'Select']+['ANC Diagnostic'=>'ANC Diagnostic','ANC Counselling'=>'ANC Counselling','PNC Diagnostic'=>'PNC Diagnostic','PNC Counselling'=>'PNC Counselling','CWC Diagnostic'=>'CWC Diagnostic','CWC Counselling'=>'CWC Counselling','CWC References'=>'CWC References','CWC Calculators'=>'CWC Calculators'],$page_values->page_subtitle,array('class'=>'form-control','id' => 'page_subtitle'))}}   
+                 {{ Form::select('page_subtitle',[null=>'Select']+['ANC Diagnostic'=>'ANC Diagnostic','ANC Counselling'=>'ANC Counselling','ANC References'=>'ANC References','PNC Diagnostic Newborn'=>'PNC Diagnostic Newborn','PNC Diagnostic Mother'=>'PNC Diagnostic Mother','PNC Counselling'=>'PNC Counselling','PNC References'=>'PNC References','CWC Diagnostic'=>'CWC Diagnostic','CWC Counselling'=>'CWC Counselling','CWC References'=>'CWC References','CWC Calculators'=>'CWC Calculators'],$page_values->page_subtitle,array('class'=>'form-control','id' => 'page_subtitle'))}}   
             </div>
             
             <div class="form-group">
@@ -117,7 +117,7 @@
                                 </div>
                                  <div class="col-xs-6">
                                     <div class="form-group">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         {{ Form::label('header','Is sub item?') }}
                                         <select class="form-control" id="first_action_sub_s1" name="first_action_sub_s1">
                                             <option>No</option>
@@ -125,7 +125,19 @@
                                         </select>
                                        <!-- <input type="checkbox" id="first_action_sub_s1" name="first_action_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
-                                        <div class="col-xs-3">
+                                     <div class="col-xs-4">
+                                        {{ Form::label('header','Is item under sub item?') }}
+                                         <select class="form-control" id="first_action_sub_sub_s1__1" name="transport_sub_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
+                                    </div>
+                                       
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
                                              {{ Form::label('header','Text property') }}
                                            <select class="form-control" id="first_action_property_s1" name="first_action_property_s1">
                                             <option>Select</option>
@@ -140,10 +152,6 @@
                                                <option style="color:blue">Underlined Blue</option>
                                            </select>
                                         </div>
-                                        
-                                    </div>
-                                </div>
-                               
                             </div> 
                              <div class="row">
                                         <div class="col-xs-6">
@@ -188,7 +196,7 @@
                                 </div>
                                  <div class="col-xs-6">
                                     <div class="form-group">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         {{ Form::label('header','Is sub item?') }}
                                         <select class="form-control" id="transport_sub_s1" name="transport_sub_s1">
                                             <option>No</option>
@@ -196,7 +204,19 @@
                                         </select>
                                         <!--<input type="checkbox" id="transport_sub_s1" name="transport_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
-                                        <div class="col-xs-3">
+                                     <div class="col-xs-4">
+                                        {{ Form::label('header','Is item under sub item?') }}
+                                         <select class="form-control" id="transport_sub_sub_s1__1" name="transport_sub_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
+                                    </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                    <div class="col-xs-6">
                                              {{ Form::label('header','Text property') }}
                                            <select class="form-control" id="transport_property_s1" name="transport_property_s1">
                                             <option>Select</option>
@@ -211,10 +231,6 @@
                                                <option style="color:blue">Underlined Blue</option>
                                            </select>
                                         </div>
-                                        
-                                    </div>
-                                </div>
-
                             </div>      
                              <div class="row">
                                         <div class="col-xs-6">
@@ -256,7 +272,7 @@
                                 </div>
                                  <div class="col-xs-6">
                                     <div class="form-group">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         {{ Form::label('header','Is sub item?') }}
                                          <select class="form-control" id="noreferral_sub_s1" name="noreferral_sub_s1">
                                             <option>No</option>
@@ -264,7 +280,19 @@
                                         </select>
                                        <!-- <input type="checkbox" id="noreferral_sub_s1" name="noreferral_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
-                                        <div class="col-xs-3">
+                                    <div class="col-xs-4">
+                                        {{ Form::label('header','Is item under sub item?') }}
+                                         <select class="form-control" id="noreferral_sub_sub_s1__1" name="noreferral_sub_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
+                                    </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                              <div class="col-xs-6">
                                              {{ Form::label('header','Text property') }}
                                            <select class="form-control" id="noreferral_property_s1" name="noreferral_property_s1">
                                             <option>Select</option>
@@ -279,10 +307,6 @@
                                                <option style="color:blue">Underlined Blue</option>
                                            </select>
                                         </div>
-                                        
-                                    </div>
-                                </div>
-
                             </div>      
                              <div class="row">
                                         <div class="col-xs-6">
@@ -324,7 +348,7 @@
                                 </div>
                                  <div class="col-xs-6">
                                     <div class="form-group">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         {{ Form::label('header','Is sub item?') }}
                                          <select class="form-control" id="second_action_sub_s1" name="second_action_sub_s1">
                                             <option>No</option>
@@ -332,7 +356,19 @@
                                         </select>
                                         <!--<input type="checkbox" id="second_action_sub_s1" name="second_action_sub_s1" value="yes" class="form-control"/>  -->
                                     </div>
-                                        <div class="col-xs-3">
+                                    <div class="col-xs-4">
+                                        {{ Form::label('header','Is item under sub item?') }}
+                                         <select class="form-control" id="second_action_sub_sub_s1__1" name="second_action_sub_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
+                                    </div>
+                                       
+                                        
+                                    </div>
+                                </div>
+                                 <div class="col-xs-6">
                                              {{ Form::label('header','Text property') }}
                                            <select class="form-control" id="second_action_property_s1" name="second_action_property_s1">
                                             <option>Select</option>
@@ -347,9 +383,6 @@
                                                <option style="color:blue">Underlined Blue</option>
                                            </select>
                                         </div>
-                                        
-                                    </div>
-                                </div>
                                  
                             </div>    
                              <div class="row">
@@ -416,15 +449,15 @@
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <div class="form-group">
-                                                {{ Form::label('link_type_s1__1','Page Link') }}
-                                                {{ Form::select('link_type_s1__1',[null=>'Select']+$pages,'',array('class'=>'form-control'))}}
+                                                {{ Form::label('answer_link_type_s1__1','Page Link') }}
+                                                {{ Form::select('answer_link_type_s1__1',[null=>'Select']+$pages,'',array('class'=>'form-control'))}}
                                             </div>
                                         </div>
                                     </div>
                                      <div class="row">
                                         <div class="col-xs-6">
                                             <div class="form-group">
-                                                {{ Form::label('definition_s1__1','Definition') }}
+                                                {{ Form::label('definition_s1__1','Definition (For Take Action Classification Pages Only)') }}
                                                <input type="text" id="definition_s1__1" name="definition_s1__1" value="" class="form-control" />
                                             </div>
                                         </div>
@@ -474,9 +507,9 @@
                                                <input type="text" id="page_header_s1__1" name="page_header_s1__1" value="" class="form-control" />
                                             </div>
                                         </div>
-                                                 <div class="col-xs-6">
+                                     <div class="col-xs-6">
                                     <div class="form-group">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         {{ Form::label('header','Is sub item?') }}
                                          <select class="form-control" id="page_item_sub_s1__1" name="page_item_sub_s1__1">
                                             <option>No</option>
@@ -484,7 +517,19 @@
                                         </select>
                                         <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
                                     </div>
-                                        <div class="col-xs-3">
+                                     <div class="col-xs-4">
+                                        {{ Form::label('header','Is item under sub item?') }}
+                                         <select class="form-control" id="page_item_sub_sub_s1__1" name="page_item_sub_sub_s1__1">
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                        <!--<input type="checkbox" id="page_item_sub_s1__1" name="page_item_sub_s1__1" value="yes" class="form-control"/>  -->
+                                    </div>
+                                       
+                                        
+                                    </div>
+                                </div>
+                                     <div class="col-xs-6">
                                              {{ Form::label('header','Text property') }}
                                            <select class="form-control" id="page_item_property_s1__1" name="page_item_property_s1__1">
                                             <option>Select</option>
@@ -498,11 +543,7 @@
                                                <option style="color:red">Underlined Red</option>
                                                <option style="color:blue">Underlined Blue</option>
                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                       
+                                        </div>  
                             </div>
                                     <div class="row">
                                         <div class="col-xs-6">
@@ -784,9 +825,10 @@ function addTransportActionItem() {
 <script type="text/javascript">
     $(document).ready(function() {
     $("#generate").click(function () {
-    var lower = $('input#page_name').val().toLowerCase(); // to lower case
-    var hyp = lower.replace(/ /g,"_");         
-    $("#page_shortname").val(hyp);
+    var lower = $.trim($('input#page_name').val().toLowerCase()); // to lower case
+    var hyp = lower.replace(/ /g,"_");  
+    var value=hyp.replace (/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/g,"");       
+    $("#page_shortname").val(value);
 
 });
     });
@@ -853,6 +895,20 @@ function addTransportActionItem() {
             $("#actions").show();
              $("#referral").hide();
         }else if(id=="Info Page"){
+             $("#emergency_level").show();
+            $("#definition").hide();
+            $("#image").hide();
+            $("#first_action").hide();
+            $("#transport").hide();
+            $("#second_action").hide();
+            $("#question_header").hide();
+            $("#answer_items").hide();
+            $("#items").show();
+            $("#actions").show();
+            $("#referral_section").hide();
+             $("#referral").hide();
+
+        }else if(id=="Reference Page"){
              $("#emergency_level").hide();
             $("#definition").hide();
             $("#image").hide();

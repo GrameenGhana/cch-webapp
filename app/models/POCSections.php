@@ -30,6 +30,6 @@ class POCSections extends Revisionable {
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('name_of_section','sub_section', 'shortname','section_url');
+	protected $fillable = array('name_of_section','sub_section', 'shortname','section_url','section_desc');
 
 }

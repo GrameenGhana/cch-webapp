@@ -8,6 +8,8 @@ use Venturecraft\Revisionable\Revisionable;
 class User extends Revisionable implements UserInterface, RemindableInterface {
 
     protected $table = 'cch_users';
+    protected $dates = ['deleted_at'];
+
     protected $hidden = array('password', 'remember_token');
 
     protected $revisionEnabled = true;
@@ -58,6 +60,10 @@ class User extends Revisionable implements UserInterface, RemindableInterface {
         return User::whereRaw('username="'.$username.'"')->first();
     }
 
+    public function getFacilitiesByTime($time) {
+
+    }
+
     function getPrimaryFacilityDetails() {
         return ($this->getPrimaryFacilityId() == 0) ? "No Facility" : Facility::find($this->getPrimaryFacilityId())->name;
     }
@@ -66,11 +72,7 @@ class User extends Revisionable implements UserInterface, RemindableInterface {
         $list = "";
         $id = $this->getPrimaryFacilityId();
         foreach ($this->supervisedFacilities as $f) {
-//            if ($f->id == $id) {
-//                $list .= '<b>' . $f->name . ' in ' . $f->district . '</b><br/>';
-//            } else {
             $list .= $f->name . ' in ' . $f->facDistrict->name . '<br/>';
-//            }
         }
         return $list;
     }
@@ -92,12 +94,12 @@ class User extends Revisionable implements UserInterface, RemindableInterface {
         return 0;
     }
 
-public  static function getUserRegions($id) {
+    public  static function getUserRegions($id) {
         $facs = DB::select('select distinct cf.region from cch.cch_facilities cf inner join  cch.cch_facility_user cfu   on cf.id = cfu.facility_id  where cfu.user_id=? ', array($id));
        return $facs;
-}
+    }
 
- public  static function getUserSubDistricts($id) {
+    public  static function getUserSubDistricts($id) {
         $facs = DB::select('select distinct cf.sub_district from cch.cch_facilities cf inner join  cch.cch_facility_user cfu   on cf.id = cfu.facility_id  where cfu.user_id=? ', array($id));
         $dis = "";
         $cnt = 0;
@@ -111,8 +113,7 @@ public  static function getUserRegions($id) {
         return $dis;
     }
 
-
-public  static function getUserDistricts($id) {
+    public  static function getUserDistricts($id) {
         $user = User::find($id);
 
         if (in_array($user->role, array('Admin'))) {
@@ -315,25 +316,85 @@ public  static function getUserDistricts($id) {
     public function events($limit = false) {
         $events = array();
 
+        $where = "nurseid='{$this->username}' ";
+        if ($limit) {
+            $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
+            $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
+            $where .= "AND DATE(startdate) BETWEEN '$f' AND '$l'";
+        }
+ 
+        $sel = 'id, nurseid as nurseId, eventlocation as location,eventtype as type, startdate as start, ';
+        $sel .= 'enddate as end, deleted_at, justification, comments, evstatus as status';
+        $logs =  DB::connection('mysql2')->table('eventplanner')
+                        ->select(DB::raw($sel))
+                        ->whereRaw($where)
+                        ->orderBy('startdate','Desc')
+                        ->get();
+
+
+        foreach ($logs as $log) {
+                 $log->start =  date('U',strtotime($log->start));
+                 $log->end =  date('U',strtotime($log->end));
+                 $log->location = (isset($log->location)) ? $log->location : 'Unknown location';
+                 $log->title = addslashes(trim(@$log->type . ' at ' . $log->location));
+                 $log->justification = (!empty($log->justification))
+                                     ? $log->justification : 'No Justification';
+                 $log->comments = (!empty($log->comments)) ? $log->comments : 'No Comments';
+                 $log->status = (!empty($log->status)) ? $log->status : 'Unknown';
+
+                array_push($events, $log);
+        }
+
+        return $events;
+    }
+
+    public function targets($limit = true) {
+        $targets = array();
+
+        $where = "nurseid='{$this->username}' AND category NOT IN ('other') ";
+        if ($limit) {
+            $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
+            $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
+            $where .= "AND DATE(startdate) BETWEEN '$f' AND '$l'";
+        }
+
+        $sel = 'id, nurseid as nurseId, target_number as target, target_type as type, category, achieved,'; 
+        $sel .= 'justification, target_start_date as start, due_date as end, completed as status'; 
+        $logs =  DB::connection('mysql2')->table('targetsetting')
+                        ->select(DB::raw($sel))
+                        ->whereRaw($where)
+                        ->orderBy('start','Desc')
+                        ->get();
+
+        foreach ($logs as $log) {
+                 $log->justification = (!empty($log->justification))
+                                     ? $log->justification : 'No Justification';
+                 $log->status = (!empty($log->status)) ? $log->status : 'Unknown';
+                 array_push($targets, $log);
+        }
+
+        return $targets;
+    }
+
+    /*** old version based on logs table 
+    public function events($limit = false) {
+        $events = array();
         $deleted = array();
-        $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
-        $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
 
-
-
-
-        $where = ($limit) ? "module='Calendar' AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'" : "module='Calendar'";
-
-
-//echo $where;
-        $logs = $this->tracklogs()->whereRaw($where)->get();
+        $where = "nurseid='{$this->username}' ";
+        if ($limit) {
+            $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
+            $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
+            $where .= "AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'";
+        }
+ 
+        $logs = $this->tracklogs()->whereRaw($where)->orderBy('created_at',' desc')->limit(25)->get();
 
         foreach ($logs as $log) {
             $e = $this->createEvent($log->data, $log->start_time, $log->end_time);
             if ($e == null) {
                 
             } else if (is_array($e)) {
-
                 $s = md5($e["eventid"]);
                 if (!array_key_exists($s, $deleted)) {
                     $events[$s] = $e;
@@ -350,63 +411,18 @@ public  static function getUserDistricts($id) {
         return $events;
     }
 
-    /**
-      public function events($limit = false) {
-      $events = array();
-      $deletedEvents = array();
-
-      $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
-      $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
-
-
-
-
-      $where = ($limit) ? "module='Calendar' AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'" : "module='Calendar'";
-
-
-      //echo $where;
-      $logs = $this->tracklogs()->whereRaw($where)->get();
-
-      foreach ($logs as $log) {
-      $e = $this->createEvent($log->data, $log->start_time, $log->end_time);
-      if (is_array($e)) {
-      $s = md5($e["eventid"]);
-      if (!in_array($e["eventid"], $deletedEvents)) {
-      $events[$s] = $e;
-      } else {
-      unset($events[$s]);
-      var_dump($events);
-      }
-      } else {
-      $s = md5($e);
-      $deletedEvents[$s] = $e;
-      unset($events[$s]);
-      var_dump($events);
-      }
-      }
-
-      return $events;
-      }
-
-     * */ /**
-
-      public function targets()
-      {
-      $targets = array();
-      $logs = $this->tracklogs()->where('module','=','Target')->get();
-      foreach($logs as $log) {
-      }
-      return $targets;
-      }
-     * */
     public function targets($limit = true) {
         $targets = array();
-        //    $logs = $this->tracklogs()->where('module','=','Target')->get();
 
         $f = ((new DateTime(date('Y-m-d')))->modify('first day of previous month')->format('Y-m-d'));
         $l = ((new DateTime(date('Y-m-d')))->modify('last day of next month')->format('Y-m-d'));
 
-        $where = ($limit) ? "module='Target Setting' AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'" : "module='Target Setting'";
+        $where = "module='Target Setting'";
+        if ($limit) {
+            //$where = ($limit) ? "module='Target Setting' AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'" : "module='Target Setting'";
+            $where .= ($limit) ? " AND DATE(FROM_UNIXTIME(start_time /1000)) BETWEEN '$f' AND '$l'";
+        }
+        
         $logs = $this->tracklogs()->whereRaw($where)->get();
 
         foreach ($logs as $log) {
@@ -417,9 +433,9 @@ public  static function getUserDistricts($id) {
             }
         }
 
-
         return $targets;
     }
+    */
 
     public function nurseCount() {
         $count = DB::table($this->table)
@@ -470,76 +486,14 @@ public  static function getUserDistricts($id) {
         return $this->email;
     }
 
-    /**
-     * Set additional attributes as hidden on the current Model
-     *
-     * @return instanceof Model
-     */
-    public function addHidden($attribute) {
-        $hidden = $this->getHidden();
-
-        array_push($hidden, $attribute);
-
-        $this->setHidden($hidden);
-
-        // Make method chainable
-        return $this;
-    }
-
-    /**
-     * Convert appended collections into a list of attributes
-     *
-     * @param  object       $data       Model OR Collection
-     * @param  string|array $levels     Levels to iterate over
-     * @param  string       $attribute  The attribute we want to get listified
-     * @param  boolean      $hideOrigin Hide the original relationship data from the result set
-     * @return Model
-     */
-    public function listAttributes($data, $levels, $attribute = 'id', $hideOrigin = true) {
-
-        // Set some defaults on first call of this function (because this function is recursive)
-        if (!is_array($levels))
-            $levels = explode('.', $levels);
-
-        if ($data instanceof Illuminate\Database\Eloquent\Collection) { // Collection of Model objects
-            // We are dealing with an array here, so iterate over its contents and use recursion to look deeper:
-            foreach ($data as $row) {
-                $this->listAttributes($row, $levels, $attribute, $hideOrigin);
-            }
-        } else {
-            // Fetch the name of the current level we are looking at
-            $curLevel = array_shift($levels);
-
-            if (is_object($data->{$curLevel})) {
-                if (!empty($levels)) {
-                    // We are traversing the right section, but are not at the level of the list yet... Let's use recursion to look deeper:
-                    $this->listAttributes($data->{$curLevel}, $levels, $attribute, $hideOrigin);
-                } else {
-                    // Hide the appended collection itself from the result set, if the user didn't request it
-                    if ($hideOrigin)
-                        $data->addHidden($curLevel);
-
-                    // Convert Collection to Eloquent lists()
-                    if (is_array($attribute)) // Use specific attributes as key and value
-                        $data->{$curLevel . '_' . $attribute[0]} = $data->{$curLevel}->lists($attribute[0], $attribute[1]);
-                    else // Use specific attribute as value (= numeric keys)
-                        $data->{$curLevel . '_' . $attribute} = $data->{$curLevel}->lists($attribute);
-                }
-            }
-        }
-
-        return $data;
-    }
 
     public function createEvent($data, $start, $end) {
         $data = preg_replace("/\n/", "", $data);
-        //Log::info("Data ->" . $data);
         $events = json_decode($data);
-//echo "<br />".$data."<br />";
 
         $eventid = (isset($events->eventid)) ? $events->eventid : '0';
-
         $category = (isset($events->category)) ? $events->category : '';
+
         $deleted=0;
         try {
             $deleted = @$events->deleted;
@@ -547,35 +501,26 @@ public  static function getUserDistricts($id) {
             echo $exc->getTraceAsString();
         }
 
-
         if ($deleted == 0) {
             if (strtolower(@$events->eventtype) == 'personal' || strtolower($category) == 'personal') {
                 return null;
             } else {
-                //           $eventid = (isset($events->eventid)) ? $events->eventid : '0';
                 $location = (isset($events->location)) ? $events->location : 'unknown location.';
-                $justification = (isset($events->justification)) ? $events->justification : 'no justification.';
-                $comments = (isset($events->comments)) ? $events->comments : 'no comments.';
-                $status = 'unknown' ;
+                $justification = (isset($events->justification) && !empty($events->justification)>0) 
+                                    ? $events->justification : 'No Justification';
 
-                if($eventid == "417"){
-                     Log::info("Data -> " .$data);
+                $comments = (isset($events->comments) && !empty($events->comments))
+                                    ? $events->comments : 'No Comments';
 
-                }
-
-                try{
-                    if(strpos($data,'status') !== false ){
-                    $status = $events->status;
-
-                    Log::info("Status -> " .$status);
-                    }
-                }catch(Exception $ex){
+                $status = 'Unknown' ;
+                try {
+                    if(strpos($data,'status') !== false && !empty($events->status)){ $status=$events->status; }
+                } catch(Exception $ex){
 
                 }
                 
-
-
-                $event = array('title' => addslashes(trim(@$events->eventtype . ' at ' . $location)),
+                $event = array(
+                    'title' => addslashes(trim(@$events->eventtype . ' at ' . $location)),
                     'location' => addslashes($location),
                     'type' => addslashes(@$events->eventtype),
                     'start' => $start,
@@ -587,7 +532,6 @@ public  static function getUserDistricts($id) {
                 return $event;
             }
         }
-
      
         return $eventid;
     }
@@ -665,14 +609,14 @@ public  static function getUserDistricts($id) {
         return null;
     }
 
-  public static function isDistrictAdmin($role) {
+    public static function isDistrictAdmin($role) {
         if (in_array(strtolower($role), array('district admin','dhio','dhio assistant'))) {
             return true;
         }
         return false;
     }
 
- public static function getUsersInDistrict($id) {
+    public static function getUsersInDistrict($id) {
         $rawResult = (array) DB::select("SELECT cu.* FROM cch_users cu inner join cch_facility_user cfu  on cu.id = cfu.user_id and cfu.primary=1 inner join  cch_facilities cf on cf.id = cfu.facility_id where cf.district =? and cu.status='active' order by cu.first_name asc, last_name asc ",array($id));
         $users = User::hydrate($rawResult);
         
@@ -680,6 +624,65 @@ public  static function getUserDistricts($id) {
         return $users;
     }
 
+    /**
+     * Set additional attributes as hidden on the current Model
+     *
+     * @return instanceof Model
+     */
+    public function addHidden($attribute) {
+        $hidden = $this->getHidden();
+
+        array_push($hidden, $attribute);
+
+        $this->setHidden($hidden);
+
+        // Make method chainable
+        return $this;
+    }
+    /**
+     * Convert appended collections into a list of attributes
+     *
+     * @param  object       $data       Model OR Collection
+     * @param  string|array $levels     Levels to iterate over
+     * @param  string       $attribute  The attribute we want to get listified
+     * @param  boolean      $hideOrigin Hide the original relationship data from the result set
+     * @return Model
+     */
+    public function listAttributes($data, $levels, $attribute = 'id', $hideOrigin = true) {
+
+        // Set some defaults on first call of this function (because this function is recursive)
+        if (!is_array($levels))
+            $levels = explode('.', $levels);
+
+        if ($data instanceof Illuminate\Database\Eloquent\Collection) { // Collection of Model objects
+            // We are dealing with an array here, so iterate over its contents and use recursion to look deeper:
+            foreach ($data as $row) {
+                $this->listAttributes($row, $levels, $attribute, $hideOrigin);
+            }
+        } else {
+            // Fetch the name of the current level we are looking at
+            $curLevel = array_shift($levels);
+
+            if (is_object($data->{$curLevel})) {
+                if (!empty($levels)) {
+                    // We are traversing the right section, but are not at the level of the list yet... Let's use recursion to look deeper:
+                    $this->listAttributes($data->{$curLevel}, $levels, $attribute, $hideOrigin);
+                } else {
+                    // Hide the appended collection itself from the result set, if the user didn't request it
+                    if ($hideOrigin)
+                        $data->addHidden($curLevel);
+
+                    // Convert Collection to Eloquent lists()
+                    if (is_array($attribute)) // Use specific attributes as key and value
+                        $data->{$curLevel . '_' . $attribute[0]} = $data->{$curLevel}->lists($attribute[0], $attribute[1]);
+                    else // Use specific attribute as value (= numeric keys)
+                        $data->{$curLevel . '_' . $attribute} = $data->{$curLevel}->lists($attribute);
+                }
+            }
+        }
+
+        return $data;
+    }
 
 }
 

@@ -1,6 +1,7 @@
 {
     "require": {
         "pda/pheanstalk": "~2.1",
-        "venturecraft/revisionable": "1.*"
+        "venturecraft/revisionable": "1.*",
+        "maatwebsite/excel": "~1.3"
     }
 }

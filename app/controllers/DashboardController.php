@@ -47,4 +47,9 @@ class DashboardController extends BaseController {
 	{
 	   	    return View::make('dashboards.stayingwell', array('dashboard'=>$this->dashboard));
 	}
+
+    public function QualityAssuranceReport()
+    {
+	   	    return View::make('dashboards.qar', array('dashboard'=>$this->dashboard));
+    }
 }

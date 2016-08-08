@@ -41,14 +41,16 @@
             <div class="alert alert-success fade in"> <a href="#" class="close" data-dismiss="alert">&times;</a><strong>Success!</strong> {{ Session::get('message') }}</div>
         @endif
         <div class="dataTable_wrapper"> 
+        <div class="col-md-12">
 		<table class="table table-striped table-bordered"  id="dataTables-example">
 			<thead>
 				<tr>
-					<th>Page Desc</th>
-					<th>Page Section</th>
+			   <!--<th>Page Desc</th>-->
+					<!--<th>Page Section</th>-->
 					<th>Page Shortname</th>
 					<th>Page Type</th>
 					<th>Page Subtitle</th>
+          <th>Link Value</th>
 					<th>Status</th>
 					<th>Actions</th>
 				</tr>
@@ -56,11 +58,12 @@
 			<tbody>
 			  @foreach($pages as $page)
 				<tr>
-					<td>{{$page->page_name}}</td>
-					<td>{{$page->page_section}}</td>
-					<td style="width: 20%">{{$page->page_shortname}}</td>
-					<td>{{$page->type_of_page}}</td>
-					<td>{{$page->page_subtitle}}</td>
+					<!--<td>{{$page->page_name}}</td>-->
+					<!--<td>{{$page->page_section}}</td>-->
+					<td style="max-width:100px;word-wrap:break-word;">{{$page->page_shortname}}</td>
+					<td style="max-width:50px;word-wrap:break-word;">{{$page->type_of_page}}</td>
+					<td style="max-width:100px;word-wrap:break-word;">{{$page->page_subtitle}}</td>
+         <td style="max-width:100px;word-wrap:break-word;">{{$page->page_link_value}}</td>
 					@if(file_exists($page->page_url)) 
 						<td><span class="btn btn-success btn-circle"><i class="fa fa-check"></i></span></td>
   					@else
@@ -79,6 +82,7 @@
 		@endsection
 		@include('content.poc.widgets.panel', array('header'=>true, 'as'=>'cotable'))
 	</div>
+  </div>
 </div>
 </div>
 

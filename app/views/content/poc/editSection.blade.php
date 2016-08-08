@@ -57,8 +57,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
     $("#generate").click(function () {
-    var lower = $('input#name_of_section').val().toLowerCase(); // to lower case
-    var hyp = lower.replace(/ /g,"_");         
+    var lower = $.trim($('input#name_of_section').val().toLowerCase()); // to lower case
+    var value=lower.replace (/[`~!@#$%^&*()|+\-=?;:'",.<>\{\}\[\]\\\/]/g,"");
+    var hyp = value.replace(/ /g,"_");        
+    
     $("#shortname").val(hyp);
 
 });

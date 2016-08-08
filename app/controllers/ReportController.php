@@ -15,6 +15,8 @@ class ReportController  extends BaseController
 {
     public function index() 
     {
+    if (Auth::check())
+        {   
         $this->districtIds = User::getUserDistricts(Auth::user()->id);
         $this->isDistrictAdmin = false;
 
@@ -28,6 +30,9 @@ class ReportController  extends BaseController
         for($i=date('Y'); $i >= 2012; $i--) { array_push($years, $i); }
         
         return View::make('reports.index',array('d'=> $this->districtIds, 'years'=>$years));
+    }else{
+             return View::make('login');
+        }
     }
 }
 

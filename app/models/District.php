@@ -4,6 +4,8 @@ use Venturecraft\Revisionable\Revisionable;
 
 class District extends Revisionable { 
 
+    protected $dates = ['deleted_at'];
+
     protected $revisionEnabled = true;
     protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
     protected $historyLimit = 500;
@@ -15,7 +17,6 @@ class District extends Revisionable {
     {
         return $this->name;
     }
-
 
     public function users()
     {

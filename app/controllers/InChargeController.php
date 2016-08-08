@@ -18,16 +18,29 @@ class InChargeController extends BaseController {
        return Response::json(array('error' => false, 'data' => $data), 200);
 	}
 
+    private function microtime_float()
+    {
+        list($usec, $sec) = explode(" ", microtime());
+            return ((float)$usec + (float)$sec);
+    }
+
+
     public function show($id)
     {
+        $ts = $this->microtime_float();
+
         $sup = User::whereRaw('username=? and role like "%Supervisor%"',array($id))->first();
 
         if (is_null($sup)) {
 		    $errors = array('Supervisor not found'); 
+            $te = $this->microtime_float();
+            Log::info("Time for $id: " . ($te-$ts)."s");
     		return Response::json(array('error' => true, 'messages'=>$errors), 200);
         } else {
             $s = $this->details($sup); 
-    	return Response::json(array('error' => false, 'data' => array('supervisor'=>$s)), 200);
+            $te = $this->microtime_float();
+            Log::info("Time for $id: " . ($te-$ts)."s");
+    	    return Response::json(array('error' => false, 'data' => array('supervisor'=>$s)), 200);
         }	    
     }
     
@@ -46,18 +59,18 @@ class InChargeController extends BaseController {
             foreach($sup->facilities as $k=>$v)
             {
                 $nurses = array();
+                $allowed = array('ACTIVE','TEST','OWNDEVICE');
                 foreach($v->nurses() as $n)
-                      {
-if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {     
-         array_push($nurses, $n->toArray());
-                }}
-         array_push($facs, array('name'=>$v->name,
+                {
+                    if(in_array($n->status,$allowed) || ($sup->status=='TEST' && $n->status=='TEST')) {     
+                        array_push($nurses, $n->toArray());
+                    }
+                }
+                    array_push($facs, array('name'=>$v->name,
                                  'id'=>$v->id,
                                  'district'=>$v->facDistrict->name,
                                  'did'=>$v->facDistrict->id,
-                                
                                  'region'=>$v->facDistrict->region,
-
                                 'nurses'=>$nurses,
                                   ));
           }
@@ -152,8 +165,6 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                 'justification' => $justification,
                 'comments' => $comments,
                 'status' => $status);
-
-
         }
 
 
@@ -181,8 +192,6 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
                 'justification' => ($target->justification),
                 'start' => $target->start,
                 'end' => $target->end);
-
-
         }
 
         return $targets;
@@ -198,14 +207,11 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
 
         foreach($topicsdata as $t => $topic) {
 
-
             $topics[$topic->title] = array(
                 'last_accessed' => $topic->last_accessed,
                 'time_taken' => $topic->time_taken,
                 'percentcomplete' => $topic->percentcomplete,
                 'activities' => $topic->activities);
-
-
         }
 
         return $topics;
@@ -236,9 +242,39 @@ if($n->status=='ACTIVE' || $sup->status=='TEST' && $n->status=='TEST') {
         return $courses;
     }
 
+    protected function getUserCoursesForAchievements($username){
+        $userid=DB::table('cch_users')
+                    ->where('username','=',$username)
+                    ->first();
+
+        $coursesdata = DB::table('user_courses')
+            ->where('username','=',$userid->id)
+            ->get();
+
+
+        $courses= array();
+
+        foreach($coursesdata as $c => $course) {
+            $courses[$c] = array(
+              //'topics' => $this->getUserCoursesTopics($course->title),
+                'course'=>$course->course,
+                'title'=>$course->title,
+                'attempts' => $course->attempts,
+                'score' => $course->score,
+                'time_taken' => $course->time_taken,
+                'last_accessed' => $course->last_accessed,
+                'percentcomplete' => $course->percentcomplete);
+
+
+        }
+
+        return $courses;
+    }
+
 
 public function showdetail($id) {
 //        $sup = User::whereRaw('id=? and role="Supervisor"',array($id))->first();
+    
         $sup = User::whereRaw('username=?', array($id))->first();
         $surveys=DB::table('cch_tracker')
                     ->select(DB::raw('data,start_time'))
@@ -261,8 +297,6 @@ public function showdetail($id) {
             foreach ($sup->supervisedFacilities as $k => $v) {
                 $facilities[] = array("id" => $v->id, "name" => $v->name);
             }
-
-
             $primary = array("id" =>@ $sup->getPrimaryFacility()->facility_id, "name" => $sup->getPrimaryFacilityDetails());
 
 //            echo 'select * from cch.districts u where u.id =(select district from  cch.cch_facilities cf where cf.id='.$sup->getPrimaryFacility()->facility_id.' ) ';
@@ -294,17 +328,77 @@ public function showdetail($id) {
                         "survey_popup"=>$survey_popup));
 
         }
+        
+    }
+    public function showdetailWithInputId() {
+//        $sup = User::whereRaw('id=? and role="Supervisor"',array($id))->first();
+    $id=Input::get("id");
+        $sup = User::whereRaw('username=?', array($id))->first();
+        $surveys=DB::table('cch_tracker')
+                    ->select(DB::raw('data,start_time'))
+                    ->where('username','=',$id)
+                    ->where('data','like','%profile%')
+                    ->where('data','not like','%activity%')
+                    ->get();
+
+        $survey_popup=DB::table('cch_tracker')
+                       ->select(DB::raw('data'))
+                       ->where('username','=',$id)
+                       ->where('module','like','%Survey%')
+                       ->get();
+        if (is_null($sup)) {
+            $errors = array('User Not Found');
+            return Response::json(array('error' => true, 'messages' => $errors), 200);
+        } else {
+            $s = $this->details($sup);
+            $facilities = array();
+            foreach ($sup->supervisedFacilities as $k => $v) {
+                $facilities[] = array("id" => $v->id, "name" => $v->name);
+            }
+            $primary = array("id" =>@ $sup->getPrimaryFacility()->facility_id, "name" => $sup->getPrimaryFacilityDetails());
+
+//            echo 'select * from cch.districts u where u.id =(select district from  cch.cch_facilities cf where cf.id='.$sup->getPrimaryFacility()->facility_id.' ) ';
+
+              $district = DB::select('select * from cch.districts u where u.id =(select district from  cch.cch_facilities cf where cf.id=? ) ', array(@ $sup->getPrimaryFacility()->facility_id));
+             $dist = "No District";
+         foreach($district as $d)
+        {$dist = $d->name;
+        
+}
+         //   $groups=DB::select('SELECT cu.username, cu.last_name,cu.first_name,
+           //                      IF(cu.ischn = 1, "Yes",IF(cu.ischn  = 0 ,"No","No"))
+             //                    as is_chn,cf.facility_type ,cf.name,cu.status 
+               //                  FROM cch.cch_users cu 
+                 //                LEFT JOIN cch.cch_facility_user cfu  
+                   //              ON cu.id = cfu.user_id 
+                     //            AND cfu.`primary` = 1 
+                       //          LEFT JOIN cch.cch_facilities cf on cf.id = cfu.facility_id 
+                         //        LEFT JOIN cch.districts d on d.id=cf.district  
+                           //      AND d.id='.$d->id.' where cu.status="ACTIVE" group by cu.username');
+
+            return Response::json(array('error' => false,"user_id"=>$sup->id, 'last_name' => $sup->last_name, "first_name" => $sup->first_name,
+                        "role" => $sup->role, "ischn" => $sup->ischn, "title" => $sup->title,
+                        "primary_facility" => $primary,
+                        "district" => $dist,
+                       // "groups"=>$groups,
+                        "supervised_facility" => $facilities,
+                        "survey_data"=>$surveys,
+                        "survey_popup"=>$survey_popup));
+
+        }
+        
     }
     public function achievements($id){
+
          $target_achievements=DB::connection('mysql2')
                              ->select(DB::raw('Select t.* from targetsetting t left outer join targetsetting t2 on(t.target_id=t2.target_id and t.nurseid=t2.nurseid and t.startdate<t2.startdate)  where t2.id is null and t.nurseid=:id'),array('id'=>$id,));
-                                 $course_achievements=DB::connection('mysql2')
-                                ->table('learningcenter_quizzes')
-                                ->select(DB::raw('*'))
-                                ->where('username','=',$id)
-                                ->get();
+        $course_achievements=DB::connection('mysql2')
+                             ->table('learningcenter_quizzes')
+                             ->select(DB::raw('*'))
+                             ->where('username','=',$id)
+                             ->get();
 
-                                $courses_for_ksa=DB::connection('mysql2')
+        $courses_for_ksa=DB::connection('mysql2')
                                 ->table('finalquizscores')
                                 ->select(DB::raw('*'))
                                 ->where('username','=',$id)
@@ -313,6 +407,16 @@ public function showdetail($id) {
                               return Response::json(array("targets"=>$target_achievements,
                                                             "courses"=>$course_achievements,
                                                             "new_courses"=>$courses_for_ksa));
+    }
+     public function courseAchievements($id){
+
+        $courses_for_ksa=DB::connection('mysql2')
+                                ->table('finalquizscores')
+                                ->select(DB::raw('*'))
+                                ->where('username','=',$id)
+                                ->get();
+
+                              return Response::json(array("new_courses"=>$courses_for_ksa));
     }
 }
 

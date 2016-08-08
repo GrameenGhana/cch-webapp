@@ -27,8 +27,10 @@
 
         {{ HTML::style('css/chosen/chosen.css'); }} 
 
-        <!-- jQuery 2.0.2 -->
+        <!-- jQuery 2.0.2 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+-->
+        {{ HTML::script('js/jquery-1.12.0.min.js'); }}
         <!-- jQuery UI 1.10.3 -->
         {{ HTML::script('js/jquery-ui-1.10.3.min.js'); }}
         <!-- Bootstrap -->
@@ -178,8 +180,11 @@
                                         <li class="{{ Request::is('content/poccms/section*') ? 'active' : '' }}">
                                             <a href="{{ URL::to('content/poccms/section') }}"><i class="fa fa-edit fa-fw"></i>Add Sections</a>
                                         </li>
+                                        <li class="{{ Request::is('content/poccms/addreference*') ? 'active' : '' }}">
+                                            <a href="{{ URL::to('content/poccms/addreference') }}"><i class="fa fa-edit fa-fw"></i>Add References</a>
+                                        </li>
                                         <li class="{{ Request::is('content/poccms/upload*') ? 'active' : '' }}">
-                                            <a href="{{ URL::to('content/poccms/upload') }}"><i class="fa fa-upload"></i>Upload Content</a>
+                                            <a href="{{ URL::to('content/poccms/upload') }}"><i class="fa fa-upload"></i>View & Upload Content</a>
                                         </li>
                                     </ul>
                                </li> 
@@ -277,7 +282,7 @@
         <!-- iCheck -->
         {{ HTML::script('js/plugins/iCheck/icheck.min.js'); }}
         <!-- data tables -->
-        {{ HTML::script('js/plugins/datatables/jquery.dataTables.js'); }}
+        {{ HTML::script('js/plugins/datatables/jquery.dataTables.min.js'); }}
         {{ HTML::script('js/plugins/datatables/dataTables.bootstrap.js'); }}
         {{ HTML::script('js/plugins/datatables/tableExport.js'); }}
         {{ HTML::script('js/plugins/datatables/jquery.base64.js'); }}

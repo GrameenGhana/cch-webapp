@@ -210,6 +210,170 @@ class Dashboard extends Eloquent {
     /*** End Indicators  **/
 
 
+    /** Quality Assurance Reports **/
+    public static function QARUserStatusSummary($params=null)
+    {
+        $data = array();
+
+        $p = Dashboard::processInput($params);
+        $where = Dashboard::buildQARWhere($params);
+
+        // process dates
+        $edate = "DATE('".$p['enddate']."')";
+
+        $sql = "SELECT cu.id
+				     , cu.status 
+				     , d.region
+				     , d.name as district
+				     , cf.name as facility
+                     , IF(csc.user_id IS NULL, 'none', IF(csc.mxid!='none',csc.mxid,csc.mnid)) as schange 
+				  FROM cch.cch_users cu 
+                  LEFT JOIN (select sc.user_id
+                  , (select ifnull((select new_status from cch_user_status_change where id=max(x.id)),'none') 
+                                         from cch_user_status_change x
+                                        where x.created_at < $edate and x.user_id=sc.user_id) as mxid
+                  , (select ifnull((select old_status from cch_user_status_change where id=min(y.id)),'none') 
+                                         from cch_user_status_change y 
+                                        where y.created_at > $edate and y.user_id=sc.user_id) as mnid
+                               from cch_user_status_change sc
+                               group by sc.user_id) csc ON csc.user_id = cu.id 
+				  JOIN cch.cch_facility_user cfu on cfu.user_id = cu.id AND cfu.`primary` = 1 
+				  JOIN cch.cch_facilities cf on cf.id = cfu.facility_id 
+                  JOIN cch.districts d on d.id=cf.district
+                 WHERE $where";
+
+        $d =  DB::connection('mysql')->select(DB::raw($sql));
+
+        foreach($d as $p) 
+        { 
+           $status = ($p->schange=='none' or $p->status==$p->schange) ? $p->status : $p->schange;
+
+           if (in_array($p->district, array_keys($data))) {
+                $data[$p->district][$status]++;
+                $data[$p->district]['Total']++;
+            } else {
+                $data[$p->district] = array('District'=>$p->district, 'ACTIVE'=>0,'ERROR'=>0,
+                                            'INACTIVE'=>0, 'OWNDEVICE'=>0,'TEST'=>0,'Total'=>0);
+                $data[$p->district][$status]++;
+                $data[$p->district]['Total']++;
+            }
+        }
+
+        return array('data'=> array_values($data));
+    }
+
+    public static function QARVersionInUse($params=null)
+    {
+        $data = array();
+
+        $p = Dashboard::processInput($params);
+        $versions = Dashboard::VersionByPeriod($p['enddate']);
+        $edate = "DATE('".$p['enddate']."')";
+
+        // get users active during the period
+        $users = Dashboard::UserByPeriodStatus($params, 'ACTIVE');
+        $where = Dashboard::buildQARWhere($params,true);
+        $where .= " AND cu.id IN (".implode(',',$users).")";
+
+        $sql = "SELECT d.region
+				     , d.name as district
+                     , t2.ver
+                     , COUNT(cu.id) as c
+				  FROM cch.cch_users cu 
+                  JOIN (SELECT username, MAX(version) ver, MAX(start_time) as last_date 
+                          FROM cch.cch_tracker 
+                         WHERE FROM_UNIXTIME(start_time/1000) <= $edate
+                         GROUP BY username
+                         HAVING MAX(FROM_UNIXTIME(start_time/1000)) < $edate) t2 ON t2.username= cu.username
+				  JOIN cch.cch_facility_user cfu on cfu.user_id = cu.id AND cfu.`primary` = 1 
+				  JOIN cch.cch_facilities cf on cf.id = cfu.facility_id 
+                  JOIN cch.districts d on d.id=cf.district
+                 WHERE $where AND cu.ischn = 1
+                 GROUP BY d.region, d.name, t2.ver";
+
+        $d =  DB::connection('mysql')->select(DB::raw($sql));
+
+        foreach($d as $p) 
+        { 
+           $p->ver = ($p->ver=="") ? "None" : $p->ver;
+
+           if (in_array($p->district, array_keys($data))) {
+                $data[$p->district][$p->ver] = $p->c;
+            } else {
+                $data[$p->district] = array(); 
+                $data[$p->district]['District'] = $p->district;
+                foreach($versions as $v) { $data[$p->district][$v] = 0; }
+                $data[$p->district][$p->ver] = $p->c;
+            }
+        }
+
+        return array('data'=> array_values($data));
+    }
+
+    public static function VersionByPeriod($edate=null)
+    {
+        $versions = array();
+    
+        $edate = ($edate==null) ? date('Y-m-d') : $edate;
+
+        $sql = "SELECT DISTINCT(IF(version='' || version is NULL,'None',version)) v
+				  FROM cch.cch_tracker 
+                 WHERE FROM_UNIXTIME(start_time/1000) <= DATE('$edate')
+                 ORDER BY v";
+
+        $d =  DB::connection('mysql')->select(DB::raw($sql));
+
+        foreach($d as $p) { array_push($versions, $p->v); } 
+
+        return $versions; 
+    }
+
+    private static function UserByPeriodStatus($params, $status)
+    {
+        $users = array();
+
+        $p = Dashboard::processInput($params);
+        $where = Dashboard::buildQARWhere($params);
+
+        // process dates
+        $edate = "DATE('".$p['enddate']."')";
+
+        $sql = "SELECT cu.id
+				     , cu.status 
+				     , d.region
+				     , d.name as district
+				     , cf.name as facility
+                     , IF(csc.user_id IS NULL, 'none', IF(csc.mxid!='none',csc.mxid,csc.mnid)) as schange 
+				  FROM cch.cch_users cu 
+                  LEFT JOIN (select sc.user_id
+                  , (select ifnull((select new_status from cch_user_status_change where id=max(x.id)),'none') 
+                                         from cch_user_status_change x
+                                        where x.created_at < $edate and x.user_id=sc.user_id) as mxid
+                  , (select ifnull((select old_status from cch_user_status_change where id=min(y.id)),'none') 
+                                         from cch_user_status_change y 
+                                        where y.created_at > $edate and y.user_id=sc.user_id) as mnid
+                               from cch_user_status_change sc
+                               group by sc.user_id) csc ON csc.user_id = cu.id 
+				  JOIN cch.cch_facility_user cfu on cfu.user_id = cu.id AND cfu.`primary` = 1 
+				  JOIN cch.cch_facilities cf on cf.id = cfu.facility_id 
+                  JOIN cch.districts d on d.id=cf.district
+                 WHERE $where";
+
+        $d =  DB::connection('mysql')->select(DB::raw($sql));
+
+        foreach($d as $p) 
+        { 
+            $s = ($p->schange=='none' or $p->status==$p->schange) ? $p->status : $p->schange;
+            if ($status==$s)
+            {
+                    array_push($users, $p->id);
+            }
+
+        }
+
+        return $users; 
+    }
+
     /*** Staying Well **/
     public function swPlans($params=null)
     {
@@ -391,6 +555,48 @@ class Dashboard extends Eloquent {
 
         return $where;
     }
+
+    protected static function buildQARWhere($params, $loconly=false)
+    {
+        if (is_null($params)) { return "1=1"; }
+
+        $params = Dashboard::processInput($params);
+
+       // process dates
+        $where = ($loconly) ? "1=1" : "DATE(cu.created_at) BETWEEN  DATE('".$params['startdate']."') AND DATE('".$params['enddate']."')";
+
+        // process location option
+        if (! is_null($params['location']))
+        {
+            if (!in_array('all',$params['location']))
+            {
+                $facs = array();
+                $l = new Facility;
+
+                foreach($params['location'] as $f)
+                {
+                    if (preg_match("/Region/",$f)) {
+                        $ids = $l->facilities($f,null);
+                        foreach($ids as $id =>$v) { array_push($facs, $id); }
+
+                    } else if (preg_match("/District/",$f)) {
+                        $ids = $l->facilities(null,$f);
+                        foreach($ids as $id =>$v) { array_push($facs, $id); }
+
+                    } else {
+                        array_push($facs, $f);
+                    }
+                }
+
+                if (! empty($facs)) {
+                    $where .= " AND cf.id in (".implode(',',$facs).")";
+                }
+            }
+        }
+
+        return $where;
+    }
+
 
     public static function processInput($data)
     {
