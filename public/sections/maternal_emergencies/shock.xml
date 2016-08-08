@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Red" name="shock" page_subtitle="PNC Diagnostic Mother: Maternal Emergencies  &gt; Shock" page_title="Point of Care" type_of_page="Take Action Page">
+		<field color_code="" group="definition" link="" name="" options="" property="" type="definition"/>
+		<field color_code="" group="first_actions" link="" name="Take Action: Shock" options="" property="" type="first_section_head"/>
+		<field color_code="" group="first_actions" link="" name="Refer client to a health center or hospital IMMEDIATELY" options="" property="Select" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="Call provider and arrange transport " options="" property="Select" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="" options="" property="Select" type="first_actions"/>
+		<field color_code="" group="transport_actions" link="" name="While waiting for transport: " options="" property="" type="transport_section_head"/>
+		<field color_code="" group="transport_actions" link="" name="Put client on her left side with her legs high above the chest   " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="" name="Cover the mother for warmth" options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="second_actions" link="" name="Record clinical information in client’s maternal health or “Red” book. If possible, also fill out referral form " options="" property="Select" type="second_actions"/>
+		<field color_code="" group="second_actions" link="" name="Accompany mother and have a family member accompany mother to the health facility" options="" property="Select" type="second_actions"/>
+		<field color_code="" group="second_actions" link="" name="Follow up with client after discharge from health center or hospital" options="" property="Select" type="second_actions"/>
+		
+	</form>
+</xmlgui>

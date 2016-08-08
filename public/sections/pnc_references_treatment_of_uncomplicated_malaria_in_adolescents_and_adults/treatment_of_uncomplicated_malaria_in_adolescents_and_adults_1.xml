@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treatment_of_uncomplicated_malaria_in_adolescents_and_adults_1" page_subtitle="PNC References: PNC References Treatment of Uncomplicated Malaria in Adolescents and Adults&gt; Treatment of Uncomplicated Malaria in Adolescents and Adults 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Signs and Symptoms" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Adults with uncomplicated may present with the following symptoms:  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Headache" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Lassitude" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Fatigue" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Abdominal discomfort" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Muscle and joint aches" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="These maybe followed by fever, chills, perspiration, anorexia, vomiting and worsening malaise.  Most of these signs and symptoms are non-specific and may occur with other infectious condition such as viral infections.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Treatment of Uncomplicated Malaria" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/55.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Preferred 1st Line Treatment with Artesunate-Amodiaquine " options="" property="Bold Blue" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Co-Blistered Formulation:  " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Tablets of each drug come packaged together.  " options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="Artesunate and Amodiaquine should be administered together.  They may be administered either as a single dose each day OR as divided doses. If given as divided doses, half of the dose should be given in the morning, and half in the evening " options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="IF given as SINGLE DAILY DOSING " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/4.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="If given as TWICE DAILY DOSING: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/5.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="With Fixed-Dose Combination Therapy: 2 tablets once a day for 3 days for adolescents and adults" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/6.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/treatment_of_uncomplicated_malaria_in_adolescents_and_adults_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

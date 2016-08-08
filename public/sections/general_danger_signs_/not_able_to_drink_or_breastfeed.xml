@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="not_able_to_drink_or_breastfeed" type_of_page="Take Action Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: General Danger Signs &gt; Not able to Drink or Breastfeed" color_code="Red">
+		<field name="" link="" type="definition" group="definition" color_code="" property="" options=""/>
+		<field name="Take Action: Not able to Drink or Breastfeed" link="" type="first_section_head" group="first_actions" color_code="" property="" options=""/>
+		<field name="Check vital signs and complete assessment quickly.: Assess the child for the following:" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Cough or difficult breathing " link="cough or difficult breathing/cough_or_difficult_breathing1" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Diarrhoea " link="cwc_diarrhoea/diarrhoea_1" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Fever " link="cwc_fever/fever1" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Ear problem " link="ear_problems/ear_problems_1" type="first_actions_sub" group="first_actions" color_code="" property="Select" options=""/><field name="Administer any necessary pre-referral treatment " link="pre-referral_treatments_in_clinics/prereferral_treatments_in_clinics1" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Refer mother/caregiver and child to a health center or hospital IMMEDIATELY" link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="Fill out referral form, and record clinical care in Child Health Records &#x201C;green&#x201D; book  " link="" type="first_actions" group="first_actions" color_code="" property="Select" options=""/>
+		<field name="While waiting for transport: " link="" type="transport_section_head" group="transport_actions" color_code="" property="" options=""/>
+		<field name="Advise mother/caregiver not to put the child on her back " link="" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver how to keep the child warm on the way to the health facility" link="keeping_child_warm_on_the_way_to_the_hospital/keeping_child_warm_on_the_way_to_the_hospital1" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="If child still breastfeeds, observe mother breastfeeding and provide counseling on breast attachment and positioning, if necessary " link="feeding_a_healthy_child/breastfeeding_attachment_and_position" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child" link="feeding_a_healthy_child/feeding_a_healthy_child1" type="transport_actions" group="transport_actions" color_code="" property="Select" options=""/>
+		<field name="Accompany mother and child to the health facility" link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="Follow up with client after discharge from health center or hospital" link="" type="second_actions" group="second_actions" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/></form></xmlgui>

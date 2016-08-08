@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="soothe_throat_and_relieve_cough_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Soothe Throat and Relieve Cough&gt; Soothe Throat and Relieve Cough Two" color_code="Select">
+		<field name="Counsel mother/caregiver to avoid harmful remedies" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Advise mother/caregiver NOT to give cough syrups:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="These syrups may sedate the child and interfere with feeding" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="They may also interfere with the child's ability to cough up secretions from the lungs " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+
+		<field name="Advise mother/caregiver to avoid medicated nose drops (those that contain anything other than saline): " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="These might have similar side effects to cough syrups and can also be relatively expensive" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

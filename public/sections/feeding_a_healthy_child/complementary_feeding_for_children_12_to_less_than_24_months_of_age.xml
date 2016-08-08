@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="complementary_feeding_for_children_12_to_less_than_24_months_of_age" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding A Healthy Child &gt; Complementary Feeding For Children 12 &#x2013; &lt; 24 MONTHS OF AGE " color_code="Select">
+		<field name=" Complementary Feeding from 12 &#x2013; &lt; 24 Months | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="feeding_a_healthy_child/32.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Continue breastfeeding your child on demand both day and night, breastmilk continues to be the most important part of your child&#x2019;s diet " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Breastmilk continues to make up one-third of young child&#x2019;s energy needs from 12 &#x2013; &lt; 24 months of age " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="To help your child to grow strong and breastfeed, you should use a family planning method to prevent another pregnancy" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Next" color_code="Default" link="feeding_a_healthy_child/complementary_feeding_for_children_12_to_less_than_24_months_of_age__two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

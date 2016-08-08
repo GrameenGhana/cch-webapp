@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="importance_of_exclusive_breastfeeding" type_of_page="Info Page" page_title="Point of Care" page_subtitle="PNC Counselling: Infant Feeding&gt; Importance of Exclusive Breastfeeding " color_code="Select">
+		<field name="Counsel Mother on the Importance of Giving ONLY Breast Milk  " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Important to feed baby the first yellowish milk known as colostrum" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/2.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Colostrum protects babies from many diseases" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Breast milk provides all the food and water your baby needs during the first 6 months " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Do not give anything else, not even water, including bottled water, sachet water, gripe water, and herbal concoctions, such as walga " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/3.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Even during hot weather, breast milk will satisfy baby&#x2019;s thirst" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Giving other liquids will cause your baby to suckle less and will reduce amount of breast milk you produce" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Giving water, other liquids and foods in the first 6 months can make your baby sick " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="You can give medicines that your health provider recommends " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="infant_feeding/importance_of_exclusive_breastfeeding_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

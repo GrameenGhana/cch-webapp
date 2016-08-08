@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="records_history_three" page_subtitle="ANC Diagnostic: ANC Records &amp; History&gt; Records &amp; History Three" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="First Time Seeing a Health Worker" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Record the following personal information: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Name" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Age" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Home address" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Occupation" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Marital status:  Husband or partner" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Next of kin: Name, address, telephone number" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="calculators/estimate_trimester_calculator" name="Estimate Trimester " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Refer client to see a midwife for full consultation " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Call provider and arrange transport " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Fill out referral form or write a referral note" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Obtain feedback from referral facility, and follow up with client " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

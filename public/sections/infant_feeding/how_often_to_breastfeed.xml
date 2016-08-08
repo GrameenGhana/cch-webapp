@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_often_to_breastfeed" page_subtitle="PNC Counselling: Infant Feeding&gt;  How Often to Breastfeed" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="How often should a client breastfeed: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed your baby on demand, day and night, at least 8 – 12 times everyday " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Frequent feeding will help your body to produce breast milk" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Continue to feed until baby finishes the breast and comes off on his or her own. Offer the other breast and let baby decide if he or she wants more or not" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Switching back and forth from one breast to the other prevents the baby from getting the nutritious “hind milk.” The “fore milk” has more water and satisfies the baby’s thirst.  The “hind milk” has more fat and satisfies your baby’s hunger" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If your baby is ill or sleepy, wake him or her to offer breast often" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Do NOT use bottles, teats or sprouted cups.  They are difficult to clean and can cause your baby to become sick " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="infant_feeding/how_often_to_breastfeed_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

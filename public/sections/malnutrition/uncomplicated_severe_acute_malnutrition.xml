@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="uncomplicated_severe_acute_malnutrition" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Malnutrition&gt;  Uncomplicated Severe Acute Malnutrition " color_code="Amber">
+		<field name="Uncomplicated Severe Acute Malnutrition | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Assess child&#x2019;s feeding " link="immunization_and_vitamin_a/_immunization_and_vitamin_a1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Assess for HIV infection, if trained " link="cwc_hiv_infection/hiv_infection_1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Administer first dose of vitamin A, as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="malnutrition/12.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Counsel and give second dose of Vitamin A to mother/caregiver to be administered to child the next day " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/><field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="malnutrition/uncomplicated_severe_acute_malnutrition_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

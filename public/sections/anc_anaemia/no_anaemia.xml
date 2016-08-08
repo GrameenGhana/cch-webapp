@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Green" name="no_anaemia" page_subtitle="ANC Diagnostic: ANC Anaemia&gt; No Anaemia" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="No Anaemia | Take Action" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="nutrition/nutrition_1" name="Counsel client to eat foods rich in iron and folate + vitamin C " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Counsel client on topics relevant to the trimester she is in " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Refer pregnant woman to the nearest health center to be examined by a midwife if she is due for routine antenatal care " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

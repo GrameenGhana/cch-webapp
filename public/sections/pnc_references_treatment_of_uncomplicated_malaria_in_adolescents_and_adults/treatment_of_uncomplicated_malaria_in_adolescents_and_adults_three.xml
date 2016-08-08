@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treatment_of_uncomplicated_malaria_in_adolescents_and_adults_three" page_subtitle="PNC References: PNC References Treatment of Uncomplicated Malaria in Adolescents and Adults&gt; Treatment of Uncomplicated Malaria in Adolescents and Adults THREE" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Administration, Management of Vomiting, and Other Supportive Treatment for Treatment with ACTs" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Preferable that client takes the first dose of the drug in front of the nurse or health worker " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Preferable to administer medicine after the client has eaten a meal " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If vomiting occurs within 30 minutes, the dosage of medicine should be repeated.  If vomiting stops, give client the 2nd and 3rd doses to take at home if you are sure that your instructions will be followed.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Ask client to go to the health center or hospital if vomiting persists.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Treatment of fever with Paracetamol is a recommended part of supportive care for malaria.  Paracetamol in tablet form may be given every 4-6 hours until the temperature is normal.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/8.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/treatment_of_uncomplicated_malaria_in_adolescents_and_adults_four" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

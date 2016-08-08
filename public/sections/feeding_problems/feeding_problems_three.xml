@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_problems_three" type_of_page="Take Action Classification Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Feeding Problems&gt; Feeding Problems Three" color_code="Select">
+		<field name="Does the child have any of the following signs or conditions from examination?" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="HIV exposed " link="feeding_problems/hiv_exposed" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="Persistent Diarrhoea " link="feeding_problems/persistent_diarrheoa" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="Other illnesses " link="feeding_problems/other_illnesses" type="answers" group="answers" color_code="" property="" options="Includes moderate acute malnutrition, underweight, anaemia, | Click here to take action"/>
+		<field name="No illness or feeding problems " link="feeding_problems/no_illness_or_feeding_problems" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/></form></xmlgui>

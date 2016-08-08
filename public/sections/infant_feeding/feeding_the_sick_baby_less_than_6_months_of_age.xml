@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="feeding_the_sick_baby_less_than_6_months_of_age" page_subtitle="PNC Counselling: Infant Feeding&gt; Feeding the Sick Baby Less than 6 Months of Age" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/50.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed more frequently during illness, including diarrhoea, will help baby fight sickness, reduce weight loss and recover more quickly" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeeding also provides comfort to your sick baby.  If your baby refuses to breastfeed, encourage your baby until he or she takes the breast again " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give only breast milk and medicines recommended by your doctor/health care provider" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If the baby is too weak to suckle, express breast milk to feed him or her.  This will help you to keep up your milk supply and prevent breast difficulties " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="After each illness, increase the frequency of breastfeeding to help your baby regain health and weight " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="When you are sick, you can continue to breastfeed your baby.  You may need extra food and support during this time " options="" property="Select" type="section_items"/>
+</form>
+</xmlgui>

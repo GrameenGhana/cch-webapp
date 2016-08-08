@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="no_fever" page_subtitle="ANC Diagnostic: ANC Malaria&gt; No Fever" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="anc_malaria_prevention/malaria_prevention_1" name="Counsel mother to sleep under an insecticide treated net every night with her baby" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="anc_anaemia/anaemia_1" name="Now assess to client for anaemia " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

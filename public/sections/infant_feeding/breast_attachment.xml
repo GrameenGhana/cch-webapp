@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="breast_attachment" type_of_page="Info Page" page_title="Point of Care" page_subtitle="PNC Counselling: Infant Feeding&gt; Breast Attachment" color_code="Select">
+		<field name="Educate Client on Importance of Good Breast Attachment" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Baby should be put to the breast within the 1st hour of birth " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/6.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Good attachment helps to ensure that baby suckles well" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Good attachment helps mother to produce a good supply of breast milk" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Good attachment helps prevent sore and cracked nipples" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/15.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="NEXT" color_code="Default" link="infant_feeding/breast_attachment_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

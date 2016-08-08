@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="prereferral_treatments_in_clinics1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC References: Pre-referral Treatments in Clinics&gt; Pre-referral Treatments in Clinics1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="General Considerations" link="pre-referral_treatments_in_clinics/general_consideration" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Diazepam" link="pre-referral_treatments_in_clinics/diazepam" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="First Aid: CPR" link="pre-referral_treatments_in_clinics/first_aid_cpr" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Intramuscular Ampicillin and Intramuscular Gentimicin" link="pre-referral_treatments_in_clinics/intramuscular_ampicillin_and_intramuscular_gentamicin" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Intramuscular Quinine" link="pre-referral_treatments_in_clinics/intramuscular_quinine" type="answers" group="answers" color_code="" property="" options=""/><field name="Rectal Artesunate" link="pre-referral_treatments_in_clinics/rectal_artesunate" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Treat to Prevent Low Blood Sugar" link="pre-referral_treatments_in_clinics/treat_and_prevent_low_blood_sugar" type="answers" group="answers" color_code="" property="" options=""/><field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

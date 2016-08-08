@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Red" name="severe_persistent_diarrhoea" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; Severe persistent diarrhoea " page_title="Point of Care" type_of_page="Take Action Page">
+		<field color_code="" group="definition" link="" name="" options="" property="" type="definition"/>
+		<field color_code="" group="first_actions" link="" name="Take Action: Severe persistent diarrhoea " options="" property="" type="first_section_head"/>
+		<field color_code="" group="first_actions" link="" name="If baby also has other severe conditions or severe or some dehydration" options="" property="Bold Red" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="Refer mother and baby to a health center or hospital IMMEDIATELY" options="" property="Select" type="first_actions"/>
+		<field color_code="" group="first_actions" link="" name="Call provider and arrange transport " options="" property="Select" type="first_actions"/>
+		<field color_code="" group="transport_actions" link="" name="While waiting for transport: " options="" property="" type="transport_section_head"/>
+		<field color_code="" group="transport_actions" link="pnc_references_treating_some_dehydration_with_ors/treating_some_dehydration_with_ors_1" name="Prepare ORS" options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="" name="Advise mother to give frequent sips of ORS to the baby on the way to the health facility " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="" name="Advise mother to continue breastfeeding " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="" name="If baby is not able to breastfeed, give small sips of expressed breast milk that has been collected in a clean container with a lid " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="transport_actions" link="keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital/keeping_infant_warm__breastfeeding_on_the_way_to_the_hospital_1" name="Teach mother how to keep the baby warm on the way to the health facility  " options="" property="Select" type="transport_actions"/>
+		<field color_code="" group="second_actions" link="" name="Record baby’s clinical information in client’s maternal health or “Red” book. If possible, also fill out referral form " options="" property="Select" type="second_actions"/>
+		<field color_code="" group="second_actions" link="" name="Accompany mother and baby, and have a family member accompany mother and baby to the health facility" options="" property="Select" type="second_actions"/>
+		<field color_code="" group="second_actions" link="" name="Follow up with client after discharge from health center or hospital" options="" property="Select" type="second_actions"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

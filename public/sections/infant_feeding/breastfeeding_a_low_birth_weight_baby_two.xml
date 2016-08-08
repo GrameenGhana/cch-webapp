@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="breastfeeding_a_low_birth_weight_baby_two" page_subtitle="PNC Counselling: Infant Feeding&gt; Breastfeeding a Low Birth Weight Baby TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Special considerations for Low Birth Weight Infants:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="infant_feeding/how_to_express_breast_milk" name="Direct breastfeeding of a very small baby may not be possible for several weeks.  Mother should be taught and encouraged to express breast milk and feed the breast milk to the baby using a clean cup " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="kangaroo_mother_care/kangaroo_mother_care_1" name="Kangaroo mother care provides skin to skin contact, warmth and closeness to the mother’s breast.  And encourages early and exclusive breastfeeding, either by direct feeding or using expressed breast milk given by cup " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Different caregivers can also share in the care of the baby using the same Kangaroo method position " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/18.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="chps_mother_baby_is_able_to_stay_for_4_hours_at_facility" page_subtitle="PNC Diagnostic Newborn: PNC Diarrhoea&gt; CHPS + mother &amp; baby is able to stay for &gt; 4 hours at facility " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="In Facility Care for Diarrhoea with Some Dehydration | Take Action: First 4-hour period" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="pnc_references_treating_some_dehydration_with_ors/treating_some_dehydration_with_ors_1" name="Determine amount of ORS to give during the first 4 hour period " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If the baby wants more ORS than recommended, give more" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="For babies who are not breastfed, also give 100 – 200 mL of clean water during this period if you use standard ORS  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Show the mother how to give ORS: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give frequent small sips from a clean cup" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="If the child vomits, wait 10 minutes.  Then continue, but more slowly." options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Continue breastfeeding whenever child wants " options="" property="Select" type="section_items_sub"/>
+		<field color_code="Default" group="actions" link="pnc_diarrhoea/chps_mother_baby_is_able_to_stay_for_4_hours_at_facility_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

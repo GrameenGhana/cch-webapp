@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="_growth_monitoring_and_children_development_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Growth Monitoring And Children Development&gt; Growth Monitoring And Children Development TWO" color_code="Select">
+		<field name="Growth Stages and Problems with Child Development | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="It is important to follow your child&#x2019;s growth. There are a few signs that can help you follow the growth and development of your child from birth to 5 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="A child should seek care at a health centre or hospital IMMEDIATELY, if the child exhibits any of the following behaviours or signs " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Hearing" link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="growth_monitoring_and_children_development/54.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Does not turn toward the source of new sounds or voices " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Has frequent ear infections (discharge from ear, or earache)" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Does not respond when you call unless child can see you" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Does not talk or talks strangely" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="growth_monitoring_and_children_development/growth_monitoring_and_children_development_three" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

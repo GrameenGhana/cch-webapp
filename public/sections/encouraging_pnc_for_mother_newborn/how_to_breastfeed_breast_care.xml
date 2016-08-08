@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_to_breastfeed_breast_care" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; How to breastfeed &amp; breast care " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="What clients need to know about breastfeeding" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Breast milk provides all the food and water a baby needs for the first 6 months of life " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/15.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Important to feed baby the first yellowish milk known as colostrum" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Colostrum protects babies from many diseases" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Exclusive breastfeeding means giving only breast milk, and nothing else (no other milks, foods or liquids, not even sips of water), except for medicines prescribed by a doctor or nurse. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Help clients know how to attach baby to her breast " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Baby should be put to the breast within the 1st hour of birth " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/21.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Good attachment helps to ensure that baby suckles well" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Good attachment helps mother to produce a good supply of breast milk" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Good attachment helps prevent sore and cracked nipples" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="To make sure baby is attached well: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Touch baby’s lips to nipple" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Wait until baby’s mouth open wide" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Quickly bring breast from below, aiming nipple up towards the roof of the baby’s mouth" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Baby should now take a big mouthful of breast milk" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="The 4 signs of good attachment are:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Baby’s mouth is wide open" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Mother can see more of the darker skin (areola) above the baby’s mouth than below" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/22.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Baby’s lower lop is turned outwards" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Baby’s chin is touching breast " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/23.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="encouraging_pnc_for_mother_newborn/how_to_breastfeed_breast_care_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

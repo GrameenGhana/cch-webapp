@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="family_planning_in_the_postpartum_period_1" page_subtitle="PNC Counselling: Family Planning in the Postpartum Period&gt; Family Planning in the Postpartum Period 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Counsel mother on benefits of postpartum family planning, and importance of birth spacing before having other children" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Healthy timing and spacing of pregnancy means waiting at least 2-3 years before becoming pregnant women " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Spacing your children allows: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="More time to breastfeed and care for each child " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="More time for your body to recover between pregnancies" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="More money because you have fewer children, and thus fewer expenses for school fees, clothing, food, etc. " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Feeding your baby only breast milk for the first 6 months helps to space births in a way that is healthy for both you and your baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="family_planning_in_the_postpartum_period/46.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="family_planning_in_the_postpartum_period/family_planning_in_the_postpartum_period_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

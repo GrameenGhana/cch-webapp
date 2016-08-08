@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="test_not_possible" type_of_page="Take Action Classification Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Test not Possible" color_code="Select">
+		<field name=" Does the child have any of the following conditions? " link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Severe febrile disease, malaria status unknown " link="fever/severe_febrile_disease_malaria_status_unknown" type="answers" group="answers" color_code="" property="" options="Any danger sign OR  | Stiff neck OR  -&#9;Signs of Severe Malaria:  |&#9;Persistent vomiting  |&#9;Convulsions |&#9;Lethargy / unconsciousness |&#9;Dark, cola-coloured urine |Persistent fever &#x2265; 38.5&#xBA;C   |&#9;Unable to sit or stand  |&#9;Jaundice | Severe pallor  | Shock  | Bleeding | Click here to take action"/>
+		<field name="Uncomplicated malaria " link="fever/uncomplicated_malaria_test_not_done" type="answers" group="answers" color_code="" property="" options="Presence or history of fever (by history, feels hot, or temperature &#x2265; 38.5&#xB0;C) AND  | Malaria status unknown | Click here to take action"/>
+		<field name="Severe complicated measles" link="fever/severe_complicated_measles" type="answers" group="answers" color_code="" property="" options="Malaria status unknown PLUS:  |&#9;Any general danger sign OR  |&#9;Clouding of cornea OR  | Deep or extensive mouth ulcers | Click here to take action"/>
+		<field name="Measles with eye or mouth complications " link="fever/measles_with_eye_or_mouth_complications_malaria_status_unknown" type="answers" group="answers" color_code="" property="" options="Malaria status unknown PLUS:  |Pus draining from eye OR  | Mouth ulcers | Click here to take action"/>
+		<field name="Uncomplicated Measles" link="fever/uncomplicated_measles_malaria_status_unknown" type="answers" group="answers" color_code="" property="" options="Malaria status Unknown PLUS:  |&#9;Measles now OR  |&#9;Measles within last 3 months  | Click here to take action"/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form></xmlgui>

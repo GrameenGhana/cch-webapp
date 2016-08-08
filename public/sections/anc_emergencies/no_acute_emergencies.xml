@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Green" name="no_acute_emergencies" page_subtitle="ANC Diagnostic: ANC Emergencies&gt; No Acute Emergencies" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="No Acute Emergencies | Take Action " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="anc_records_history/records_history_1" name="Check client’s records, and estimate her trimester if not known" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

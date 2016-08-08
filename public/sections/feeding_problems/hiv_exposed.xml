@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="hiv_exposed" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Feeding Problems&gt; HIV Exposed" color_code="Amber">
+	<field name="HIV exposed | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+	<field name="For children whose HIV status is unknown, assess HIV infection if trained " link="cwc_hiv_infection/hiv_infection_1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	<field name="For children who are HIV infected or HIV exposed:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	<field name="Counsel mother/caregiver on feeding according to the feeding recommendations for HIV-exposed children " link="feeding_an_hiv_exposed_or_infected_child/hiv_infected_child" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="If child still breastfeeds, observe mother breastfeeding and provide counseling on breast attachment and positioning, if necessary " link="feeding_a_healthy_child/breastfeeding_attachment_and_position" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="Advise mother/caregiver when to return for care immediately " link="when_to_seek_care_immediately/_when_to_seek_care_immediately1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="If child continues to have feeding problems, advise mother/caregiver to return for care in 5 days" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+	<field name="Record clinical care in Child Health Record &#x201C;green&#x201D; book" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+</form></xmlgui>

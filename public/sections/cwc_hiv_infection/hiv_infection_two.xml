@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="hiv_infection_two" page_subtitle="CWC Diagnostic: CWC HIV Infection&gt; HIV Infection Two" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Trained to Provide HIV Testing and Counseling | Do the following" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="cwc_hiv_infection/13.jpg" options="" property="" type="image"/>
+		<field color_code="" group="section_header" link="" name="CHECK" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Check with mother or mother’s ANC card (if available) for her HIV status" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Does the child have one or more of the following conditions? " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="cough or difficult breathing/pneumonia" name="Pneumonia " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="cwc_diarrhoea/diarrhoea_1" name="Diarrhoea " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="ear_problems/ear_problems_1" name="Ear discharge " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="malnutrition/malnutrition1" name="Moderate acute malnutrition or underweight" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Oral thrush" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="* Note: assess quickly, refer child IMMEDIATELY if child has severe disease or emergencies" options="" property="Italic" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="LOOK, FEEL AND TEST" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="If mother’s status is not known, test to find out if child is HIV exposed " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If child is ≥ 6 weeks of age, then a Dried Blood Spot sample should be taken for virological testing" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Check to see if child has any of the following symptoms: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Oral thrush" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Parotid enlargement" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Generalized persistent lymphadenopathy " options="" property="Select" type="section_items_sub"/>
+		<field color_code="Default" group="actions" link="cwc_hiv_infection/hiv_infection_three" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

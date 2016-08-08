@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="oral_antibiotics" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC References: Teach Mother to Give Oral Drugs at Home&gt; Oral Antibiotics" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Amoxycillin" link="teach_mother_to_give_oral_drugs_at_home/amoxycillin" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Cotrimoxazole" link="teach_mother_to_give_oral_drugs_at_home/cotrimoxazole" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Ciprofloxacin" link="teach_mother_to_give_oral_drugs_at_home/ciprofloxacin" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/></form></xmlgui>

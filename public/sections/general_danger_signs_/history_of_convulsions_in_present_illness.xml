@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="history_of_convulsions_in_present_illness" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: General Danger Signs &gt; History of Convulsions in Present Illness" color_code="Red">
+		<field name="History of convulsions in present illness | Take Action" link="" type="header" group="section_header" color_code="" property="" options=""/><field name="Check vital signs and complete assessment quickly.: Assess the child for the following:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Cough or difficult breathing " link="cough or difficult breathing/cough_or_difficult_breathing1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Diarrhoea" link="cwc_diarrhoea/diarrhoea_1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fever " link="cwc_fever/fever1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Ear problem " link="ear_problems/ear_problems_1" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Administer any necessary pre-referral treatment " link="pre-referral_treatments_in_clinics/prereferral_treatments_in_clinics1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Refer mother/caregiver and child to a health center or hospital IMMEDIATELY" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fill out referral form, and record clinical care in Child Health Records &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Next" color_code="Default" link="general_danger_signs_/history_of_convulsions_in_present_illness_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="first_trimester" page_subtitle="ANC Diagnostic: ANC Malaria&gt; First Trimester" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="If client is due for a scheduled ANC visit, refer her to see a midwife " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="treatment_for_uncomplicated_malaria_in_pregnant_women/treatment_for_uncomplicated_malaria_in_pregnant_women_1" name="If client is not due for a scheduled visit, and does not have with any danger signs provide anti-malarial treatment" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Oral quinine: 600 mg 8 hourly for 7 days " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="OR oral quinine according to body weight for 3 days + 300 mg of clindamycin 3 times daily for 3 days " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Paracetamol 1000 mg (2 tablets) maybe given every 4-6 hr until fever returns to normal" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Encourage fluid intake " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Counsel client on the following: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Importance of taking malaria medicines for treatment " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="anc_malaria_prevention/malaria_prevention_1" name="Sleeping under an ITN every night " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="malaria_prophylaxis_with_sp_for_pregnant_women/malaria_prophylaxis_with_sp_for_pregnant_women_1" name="Importance of taking SP to prevent future episodes of malaria " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="nutrition_requirements_for_the_mother/nutrition_requirements_for_the_mother1" name="Eating foods rich in iron, folate and vitamin C " options="" property="Bold Red" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Follow up with client in 24 hours, if there is no improvement refer client to the health center or hospital " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

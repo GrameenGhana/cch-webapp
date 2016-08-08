@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="kangaroo_mother_care_three" page_subtitle="PNC Counselling: Kangaroo Mother Care&gt;Kangaroo Mother Care THREE" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="When not in skin to skin contact, keep baby clothed and covered as much as possible at all times. Dress baby in extra clothing including hat and socks " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/64.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Loosely wrap the young baby in a soft dry cloth and cover with a blanket " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Check frequently if baby’s hands and feet are warm.  If cold, rewarm baby using skin to skin contact " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed baby often (or give expressed breast milk by cup) " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

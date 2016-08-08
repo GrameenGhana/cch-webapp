@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="rest__exercise_five" page_subtitle="ANC Counselling: Rest &amp; exercise &gt; Rest &amp; exercise FIVE" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Kegel Exercise: strengthens muscles that help make delivery easier, and reduces the chance of complications during delivery. " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Tighten the muscles around your anal opening and in your vagina (as if you holding back urine).  Hold for a count of 3, then relax." options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Repeat 5-10 times.  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="This exercise can be done anytime during the day when you are sitting down. " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

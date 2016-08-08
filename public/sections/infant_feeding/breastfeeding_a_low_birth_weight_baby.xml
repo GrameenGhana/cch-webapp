@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="breastfeeding_a_low_birth_weight_baby" page_subtitle="PNC Counselling: Infant Feeding&gt;  Breastfeeding a Low Birth Weight Baby" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="The best milk for a low birth weight infant, including babies born early, is the breast milk from the baby’s own mother" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="The cross cradle and underarm positions are good positions for feeding a low birth weight baby" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed often to get baby used to the breast and to keep the milk flowing " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Long, slow feeds are fine.  It is important to keep the baby at the breast " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If the baby sleep for long periods of time, you may need to unwrap the baby or take off some of his or her clothes to help waken him or her for the feed" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed the baby before he or she starts to cry" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Earlier signs of hunger include a COMBINATION of the following: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Being alert and restless " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Opening mouth and turning head" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Putting tongue in and out" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Sucking on hand or fist " options="" property="Select" type="section_items_sub"/>
+
+		<field color_code="Default" group="actions" link="infant_feeding/breastfeeding_a_low_birth_weight_baby_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="home_care_for_the_infant_1" page_subtitle="PNC Counselling: Home Care for the Infant&gt; Home Care for the Infant  1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Giving home care for the infant " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Counsel Mother to Exclusively Breastfeed the Young Infant " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Give only breastfeeds to the baby for the first 6 months " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Breastfeed frequently, as often and for as long as the infant wants " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Advise Mother to Keep Young Infant Warm at All Times " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="In cool weather cover the baby’s head and feet " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Dress the baby with extra clothing " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="home_care_for_the_infant/home_care_for_the_infant_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

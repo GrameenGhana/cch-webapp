@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="exclusive_breastfeeding_when_mother_is_taking_arvs" page_subtitle="PNC Counselling: Infant Feeding&gt; Exclusive Breastfeeding When Mother is Taking ARVs" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Exclusively breastfeeding (giving only breast milk) for the first 6 months together with ARVs for either yourself and your baby will greatly help reduce chances of HIV passing from yourself to your baby " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="By only giving breast milk, your baby also receives all the benefits of breastfeeding including protection from diarrhoea and other illnesses " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="It is very important to avoid mixed feeding. Mixed feeding means feeding your baby both breast milk and any other foods or liquids, including infant formula, animal milks, or water " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/54.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Take your baby to ART centre to be tested for HIV when he/she is 6 weeks old " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/53.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="infant_feeding/exclusive_breastfeeding_when_mother_is_taking_arvs_two" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

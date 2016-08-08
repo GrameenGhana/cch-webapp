@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="importance_of_exclusive_breastfeeding_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="PNC Counselling: Infant Feeding&gt; Importance of Exclusive Breastfeeding TWO" color_code="Select">
+	<field name="Explain the Importance of Exclusive Breastfeeding for the First 6 Months " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Exclusive breastfeeding means feeding your baby ONLY breast milk for the 6 months " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/4.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Breast milk provides all the food and water your baby needs during the first 6 months " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Exclusive breastfeeding protects your baby from many illnesses, such as diarrhoea and respiratory diseases " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="When you exclusively breastfeed your baby during the first 6 months and have no menses, you are protected from getting pregnant again" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Mixed feeding means feeding your baby both breast milk and any other foods or liquids, including infant formula, animal milks, or water" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Mixed feeding your baby before 6 months can damage your baby&#x2019;s stomach" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Mixed feeding increases the chances that your baby will suffer from diarrhoea, pneumonia, and from malnutrition " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Mixed feeding reduces protection that exclusive breastfeeding gives, and all of the benefits that your baby gets from your breast milk  " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="infant_feeding/5.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+	</form>
+</xmlgui>

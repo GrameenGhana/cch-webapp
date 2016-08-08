@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="when_to_return_for_pnc" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; When to return for PNC" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Routine Postnatal Care (PNC) Visits" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/2.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/47.png" options="" property="" type="image"/>
+		<field color_code="" group="section_header" link="" name="Advise Mother When to Return to the Health Facility IMMEDIATELY " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/3.png" options="" property="" type="image"/>
+	</form>
+</xmlgui>

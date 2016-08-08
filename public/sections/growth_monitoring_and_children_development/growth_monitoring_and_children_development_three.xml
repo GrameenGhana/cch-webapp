@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="growth_monitoring_and_children_development_three" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Growth Monitoring And Children Development&gt;  Growth Monitoring And Children Development THREE" color_code="Select">
+		<field name="Sight" link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="growth_monitoring_and_children_development/55.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Has red eye or discharge from eyes" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="A cloudy appearance of the eyes, a white spot in the eye" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Frequently rubs eyes and says they hurt" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Often bumps into things while moving around" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Holds head in an awkward position when trying to look at something" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Has eyes which sometimes or always look in different directions (squints)" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Talking " link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="growth_monitoring_and_children_development/56.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Does not say mama/mommy/dada by 18 months of age" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Cannot name a few familiar objects or people by 2 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Cannot repeat simple songs, rhymes by 3 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Is not talking in short sentences by age 4 years" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="growth_monitoring_and_children_development/_growth_monitoring_and_children_development_four" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

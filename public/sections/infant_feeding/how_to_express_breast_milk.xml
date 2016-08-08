@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_to_express_breast_milk" page_subtitle="PNC Counselling: Infant Feeding&gt; How to Express Breast Milk " page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Wash your hands with soap &amp; water  Prepare clean containers" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/19.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pour boiling water into a cup" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/20.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pour out hot water from cup" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/21.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Wash hands again with soap &amp; water" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/22.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Get comfortable " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Gently stroke your breasts, a warm cloth may stimulate the flow of milk " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Place cooled, clean cup under breast" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/23.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Put your thumb on the breast above the dark area around nipple (areola) and other fingers on the underside of the breast behind areola: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="With your thumb and first 2 fingers press a little bit in towards chest wall and then press gently towards areola" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Milk may start to flow in drops, or sometimes in fine streams. Collect the milk in the clean cup " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Avoid rubbing skin, which can cause bruising, or squeezing the nipple which will stop the flow of milk " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Rotate the thumb and finger positions and press and release all around areola " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/24.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Hold baby wrapped " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Hold cup of milk to baby’s lips " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Tip cup so milk reaches baby’s lips   " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Hold cup to the baby’s lips and let him or her take it " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/25.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Keep expressed breast milk up to 8 hours in a cool place " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Or up to 72 hours in the back of a refrigerator  " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/26.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

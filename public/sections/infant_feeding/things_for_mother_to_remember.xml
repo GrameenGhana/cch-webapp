@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="things_for_mother_to_remember" page_subtitle="PNC Counselling: Infant Feeding&gt; Things for Mother to Remember" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/15.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="infant_feeding/27.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Exclusive breastfeeding during the first 6 months protects mother from getting pregnant as long as periods have not returned. Consult family planning counsellor as soon as possible after giving birth " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="When baby is 6 months old continue breastfeeding and being giving other foods " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Watch for signs of diarrhoea, fever, difficulty breathing, or refusal to feed because these need prompt attention " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="If mother is HIV-infected, she should not feed her baby from a nipple that is cracked or bleeding. Instead, she should feed from the other breast and express and discard milk from the breasted that is affected " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Getting infected or re-infected with HIV while breastfeeding increases the risk of mother to child transmission.  Important to practice safe sex by using condoms consistently and correctly " options="" property="Select" type="section_items"/>
+		
+		<field color_code="" group="section_items" link="" name="To protect the baby, the mother must know her HIV status" options="" property="Select" type="section_items"/>
+		
+	</form>
+</xmlgui>

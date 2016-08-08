@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="fever1" type_of_page="Take Action Classification Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Fever1" color_code="Select">
+		<field name="Does the child feel hot or has a temperature of 37.5&#xBA;C or above? Or has had a fever by history? " link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Has fever " link="fever/has_fever" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="No fever " link="ear_problems/ear_problems_1" type="answers" group="answers" color_code="" property="" options="Click here to take action"/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

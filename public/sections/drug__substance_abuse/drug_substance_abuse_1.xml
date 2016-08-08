@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="drug_substance_abuse_1" page_subtitle="ANC Counselling: Drug &amp; substance abuse&gt; Drug &amp; substance abuse 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Counsel client on:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="The importance of drugs that health workers give to pregnant women, why they are given, and how they should be taken" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="drug__substance_abuse/12.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="To avoid abuse/misuse of drugs and herbs" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="drug__substance_abuse/14.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="To avoid consuming alcohol during pregnancy" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="drug__substance_abuse/13.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Harmful consequences of smoking" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Harmful consequences of skin bleaching" options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

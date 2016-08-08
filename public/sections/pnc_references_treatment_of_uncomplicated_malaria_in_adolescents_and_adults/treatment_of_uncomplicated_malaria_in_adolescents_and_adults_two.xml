@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="treatment_of_uncomplicated_malaria_in_adolescents_and_adults_two" page_subtitle="PNC References: PNC References Treatment of Uncomplicated Malaria in Adolescents and Adults&gt; Treatment of Uncomplicated Malaria in Adolescents and Adults TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Artemether-Lumefantrine as an Alternate " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="This is reserved for clients who do not tolerate Artesunate-Amodiaquine" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="The drug should be taken twice per day in divided doses, and after eating meals" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Standard 3-day treatment with a total of six doses according to body weight is recommended as below: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/7.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="pnc_references_treatment_of_uncomplicated_malaria_in_adolescents_and_adults/treatment_of_uncomplicated_malaria_in_adolescents_and_adults_three" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Amber" name="hiv_positive_three" page_subtitle="PNC Diagnostic Newborn: PNC HIV Infection&gt; HIV Positive Three" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="HIV-Positive Mother, Not on ARVs | Take Action " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Refer mother and baby to ART centre to get counseling and receive ARVs" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Educate mother on the importance of having her baby and herself taking ARVs regularly" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="infant_feeding/exclusive_breastfeeding_when_mother_is_not_taking_arvs" name="Counsel client to exclusively breastfeed her baby for 6 months, and explain the harms of mixed feeding " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Follow-up with the mother and baby after they have visited the ART centre, and again when the baby is 6 weeks old" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

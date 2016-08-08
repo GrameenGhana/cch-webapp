@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="very_severe_disease__local_bacterial_infections_1" page_subtitle="PNC Diagnostic Newborn: Very Severe Disease &amp; Local Bacterial Infections&gt; Very Severe Disease &amp; Local Bacterial Infections 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="ASK" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Is baby having any difficulty in feeding? " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Has the baby been given any herbal medicines since birth?" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Has baby had convulsions (fits)? " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="LOOK, LISTEN, FEEL" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="BREATHING " options="" property="Bold" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Not breathing (apnoea)" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Count the breaths in 1 minute:" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Slow breathing (&lt;20 bpm)" options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="Fast breathing (≥ 60 bpm).  Repeat count to ensure fast breathing " options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="Look and listen for grunting" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Look for chest in-drawing  " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="MOVEMENTS/TONE/CONVULSION" options="" property="Bold" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Look at baby’s movements. If baby is sleeping, ask the mother to wake him/her" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Does the baby move on his/her own? Are they normal and symmetrical? " options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="Is the baby convulsing now (abnormal movements of part or the whole body)? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="If the baby is not moving, gently stimulate him/her" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Does the baby not move at all?  " options="" property="Select" type="section_items_sub_sub"/>
+		<field color_code="" group="section_items" link="" name="SKIN, EYES, UMBILICUS" options="" property="Bold" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Are there any skin pustules? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Redness, swelling of skin? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Look at the umbilicus. Is it red or draining pus? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Look at the eyes.  Are they swollen and draining pus?  Are they yellow?" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Check for cyanosis. Are the baby’s lips and tongue look blue?  " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Does the baby have severe pallor? " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="Measure axillary temperature " options="" property="Select" type="section_items_sub"/>
+		<field color_code="Default" group="actions" link="very_severe_disease__local_bacterial_infections/very_severe_disease__local_bacterial_infections_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

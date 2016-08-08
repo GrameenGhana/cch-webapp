@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="care_of_newborns" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; Care of newborns" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Counsel pregnant women to register her newborn at birth with NHIS" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Need for ear piercing and circumcision " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Sickle cell disease screening " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Importance of good cord care " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Counsel pregnant woman how to give home care after baby is born, which include:" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breastfeeding frequently day and night: at least 10 times in 24 hours; or as often as and for as long as baby wants" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/15.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Good hygiene and hand washing" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/16.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Need for rest, drinking plenty of fluids and eating more" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/17.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Importance of sleeping under an ITN every night with her baby" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/18.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Take iron and folic acid supplements for 6 weeks after giving birth" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/19.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="How to keep the baby warm, and what good sleeping positions are" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/20.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>	</form>
+</xmlgui>

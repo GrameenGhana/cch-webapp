@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="severe_complicated_measles" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Severe Complicated Measles" color_code="Red">
+		<field name="Severe Complicated Measles | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Refer mother/caregiver and child to a health center or hospital IMMEDIATELY" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Call provider and arrange transport " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Administer ONE dose of vitamin A, as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="fever/12.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="NEXT" color_code="Default" link="fever/severe_complicated_measles_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

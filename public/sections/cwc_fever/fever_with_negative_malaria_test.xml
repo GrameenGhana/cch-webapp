@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="fever_with_negative_malaria_test" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Fever with Negative Malaria Test" color_code="Green">
+		<field name="Fever with Negative Malaria Test | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Assess child for other cause of fever, and treat accordingly " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Refer child if any of the following signs are present:" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Look for local tenderness" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Refusal to use a limb" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Hot tender swelling" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Red tender skin or boils" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Lower abdominal pain" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Pain on passing urine" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Fever present for &gt; 7 days " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="fever/fever_with_negative_malaria_test_two" type="button" group="actions" property="" options=""/>
+	</form></xmlgui>

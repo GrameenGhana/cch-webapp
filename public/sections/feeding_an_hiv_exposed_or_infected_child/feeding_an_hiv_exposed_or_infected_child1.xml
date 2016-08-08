@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="feeding_an_hiv_exposed_or_infected_child1" page_subtitle="CWC Counselling: Feeding An HIV Exposed Or Infected Child&gt; Feeding An HIV Exposed Or Infected Child1" page_title="Point of Care" type_of_page="Question Page">
+		<field color_code="" group="questions" link="" name="" options="" property="" type="question"/>
+		<field color_code="" group="answers" link="feeding_an_hiv_exposed_or_infected_child/hiv_exposed_0_to_less_than_6_months_of_age" name="HIV Exposed 0-&lt; 6 Months of Age" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="feeding_an_hiv_exposed_or_infected_child/hiv_exposed_6_to_less_than_12_months_of_age" name="HIV Exposed 6-&lt; 12 Months of Age" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="feeding_an_hiv_exposed_or_infected_child/hiv_exposed_12_to_less_than_24_months_of_age" name="HIV Exposed 12 -&lt; 24 Months of Age" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="feeding_an_hiv_exposed_or_infected_child/hiv_infected_child" name="HIV Infected Child" options="" property="" type="answers"/>
+		<field color_code="" group="answers" link="feeding_an_hiv_exposed_or_infected_child/affas_criteria_for_stopping_breastfeeding_for_hiv_exposed_children" name="AFASS Criteria for Stopping Breastfeeding For HIV Exposed Children" options="" property="" type="answers"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

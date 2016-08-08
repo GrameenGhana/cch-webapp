@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_a_healthy_child1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Counselling: Feeding A Healthy Child &gt; Feeding A Healthy Child1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Breastfeeding Attachment and Position" link="feeding_a_healthy_child/breastfeeding_attachment_and_position" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Exclusive Breastfeeding for 6 Months " link="feeding_a_healthy_child/exclusive_breastfeeding_for_6_months" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Frequency of Feeds" link="feeding_a_healthy_child/frequency_of_feeds" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Expressing Breastmilk" link="feeding_a_healthy_child/expressing_breastmilk" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Introducing Complementary Foods at 6 Months " link="feeding_a_healthy_child/introducing_complementary_foods_at_6_months" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Complementary Feeding for Children 6 &#x2013; &lt; 9 Months of Age  " link="feeding_a_healthy_child/complementary_feeding_for_children_6_to_less_than_9_months_of_age" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Complementary Feeding for Children 9 &#x2013; &lt; 12 Months of Age" link="feeding_a_healthy_child/complementary_feeding_for_children_9_–__12_months_of_age" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Complementary Feeding for Children 12 &#x2013; &lt; 24 Months of Age " link="feeding_a_healthy_child/complementary_feeding_for_children_12_to_less_than_24_months_of_age" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name=" Food Variety  " link="feeding_a_healthy_child/food_variety" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Adding Multiple Micronutrients Powders (MNPs)   " link="feeding_a_healthy_child/adding_multiple_micronutrient_powders_mnps" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Special Consideration for Feeding any Sick Child" link="feeding_a_healthy_child/special_consideration_for_feeding_any_sick_child" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Special Consideration for Sick Child 0 &#x2013; &lt; 6 Months of Age" link="feeding_a_healthy_child/special_consideration_for_feeding_sick_child_0_to_less_than_6_months_of_age" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

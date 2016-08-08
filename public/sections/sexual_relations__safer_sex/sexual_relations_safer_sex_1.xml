@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="sexual_relations_safer_sex_1" page_subtitle="PNC Counselling: Sexual Relations &amp; Safer Sex&gt; Sexual Relations &amp; Safer Sex 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name=" Advise mother on when to have sexual relations    " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="	To avoid sexual intercourse for at least 2 weeks after delivery, or until lochia/vaginal discharge has stopped and perineal wounds have healed" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Can resume sexual intercourse after this time, whenever she feels ready and comfortable " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="That she is more susceptible to sexually transmitted infections during the postnatal period.  Encourage her to use a condom consistently to protect against infections " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="" name="" options="" property="" type="button"/>
+	</form>
+</xmlgui>

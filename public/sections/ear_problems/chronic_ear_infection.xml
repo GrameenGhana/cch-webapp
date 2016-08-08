@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="chronic_ear_infection" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Ear Problems&gt; Chronic Ear Infection" color_code="Amber">
+		<field name="Chronic Ear Infection | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Dry the ear by wicking " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver to dry the ear by wicking " link="teach_mother_to_treat_local_infections_at_home/clear_ear_by_dry_wicking_and_eardrops" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Treat child with gentamycin and ciprofloxacin eardrops: 2 drops 3 times daily for 14 days, if possible " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Check for HIV infection, if trained " link="cwc_hiv_infection/hiv_infection_1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Complete assessment of child, and administer all appropriate treatment " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Advise mother to return for a follow-up visit in 5 days" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Record clinical care in Child Health Record &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	</form>
+</xmlgui>

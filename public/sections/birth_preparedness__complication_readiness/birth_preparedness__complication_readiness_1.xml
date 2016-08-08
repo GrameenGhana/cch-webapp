@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="birth_preparedness__complication_readiness_1" page_subtitle="ANC Counselling: Birth preparedness &amp; complication readiness&gt; Birth preparedness &amp; complication readiness 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Help client on complication readiness plan, specifically on:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Plan for transport, which family member(s) will accompany mother &amp; baby and where to go if complications occurs" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="birth_preparedness__complication_readiness/9.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Register mother &amp; baby for health insurance or renew your NHIS. Save money for care and transport " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="birth_preparedness__complication_readiness/10.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Go to the health facility as soon as danger signs occur " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="birth_preparedness__complication_readiness/11.png" options="" property="" type="image"/>
+	</form>
+</xmlgui>

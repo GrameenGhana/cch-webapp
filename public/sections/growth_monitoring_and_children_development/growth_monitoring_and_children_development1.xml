@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="growth_monitoring_and_children_development1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Growth Monitoring And Children Development&gt;  Growth Monitoring And Children Development1" color_code="Select">
+		<field name="Growth Monitoring | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="growth_monitoring_and_children_development/weighing.PNG" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Take your child to growth monitoring and promotion monthly during the first year " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="A healthy child who is growing well should gain weight every month. If your child is not gaining weight or losing weight, there is a problem" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Attending growth monitoring and promotion sessions can help identify nutrition problems your child may have, such as severe thinness or swelling.  Nutritional problems may need urgent treatment with special (therapeutic) foods" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Measuring the Mid Upper Arm Circumference (MUAC) of a child over 6 months also identifies severe thinness" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="During growth monitoring and promotion sessions, you can ask questions about your child&#x2019;s growth, health and nutrition " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="It is important to address poor growth and other signs of poor nutrition quickly, as soon as they are identified. If the problem is severe, you should immediately take your child to the nearest facility " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/><field name="When you go to the health center for growth monitoring, ask about family planning too " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="You should also ask about your baby&#x2019;s immunisation schedule.  Immunisations protect babies against several diseases  " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="growth_monitoring_and_children_development/_growth_monitoring_and_children_development_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="soothe_throat_and_relieve_cough1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Soothe Throat And Relieve Cough&gt; Soothe Throat And Relieve Cough1" color_code="Select">
+		<field name="Soothe Throat and Relieve Cough | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Counsel mother/caregiver to give safe remedies " link="" type="header" group="section_header" color_code="" property="Select" options=""/>
+		<field name="Safe remedies can be homemade, for example warm water mixed with honey, tea, warm soups, and warm lemon drinks, and can be as effective as those bought in a store" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="When explaining how to give the safe remedy, it is not necessary to watch the mother practise giving the remedy to the child" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Exact dosing is not important with this treatment" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If child is exclusively breastfed, child does not need to take other drinks or remedies. Breast milk is the best soothing remedy for an exclusively breastfed child" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="soothe_throat_and_relieve_cough/soothe_throat_and_relieve_cough_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

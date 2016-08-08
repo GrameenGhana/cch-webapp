@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="feeding_problems1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Feeding Problems&gt; Feeding Problems1" color_code="Select">
+		<field name="For sick children less than 2 years of age OR if child has moderate acute malnutrition or underweight OR anaemia" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="ASK" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="How are you feeding your child? " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="For children receiving ANY breastmilk: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How many times during the day does the child breastfeed?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Do you also breastfeed at night?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="For children receiving replacement milk: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="What replacement milk are you giving?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How many times do you feed your child during the day and night?" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How much is given at each feed? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How is the milk prepared? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How is the milk being given?  In a cup or bottle? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="How are cleaning the utensils? " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If child is still breastfeeding as well, could the mother give extra breastmilk instead of replacement milk (especially if the child is &lt; 6 months old) " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="feeding_problems/feeding_problems_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

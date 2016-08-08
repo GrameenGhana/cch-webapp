@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="safe_preparation_of_food_1" page_subtitle="ANC Counselling: Safe preparation of food&gt; Safe preparation of food 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Educate client on safe preparation of food:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="safe_preparation_of_food/57.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Good hygiene (cleanliness) is important to avoid diarrhea and other illness" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Use clean utensils and store foods in a clean place" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Wash vegetables, cook immediately to preserve nutrients " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Wash raw fruits and vegetables before eating" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Wash your hands with soap and water before preparing foods and after using the toilet " options="" property="Select" type="section_items"/>
+		
+	</form>
+</xmlgui>

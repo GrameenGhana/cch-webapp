@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="how_to_breastfeed_breast_care_three" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; How to breastfeed &amp; breast care  Three" page_title="Point of Care" type_of_page="Info Page">
+	<field color_code="" group="section_header" link="" name="Things to remember:" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Exclusive breastfeeding during the first 6 months protects you from getting pregnant as long as periods have not returned. Consult family planning counsellor as soon as possible after giving birth " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="When baby is 6 months old continue breastfeeding and begin giving other foods " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Watch for signs of diarrhoea, fever, difficulty breathing, or refusal to feed because these need prompt attention " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/26.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="If mother is HIV-infected, she should not feed her baby from a nipple that is cracked or bleeding. Instead, she should feed from the other breast and express and discard milk from the breasted that is affected " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/27.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Getting infected or re-infected with HIV while breastfeeding increases the risk of mother to child transmission.  Important to practice safe sex by using condoms consistently and correctly " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="To protect the baby, the mother must know her HIV status " options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

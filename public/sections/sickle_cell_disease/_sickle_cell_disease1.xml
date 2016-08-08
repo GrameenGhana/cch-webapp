@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="_sickle_cell_disease1" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Counselling: Sickle Cell Disease&gt; Sickle Cell Disease1" color_code="Select">
+		<field name="Sickle Cell Disease | Counseling" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="In Ghana, sickle cell disease is the most common blood disease children inherit from their parents.  You will not know your child has the disease unless he or she is tested " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Look out for the following signs and symptoms of sickle cell disease: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Yellow eyes, mouth, palms, and other parts of the body" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Swelling and pain of the hands and feet" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Frequent shortage of blood" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Enlargement of the abdomen " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Children with sickle cell disease easily get malaria, pneumonia and other infections" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="To find out if your child has sickle cell disease, take him or her to the health facility for laboratory tests as soon as possible after birth" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="sickle_cell_disease/sickle_cell_disease_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

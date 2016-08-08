@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="measles_with_eye_or_mouth_complications_malaria_status_unknown" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt; Measles with Eye or Mouth Complications Malaria Status Unknown" color_code="Amber">
+		<field name="Measles with Eye or Mouth Complications, Malaria Status Unknown | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Administer first dose of vitamin A, as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="fever/18.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Counsel and give second dose of Vitamin A to caregiver/mother to be administered to child the next day " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If child has pus draining from the eye, treat with first dose of " link="teach_mother_to_treat_local_infections_at_home/tetracycline_or_chloramphenicol_eye_ointment" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="1% tetracycline eye ointment OR " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="0.5% chloramphenicol eye ointment " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Teach caregiver/mother how to administer eye ointments at home " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="fever/measles_with_eye_or_mouth_complications_malaria_status_unknown_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

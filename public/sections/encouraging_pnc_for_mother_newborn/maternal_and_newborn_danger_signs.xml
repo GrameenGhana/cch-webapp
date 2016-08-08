@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="maternal_and_newborn_danger_signs" page_subtitle="ANC Counselling: Encouraging PNC for mother &amp; newborn&gt; Maternal and Newborn Danger Signs" page_title="Point of Care" type_of_page="Info Page">
+	<field color_code="" group="section_header" link="" name="Danger Signs in the Mother" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Vaginal bleeding  (heavy or sudden release)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/29.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pain in calf with or without swelling" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/30.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Severe headache and/or blurred vision" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/31.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Fever" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/32.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pale tongue &amp; eyes" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/33.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Severe abdominal pain" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="encouraging_pnc_for_mother_newborn/34.png" options="" property="" type="image"/>
+		<field color_code="" group="section_header" link="" name="Other maternal danger signs include: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Breathing difficulty" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Convulsions/loss of consciousness" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Foul smelling discharge of vagina" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Painful and tender wound" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Breast that are red hot and feel painful" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Abnormal behaviour/threats may harm herself or her baby; has hallucinations" options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="encouraging_pnc_for_mother_newborn/maternal_and_newborn_danger_signs_two" name="Next" options="" property="" type="button"/>
+	</form>
+</xmlgui>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="pregnancy_danger_signs_1" page_subtitle="ANC Counselling: Pregnancy danger signs&gt; Pregnancy danger signs 1" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Danger Signs in the Pregnant Woman  " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Vaginal bleeding  (heavy or sudden release)" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/29.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pain in calf with or without swelling" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/30.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Severe headache and/or blurred vision" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/31.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Fever" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/32.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Pale tongue &amp; eyes" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/33.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Severe abdominal pain" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/34.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Persistent vomiting" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="pregnancy_danger_signs/62.PNG" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_header" link="" name="Other pregnancy danger signs include: " options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Jaundice" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Rupture of membranes" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Offensive or discoloured discharge from vagina" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Absence of foetal movements" options="" property="Select" type="section_items"/>
+	</form>
+</xmlgui>

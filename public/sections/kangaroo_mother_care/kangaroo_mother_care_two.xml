@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="kangaroo_mother_care_two" page_subtitle="PNC Counselling: Kangaroo Mother Care&gt;Kangaroo Mother Care TWO" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="Provide skin to skin contact as much as possible, day and night: " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Dress baby in a warm shirt open at the front, a nappy, hat and socks" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/61.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Hold baby in skin to skin contact on your chest between breasts.  Keep baby’s head turned to one side" options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/59.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Cover baby with a cloth (and an additional blanket in cold weather) " options="" property="Select" type="section_items_sub"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/61.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Keep baby in the same bed while you sleep" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/62.png" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="" options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="kangaroo_mother_care/63.png" options="" property="" type="image"/>
+		<field color_code="Default" group="actions" link="kangaroo_mother_care/kangaroo_mother_care_three" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

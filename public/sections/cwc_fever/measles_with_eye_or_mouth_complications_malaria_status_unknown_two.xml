@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="measles_with_eye_or_mouth_complications_malaria_status_unknown_two" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Fever&gt;  Measles with Eye or Mouth Complications Malaria Status Unknown Two" color_code="Amber">
+		<field name="" link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="If mouth ulcers persist, treat with gentian violet" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Teach mother/caregiver how to clean child&#x2019;s mouth with salt solution and paint with gentian violet" link="teach_mother_to_treat_local_infections_at_home/gentian_violet" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Treat any skin irritation with calamine lotion by applying to the affected areas" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give paracetamol to reduce fever (temperature &#x2265; 38.5&#xB0;C), as given below: " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Give first dose of paracetamol in clinic " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/><field name="Advise mother/caregiver to give paracetamol every 6 hours until fever or pain is gone " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Provide paracetamol for 2 days" link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="fever/13.jpeg" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Advise mother/caregiver when to return for care immediately " link="when_to_seek_care_immediately/_when_to_seek_care_immediately1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Counsel mother/caregiver on feeding a sick child " link="feeding_a_healthy_child/feeding_a_healthy_child1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Advise mother/caregiver to follow-up in 2 days " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Record clinical care in Child Health Record &#x201C;green&#x201D; book" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+	</form>
+</xmlgui>

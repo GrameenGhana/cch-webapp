@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="teach_mother_to_give_oral_drugs_at_home1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC References: Teach Mother to Give Oral Drugs at Home&gt; Teach Mother to Give Oral Drugs at Home1" color_code="Select">
+		<field name="" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="General Considerations" link="teach_mother_to_give_oral_drugs_at_home/general_considerations" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Cotrimoxazole (For HIV)" link="teach_mother_to_give_oral_drugs_at_home/cotrimoxazole_for_hiv" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Oral Antibiotics" link="teach_mother_to_give_oral_drugs_at_home/oral_antibiotics" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Tetracycline" link="teach_mother_to_give_oral_drugs_at_home/tetracycline" type="answers" group="answers" color_code="" property="" options=""/><field name="Oral Antimalarial" link="teach_mother_to_give_oral_drugs_at_home/oral_antimalarial" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="Paracetamol" link="teach_mother_to_give_oral_drugs_at_home/paracetamol" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" link="" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="malnutrition1" type_of_page="Question Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Malnutrition&gt; Malnutrition1" color_code="Select">
+		<field name="Is Ready-to-Use Therapeutic Food (RUTF) available where you are?" link="" type="question" group="questions" color_code="" property="" options=""/>
+		<field name="Yes" link="malnutrition/rutf_available" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="No" link="malnutrition/no_rutf_available" type="answers" group="answers" color_code="" property="" options=""/>
+		<field name="" color_code="Default" property="" link="" type="button" group="actions" options=""/></form></xmlgui>

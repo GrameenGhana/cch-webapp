@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form color_code="Select" name="rest__exercise_four" page_subtitle="ANC Counselling: Rest &amp; exercise &gt; Rest &amp; exercise FOUR" page_title="Point of Care" type_of_page="Info Page">
+		<field color_code="" group="section_header" link="" name="Rib cage lift: strengthening leg muscles and making it easier to breathe" options="" property="" type="header"/>
+		<field color_code="" group="section_items" link="" name="rest__exercise/ribcagelift.gif" options="" property="" type="image"/>
+		<field color_code="" group="section_items" link="" name="Sit with your legs crossed." options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Curve your arm over your it, and then return to the original position " options="" property="Select" type="section_items"/>
+		<field color_code="" group="section_items" link="" name="Repeat 4-5 times. " options="" property="Select" type="section_items"/>
+		<field color_code="Default" group="actions" link="rest__exercise/rest__exercise_five" name="NEXT" options="" property="" type="button"/>
+	</form>
+</xmlgui>

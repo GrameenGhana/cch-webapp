@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="no_ear_infection" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: Ear Problems&gt; No Ear Infection" color_code="Green">
+		<field name="No Ear Infection | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="No treatment required" link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Proceed to assess child for malnutrition " link="malnutrition/malnutrition1" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="" color_code="Default" link="" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xmlgui>
+	<form name="convulsing_now" type_of_page="Info Page" page_title="Point of Care" page_subtitle="CWC Diagnostic: General Danger Signs &gt; Convulsing Now" color_code="Red">
+		<field name="Convulsing Now | Take Action " link="" type="header" group="section_header" color_code="" property="" options=""/>
+		<field name="Manage child&#x2019;s airway: " link="" type="section_items_sub" group="section_items" color_code="" property="Select" options=""/>
+		<field name="Turn the child on his or her side to avoid aspiration " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="general_danger_signs_/3.png" link="" type="image" group="section_items" color_code="" property="" options=""/>
+		<field name="Do not insert anything in the mouth " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If the lips and tongue are blue, open the mouth and make sure the airway is clear " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="If necessary, remove secretions from the throat through a catheter inserted through the nose " link="" type="section_items" group="section_items" color_code="" property="Select" options=""/>
+		<field name="NEXT" color_code="Default" link="general_danger_signs_/convulsing_now_two" type="button" group="actions" property="" options=""/>
+	</form>
+</xmlgui>
